@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="ja">
+
+<head>
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'top', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <div class="main">
+    <img class="main-image" src="/assets/job.jpg" alt="background image">
+    <div class="word"> 
+      <p class="title">shift scheduleで</p>
+      <p class="sub-title">手軽にシフト作成</p>
+    </div>
+    <% if user_signed_in? %>
+    <div class="nave_menu">
+      <%= link_to 'シフト作成はこちら', new_shift_path, class: "btn btn-primary btn-lg", role: "button", id: "enter"%>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn btn-primary btn-lg", role: "button", id: "enter", onclick: "return confirm('本当にログアウトしますか？');" %>
+    </div>
+    <% else %>
+    <div class="nave_menu">
+      <%= link_to "ログイン", new_user_session_path, class: "btn btn-primary btn-lg", role: "button", id: "enter" %>
+      <%= link_to "新規登録", new_user_registration_path, class: "btn btn-primary btn-lg", role: "button", id: "enter" %>
+      <%= link_to 'ゲストログイン', users_guest_sign_in_path, class: "btn btn-primary btn-lg", role: "button", id: "enter" %>
+    </div>
+    <% end %>
+  </div>
+</body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  

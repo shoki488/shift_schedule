@@ -1,0 +1,29 @@
+inherit_from:
+  - .rubocop_todo.yml
+  - .rubocop_airbnb.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+  
+Rails:
+  Enabled: true
+
+AllCops:
+  NewCops: enable
+  Exclude:
+   - 'db/**/*'
+   - 'config/**/*'
+   - 'script/**/*'
+   - 'node_modules/**/*'
+   - 'bin/*'
+   - '**/Gemfile'
+   - 'vendor/**/*'
+   - '.git/**/*'
+   - 'spec/spec_helper.rb'
+   - 'lib/**/*'
+
+Layout/LineLength:
+  Max: 200
+

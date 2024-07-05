@@ -1,0 +1,16 @@
+class ChatApi
+  require 'ruby/openai'
+
+  def initialize
+    @openai = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_ACCESS_TOKEN"))
+  end
+
+  def create_shift
+    response = @openai.chat(
+      parameters: {
+        model: 'gpt-3.5-turbo',
+        messages: [{ role: 'system', content: "あなたはシフト作成者です。従業員の条件や業務ニーズに基づいて、シフトを作成してください。" }],
+      })
+    response.dig('choices', 0, 'message', 'content')
+  end
+end

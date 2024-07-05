@@ -1,0 +1,131 @@
+<div class="scrollable-form">
+  <h2 class="title"><%= current_user.name %>アカウント変更ページ</h2>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: @user %>
+
+    <div class="field">
+      <%= f.label :ユーザー名 %><br />
+      <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :メールアドレス %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :classification, "役職" %>
+      <%= f.select :classification, options_for_select(["社員", "リーダー", "パート・アルバイト"]), id: "user_classification" %>
+    </div>
+
+    <div id="shift-type-fields">
+      <% if @user.classification == "社員" %>
+        <div class="field">
+          <%= f.label :shift_type, "シフトタイプ" %><br />
+          <%= f.select :shift_type, options_for_select(["早番: 9時~18時", "遅番: 13時~22時"]), class: 'content__main__box__field__select' %>
+        </div>
+      <% elsif @user.classification == "リーダー" %>
+        <div class="field">
+          <%= f.label :shift_type, "シフトタイプ" %><br />
+          <%= f.select :shift_type, options_for_select(["固定シフト"]), class: 'content__main__box__field__select' %>
+        </div>
+      <% elsif @user.classification == "パート・アルバイト" %>
+        <div class="field">
+          <%= f.label :start_time, "希望の開始時間" %>
+          <%= f.time_select :start_time, { minute_step: 30 }, default: { hour: 9, minute: 0 }, class: 'content__main__box__field__select' %><br />
+          <%= f.label :end_time, "希望の終了時間" %>
+          <%= f.time_select :end_time, { minute_step: 30 }, default: { hour: 22, minute: 0 }, class: 'content__main__box__field__select' %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="field">
+      <%= f.label :新しいパスワード %> <br />
+      <%= f.password_field :password, autocomplete: "new-password" %>
+      <% if @minimum_password_length %>
+        <br />
+        <em>６文字以上入力してください。</em>
+      <% end %>
+    </div>
+
+    <div class="field">
+      <%= f.label :確認パスワード %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :現在のパスワード %> <br />
+      <%= f.password_field :current_password, autocomplete: "current-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "更新する", class: "large-button" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="home">
+  <%= link_to "ホーム", root_path %>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const classificationField = document.getElementById("user_classification");
+  const shiftTypeFields = document.getElementById("shift-type-fields");
+
+  function updateFields() {
+    const classification = classificationField.value;
+    shiftTypeFields.innerHTML = '';  // Clear previous fields
+
+    if (classification === '社員') {
+      shiftTypeFields.innerHTML = `
+        <div class="field">
+          <label for="user_shift_type">シフトタイプ</label><br />
+          <select name="user[shift_type]" id="user_shift_type" class="content__main__box__field__select">
+            <option value="早番: 9時~18時">早番: 9時~18時</option>
+            <option value="遅番: 13時~22時">遅番: 13時~22時</option>
+          </select>
+        </div>`;
+    } else if (classification === 'リーダー') {
+      shiftTypeFields.innerHTML = `
+        <div class="field">
+          <label for="user_shift_type">シフトタイプ</label><br />
+          <select name="user[shift_type]" id="user_shift_type" class="content__main__box__field__select">
+            <option value="固定シフト">固定シフト</option>
+          </select>
+        </div>`;
+    } else if (classification === 'パート・アルバイト') {
+      shiftTypeFields.innerHTML = `
+        <div class="field">
+          <label for="user_start_time">希望の開始時間</label>
+          <select name="user[start_time(4i)]" id="user_start_time_4i" class="content__main__box__field__select">
+            ${generateTimeOptions()}
+          </select>
+          <select name="user[start_time(5i)]" id="user_start_time_5i" class="content__main__box__field__select">
+            <option value="00">00</option>
+            <option value="30">30</option>
+          </select><br />
+          <label for="user_end_time">希望の終了時間</label>
+          <select name="user[end_time(4i)]" id="user_end_time_4i" class="content__main__box__field__select">
+            ${generateTimeOptions()}
+          </select>
+          <select name="user[end_time(5i)]" id="user_end_time_5i" class="content__main__box__field__select">
+            <option value="00">00</option>
+            <option value="30">30</option>
+          </select>
+        </div>`;
+    }
+  }
+
+  function generateTimeOptions() {
+    let options = '';
+    for (let i = 0; i < 24; i++) {
+      options += `<option value="${i}">${i.toString().padStart(2, '0')}</option>`;
+    }
+    return options;
+  }
+
+  classificationField.addEventListener("change", updateFields);
+  updateFields();  // Initial call to set the fields based on current classification
+});
+</script>

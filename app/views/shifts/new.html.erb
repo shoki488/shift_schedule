@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <h2>シフト作成</h2>
+    <% if @shift.errors.any? %>
+      <div class="alert alert-danger" id="error_explanation">
+        <ul>
+          <% @shift.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+<%= form_with(model: @shift, url: shifts_path, method: :post, local: true, class: "needs-validation") do |f| %>
+  <p>シフトを作成する期間を選んでください</p>
+    <div class="mb-3">
+      <%= f.label :calendar, "カレンダー", class: "form-label" %>
+      <%= f.date_field :calendar, autofocus: true, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :user_id, "作成者" %>
+      <%= f.collection_select :user_id, @users, :id, :name %>
+    </div>
+
+    <div class="mb-3">
+      <%= label_tag :password, "シフト作成パスワード" %>
+      <%= password_field_tag :password %>
+    </div>
+    
+    <div class="d-grid">
+      <%= f.submit "シフト作成", class: "btn btn-primary" %>
+    </div>
+<% end %>

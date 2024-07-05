@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="scrollable-form">
+      <h1 class="title">シフト一覧ページ</h1>
+    <div class="classification">
+      <div class="content">
+        <% @shifts.each do |shift| %>
+          <div class="shift-item">
+            <div class="shift-details">
+              <h3><%= shift.calendar %> 予定シフト</h3>
+              <p><%= raw shift.content %></p>
+            </div>
+            <div class="shift-actions">
+              <%= link_to "シフト作成", new_shift_path(shift), class: "btn btn-primary btn-sm" %>
+              <%= link_to "シフト詳細", shift_path(shift), class: "btn btn-primary btn-sm" %>
+            </div>
+            <%= button_to "シフト削除", shift, method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-danger btn-sm" %>
+            <p class="creator">シフト作成者: <%= shift.creator %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>

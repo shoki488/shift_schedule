@@ -1,0 +1,24 @@
+<h1 class="title">アカウント確認画面</h1>
+<div class="info">
+  <h3 class="info-more">ユーザー名</h3>
+  <%= @user.name %>
+  <h3 class="info-more">メールアドレス</h3>
+  <%= @user.email %>
+  <h3 class="info-more">役職</h3>
+  <%= @user.classification %>
+  <% if @user.classification == '社員' %>
+    <h3 class="info-more">シフトタイプ</h3>
+    <%= @user.shift_type %>
+  <% elsif @user.classification == 'リーダー' %>
+    <h3 class="info-more">シフトタイプ</h3>
+    <%= @user.shift_type %>
+  <% elsif @user.classification == 'パート・アルバイト' %>
+    <h3 class="info-more">希望の時間帯</h3>
+    出勤時間 <%= @user.start_time.strftime("%H:%M") %>
+    退勤時間 <%= @user.end_time.strftime("%H:%M") %>
+  <% end %>
+</div>
+<div class="home">
+  <%= link_to "ホーム", root_path %>
+</div>
+
