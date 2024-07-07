@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   rspec:
     docker:
-      - image: circleci/ruby:2.7.3
+      - image: circleci/ruby:3.0.4
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
@@ -24,7 +24,7 @@ jobs:
           name: update bundler
           command: |
             gem update --system
-            gem install bundler:2.1.4
+            gem install bundler
       - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
       - save_cache:
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
@@ -41,7 +41,7 @@ jobs:
           command: bundle exec rspec
   rubocop:
     docker:
-      - image: circleci/ruby:2.7.3
+      - image: circleci/ruby:3.0.4
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
@@ -63,7 +63,7 @@ jobs:
           name: update bundler
           command: |
             gem update --system
-            gem install bundler:2.1.4
+            gem install bundler
       - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
       - save_cache:
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
