@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   rspec:
     docker:
-      - image: circleci/ruby:3.0.4
+      - image: circleci/ruby:3.0
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
@@ -41,7 +41,7 @@ jobs:
           command: bundle exec rspec
   rubocop:
     docker:
-      - image: circleci/ruby:3.0.4
+      - image: circleci/ruby:3.0
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
