@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   rspec:
     docker:
-      - image: circleci/ruby:2.6.5-node-browsers
+      - image: circleci/ruby:2.7.3
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
@@ -41,7 +41,7 @@ jobs:
           command: bundle exec rspec
   rubocop:
     docker:
-      - image: circleci/ruby:2.6.5-node-browsers
+      - image: circleci/ruby:2.7.3
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
@@ -76,7 +76,7 @@ jobs:
           command: bundle exec rubocop
 
 workflows:
-  version: 2.0
+  version: 2
   rspec_and_rubocop_workflow:
     jobs:
       - rspec
