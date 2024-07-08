@@ -1,0 +1,16 @@
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/json-2.7.2/ext/json
+/Users/mashimakatsunori/.rbenv/versions/3.0.4/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240708-28221-ncwzjr sitelibdir\=./.gem.20240708-28221-ncwzjr clean
+
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240708-28221-ncwzjr sitelibdir\=./.gem.20240708-28221-ncwzjr
+make: Nothing to be done for `all'.
+
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240708-28221-ncwzjr sitelibdir\=./.gem.20240708-28221-ncwzjr install
+
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240708-28221-ncwzjr sitelibdir\=./.gem.20240708-28221-ncwzjr clean

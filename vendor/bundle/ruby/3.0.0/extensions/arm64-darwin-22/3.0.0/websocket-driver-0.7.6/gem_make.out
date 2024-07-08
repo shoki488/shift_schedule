@@ -1,0 +1,18 @@
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+/Users/mashimakatsunori/.rbenv/versions/3.0.4/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240708-28221-o824ce sitelibdir\=./.gem.20240708-28221-o824ce clean
+
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240708-28221-o824ce sitelibdir\=./.gem.20240708-28221-o824ce
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240708-28221-o824ce sitelibdir\=./.gem.20240708-28221-o824ce install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20240708-28221-o824ce
+
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240708-28221-o824ce sitelibdir\=./.gem.20240708-28221-o824ce clean
