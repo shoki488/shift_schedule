@@ -66,6 +66,22 @@ jobs:
           name: RuboCop
           command: bundle exec rubocop
 
+  heroku_deploy:
+    working_directory: ~/potepanec
+    executor: heroku/default
+    resource_class: small
+    steps:
+      - checkout
+      - heroku/install
+      - run:
+          name: Deploy
+          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git HEAD:master
+      - run:
+          name: Run post-deploy tasks
+          command: |
+            heroku run bin/rails db:migrate -a $HEROKU_APP_NAME
+
+
 workflows:
   version: 2
   rspec_and_rubocop_workflow:
