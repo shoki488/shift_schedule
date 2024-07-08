@@ -2,17 +2,15 @@ version: 2.1
 jobs:
   rspec:
     docker:
-      - image: circleci/ruby:3.0
+      - image: circleci/ruby:3.0.3
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
           DB_USERNAME: root
-          # DB_PASSWORD: password
       - image: circleci/mysql:5.6
         environment:
           MYSQL_DATABASE: fitness_app01_test
           MYSQL_USER: root
-          # - MYSQL_ROOT_PASSWORD: password
     working_directory: ~/fitness_app01
     steps:
       - checkout
@@ -23,7 +21,6 @@ jobs:
       - run:
           name: update bundler
           command: |
-            gem update --system
             gem install bundler
             bundle config set path 'vendor/bundle'
             bundle install --jobs=4 --retry=3
@@ -42,17 +39,15 @@ jobs:
           command: bundle exec rspec
   rubocop:
     docker:
-      - image: circleci/ruby:3.0
+      - image: circleci/ruby:3.0.3
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
           DB_USERNAME: root
-          # DB_PASSWORD: password
       - image: circleci/mysql:5.6
         environment:
           MYSQL_DATABASE: fitness_app01_test
           MYSQL_USER: root
-          # - MYSQL_ROOT_PASSWORD: password
     working_directory: ~/fitness_app01
     steps:
       - checkout
@@ -63,7 +58,6 @@ jobs:
       - run:
           name: update bundler
           command: |
-            gem update --system
             gem install bundler
             bundle config set path 'vendor/bundle'
             bundle install --jobs=4 --retry=3
@@ -76,7 +70,19 @@ jobs:
       - run:
           name: RuboCop
           command: bundle exec rubocop
-
+heroku_deploy:
+    executor: heroku/default
+    resource_class: small
+    steps:
+      - checkout
+      - heroku/install
+      - run:
+          name: Deploy
+          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git HEAD:master
+      - run:
+          name: Run post-deploy tasks
+          command: |
+            heroku run bin/rails db:migrate -a $HEROKU_APP_NAME
 workflows:
   version: 2
   rspec_and_rubocop_workflow:
