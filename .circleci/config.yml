@@ -2,10 +2,15 @@ version: 2.1
 jobs:
   rspec:
     machine:
-      image: ubuntu-2004:2022.04.2
-    working_directory: ~/fitness_app01
+      image: ubuntu-2004:2022.04.1
     steps:
       - checkout
+      - run:
+          name: Set up Ruby
+          command: |
+            rbenv install 3.0.4 -s  # Ruby 3.0.4 をインストール
+            rbenv global 3.0.4
+            ruby -v
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
@@ -29,12 +34,18 @@ jobs:
       - run:
           name: RSpec
           command: bundle exec rspec
+
   rubocop:
     machine:
-      image: ubuntu-2004:2022.04.2
-    working_directory: ~/fitness_app01
+      image: ubuntu-2004:2022.04.1
     steps:
       - checkout
+      - run:
+          name: Set up Ruby
+          command: |
+            rbenv install 3.0.4 -s  # Ruby 3.0.4 をインストール
+            rbenv global 3.0.4
+            ruby -v
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
@@ -54,19 +65,6 @@ jobs:
       - run:
           name: RuboCop
           command: bundle exec rubocop
-heroku_deploy:
-    executor: heroku/default
-    resource_class: small
-    steps:
-      - checkout
-      - heroku/install
-      - run:
-          name: deploy to Heroku
-          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git HEAD:master
-      - run:
-          name: run post-deploy tasks
-          command: |
-            heroku run bin/rails db:migrate -a $HEROKU_APP_NAME
 
 workflows:
   version: 2
