@@ -14,18 +14,18 @@ checking for Random.bytes... yes
 creating Makefile
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/puma-5.6.8/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-13wlh0 sitelibdir\=./.gem.20240708-28221-13wlh0 clean
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-5k6rsk sitelibdir\=./.gem.20240708-46689-5k6rsk clean
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/puma-5.6.8/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-13wlh0 sitelibdir\=./.gem.20240708-28221-13wlh0
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-5k6rsk sitelibdir\=./.gem.20240708-46689-5k6rsk
 compiling http11_parser.c
 compiling mini_ssl.c
 compiling puma_http11.c
 linking shared-object puma/puma_http11.bundle
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/puma-5.6.8/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-13wlh0 sitelibdir\=./.gem.20240708-28221-13wlh0 install
-/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20240708-28221-13wlh0/puma
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-5k6rsk sitelibdir\=./.gem.20240708-46689-5k6rsk install
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20240708-46689-5k6rsk/puma
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/puma-5.6.8/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-13wlh0 sitelibdir\=./.gem.20240708-28221-13wlh0 clean
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-5k6rsk sitelibdir\=./.gem.20240708-46689-5k6rsk clean

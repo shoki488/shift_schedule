@@ -328,7 +328,7 @@ checked program was:
 ld: warning: ignoring duplicate libraries: '-lcrypto', '-lssl'
 Undefined symbols for architecture arm64:
   "_SSL_get1_peer_certificate", referenced from:
-      _t in conftest-ccf3a0.o
+      _t in conftest-9da3b3.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:

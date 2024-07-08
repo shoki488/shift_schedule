@@ -3,16 +3,16 @@ current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0
 creating Makefile
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-uqhejq sitelibdir\=./.gem.20240708-28221-uqhejq clean
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-qr45x7 sitelibdir\=./.gem.20240708-46689-qr45x7 clean
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-uqhejq sitelibdir\=./.gem.20240708-28221-uqhejq
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-qr45x7 sitelibdir\=./.gem.20240708-46689-qr45x7
 compiling cruby.c
 linking shared-object skiptrace/internal/cruby.bundle
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-uqhejq sitelibdir\=./.gem.20240708-28221-uqhejq install
-/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20240708-28221-uqhejq/skiptrace/internal
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-qr45x7 sitelibdir\=./.gem.20240708-46689-qr45x7 install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20240708-46689-qr45x7/skiptrace/internal
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-uqhejq sitelibdir\=./.gem.20240708-28221-uqhejq clean
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-qr45x7 sitelibdir\=./.gem.20240708-46689-qr45x7 clean

@@ -6,10 +6,10 @@ checking for altzone in time.h with  -Werror... no
 creating Makefile
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/date-3.3.4/ext/date
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-3qk2j4 sitelibdir\=./.gem.20240708-28221-3qk2j4 clean
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-wszkog sitelibdir\=./.gem.20240708-46689-wszkog clean
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/date-3.3.4/ext/date
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-3qk2j4 sitelibdir\=./.gem.20240708-28221-3qk2j4
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-wszkog sitelibdir\=./.gem.20240708-46689-wszkog
 compiling date_core.c
 compiling date_parse.c
 compiling date_strftime.c
@@ -17,8 +17,8 @@ compiling date_strptime.c
 linking shared-object date_core.bundle
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/date-3.3.4/ext/date
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-3qk2j4 sitelibdir\=./.gem.20240708-28221-3qk2j4 install
-/usr/bin/install -c -m 0755 date_core.bundle ./.gem.20240708-28221-3qk2j4
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-wszkog sitelibdir\=./.gem.20240708-46689-wszkog install
+/usr/bin/install -c -m 0755 date_core.bundle ./.gem.20240708-46689-wszkog
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/date-3.3.4/ext/date
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-3qk2j4 sitelibdir\=./.gem.20240708-28221-3qk2j4 clean
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-wszkog sitelibdir\=./.gem.20240708-46689-wszkog clean

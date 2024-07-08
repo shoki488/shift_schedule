@@ -1,11 +1,16 @@
 version: 2.1
 jobs:
   rspec:
-    docker:
-      - image: circleci/ruby:3.0.4-node 
-    working_directory: ~/fitness_app01
+    machine:
+       image: ubuntu-2004:2022.04.1
     steps:
       - checkout
+      - run:
+          name: Set up Ruby
+          command: |
+            rbenv install 3.0.4 -s
+            rbenv global 3.0.4
+            ruby -v
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
@@ -31,11 +36,16 @@ jobs:
           command: bundle exec rspec
 
   rubocop:
-    docker:
-      - image: circleci/ruby:3.0.4-node
-    working_directory: ~/fitness_app01
+    machine:
+      image: ubuntu-2004:2022.04.1
     steps:
       - checkout
+      - run:
+          name: Set up Ruby
+          command: |
+            rbenv install 3.0.4 -s  # Ruby 3.0.4 をインストール
+            rbenv global 3.0.4
+            ruby -v
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}

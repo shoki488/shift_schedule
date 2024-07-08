@@ -12,7 +12,7 @@
 #
 FactoryBot.define do
   factory :shift do
-    calendar { "2024-07-07" }
+    calendar { "2025-07-07" }
     creator { "yokota" }
     content { "これはAIの返答を模倣しているデータです。" }
   end

@@ -3,10 +3,10 @@ current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0
 creating Makefile
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-kwpcos sitelibdir\=./.gem.20240708-28221-kwpcos clean
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-m39svw sitelibdir\=./.gem.20240708-46689-m39svw clean
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-kwpcos sitelibdir\=./.gem.20240708-28221-kwpcos
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-m39svw sitelibdir\=./.gem.20240708-46689-m39svw
 compiling ./libsass/src/ast.cpp
 compiling ./libsass/src/ast2c.cpp
 compiling ./libsass/src/ast_fwd_decl.cpp
@@ -86,8 +86,8 @@ compiling ./libsass/src/values.cpp
 linking shared-object sassc/libsass.bundle
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-kwpcos sitelibdir\=./.gem.20240708-28221-kwpcos install
-/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20240708-28221-kwpcos/sassc
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-m39svw sitelibdir\=./.gem.20240708-46689-m39svw install
+/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20240708-46689-m39svw/sassc
 
 current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
-make DESTDIR\= sitearchdir\=./.gem.20240708-28221-kwpcos sitelibdir\=./.gem.20240708-28221-kwpcos clean
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-m39svw sitelibdir\=./.gem.20240708-46689-m39svw clean

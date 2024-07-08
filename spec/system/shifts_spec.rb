@@ -11,12 +11,12 @@ RSpec.describe "Shifts", type: :system do
 
   it "日付、シフト作成者、パスワードを入力した後シフト作成し詳細画面に移動できる" do
     visit new_shift_path
-    fill_in 'shift_calendar', with: '2024/07/07'
+    fill_in 'shift_calendar', with: '2025/07/07'
     select user.name, from: 'shift_user_id'
     fill_in 'password', with: ENV['SHIFT_CREATION_PASSWORD']
     click_button 'シフト作成'
     visit shifts_path
-    expect(page).to have_content('2024-07-07')
+    expect(page).to have_content('2025-07-07')
   end
 
   it "シフト削除ができること" do

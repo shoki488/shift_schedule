@@ -1,7 +1,5 @@
 require 'rails_helper'
-require 'webmock/rspec'
 
-WebMock.disable_net_connect!(allow_localhost: true)
 RSpec.describe "シフト作成", type: :request do
   describe "POST /shifts" do
     let(:api_key) { 'test_openai_api_key' }
@@ -20,9 +18,6 @@ RSpec.describe "シフト作成", type: :request do
     context "リクエストが成功した場合" do
       it "シフトが正常に作成されていること" do
         sign_in @user1
-        stub_request(:post, "https://api.openai.com/v1/chat/completions").
-          to_return(status: 200, body: { success: { message: "シフトが作成されました" } }.to_yaml)
-
         post shifts_path, params: { shift: { calendar: '2024-06-13', user_id: @user1.id }, password: 'password' }
 
         expect(response).to have_http_status(:success)
@@ -41,9 +36,6 @@ RSpec.describe "シフト作成", type: :request do
             },
           ],
         }.to_json
-
-        stub_request(:post, "https://api.openai.com/v1/chat/completions").
-          to_return(status: 200, body: ai_response)
 
         post shifts_path, params: { shift: { calendar: '2024-06-13', user_id: @user1.id }, password: 'password' }
         expect(response).to have_http_status(:success)
@@ -65,9 +57,6 @@ RSpec.describe "シフト作成", type: :request do
           ],
         }.to_json
 
-        stub_request(:post, "https://api.openai.com/v1/chat/completions").
-          to_return(status: 200, body: ai_response)
-
         post shifts_path, params: { shift: { calendar: '2024-06-13', user_id: @user2.id }, password: 'password' }
         expect(response).to have_http_status(:success)
 
@@ -87,9 +76,6 @@ RSpec.describe "シフト作成", type: :request do
             },
           ],
         }.to_json
-
-        stub_request(:post, "https://api.openai.com/v1/chat/completions").
-          to_return(status: 200, body: ai_response)
 
         post shifts_path, params: { shift: { calendar: '2024-06-13', user_id: @user3.id }, password: 'password' }
         expect(response).to have_http_status(:success)
@@ -112,9 +98,6 @@ RSpec.describe "シフト作成", type: :request do
             },
           ],
         }.to_json
-
-        stub_request(:post, "https://api.openai.com/v1/chat/completions").
-          to_return(status: 200, body: ai_response)
 
         post shifts_path, params: { shift: { calendar: '2024-06-13', user_id: @user4.id }, password: 'password' }
         expect(response).to have_http_status(:success)
@@ -139,8 +122,6 @@ RSpec.describe "シフト作成", type: :request do
           ],
         }.to_json
 
-        stub_request(:post, "https://api.openai.com/v1/chat/completions").
-          to_return(status: 200, body: ai_response)
         post shifts_path,
         params: { shift: { calendar: '2024-06-13', user_id: @user1.id }, password: 'password' }
         expect(response).to have_http_status(:success)
