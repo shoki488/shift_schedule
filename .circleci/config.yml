@@ -1,16 +1,8 @@
 version: 2.1
 jobs:
   rspec:
-    docker:
-      - image: circleci/ruby:3.0.3
-        environment:
-          RAILS_ENV: test
-          DB_HOST: 127.0.0.1
-          DB_USERNAME: root
-      - image: circleci/mysql:5.6
-        environment:
-          MYSQL_DATABASE: fitness_app01_test
-          MYSQL_USER: root
+    machine:
+      image: ubuntu-2004:2022.04.2
     working_directory: ~/fitness_app01
     steps:
       - checkout
@@ -38,16 +30,8 @@ jobs:
           name: RSpec
           command: bundle exec rspec
   rubocop:
-    docker:
-      - image: circleci/ruby:3.0.3
-        environment:
-          RAILS_ENV: test
-          DB_HOST: 127.0.0.1
-          DB_USERNAME: root
-      - image: circleci/mysql:5.6
-        environment:
-          MYSQL_DATABASE: fitness_app01_test
-          MYSQL_USER: root
+    machine:
+      image: ubuntu-2004:2022.04.2
     working_directory: ~/fitness_app01
     steps:
       - checkout
@@ -77,12 +61,13 @@ heroku_deploy:
       - checkout
       - heroku/install
       - run:
-          name: Deploy
+          name: deploy to Heroku
           command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git HEAD:master
       - run:
-          name: Run post-deploy tasks
+          name: run post-deploy tasks
           command: |
             heroku run bin/rails db:migrate -a $HEROKU_APP_NAME
+
 workflows:
   version: 2
   rspec_and_rubocop_workflow:
