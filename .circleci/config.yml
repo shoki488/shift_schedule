@@ -1,70 +1,59 @@
 version: 2.1
+
+orbs:
+  heroku: circleci/heroku@2.0
+
 jobs:
   rspec:
-    machine:
-       image: ubuntu-2004:2022.04.1
+    working_directory: ~/potepanec
+    docker:
+      - image: cimg/ruby:3.0.4
+    resource_class: small
     steps:
       - checkout
+      - setup_remote_docker:
+          version: 20.10.14
       - run:
-          name: Set up Ruby
+          name: Setup environment variable
           command: |
-            rbenv install 3.0.4 -s
-            rbenv global 3.0.4
-            ruby -v
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
-            - v1-dependencies-
+            echo "export COMPOSE_FILE=docker-compose.ci.yml" >> $BASH_ENV
       - run:
-          name: update bundler
+          name: Start containers and verify it is working
           command: |
-            gem install bundler
-            bundle config set path 'vendor/bundle'
-            bundle install --jobs=4 --retry=3
-      - save_cache:
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
-          paths:
-            - ./vendor/bundle
-      - run: bundle exec rails db:create RAILS_ENV=test
-      - run: bundle exec rails db:schema:load RAILS_ENV=test
+            set -x
+            docker-compose up -d
+            docker exec potepanec_app curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
       - run:
-          name: yarn Install
-          command: yarn install
-      - run: bundle exec bin/webpack
+          name: Setup database
+          command: |
+            docker-compose exec potepanec bash -c 'yes n | bundle exec rails g spree:install --migrate --seed --sample --auto_accept'
       - run:
-          name: RSpec
-          command: bundle exec rspec
+          name: Run rspec
+          command: docker-compose exec potepanec rspec
 
   rubocop:
-    machine:
-      image: ubuntu-2004:2022.04.1
+    working_directory: ~/potepanec
+    docker:
+      - image: cimg/ruby:3.0.4
+    resource_class: small
     steps:
       - checkout
-      - run:
-          name: Set up Ruby
-          command: |
-            rbenv install 3.0.4 -s  # Ruby 3.0.4 をインストール
-            rbenv global 3.0.4
-            ruby -v
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
-            - v1-dependencies-
+            - gemfiles-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - gemfiles-{{ .Branch }}-
+            - gemfiles-master-
+      - run: bundle config --local path vendor/bundle
       - run:
-          name: update bundler
-          command: |
-            gem install bundler
-            bundle config set path 'vendor/bundle'
-            bundle install --jobs=4 --retry=3
+          name: bundle install
+          command: bundle check || bundle install --jobs=8 --clean
+      - run:
+          name: Run rubocop
+          command: bundle exec rubocop --parallel
       - save_cache:
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+          key: gemfiles-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
-            - ./vendor/bundle
-      - run: bundle exec rails db:create RAILS_ENV=test
-      - run: bundle exec rails db:schema:load RAILS_ENV=test
-      - run:
-          name: RuboCop
-          command: bundle exec rubocop
+            - vendor/bundle
 
   heroku_deploy:
     working_directory: ~/potepanec
@@ -81,10 +70,13 @@ jobs:
           command: |
             heroku run bin/rails db:migrate -a $HEROKU_APP_NAME
 
-
 workflows:
-  version: 2
-  rspec_and_rubocop_workflow:
+  version: 2.1
+  build:
     jobs:
       - rspec
       - rubocop
+      - heroku_deploy:
+          requires:
+            - rspec
+            - rubocop
