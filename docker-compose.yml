@@ -7,9 +7,6 @@ volumes:
   storage:
 
 services:
-  app:
-    environment:
-      - WEBPACKER_ASSET_HOST=http://localhost:3000
   mysql:
     image: mysql:8.0
     environment:
