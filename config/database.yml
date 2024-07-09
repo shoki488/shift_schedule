@@ -10,7 +10,7 @@ default: &default
   host: <%= ENV['MYSQL_HOST'] || 'localhost' %>
   username: <%= ENV['MYSQL_USERNAME'] || 'root' %>
   password: <%= ENV['MYSQL_PASSWORD'] || '' %>
-  app:  <%= ENV['WEBPACKER_ASSET_HOST'] || '' %>
+  app: <%= ENV['WEBPACKER_ASSET_HOST'] || '' %>
   timeout: 5000
 
 development:
