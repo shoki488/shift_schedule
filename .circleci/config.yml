@@ -24,6 +24,9 @@ jobs:
             docker-compose up -d
             docker exec potepanec_app curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
       - run:
+          name: Precompile Webpack assets
+          command: bin/webpacker    
+      - run:
           name: Run rspec
           command: docker-compose exec potepanec rspec
 

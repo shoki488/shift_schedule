@@ -27,10 +27,13 @@ services:
       MYSQL_USERNAME: root
       MYSQL_PASSWORD: password
       MYSQL_HOST: mysql
+      SELENIUM_DRIVER_URL: http://selenium_chrome:4444/wd/hu
       REDIS_URL: "redis://redis:6379"
     depends_on:
       - mysql
-      - redis
+      - chrome
+  chrome:
+    image: selenium/standalone-chrome-debug
     networks:
       - default
     command: bundle exec rails server -b 0.0.0.0

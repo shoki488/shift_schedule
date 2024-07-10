@@ -39,7 +39,7 @@ RSpec.describe Shift, type: :model do
       shift.calendar = Date.yesterday
       expect(shift).not_to be_valid
       shift.valid?
-      expect(shift.errors[:base]).to include("本日以降の日付を選んでください。")
+      expect(shift.errors[:calendar]).to include("本日以降の日付を選んでください。")
     end
 
     it 'シフト作成日が本日または明日以降なら、有効であること' do

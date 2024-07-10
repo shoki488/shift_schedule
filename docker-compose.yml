@@ -28,8 +28,14 @@ services:
       MYSQL_USERNAME: root
       MYSQL_PASSWORD: password
       MYSQL_HOST: mysql
+      SELENIUM_DRIVER_URL: http://selenium_chrome:4444/wd/hu
     depends_on:
       - mysql
+      - chrome
+  chrome:
+    image: selenium/standalone-chrome-debug
+    ports:
+     - 4444:4444
     networks:
       - default
     volumes:
