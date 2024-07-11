@@ -8,6 +8,8 @@ jobs:
     working_directory: ~/potepanec
     docker:
       - image: cimg/ruby:3.0.4
+    environment:
+      RAILS_ENV: test
     resource_class: small
     steps:
       - checkout

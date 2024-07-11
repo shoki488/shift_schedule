@@ -5,7 +5,7 @@ require "rails/all"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-Dotenv::Railtie.load if defined?(Dotenv::Railtie)
+Dotenv::Rails.load if defined?(Dotenv::Rails)
 
 module ShiftScheduling
   class Application < Rails::Application
@@ -24,11 +24,11 @@ module ShiftScheduling
     config.time_zone = 'Asia/Tokyo'   
     
     config.generators do |g|
-      config.generators.test_framework = :rspec
-      config.generators.system_tests   = false
-      config.generators.stylesheets    = false
-      config.generators.javascripts    = false
-      config.generators.helper         = false
+      g.test_framework :rspec
+      g.system_tests   false
+      g.stylesheets    false
+      g.javascripts    false
+      g.helper         false
     end
   end
 end
