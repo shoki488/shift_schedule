@@ -22,7 +22,7 @@ jobs:
              curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
              sudo apt-get update
              sudo apt-get install -y nodejs
-             curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.22.21
+             curl -o- -L https://yarnpkg.com/install.sh | bash
              echo "export PATH=$(yarn global bin):$PATH" >> $BASH_ENV
              yarn --version
       - run:
