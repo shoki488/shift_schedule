@@ -30,7 +30,7 @@ services:
       MYSQL_PASSWORD: password
       MYSQL_HOST: mysql
       SELENIUM_DRIVER_URL: http://selenium_chrome:4444/wd/hub
-      YARN_PATH: /opt/homebrew/bin/yarn
+      YARN_PATH: /usr/local/bin/yarn
     depends_on:
       - mysql
       - chrome

@@ -26,7 +26,7 @@ jobs:
             echo "export YARN_PATH=${YARN_PATH}" >> $BASH_ENV
       - run:
           name: Install Yarn dependencies
-          command: /opt/homebrew/bin/yarn install
+          command: /usr/local/bin/yarn install
       - run:
           name: Setup environment variable
           command: |
