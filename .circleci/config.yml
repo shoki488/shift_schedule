@@ -8,7 +8,7 @@ jobs:
     working_directory: ~/potepanec
     docker:
       - image: cimg/ruby:3.0.4
-      - image: cimg/node:16.17
+      - image: cimg/node:20.10
     environment:
       RAILS_ENV: test
     resource_class: small
