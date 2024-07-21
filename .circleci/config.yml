@@ -17,17 +17,27 @@ jobs:
       - setup_remote_docker:
           version: 20.10.14
       - run:
-          name: Install JavaScript dependencies
-          command: yarn install
+          name: Install Node.js and Yarn
+          command: |
+            curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+            echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+            sudo apt-get update && sudo apt-get install -y nodejs yarn
       - run:
-          name: Compile Webpack Assets
-          command: bundle exec rails webpacker:compile
+          name: Setup environment variable
+          command: |
+            echo "export COMPOSE_FILE=docker-compose.ci.yml" >> $BASH_ENV
+      - run:
+          name: Install Bundler dependencies
+          command: bundle install --jobs=4 --retry=3
       - run:
           name: Start containers and verify it is working
           command: |
             set -x
             docker-compose up -d
             docker exec potepanec_app curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
+      - run:
+          name: Compile Webpack Assets
+          command: ./node_modules/.bin/webpack
       - run:
           name: Run rspec
           command: docker-compose exec potepanec rspec
