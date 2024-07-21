@@ -8,6 +8,7 @@ jobs:
     working_directory: ~/potepanec
     docker:
       - image: cimg/ruby:3.0.4
+      - image: cimg/node:16.17
     environment:
       RAILS_ENV: test
     resource_class: small
@@ -16,18 +17,24 @@ jobs:
       - setup_remote_docker:
           version: 20.10.14
       - run:
+          name: Install Node.js and Yarn
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y nodejs
+            sudo apt-get install -y yarn
+      - run:
           name: Setup environment variable
           command: |
             echo "export COMPOSE_FILE=docker-compose.ci.yml" >> $BASH_ENV
+      - run:
+          name: Install Bundler dependencies
+          command: bundle install --jobs=4 --retry=3
       - run:
           name: Start containers and verify it is working
           command: |
             set -x
             docker-compose up -d
             docker exec potepanec_app curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
-      - run:
-          name: Install Bundler dependencies
-          command: bundle install --jobs=4 --retry=3
       - run:
           name: Compile Webpack Assets
           command: bundle exec rails webpacker:compile
