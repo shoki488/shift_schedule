@@ -22,11 +22,14 @@ jobs:
             curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
             sudo apt-get update
             sudo apt-get install -y nodejs yarn
-            YARN_PATH=$(which yarn)
-            echo "export YARN_PATH=${YARN_PATH}" >> $BASH_ENV
+            yarn_path=$(which yarn)
+            echo "Yarn installed at: $yarn_path"
+            echo "export YARN_PATH=${yarn_path}" >> $BASH_ENV
       - run:
           name: Install Yarn dependencies
-          command: /usr/local/bin/yarn install
+          command: |
+            source $BASH_ENV
+            $YARN_PATH install
       - run:
           name: Setup environment variable
           command: |
