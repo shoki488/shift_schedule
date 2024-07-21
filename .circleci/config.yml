@@ -24,7 +24,7 @@ jobs:
            sudo apt-get install -y nodejs yarn
       - run:
           name: Install Yarn dependencies
-          command: yarn install
+          command: /opt/homebrew/bin/yarn install
       - run:
           name: Setup environment variable
           command: |
