@@ -19,17 +19,17 @@ jobs:
       - run:
          name: Install Node.js and Yarn
          command: |
-            curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-            sudo apt-get update
-            sudo apt-get install -y nodejs yarn
-            yarn_path=$(which yarn)
-            echo "Yarn installed at: $yarn_path"
-            echo "export YARN_PATH=${yarn_path}" >> $BASH_ENV
+             curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+             sudo apt-get update
+             sudo apt-get install -y nodejs
+             curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.22.21
+             echo "export PATH=$(yarn global bin):$PATH" >> $BASH_ENV
+             yarn --version
       - run:
           name: Install Yarn dependencies
           command: |
             source $BASH_ENV
-            $YARN_PATH install
+            yarn install
       - run:
           name: Setup environment variable
           command: |

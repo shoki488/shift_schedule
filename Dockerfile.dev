@@ -27,7 +27,6 @@ RUN apt-get update \
   && apt-get clean
 
 RUN mkdir /potepanec
-ENV YARN_PATH /usr/local/bin/yarn
 WORKDIR /potepanec
 COPY . /potepanec
 RUN bundle install
