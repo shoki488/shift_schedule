@@ -26,6 +26,9 @@ jobs:
             docker-compose up -d
             docker exec potepanec_app curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
       - run:
+          name: Install Bundler dependencies
+          command: bundle install --jobs=4 --retry=3
+      - run:
           name: Compile Webpack Assets
           command: bundle exec rails webpacker:compile
       - run:
