@@ -23,6 +23,9 @@ jobs:
             echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
             sudo apt-get update && sudo apt-get install -y nodejs yarn
       - run:
+          name: Install Yarn dependencies
+          command: yarn install
+      - run:
           name: Setup environment variable
           command: |
             echo "export COMPOSE_FILE=docker-compose.ci.yml" >> $BASH_ENV
