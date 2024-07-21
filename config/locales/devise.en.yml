@@ -6,6 +6,8 @@ ja:
     attributes:
       user:
         name: 名前
+        classification: 役職
+        shift_type: シフトタイプ
         start_time: 勤務開始時間
         end_time: 勤務終了時間
         confirmation_sent_at: パスワード確認送信時刻
