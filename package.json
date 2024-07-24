@@ -26,5 +26,9 @@
     "@babel/preset-env": "^7.24.7",
     "@webpack-cli/serve": "^2.0.5",
     "webpack-dev-server": "^5.0.4"
+  },
+  "scripts": {
+  "dev": "webpack --mode development",
+  "build": "webpack --mode production"
   }
 }
