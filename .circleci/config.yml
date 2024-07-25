@@ -46,6 +46,7 @@ jobs:
       - run:
           name: Compile Webpack Assets
           command: |
+            export NODE_OPTIONS=--openssl-legacy-provider
             RAILS_ENV=production bundle exec rails assets:precompile
             RAILS_ENV=production bundle exec rails webpacker:compile
       - run:
