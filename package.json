@@ -28,6 +28,7 @@
     "webpack-dev-server": "^5.0.4"
   },
   "scripts": {
+    "install:babel": "npm install @babel/plugin-proposal-private-methods --save-dev",
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
   }

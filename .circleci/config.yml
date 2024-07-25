@@ -46,7 +46,6 @@ jobs:
       - run:
           name: Compile Webpack Assets
           command: |
-            ./node_modules/.bin/webpack
             RAILS_ENV=production bundle exec rails assets:precompile
             RAILS_ENV=production bundle exec rails webpacker:compile
       - run:
