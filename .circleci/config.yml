@@ -46,6 +46,8 @@ jobs:
       - run:
           name: Compile Webpack Assets
           command: |
+            npm install @babel/plugin-proposal-private-methods --save-dev
+            ./node_modules/.bin/webpack
             RAILS_ENV=production bundle exec rails assets:precompile
             RAILS_ENV=production bundle exec rails webpacker:compile
       - run:
