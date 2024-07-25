@@ -37,10 +37,10 @@ services:
       - default
     command: bundle exec rails server -b 0.0.0.0
 
-  chrome:
-    image: selenium/standalone-chrome-debug
+  selenium_chrome:
+    image: seleniarm/standalone-chromium
     ports:
-     - 4444:4444
+      - 4444:4444
     networks:
       - default
     volumes:
