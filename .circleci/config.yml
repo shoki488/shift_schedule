@@ -7,7 +7,7 @@ jobs:
   rspec:
     working_directory: ~/potepanec
     docker:
-      - image: cimg/ruby:3.0.4-node-browsers
+      - image: cimg/ruby:3.0.4
       - image: cimg/node:20.10
     environment:
       RAILS_ENV: test
