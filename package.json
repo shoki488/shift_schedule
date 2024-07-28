@@ -30,6 +30,7 @@
   },
   "scripts": {
     "install:babel": "yarn add @babel/plugin-transform-private-methods --dev",
+    "start": "webpack-dev-server --mode development",
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
   }
