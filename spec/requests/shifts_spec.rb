@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'webdrivers'
 
 RSpec.describe "シフト作成", type: :request do
   describe "POST /shifts" do

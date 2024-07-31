@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'webdrivers'
 
 RSpec.describe "Users", type: :system do
   let(:valid_user) { FactoryBot.build(:user) }
