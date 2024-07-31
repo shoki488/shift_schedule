@@ -30,9 +30,12 @@ jobs:
              source $BASH_ENV
              yarn --version
       - run:
-          name: Start Chromedriver
-          command: chromedriver --port=9515 --url-base=wd/hub &
-          background: true
+          name: Install Chromedriver
+          command: |
+            curl -O https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+            unzip chromedriver_linux64.zip
+            sudo mv chromedriver /usr/local/bin/
+            sudo chmod +x /usr/local/bin/chromedriver
       - run:
           name: Install Yarn dependencies
           command: |

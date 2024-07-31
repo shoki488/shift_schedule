@@ -86,4 +86,3 @@ production:
   compile: true
   extract_css: false
   cache_manifest: false
-  public_root_path: '/packs'
