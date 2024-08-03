@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'webdrivers'
 
 RSpec.describe "Tops", type: :system do
   it "トップページの画像が表示されること" do

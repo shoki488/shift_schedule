@@ -1,13 +1,10 @@
 require 'rails_helper'
-require 'webdrivers'
 
 RSpec.describe "シフト作成", type: :request do
   describe "POST /shifts" do
     let(:api_key) { 'test_openai_api_key' }
 
     before do
-      allow(ENV).to receive(:fetch).with('OPENAI_ACCESS_KEY').and_return(api_key)
-
       @user1 = FactoryBot.create(:user, name: 'yamada', classification: 'リーダー', shift_type: '固定シフト', email: 'yamada@example.com', password: 'password', password_confirmation: 'password')
       @user2 = FactoryBot.create(:user, name: 'tanaka', classification: '社員', shift_type: '早番', email: 'tanaka@example.com', password: 'password', password_confirmation: 'password')
       @user3 = FactoryBot.create(:user, name: 'sato', classification: '社員', shift_type: '遅番', email: 'sato@example.com', password: 'password', password_confirmation: 'password')

@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'webdrivers'
 
 RSpec.describe "Shifts", type: :system do
   let!(:shifts) { FactoryBot.create_list(:shift, 3) }

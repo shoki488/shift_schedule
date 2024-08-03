@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'webdrivers'
 
 RSpec.describe "TopPages", type: :request do
   let(:user) { FactoryBot.create(:user) }
