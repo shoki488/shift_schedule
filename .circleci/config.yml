@@ -21,7 +21,7 @@ jobs:
             sudo apt-get update
             sudo apt-get install -y wget unzip
             wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_linux64.zip
-            unzip chromedriver_linux64.zip -d /usr/local/bin/
+            sudo unzip chromedriver_linux64.zip -d /usr/local/bin/
             sudo chmod +x /usr/local/bin/chromedriver
       - run:
           name: Install Chrome
