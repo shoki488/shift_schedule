@@ -1,12 +1,3 @@
-namespace :webpacker do
-  desc "Verifies that webpack & webpack-dev-server are present."
-  task :check_binstubs do
-    unless File.exist?("bin/webpack")
-      $stderr.puts "webpack binstubs not found.\n"\
-           "Have you run rails webpacker:install ?\n"\
-           "Make sure the bin directory or binstubs are not included in .gitignore\n"\
-           "Exiting!"
-      exit!
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:51ef304b7887c700f854d0c61898cf7825c276509202b283403bb2bcea47cb10
+size 399

@@ -1,13 +1,3 @@
-Description:
-============
-    Generates a new cable channel for the server (in Ruby) and client (in JavaScript).
-    Pass the channel name, either CamelCased or under_scored, and an optional list of channel actions as arguments.
-
-Example:
-========
-    bin/rails generate channel Chat speak
-
-    creates a Chat channel class, test and JavaScript asset:
-        Channel:    app/channels/chat_channel.rb
-        Test:       test/channels/chat_channel_test.rb
-        Assets:     app/javascript/channels/chat_channel.js
+version https://git-lfs.github.com/spec/v1
+oid sha256:52db098b6bc1f5cc054dd526cdd14d6a34ad529864d6ffef6d0dfc86ffc88267
+size 516

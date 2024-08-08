@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-
-# TEAM: backend_infra
-# WATCHERS: maxh
-
-module RuboCop
-  module Cop
-    # Common functionality for checking for a line break before each
-    # element in a multi-line collection.
-    module MultilineElementLineBreaks
-      private
-
-      def check_line_breaks(_node, children)
-        return if all_on_same_line?(children)
-
-        last_seen_line = -1
-        children.each do |child|
-          if last_seen_line >= child.first_line
-            add_offense(child) { |corrector| EmptyLineCorrector.insert_before(corrector, child) }
-          else
-            last_seen_line = child.last_line
-          end
-        end
-      end
-
-      def all_on_same_line?(nodes)
-        return true if nodes.empty?
-
-        nodes.first.first_line == nodes.last.last_line
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6cbf8a6cbad7dad7f9b37fd796945712b0fce04fc6ebcfb429145389f4bc702e
+size 814

@@ -1,7 +1,3 @@
-# Pin npm packages by running ./bin/importmap
-
-pin "application"
-pin "@hotwired/turbo-rails", to: "turbo.min.js"
-pin "@hotwired/stimulus", to: "stimulus.min.js"
-pin "@hotwired/stimulus-loading", to: "stimulus-loading.js"
-pin_all_from "app/javascript/controllers", under: "controllers"
+version https://git-lfs.github.com/spec/v1
+oid sha256:148fdf21d156d2d1274627caa734d3e2d05ce23ae60e6a371fae054933ca30be
+size 285

@@ -1,5 +1,3 @@
-Welcome <%= @email %>!
-
-You can confirm your account through the link below:
-
-[Confirm my account](<%= confirmation_url(@resource, confirmation_token: @token) %>)
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f4e83d44da305e7ce605f7461947e8c2da09becb3d9542e8864d26541a22ee4
+size 163

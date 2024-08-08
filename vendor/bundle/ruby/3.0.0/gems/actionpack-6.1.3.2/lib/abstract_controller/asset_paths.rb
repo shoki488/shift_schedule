@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-module AbstractController
-  module AssetPaths #:nodoc:
-    extend ActiveSupport::Concern
-
-    included do
-      config_accessor :asset_host, :assets_dir, :javascripts_dir,
-        :stylesheets_dir, :default_asset_host_protocol, :relative_url_root
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d7852b92fda62a9787c86fd8bc486ca483a105766c879574cfc48cda52a216e
+size 296

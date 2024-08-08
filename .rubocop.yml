@@ -1,29 +1,3 @@
-inherit_from:
-  - .rubocop_todo.yml
-  - .rubocop_airbnb.yml
-
-require:
-  - rubocop-performance
-  - rubocop-rails
-  - rubocop-rspec
-  
-Rails:
-  Enabled: true
-
-AllCops:
-  NewCops: enable
-  Exclude:
-   - 'db/**/*'
-   - 'config/**/*'
-   - 'script/**/*'
-   - 'node_modules/**/*'
-   - 'bin/*'
-   - '**/Gemfile'
-   - 'vendor/**/*'
-   - '.git/**/*'
-   - 'spec/spec_helper.rb'
-   - 'lib/**/*'
-
-Layout/LineLength:
-  Max: 200
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:6fecf4b5cc973387951c77086334b49cd780ffc3dd446296601f80e71df54cbd
+size 415

@@ -1,29 +1,3 @@
-RSpec::Support.require_rspec_core "formatters/base_text_formatter"
-RSpec::Support.require_rspec_core "formatters/console_codes"
-
-module RSpec
-  module Core
-    module Formatters
-      # @private
-      class ProgressFormatter < BaseTextFormatter
-        Formatters.register self, :example_passed, :example_pending, :example_failed, :start_dump
-
-        def example_passed(_notification)
-          output.print ConsoleCodes.wrap('.', :success)
-        end
-
-        def example_pending(_notification)
-          output.print ConsoleCodes.wrap('*', :pending)
-        end
-
-        def example_failed(_notification)
-          output.print ConsoleCodes.wrap('F', :failure)
-        end
-
-        def start_dump(_notification)
-          output.puts
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5168b3474f80a625df2aea5fc07d022ce65693b4ad42190609372d8bcbf261a0
+size 778

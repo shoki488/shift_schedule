@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # A node extension for `ensure` nodes. This will be used in place of a plain
-    # node when the builder constructs the AST, making its methods available
-    # to all `ensure` nodes within RuboCop.
-    class EnsureNode < Node
-      # Returns the body of the `ensure` clause.
-      #
-      # @return [Node, nil] The body of the `ensure`.
-      def body
-        node_parts[1]
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8eff2cb3e79e1a7e9cc60da6af3ee57ed6a57f4c8fcdd0636b990ab5a30dcc9
+size 465

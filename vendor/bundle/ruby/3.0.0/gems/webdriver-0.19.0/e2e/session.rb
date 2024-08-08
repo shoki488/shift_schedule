@@ -1,10 +1,3 @@
-session = $client.session!
-raise unless session.id
-
-value = session.execute_sync! "return 1+2"
-raise unless value == 3
-
-value = session.execute_sync! "return arguments", [1,2,3]
-raise unless value == [1,2,3]
-
-session.delete!
+version https://git-lfs.github.com/spec/v1
+oid sha256:719d6515ba14b10dab857f71e23f1e4aef052e3df7ca6847361deecdb791893a
+size 225

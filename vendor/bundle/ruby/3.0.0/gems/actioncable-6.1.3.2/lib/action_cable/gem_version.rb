@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module ActionCable
-  # Returns the version of the currently loaded Action Cable as a <tt>Gem::Version</tt>.
-  def self.gem_version
-    Gem::Version.new VERSION::STRING
-  end
-
-  module VERSION
-    MAJOR = 6
-    MINOR = 1
-    TINY  = 3
-    PRE   = "2"
-
-    STRING = [MAJOR, MINOR, TINY, PRE].compact.join(".")
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:68bf9785dde3ca9744ee5a21aa4f09e14c43267b218a8898fdb0f602f689b230
+size 349

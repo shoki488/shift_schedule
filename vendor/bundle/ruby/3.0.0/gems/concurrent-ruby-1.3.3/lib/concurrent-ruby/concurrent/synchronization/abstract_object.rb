@@ -1,22 +1,3 @@
-module Concurrent
-  module Synchronization
-
-    # @!visibility private
-    # @!macro internal_implementation_note
-    class AbstractObject
-      def initialize
-        # nothing to do
-      end
-
-      # @!visibility private
-      # @abstract
-      def full_memory_barrier
-        raise NotImplementedError
-      end
-
-      def self.attr_volatile(*names)
-        raise NotImplementedError
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c0a659c84f5b1c11ca13509791a865cf54755b5d1e1344246d2a02c48d106583
+size 416

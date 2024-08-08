@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-# Extensions to the core String class
-class String
-  unless method_defined?(:blank?) && ' '.blank?
-    # Checks whether a string is blank. A string is considered blank if it
-    # is either empty or contains only whitespace characters.
-    #
-    # @return [Boolean] true is the string is blank, false otherwise
-    #
-    # @example
-    #   ''.blank? #=> true
-    #
-    # @example
-    #   '    '.blank? #=> true
-    #
-    # @example
-    #   '  test'.blank? #=> false
-    def blank?
-      empty? || lstrip.empty?
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:67de1cba13692c250ec9108388feaf685dce05c001c6ba3c7e2ca799d906b26e
+size 560

@@ -1,25 +1,3 @@
-module RuboCop
-  module Cop
-    module Airbnb
-      class ContinuationSlash < Base
-        MSG = 'Slash continuation should be reserved for closed string continuation. ' \
-              'Many times it is used to get around other existing rules.'.freeze
-
-        def enforce_violation(node)
-          return if node.source.match(/["']\s*\\\n/)
-          return unless node.source.match(/\\\n/)
-          add_offense(node, message: message)
-        end
-
-        alias on_send enforce_violation
-        alias on_if enforce_violation
-
-        ::RuboCop::AST::Node::ASSIGNMENTS.each do |type|
-          define_method("on_#{type}") do |node|
-            enforce_violation(node)
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cd0f63a605cedfd10a42e36fb6a3ab52ddbd5c4a9c0c412d1ca887be8719dcbd
+size 726

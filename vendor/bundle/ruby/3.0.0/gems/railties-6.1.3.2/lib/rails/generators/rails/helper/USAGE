@@ -1,12 +1,3 @@
-Description:
-    Generates a new helper. Pass the helper name, either CamelCased
-    or under_scored.
-
-    To create a helper within a module, specify the helper name as a
-    path like 'parent_module/helper_name'.
-
-Example:
-    `bin/rails generate helper CreditCard`
-
-    Credit card helper.
-        Helper:     app/helpers/credit_card_helper.rb
+version https://git-lfs.github.com/spec/v1
+oid sha256:7dba2ff9c1f6ebf335a0d4181044fa8b3306e1464a8c630cabd21a793bd281da
+size 347

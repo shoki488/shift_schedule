@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-module Nokogiri
-  module XML
-    module XPath
-      class SyntaxError < XML::SyntaxError
-        def to_s
-          [super.chomp, str1].compact.join(": ")
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b2a6e1ce6ead6c823d3c270d5fe86763cf58ecf3ee87e04db2579d3e48a757b
+size 226

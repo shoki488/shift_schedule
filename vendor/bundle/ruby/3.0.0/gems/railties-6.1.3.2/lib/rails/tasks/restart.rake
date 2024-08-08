@@ -1,9 +1,3 @@
-# frozen_string_literal: true
-
-desc "Restart app by touching tmp/restart.txt"
-task :restart do
-  verbose(false) do
-    mkdir_p "tmp"
-    touch "tmp/restart.txt"
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d915a102ad703cd131f48b2a3e214021fab75d2cff672896da761a4fac81db05
+size 171

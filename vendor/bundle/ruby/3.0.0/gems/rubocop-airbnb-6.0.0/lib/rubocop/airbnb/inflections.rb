@@ -1,14 +1,3 @@
-# String inflections copied over from ActiveSupport
-module Inflections
-  # Convert Foo::BarBaz to foo/bar_baz.
-  # Copied from ActiveSupport.
-  def underscore(camel_cased_word)
-    word = camel_cased_word.to_s.dup
-    word.gsub!(/::/, '/')
-    word.gsub!(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
-    word.gsub!(/([a-z\d])([A-Z])/, '\1_\2')
-    word.tr!("-", "_")
-    word.downcase!
-    word
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:426f162e2390a9439f4a84f83ca16b120286160045544b69cce8ebbf8898a640
+size 393

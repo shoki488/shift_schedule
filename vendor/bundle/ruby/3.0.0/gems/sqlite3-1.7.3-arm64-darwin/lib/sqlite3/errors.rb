@@ -1,35 +1,3 @@
-require 'sqlite3/constants'
-
-module SQLite3
-  class Exception < ::StandardError
-    # A convenience for accessing the error code for this exception.
-    attr_reader :code
-  end
-
-  class SQLException < Exception; end
-  class InternalException < Exception; end
-  class PermissionException < Exception; end
-  class AbortException < Exception; end
-  class BusyException < Exception; end
-  class LockedException < Exception; end
-  class MemoryException < Exception; end
-  class ReadOnlyException < Exception; end
-  class InterruptException < Exception; end
-  class IOException < Exception; end
-  class CorruptException < Exception; end
-  class NotFoundException < Exception; end
-  class FullException < Exception; end
-  class CantOpenException < Exception; end
-  class ProtocolException < Exception; end
-  class EmptyException < Exception; end
-  class SchemaChangedException < Exception; end
-  class TooBigException < Exception; end
-  class ConstraintException < Exception; end
-  class MismatchException < Exception; end
-  class MisuseException < Exception; end
-  class UnsupportedException < Exception; end
-  class AuthorizationException < Exception; end
-  class FormatException < Exception; end
-  class RangeException < Exception; end
-  class NotADatabaseException < Exception; end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6cedd5eb3801dff8b5c0629b95e5c71b3095d9cb8d5d9374c32df640b058a85f
+size 1283

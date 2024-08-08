@@ -1,11 +1,3 @@
-en:
-  faker:
-    measurement:
-      height: ["inch", "foot"]
-      length: ["yard", "foot", "mile"]
-      volume: ["cup", "tablespoon", "teaspoon", "quart", "pint", "gallon", "fluid ounce"]
-      weight: ["pound", "ounce", "ton"]
-      metric_height: ["centimeter", "meter"]
-      metric_length: ["millimeter", "centimeter", "decimeter", "meter", "dekameter", "hectometer", "kilometer"]
-      metric_volume: ["milliliter", "liter"]
-      metric_weight: ["milligram", "centigram", "decigram", "gram", "dekagram", "hectogram", "kilogram", "metric ton"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:6657e7cc2ad5da63139e2d8d16b70ddd12de3d6396264a3a783dedd382fb4f31
+size 551

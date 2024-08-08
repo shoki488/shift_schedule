@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-module Nokogiri
-  module XML
-    # :nodoc: all
-    module PP
-      module CharacterData
-        def pretty_print(pp)
-          nice_name = self.class.name.split("::").last
-          pp.group(2, "#(#{nice_name} ", ")") do
-            pp.pp(text)
-          end
-        end
-
-        def inspect
-          "#<#{self.class.name}:#{format("0x%x", object_id)} #{text.inspect}>"
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e08e0cdab06fc64d12339bffb8b4fbeeb6c8856e464c9cac0b908756dac0f65
+size 442

@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord #:nodoc:
-  # = Active Record \Serialization
-  module Serialization
-    extend ActiveSupport::Concern
-    include ActiveModel::Serializers::JSON
-
-    included do
-      self.include_root_in_json = false
-    end
-
-    def serializable_hash(options = nil)
-      if self.class._has_attribute?(self.class.inheritance_column)
-        options = options ? options.dup : {}
-
-        options[:except] = Array(options[:except]).map(&:to_s)
-        options[:except] |= Array(self.class.inheritance_column)
-      end
-
-      super(options)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cd811858d7e4088d1aec8b612119d9756fb410cdcbeb1f85c51b5cc30c0f7a0b
+size 593

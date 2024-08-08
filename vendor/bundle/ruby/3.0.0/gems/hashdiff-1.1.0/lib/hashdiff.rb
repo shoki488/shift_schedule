@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-
-require 'hashdiff/util'
-require 'hashdiff/compare_hashes'
-require 'hashdiff/lcs'
-require 'hashdiff/lcs_compare_arrays'
-require 'hashdiff/linear_compare_array'
-require 'hashdiff/diff'
-require 'hashdiff/patch'
-require 'hashdiff/version'
+version https://git-lfs.github.com/spec/v1
+oid sha256:16706190ba320bf88e2e9f782e8f7391b0c8a11854996e501872a14f81319bc7
+size 266

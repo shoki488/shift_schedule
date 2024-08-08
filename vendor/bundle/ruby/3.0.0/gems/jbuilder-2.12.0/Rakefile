@@ -1,19 +1,3 @@
-require "bundler/setup"
-require "bundler/gem_tasks"
-require "rake/testtask"
-
-if !ENV["APPRAISAL_INITIALIZED"] && !ENV["CI"]
-  require "appraisal/task"
-  Appraisal::Task.new
-  task default: :appraisal
-else
-  Rake::TestTask.new do |test|
-    require "rails/version"
-
-    test.libs << "test"
-
-    test.test_files = FileList["test/*_test.rb"]
-  end
-
-  task default: :test
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:547105400de533fc84dd561a1f1285b6f3d0a0e39b850a1b5b3c9cc8ffe9147b
+size 372

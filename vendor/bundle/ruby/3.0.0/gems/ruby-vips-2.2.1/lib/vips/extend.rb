@@ -1,16 +1,3 @@
-module Vips
-  # When the edges of an image are extended, you can specify
-  # how you want the extension done.
-  # See {Image#embed}, {Image#conv}, {Image#affine} and
-  # so on.
-  #
-  # * `:black` new pixels are black, ie. all bits are zero.
-  # * `:copy` each new pixel takes the value of the nearest edge pixel
-  # * `:repeat` the image is tiled to fill the new area
-  # * `:mirror` the image is reflected and tiled to reduce hash edges
-  # * `:white` new pixels are white, ie. all bits are set
-  # * `:background` colour set from the @background property
-
-  class Extend < Symbol
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b46a14726fb4b89387c3265aeaf161cb5f5622513d20e59ae5a17e7885f64125
+size 592

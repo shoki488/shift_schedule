@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-#--
-#
-#
-#
-# Copyright (c) 1999-2006 Minero Aoki
-#
-# This program is free software.
-# You can distribute/modify this program under the same terms of ruby.
-# see the file "COPYING".
-#
-#++
-
-module Racc
-  VERSION   = '1.8.0'
-  Version = VERSION
-  Copyright = 'Copyright (c) 1999-2006 Minero Aoki'
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c7d8557ba31e30a15825ea95e872996cb46994b04258fdb521d9dfd000e00b2
+size 327

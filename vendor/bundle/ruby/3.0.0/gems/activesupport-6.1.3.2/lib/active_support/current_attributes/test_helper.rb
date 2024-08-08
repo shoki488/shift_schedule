@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveSupport::CurrentAttributes::TestHelper # :nodoc:
-  def before_setup
-    ActiveSupport::CurrentAttributes.reset_all
-    super
-  end
-
-  def after_teardown
-    super
-    ActiveSupport::CurrentAttributes.reset_all
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:16da90cadc8c230c63ec6d3e8b81b0faddd42143641be2e72fe8bf7567ce4a18
+size 264

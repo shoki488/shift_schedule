@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-require 'set'
-
-module Sprockets
-  # Internal: The first processor in the pipeline that reads the file into
-  # memory and passes it along as `input[:data]`.  
-  class FileReader
-    def self.call(input)
-      env = input[:environment]
-      data = env.read_file(input[:filename], input[:content_type])
-      dependencies = Set.new(input[:metadata][:dependencies])
-      dependencies += [env.build_file_digest_uri(input[:filename])]
-      { data: data, dependencies: dependencies }
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2807b82f45e50498f0e1c374196bf130f3e590345e22cc59f490dd442183791
+size 529

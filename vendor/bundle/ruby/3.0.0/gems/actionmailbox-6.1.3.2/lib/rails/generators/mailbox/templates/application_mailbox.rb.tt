@@ -1,3 +1,3 @@
-class ApplicationMailbox < ActionMailbox::Base
-  # routing /something/i => :somewhere
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9b20ca9e252e61ccb654ea736da1c06f10e623f5a4f7959f32ef3ab13e958401
+size 90

@@ -1,19 +1,3 @@
-$LOAD_PATH << File.expand_path('../lib', __FILE__)
-
-require 'minitest/autorun'
-require 'skiptrace'
-
-current_directory = File.dirname(File.expand_path(__FILE__))
-
-# Fixtures are plain classes that respond to #call.
-Dir["#{current_directory}/fixtures/**/*.rb"].each do |fixture|
-  require fixture
-end
-
-module Skiptrace
-  class Test < MiniTest::Test
-    def self.test(name, &block)
-      define_method("test_#{name}", &block)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8104db4996e46ece7f9411056b1e0801fb56db183a3d2a3caba6beeb0ca93c12
+size 441

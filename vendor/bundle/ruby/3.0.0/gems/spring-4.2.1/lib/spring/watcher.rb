@@ -1,30 +1,3 @@
-require "spring/watcher/abstract"
-require "spring/configuration"
-
-module Spring
-  class << self
-    attr_accessor :watch_interval
-    attr_writer :watcher
-    attr_reader :watch_method
-  end
-
-  def self.watch_method=(method)
-    if method.is_a?(Class)
-      @watch_method = method
-    else
-      require "spring/watcher/#{method}"
-      @watch_method = Watcher.const_get(method.to_s.gsub(/(^.|_.)/) { $1[-1].upcase })
-    end
-  end
-
-  self.watch_interval = 0.2
-  self.watch_method = :polling
-
-  def self.watcher
-    @watcher ||= watch_method.new(Spring.application_root_path, watch_interval)
-  end
-
-  def self.watch(*items)
-    watcher.add(*items)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2ed80dd0f928268adf3cd2d1f8c87aa9f8f811d06b0061e0c524f508e271fe6
+size 658

@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
-require_relative '../lib/tilt/cli'
-
-exit Tilt::CLI.run
+version https://git-lfs.github.com/spec/v1
+oid sha256:f43cb76e82900cae202be3d83879638e1cc133fb02e5a0e812a944255eaad930
+size 75

@@ -1,5 +1,3 @@
-inherit_gem:
-  rubocop-discourse: default.yml
-inherit_mode:
-  merge:
-    - Exclude
+version https://git-lfs.github.com/spec/v1
+oid sha256:83faf1e6f0452f796efce2b2a124c934af56d4e68bb1d7d45a72b94c3bc5c104
+size 83

@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class Music
-    class UmphreysMcgee < Base
-      class << self
-        ##
-        # Produces the name of a song by Umphrey's McGee.
-        #
-        # @return [String]
-        #
-        # @example
-        #   Faker::Music::UmphreysMcgee.song #=> "Dump City"
-        #
-        # @faker.version 1.8.3
-        def song
-          fetch('umphreys_mcgee.song')
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9dedc483bae98fd50f55d406ec733383113faea1e88a6c1334a6f19a537bf3e0
+size 442

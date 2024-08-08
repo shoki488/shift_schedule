@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module SassC
-  module Script
-    module ValueConversion
-      class String < Base
-        def to_native(opts = {})
-          if opts[:quote] == :none || @value.type == :identifier
-            Native::make_string(@value.to_s)
-          else
-            Native::make_qstring(@value.to_s)
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:540251018ea983f403527fc08613b1359c55d99dc7278e0b54f136b8149abfab
+size 371

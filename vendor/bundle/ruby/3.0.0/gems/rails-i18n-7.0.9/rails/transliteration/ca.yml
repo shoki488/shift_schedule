@@ -1,28 +1,3 @@
-ca:
-  i18n:
-    transliterate:
-      rule:
-        à: "a"
-        á: "a"
-        ç: "c"
-        é: "e"
-        è: "e"
-        ë: "e"
-        í: "i"
-        ï: "i"
-        ó: "o"
-        ò: "o"
-        ú: "u"
-        ü: "u"
-        À: "A"
-        Á: "A"
-        Ç: "C"
-        É: "E"
-        È: "E"
-        Ë: "E"
-        Í: "I"
-        Ï: "I"
-        Ó: "O"
-        Ò: "O"
-        Ú: "U"
-        Ü: "U"
+version https://git-lfs.github.com/spec/v1
+oid sha256:6ec51afa049c050a72ee4af0b943f50e23d9fb4626cef63a9f3b3f1ff8775942
+size 427

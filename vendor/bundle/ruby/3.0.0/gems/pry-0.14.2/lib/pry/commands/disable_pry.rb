@@ -1,31 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class DisablePry < Pry::ClassCommand
-      match 'disable-pry'
-      group 'Navigating Pry'
-      description 'Stops all future calls to pry and exits the current session.'
-
-      banner <<-'BANNER'
-        Usage: disable-pry
-
-        After this command is run any further calls to pry will immediately return `nil`
-        without interrupting the flow of your program. This is particularly useful when
-        you've debugged the problem you were having, and now wish the program to run to
-        the end.
-
-        As alternatives, consider using `exit!` to force the current Ruby process
-        to quit immediately; or using `edit -p` to remove the `binding.pry`
-        from the code.
-      BANNER
-
-      def process
-        ENV['DISABLE_PRY'] = 'true'
-        pry_instance.run_command "exit"
-      end
-    end
-
-    Pry::Commands.add_command(Pry::Command::DisablePry)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c2185bf67d7b2a8ed3e92c71119368195850e2cf51f699d4000520fbc2ad9b5e
+size 945

@@ -1,23 +1,3 @@
-module FactoryBotRails
-  class FactoryValidator
-    def initialize(validators = [])
-      @validators = Array(validators)
-    end
-
-    def add_validator(validator)
-      @validators << validator
-    end
-
-    def run
-      ActiveSupport::Notifications.subscribe("factory_bot.compile_factory", &validate_compiled_factory)
-    end
-
-    private
-
-    def validate_compiled_factory
-      proc do |event|
-        @validators.each { |validator| validator.validate!(event.payload) }
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:47567f8c5a5aa8b7bf848cbda4706f7c503c182887b259d056b20fef1ee7a986
+size 502

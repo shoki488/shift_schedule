@@ -1,10 +1,3 @@
-module Regexp::Syntax
-  # A syntax that always returns true, passing all tokens as implemented. This
-  # is useful during development, testing, and should be useful for some types
-  # of transformations as well.
-  class Any < Base
-    implements :*, [:*]
-
-    def self.implements?(_type, _token) true end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:bee0e1b50d16639fd6cc43b01543fc06063c83468a2072a5627ce90aa310348f
+size 315

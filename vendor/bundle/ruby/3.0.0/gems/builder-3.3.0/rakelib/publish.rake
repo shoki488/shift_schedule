@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-# Optional publish task for Rake
-
-begin
-require 'rake/contrib/sshpublisher'
-require 'rake/contrib/rubyforgepublisher'
-
-publisher = Rake::CompositePublisher.new
-publisher.add Rake::RubyForgePublisher.new('builder', 'jimweirich')
-publisher.add Rake::SshFilePublisher.new(
-  'linode',
-  'htdocs/software/builder',
-  '.',
-  'builder.blurb')
-
-desc "Publish the Documentation to RubyForge."
-task :publish => [:rdoc] do
-  publisher.upload
-end
-rescue LoadError
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c7918aad3db405913e0c94efcd19495f90fd0fe882e40c1486db2c026d7b4ae
+size 487

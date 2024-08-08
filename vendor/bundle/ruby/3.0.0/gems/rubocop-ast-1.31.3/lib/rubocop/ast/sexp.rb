@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # This module provides a shorthand method to create a {Node} like
-    # `Parser::AST::Sexp`.
-    #
-    # @see https://www.rubydoc.info/gems/ast/AST/Sexp
-    module Sexp
-      # Creates a {Node} with type `type` and children `children`.
-      def s(type, *children)
-        klass = Builder::NODE_MAP[type] || Node
-        klass.new(type, children)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:29ac6a29ca4841112116be055fd1cee993312e778fabbe7751d46056538059c6
+size 438

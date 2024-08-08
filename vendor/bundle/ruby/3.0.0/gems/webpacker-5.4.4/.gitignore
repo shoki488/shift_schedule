@@ -1,11 +1,3 @@
-/.bundle
-/pkg
-/test/test_app/log
-node_modules
-.byebug_history
-/test/test_app/tmp
-yarn-debug.log*
-yarn-error.log*
-.yarn-integrity
-/log
-gemfiles/*.lock
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e721e55d177f64ec1002030910bcc1b43d852ea0d3f203f92efb7831bbdc575
+size 150

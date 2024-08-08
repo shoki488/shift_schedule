@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-module Net::HTTP::ProxyDelta   #:nodoc: internal use only
-  private
-
-  def conn_address
-    proxy_address()
-  end
-
-  def conn_port
-    proxy_port()
-  end
-
-  def edit_path(path)
-    use_ssl? ? path : "http://#{addr_port()}#{path}"
-  end
-end
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c87a164b738bfc82ef6e09526ef2fe7f41183613422333ab9122ecdf059da4c
+size 271

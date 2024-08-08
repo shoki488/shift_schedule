@@ -1,11 +1,3 @@
-# webdriver
-
-A Ruby https://www.w3.org/TR/webdriver/ driver
-
-## Notes for implementators
-
- - `element.value!` is slow when compared to JavaScript `el.value = ...`
- - element visibility helper `element.displayed?`
-hitrate.
- - Remember to use JavaScript multiline strings \` \` in `session.async_exec`
- - looks like delaying 0.5s between element find and click improves
+version https://git-lfs.github.com/spec/v1
+oid sha256:d3e693f93ada98b492dc8d644e0519666aef1a601f4ef99fb0a404454c289f25
+size 368

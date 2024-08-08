@@ -1,26 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/core_ext/string/inflections"
-
-module ActiveSupport
-  module MarshalWithAutoloading # :nodoc:
-    def load(source, proc = nil)
-      super(source, proc)
-    rescue ArgumentError, NameError => exc
-      if exc.message.match(%r|undefined class/module (.+?)(?:::)?\z|)
-        # try loading the class/module
-        loaded = $1.constantize
-
-        raise unless $1 == loaded.name
-
-        # if it is an IO we need to go back to read the object
-        source.rewind if source.respond_to?(:rewind)
-        retry
-      else
-        raise exc
-      end
-    end
-  end
-end
-
-Marshal.singleton_class.prepend(ActiveSupport::MarshalWithAutoloading)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c657b39afd55e5c42b366d93adb6df389f8f4be8e4f06b6ad51f39ae44c4a62
+size 691

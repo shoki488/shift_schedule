@@ -1,19 +1,3 @@
-module I18n
-  module Tests
-    module Localization
-      autoload :Date,     'i18n/tests/localization/date'
-      autoload :DateTime, 'i18n/tests/localization/date_time'
-      autoload :Time,     'i18n/tests/localization/time'
-      autoload :Procs,    'i18n/tests/localization/procs'
-
-      def self.included(base)
-        base.class_eval do
-          include I18n::Tests::Localization::Date
-          include I18n::Tests::Localization::DateTime
-          include I18n::Tests::Localization::Procs
-          include I18n::Tests::Localization::Time
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:002d8efa54c388f505f4906a089dcb7d388cc8facfd511670e198063d4d115e0
+size 587

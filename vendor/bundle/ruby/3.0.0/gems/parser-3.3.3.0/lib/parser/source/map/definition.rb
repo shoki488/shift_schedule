@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module Parser
-  module Source
-
-    class Map::Definition < Map
-      attr_reader :keyword
-      attr_reader :operator
-      attr_reader :name
-      attr_reader :end
-
-      def initialize(keyword_l, operator_l, name_l, end_l)
-        @keyword  = keyword_l
-        @operator = operator_l
-        @name     = name_l
-        @end      = end_l
-
-        super(@keyword.join(@end))
-      end
-    end
-
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8e6840668ebc86a187050492c4ae0be800ab508ad349b6ce802e48802a8bda6c
+size 435

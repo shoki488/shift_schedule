@@ -1,8 +1,3 @@
-# frozen_string_literal: true
-require_relative 'template'
-require 'babel/transpiler'
-
-Tilt::BabelTemplate = Tilt::StaticTemplate.subclass(mime_type: 'application/javascript') do
-  @options[:filename] ||= @file
-  Babel::Transpiler.transform(@data)["code"]
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:60316c4c2dda3ca565f30ac4d317fe18dd09098c59544ddfab76c8aa0b9bacdd
+size 259

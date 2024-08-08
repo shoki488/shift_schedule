@@ -1,9 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "../display_width" unless defined? Unicode::DisplayWidth
-
-class String
-  def display_width(ambiguous = 1, overwrite = {}, options = {})
-    Unicode::DisplayWidth.of(self, ambiguous, overwrite, options)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:420e97501bb476b5159abf539b7171a820879ed8c68a64b6ea5176fdb74d9f86
+size 260

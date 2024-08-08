@@ -1,7 +1,3 @@
-<%= wrap_in_modules <<~rb
-  class Engine < ::Rails::Engine
-  #{mountable? ? '  isolate_namespace ' + camelized_modules : ' '}
-  #{api? ? "  config.generators.api_only = true" : ' '}
-  end
-rb
-%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:eccaee6dade776c2fdd6fe2df398a62d7359724ce2cd06c1eafe7156adcdd211
+size 194

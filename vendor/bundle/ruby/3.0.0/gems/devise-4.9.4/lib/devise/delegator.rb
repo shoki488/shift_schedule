@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-module Devise
-  # Checks the scope in the given environment and returns the associated failure app.
-  class Delegator
-    def call(env)
-      failure_app(env).call(env)
-    end
-
-    def failure_app(env)
-      app = env["warden.options"] &&
-        (scope = env["warden.options"][:scope]) &&
-        Devise.mappings[scope.to_sym].failure_app
-
-      app || Devise::FailureApp
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:558d913f5a7dafd260d6ea67ba43271fcb9b23fb54e62fec62cbd6a93fbba560
+size 423

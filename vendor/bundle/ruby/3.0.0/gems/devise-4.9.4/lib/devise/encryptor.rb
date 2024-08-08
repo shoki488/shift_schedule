@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-require 'bcrypt'
-
-module Devise
-  module Encryptor
-    def self.digest(klass, password)
-      if klass.pepper.present?
-        password = "#{password}#{klass.pepper}"
-      end
-      ::BCrypt::Password.create(password, cost: klass.stretches).to_s
-    end
-
-    def self.compare(klass, hashed_password, password)
-      return false if hashed_password.blank?
-      bcrypt   = ::BCrypt::Password.new(hashed_password)
-      if klass.pepper.present?
-        password = "#{password}#{klass.pepper}"
-      end
-      password = ::BCrypt::Engine.hash_secret(password, bcrypt.salt)
-      Devise.secure_compare(password, hashed_password)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:82c5782958b75fd358ab79255eb93972aeae7a0558a184430b4d5142b6c8082c
+size 675

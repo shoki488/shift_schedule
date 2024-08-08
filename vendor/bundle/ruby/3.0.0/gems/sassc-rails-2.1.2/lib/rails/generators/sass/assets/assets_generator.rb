@@ -1,13 +1,3 @@
-require "rails/generators/named_base"
-
-module Sass
-  module Generators
-    class AssetsGenerator < ::Rails::Generators::NamedBase
-      source_root File.expand_path("../templates", __FILE__)
-
-      def copy_sass
-        template "stylesheet.sass", File.join('app/assets/stylesheets', class_path, "#{file_name}.sass")
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:73bbeef1c970f80c6b3f36798b9b85da8c8dd91512fb2d3fcb2f3d2083036bb9
+size 345

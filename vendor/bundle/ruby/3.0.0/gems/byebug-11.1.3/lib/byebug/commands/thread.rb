@@ -1,34 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "../subcommands"
-
-require_relative "../commands/thread/current"
-require_relative "../commands/thread/list"
-require_relative "../commands/thread/resume"
-require_relative "../commands/thread/stop"
-require_relative "../commands/thread/switch"
-
-module Byebug
-  #
-  # Manipulation of Ruby threads
-  #
-  class ThreadCommand < Command
-    include Subcommands
-
-    def self.regexp
-      /^\s* th(?:read)? (?:\s+ (.+))? \s*$/x
-    end
-
-    def self.description
-      <<-DESCRIPTION
-        th[read] <subcommand>
-
-        #{short_description}
-      DESCRIPTION
-    end
-
-    def self.short_description
-      "Commands to manipulate threads"
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:61a3a56266875dec34d4b123eebee83d5f4eaffc231914d41f5d3b9a307d8653
+size 696

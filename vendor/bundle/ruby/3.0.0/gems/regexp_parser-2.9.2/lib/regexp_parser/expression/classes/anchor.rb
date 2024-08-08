@@ -1,24 +1,3 @@
-module Regexp::Expression
-  module Anchor
-    class Base < Regexp::Expression::Base; end
-
-    class BeginningOfLine               < Anchor::Base; end
-    class EndOfLine                     < Anchor::Base; end
-
-    class BeginningOfString             < Anchor::Base; end
-    class EndOfString                   < Anchor::Base; end
-
-    class EndOfStringOrBeforeEndOfLine  < Anchor::Base; end
-
-    class WordBoundary                  < Anchor::Base; end
-    class NonWordBoundary               < Anchor::Base; end
-
-    class MatchStart                    < Anchor::Base; end
-
-    BOL      = BeginningOfLine
-    EOL      = EndOfLine
-    BOS      = BeginningOfString
-    EOS      = EndOfString
-    EOSobEOL = EndOfStringOrBeforeEndOfLine
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b74fd46840a3ec3add52bc4cf7116d0919fe3dccdd18c88605361716e2492e9
+size 745

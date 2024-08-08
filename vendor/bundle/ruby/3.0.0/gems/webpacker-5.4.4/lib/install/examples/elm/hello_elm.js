@@ -1,16 +1,3 @@
-// Run this example by adding <%= javascript_pack_tag "hello_elm" %> to the
-// head of your layout file, like app/views/layouts/application.html.erb.
-// It will render "Hello Elm!" within the page.
-
-import {
-  Elm
-} from '../Main'
-
-document.addEventListener('DOMContentLoaded', () => {
-  const target = document.createElement('div')
-
-  document.body.appendChild(target)
-  Elm.Main.init({
-    node: target
-  })
-})
+version https://git-lfs.github.com/spec/v1
+oid sha256:318f3b4eb3c22b1e1c4cb4f21d70d5fd0d42d831fc015ed5f22b295ba5ea2d7e
+size 413

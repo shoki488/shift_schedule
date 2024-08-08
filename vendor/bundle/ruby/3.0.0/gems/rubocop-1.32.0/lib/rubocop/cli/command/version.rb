@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  class CLI
-    module Command
-      # Display version.
-      # @api private
-      class Version < Base
-        self.command_name = :version
-
-        def run
-          puts RuboCop::Version.version(debug: false) if @options[:version]
-          puts RuboCop::Version.version(debug: true, env: env) if @options[:verbose_version]
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8db87908a5dd6e445b65b4cbb71336ceaa9c389c03868f3ea414074303db141
+size 413

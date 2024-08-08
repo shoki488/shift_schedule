@@ -1,20 +1,3 @@
-module FactoryBot
-  # @api private
-  class EvaluatorClassDefiner
-    def initialize(attributes, parent_class)
-      @parent_class = parent_class
-      @attributes = attributes
-
-      attributes.each do |attribute|
-        evaluator_class.define_attribute(attribute.name, &attribute.to_proc)
-      end
-    end
-
-    def evaluator_class
-      @evaluator_class ||= Class.new(@parent_class).tap do |klass|
-        klass.attribute_lists ||= []
-        klass.attribute_lists += [@attributes]
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:05cb5a4fd12fa7dee36f1e2426fa5b52e8821597669574f3f2232d53ceb5639d
+size 513

@@ -1,23 +1,3 @@
-module OpenAI
-  class Threads
-    def initialize(client:)
-      @client = client.beta(assistants: OpenAI::Assistants::BETA_VERSION)
-    end
-
-    def retrieve(id:)
-      @client.get(path: "/threads/#{id}")
-    end
-
-    def create(parameters: {})
-      @client.json_post(path: "/threads", parameters: parameters)
-    end
-
-    def modify(id:, parameters: {})
-      @client.json_post(path: "/threads/#{id}", parameters: parameters)
-    end
-
-    def delete(id:)
-      @client.delete(path: "/threads/#{id}")
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:680f2aab5f5d122c3acd63157c32ed4018d0bdcaaff8b709ddc7a934a3ff628f
+size 520

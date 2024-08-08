@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  # @api private
-  # @since v0.13.0
-  module Warning
-    # Prints a warning message with exact file and line location, similar to how
-    # Ruby's -W prints warnings.
-    #
-    # @param [String] message
-    # @return [void]
-    def self.warn(message)
-      location = caller_locations(2..2).first
-      path = location.path
-      lineno = location.lineno
-
-      Kernel.warn("#{path}:#{lineno}: warning: #{message}")
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b52d5ea1444cd9ba7ad96c53e23a763e01693641fb681a5e23d72ea1a442de0d
+size 475

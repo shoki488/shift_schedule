@@ -1,10 +1,3 @@
-Description:
-    The 'rails plugin new' command creates a skeleton for developing any
-    kind of Rails extension with ability to run tests using dummy Rails
-    application.
-
-Example:
-    rails plugin new ~/Code/Ruby/blog
-
-    This generates a skeletal Rails plugin in ~/Code/Ruby/blog.
-    See the README in the newly created plugin to get going.
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e33fadac509813591f9fcc87fab81b1dcbfe9ee2cf459156ca058c8dbcfa0a8
+size 349

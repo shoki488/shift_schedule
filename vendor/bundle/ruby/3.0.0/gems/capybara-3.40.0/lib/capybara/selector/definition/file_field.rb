@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-Capybara.add_selector(:file_field, locator_type: [String, Symbol]) do
-  label 'file field'
-  xpath do |locator, allow_self: nil, **options|
-    xpath = XPath.axis(allow_self ? :'descendant-or-self' : :descendant, :input)[
-      XPath.attr(:type) == 'file'
-    ]
-    locate_field(xpath, locator, **options)
-  end
-
-  filter_set(:_field, %i[disabled multiple name])
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef1e4d872ba5b0b6deea3601adfb845c1eaa00bf3a4c92b4635fd1d5a20835c1
+size 398

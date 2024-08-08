@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/number_helper/number_converter"
-
-module ActiveSupport
-  module NumberHelper
-    class NumberToPercentageConverter < NumberConverter # :nodoc:
-      self.namespace = :percentage
-
-      def convert
-        rounded_number = NumberToRoundedConverter.convert(number, options)
-        options[:format].gsub("%n", rounded_number)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f99aa5b3b3d02b116b93baaa803d8ee51631b88cf89b117787c7ec8adb4d117
+size 406

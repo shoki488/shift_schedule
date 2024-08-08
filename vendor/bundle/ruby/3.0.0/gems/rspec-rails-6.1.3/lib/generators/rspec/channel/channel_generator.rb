@@ -1,12 +1,3 @@
-require 'generators/rspec'
-
-module Rspec
-  module Generators
-    # @private
-    class ChannelGenerator < Base
-      def create_channel_spec
-        template 'channel_spec.rb.erb', target_path('channels', class_path, "#{file_name}_channel_spec.rb")
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:99f504b63d80f8a275174c33666cfdb99a25c7fd381983a0e22c89dc424fec64
+size 276

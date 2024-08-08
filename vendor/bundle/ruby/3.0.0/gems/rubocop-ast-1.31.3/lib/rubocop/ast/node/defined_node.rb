@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # A node extension for `defined?` nodes. This will be used in place of a
-    # plain node when the builder constructs the AST, making its methods
-    # available to all `send` nodes within RuboCop.
-    class DefinedNode < Node
-      include ParameterizedNode
-      include MethodDispatchNode
-
-      def node_parts
-        [nil, :defined?, *to_a]
-      end
-
-      alias arguments children
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:79e858efd7c4a34fe680ae6c9fd05ea9ee14754b12355da4d97d8caaa1f75ae5
+size 469

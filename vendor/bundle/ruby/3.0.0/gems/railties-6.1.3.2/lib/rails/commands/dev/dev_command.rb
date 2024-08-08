@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/dev_caching"
-
-module Rails
-  module Command
-    class DevCommand < Base # :nodoc:
-      no_commands do
-        def help
-          say "rails dev:cache # Toggle development mode caching on/off."
-        end
-      end
-
-      def cache
-        Rails::DevCaching.enable_by_file
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e52a73bf72001b105f5d63351a67645805929a06abbdb0170b0e542460429a68
+size 348

@@ -1,8 +1,3 @@
-/.bundle/
-/.yardoc
-/_yardoc/
-/coverage/
-/doc/
-/pkg/
-/spec/reports/
-/tmp/
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c65a475b30b228a381e09190c85fa0a71b06c8f60e51f1509cfd384d199af1e
+size 73

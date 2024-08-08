@@ -1,8 +1,3 @@
-# Ruby 1.x is no longer a supported runtime,
-# but its regex features are still recognized.
-#
-# Aliases for the latest patch version are provided as 'ruby/n.n',
-# e.g. 'ruby/1.9' refers to Ruby v1.9.3.
-Dir[File.expand_path('../versions/*.rb', __FILE__)].sort.each { |f| require_relative f }
-
-Regexp::Syntax::CURRENT = Regexp::Syntax.for("ruby/#{RUBY_VERSION}")
+version https://git-lfs.github.com/spec/v1
+oid sha256:b947d6afa94a380c76180229e4db8b469c5c246ed74abf99c5d10d22c3f9165b
+size 361

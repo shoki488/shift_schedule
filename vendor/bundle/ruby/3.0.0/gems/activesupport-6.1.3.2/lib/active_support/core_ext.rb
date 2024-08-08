@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
-Dir.glob(File.expand_path("core_ext/*.rb", __dir__)).sort.each do |path|
-  require path
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d86e5062fddf58938a552885ea272aff669fd8e0e8e80503889d92c7900a1397
+size 123

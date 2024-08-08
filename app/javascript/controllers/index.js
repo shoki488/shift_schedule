@@ -1,11 +1,3 @@
-// Import and register all your controllers from the importmap under controllers/*
-
-import { application } from "controllers/application"
-
-// Eager load all controllers defined in the import map under controllers/**/*_controller
-import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
-eagerLoadControllersFrom("controllers", application)
-
-// Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
-// import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
-// lazyLoadControllersFrom("controllers", application)
+version https://git-lfs.github.com/spec/v1
+oid sha256:3a4eeddb90aec4f4613a636152298f4d66faa6aa4132a986d90535599341cca1
+size 584

@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "rails/version"
-
-require "sassc"
-require_relative "rails/functions"
-require_relative "rails/importer"
-require_relative "rails/template"
-require_relative "rails/compressor"
-require_relative "rails/railtie"
+version https://git-lfs.github.com/spec/v1
+oid sha256:329fc1c72a5905218e794cc99286d5ac8008153a0489367f77073c5340a295ea
+size 253

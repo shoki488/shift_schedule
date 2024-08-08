@@ -1,13 +1,3 @@
-{
-  "name": "test_app",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "left-pad": "^1.2.0"
-  },
-  "devDependencies": {
-    "right-pad": "^1.0.1"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a816d76caf62610b1fcbd98f88913628cc118f3f44bdb6b9f1357b6f2990fd0
+size 212

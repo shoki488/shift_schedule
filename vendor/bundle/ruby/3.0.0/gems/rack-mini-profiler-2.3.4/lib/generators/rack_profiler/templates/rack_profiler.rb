@@ -1,8 +1,3 @@
-# frozen_string_literal: true
-
-if Rails.env.development?
-  require "rack-mini-profiler"
-
-  # initialization is skipped so trigger it
-  Rack::MiniProfilerRails.initialize!(Rails.application)
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:db4fc9f4fe2073db8cc455dc6b5f2488da7b094f850cf3f4fc37a8c11690595f
+size 194

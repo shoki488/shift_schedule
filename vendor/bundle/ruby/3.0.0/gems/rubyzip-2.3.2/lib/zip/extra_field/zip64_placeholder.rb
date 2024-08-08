@@ -1,15 +1,3 @@
-module Zip
-  # placeholder to reserve space for a Zip64 extra information record, for the
-  # local file header only, that we won't know if we'll need until after
-  # we write the file data
-  class ExtraField::Zip64Placeholder < ExtraField::Generic
-    HEADER_ID = ['9999'].pack('H*') # this ID is used by other libraries such as .NET's Ionic.zip
-    register_map
-
-    def initialize(_binstr = nil); end
-
-    def pack_for_local
-      "\x00" * 16
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:177b81eeff9c7d67518e858819edd5e630149645f4c4175ca55e66f21c8e36c9
+size 464

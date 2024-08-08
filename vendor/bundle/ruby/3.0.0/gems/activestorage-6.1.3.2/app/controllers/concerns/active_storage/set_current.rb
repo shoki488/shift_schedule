@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-# Sets the <tt>ActiveStorage::Current.host</tt> attribute, which the disk service uses to generate URLs.
-# Include this concern in custom controllers that call ActiveStorage::Blob#url,
-# ActiveStorage::Variant#url, or ActiveStorage::Preview#url so the disk service can
-# generate URLs using the same host, protocol, and base path as the current request.
-module ActiveStorage::SetCurrent
-  extend ActiveSupport::Concern
-
-  included do
-    before_action do
-      ActiveStorage::Current.host = request.base_url
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc86314d214e1dc970534a4a8b506f93727483ff2a6e2fba379a5229e471b2aa
+size 557

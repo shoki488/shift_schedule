@@ -1,28 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-#
-# = Mail Envelope
-#
-# The Envelope class provides a field for the first line in an
-# mbox file, that looks like "From mikel@test.lindsaar.net DATETIME"
-#
-# This envelope class reads that line, and turns it into an
-# Envelope.from and Envelope.date for your use.
-
-module Mail
-  class Envelope < NamedStructuredField
-    NAME = 'Envelope-From'
-
-    def element
-      @element ||= Mail::EnvelopeFromElement.new(value)
-    end
-
-    def from
-      element.address
-    end
-
-    def date
-      element.date_time
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c0046e30cae943e3446d77d88d71bac64770b1a7c4c9c53a451a69a4f77ec0d0
+size 573

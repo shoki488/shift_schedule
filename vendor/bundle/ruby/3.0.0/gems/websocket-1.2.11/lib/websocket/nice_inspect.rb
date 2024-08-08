@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-module WebSocket
-  module NiceInspect
-    # Recreate inspect as #to_s will be overwritten
-    def inspect
-      vars = instance_variables.map { |v| "#{v}=#{instance_variable_get(v).inspect}" }.join(', ')
-      insp = Kernel.format("#{self.class}:0x%08x", __id__)
-      "<#{insp} #{vars}>"
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c2eef9e5a5424741858e3de6646e8a8014961f11bb4d5614f66be4c175a8e320
+size 338

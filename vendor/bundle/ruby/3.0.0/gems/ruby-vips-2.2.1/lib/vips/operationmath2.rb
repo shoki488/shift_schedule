@@ -1,9 +1,3 @@
-module Vips
-  # The binary math operation to perform on an image. See {Image#math2}.
-  #
-  # * ':pow' pow()
-  # * ':wop' pow(), but with the arguments reversed
-
-  class OperationMath2 < Symbol
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0eea2f586bd6d30ab7c19c172ae033c50214182b12c77c205b051f9f766b292b
+size 203

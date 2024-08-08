@@ -1,5 +1,3 @@
-* check 'error' token handling.
-* interactive transition table monitor.
-* support backtracking.
-* output Ruby extension library?
-* LL(k)? (But it should not be called Racc)
+version https://git-lfs.github.com/spec/v1
+oid sha256:9788bb856f04bca24f6ff277b13801efb076a75f911668b791934a4fa699ecfb
+size 173

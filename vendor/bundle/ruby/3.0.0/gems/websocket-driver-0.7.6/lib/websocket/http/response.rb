@@ -1,29 +1,3 @@
-module WebSocket
-  module HTTP
-
-    class Response
-      include Headers
-
-      STATUS_LINE = /^(HTTP\/[0-9]+\.[0-9]+) ([0-9]{3}) ([\x20-\x7e]*)$/
-
-      attr_reader :code
-
-      def [](name)
-        @headers[HTTP.normalize_header(name)]
-      end
-
-      def body
-        @buffer.pack('C*')
-      end
-
-    private
-
-      def start_line(line)
-        return false unless parsed = line.scan(STATUS_LINE).first
-        @code = parsed[1].to_i
-        true
-      end
-    end
-
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a15db6ab8b7a7ff764867ef36597312ee0fabb06df729b4b472ab74145e31a99
+size 481

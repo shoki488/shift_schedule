@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators/resource_helpers"
-require "rails/generators/rails/model/model_generator"
-
-module Rails
-  module Generators
-    class ResourceGenerator < ModelGenerator # :nodoc:
-      include ResourceHelpers
-
-      hook_for :resource_controller, required: true do |controller|
-        invoke controller, [ controller_name, options[:actions] ]
-      end
-
-      class_option :actions, type: :array, banner: "ACTION ACTION", default: [],
-                             desc: "Actions for the resource controller"
-
-      hook_for :resource_route, required: true
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ccdb6852d79a19bf046cf4562d6c0ef857e7b80f0f94caebf6e4651f571bcf71
+size 615

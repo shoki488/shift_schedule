@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module Nodes
-    class Ordering < Unary
-      def nulls_first
-        NullsFirst.new(self)
-      end
-
-      def nulls_last
-        NullsLast.new(self)
-      end
-    end
-
-    class NullsFirst < Ordering
-      def reverse
-        NullsLast.new(expr.reverse)
-      end
-    end
-
-    class NullsLast < Ordering
-      def reverse
-        NullsFirst.new(expr.reverse)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0259d44ced820612b142f8baa2292779497a85d3909d4054bb052cb6b1ccca3d
+size 448

@@ -1,9 +1,3 @@
-/.bundle/
-/.yardoc
-/_yardoc/
-/coverage/
-/doc/
-/pkg/
-/spec/reports/
-/tmp/
-Gemfile.lock
+version https://git-lfs.github.com/spec/v1
+oid sha256:278ff1a14481bd579b61de94d8aff8aa743de34cb69d4e522e070518396acfb3
+size 86

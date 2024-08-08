@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "../setting"
-
-module Byebug
-  #
-  # Setting to customize the file where byebug's history is saved.
-  #
-  class SavefileSetting < Setting
-    DEFAULT = File.expand_path("#{ENV['HOME'] || '.'}/.byebug_save")
-
-    def banner
-      "File where settings are saved to. Default: ~/.byebug_save"
-    end
-
-    def to_s
-      "The command history file is #{value}\n"
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ae7371a8dea85290b811d97bb3668e6fdc77fea0b3b46c4a58d1a76a0a4c62c5
+size 423

@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    class VariableForce
-      # Mix-in module for classes which own a node and need branch information
-      # of the node. The user classes must implement #node and #scope.
-      module Branchable
-        def branch
-          return @branch if instance_variable_defined?(:@branch)
-
-          @branch = Branch.of(node, scope: scope)
-        end
-
-        def run_exclusively_with?(other)
-          return false if !branch || !other.branch
-
-          branch.exclusive_with?(other.branch)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a2712ae06f01d9dc810a6a4c8819cf45bc4069913430a82f122f8387eb0a6be
+size 585

@@ -1,27 +1,3 @@
-name: CI
-
-on: [push, pull_request]
-
-jobs:
-  ruby-versions:
-    uses: ruby/actions/.github/workflows/ruby_versions.yml@master
-    with:
-      min_version: 2.5
-
-  build:
-    needs: ruby-versions
-    name: build (${{ matrix.ruby }} / ${{ matrix.os }})
-    strategy:
-      matrix:
-        ruby: ${{ fromJson(needs.ruby-versions.outputs.versions) }}
-        os: [ ubuntu-latest, macos-latest ]
-    runs-on: ${{ matrix.os }}
-    steps:
-    - uses: actions/checkout@v4
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ matrix.ruby }}
-    - run: bundle install --jobs 4 --retry 3
-    - name: Run test
-      run: rake test
+version https://git-lfs.github.com/spec/v1
+oid sha256:98bfef7c4bf7be495d622bd71fe0f253c8a7102cd4510477f44707c903aaca81
+size 657

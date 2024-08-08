@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveModel
-  module Type
-    module Helpers # :nodoc: all
-      module Mutable
-        def cast(value)
-          deserialize(serialize(value))
-        end
-
-        # +raw_old_value+ will be the `_before_type_cast` version of the
-        # value (likely a string). +new_value+ will be the current, type
-        # cast value.
-        def changed_in_place?(raw_old_value, new_value)
-          raw_old_value != serialize(new_value)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f961a6ca7bb22276de25065f276c7c5e9cc759409d57b4d8b30a192c2d96e75a
+size 507

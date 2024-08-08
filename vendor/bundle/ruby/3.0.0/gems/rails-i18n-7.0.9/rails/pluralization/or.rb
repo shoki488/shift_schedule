@@ -1,3 +1,3 @@
-require 'rails_i18n/common_pluralizations/one_with_zero_other'
-
-::RailsI18n::Pluralization::OneWithZeroOther.with_locale(:or)
+version https://git-lfs.github.com/spec/v1
+oid sha256:013b7f00a2770d00c22017ab4679e372ebc83fbaaa4894c939fb44294bd39ca0
+size 125

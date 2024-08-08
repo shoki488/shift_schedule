@@ -1,26 +1,3 @@
-// Run this example by adding <%= javascript_pack_tag 'hello_react' %> to the head of your layout file,
-// like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
-// of the page.
-
-import React from 'react'
-import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
-
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
-
-Hello.defaultProps = {
-  name: 'David'
-}
-
-Hello.propTypes = {
-  name: PropTypes.string
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Hello name="React" />,
-    document.body.appendChild(document.createElement('div')),
-  )
-})
+version https://git-lfs.github.com/spec/v1
+oid sha256:ab631ddc8eebe7651c46a1cae751a69a95810d0c41988491a454f74726102b79
+size 644

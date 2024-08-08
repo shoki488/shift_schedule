@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-class String
-  # The inverse of <tt>String#include?</tt>. Returns true if the string
-  # does not include the other string.
-  #
-  #   "hello".exclude? "lo" # => false
-  #   "hello".exclude? "ol" # => true
-  #   "hello".exclude? ?h   # => false
-  def exclude?(string)
-    !include?(string)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:41773b18862d96071e29a082153066b435282397a9771886b3d86b6803d70405
+size 330

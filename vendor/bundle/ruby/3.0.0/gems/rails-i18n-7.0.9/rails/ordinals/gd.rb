@@ -1,24 +1,3 @@
-{
-  gd: {
-    number: {
-      nth: {
-        ordinals: -> (_key, number:, **_options) {
-          case number.to_i.abs
-          when 1
-            'ᵈ'
-          when 2
-            'ⁿᵃ'
-          when 3
-            'ˢ'
-          else
-            'ᵐʰ'
-          end
-        },
-
-        ordinalized:  -> (_key, number:, **_options) {
-          "#{number}#{ActiveSupport::Inflector.ordinal(number)}"
-        }
-      }
-    }
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:624fda91d4903f99a899b8cf31d400f495427b86f8cf4a8ce7c2f7a0ee49d67f
+size 437

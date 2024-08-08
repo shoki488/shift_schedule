@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-require 'nokogiri'
-
-require 'xpath/dsl'
-require 'xpath/expression'
-require 'xpath/literal'
-require 'xpath/union'
-require 'xpath/renderer'
-
-module XPath
-  extend XPath::DSL
-  include XPath::DSL
-
-  def self.generate
-    yield(self)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:acefdad652ca684b587bb340bd4ff5569ca1bdbbaebd740c74d4945853ce1b2c
+size 271

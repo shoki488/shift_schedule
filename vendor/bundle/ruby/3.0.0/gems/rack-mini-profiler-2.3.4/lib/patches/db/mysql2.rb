@@ -1,7 +1,3 @@
-# frozen_string_literal: true
-
-if defined?(Rack::MINI_PROFILER_PREPEND_MYSQL2_PATCH)
-  require "patches/db/mysql2/prepend"
-else
-  require "patches/db/mysql2/alias_method"
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:65a4ced158e7900e9679a1e531138c6954495e119382b06d95727665c5f319cb
+size 175

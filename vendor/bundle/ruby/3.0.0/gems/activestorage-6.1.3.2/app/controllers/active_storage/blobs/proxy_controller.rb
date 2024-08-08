@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-# Proxy files through application. This avoids having a redirect and makes files easier to cache.
-class ActiveStorage::Blobs::ProxyController < ActiveStorage::BaseController
-  include ActiveStorage::SetBlob
-  include ActiveStorage::SetHeaders
-
-  def show
-    http_cache_forever public: true do
-      set_content_headers_from @blob
-      stream @blob
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8477746b368c88013eebd5392dd72a751dabe5e077920f8db0ba49141fd284ea
+size 399

@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-module Nokogiri
-  module XML
-    module XPath
-      # The XPath search prefix to search globally, +//+
-      GLOBAL_SEARCH_PREFIX = "//"
-
-      # The XPath search prefix to search direct descendants of the root element, +/+
-      ROOT_SEARCH_PREFIX = "/"
-
-      # The XPath search prefix to search direct descendants of the current element, +./+
-      CURRENT_SEARCH_PREFIX = "./"
-
-      # The XPath search prefix to search anywhere in the current element's subtree, +.//+
-      SUBTREE_SEARCH_PREFIX = ".//"
-    end
-  end
-end
-
-require_relative "xpath/syntax_error"
+version https://git-lfs.github.com/spec/v1
+oid sha256:23fdc8ce0d4e8a6eeacb2994dc1dfa9745e0ef69a71f0aceec1d5617b74d6cdc
+size 597

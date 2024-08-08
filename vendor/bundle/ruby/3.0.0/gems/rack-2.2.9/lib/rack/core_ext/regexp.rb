@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-# Regexp has `match?` since Ruby 2.4
-# so to support Ruby < 2.4 we need to define this method
-
-module Rack
-  module RegexpExtensions
-    refine Regexp do
-      def match?(string, pos = 0)
-        !!match(string, pos)
-      end
-    end unless //.respond_to?(:match?)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3b0d47105b7448684539241372fbc6403c4326d1f6712f2f7e3e5fbe314bb8e
+size 307

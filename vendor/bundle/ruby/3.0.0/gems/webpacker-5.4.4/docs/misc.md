@@ -1,23 +1,3 @@
-# How-Tos
-
-
-## Ignoring swap files
-
-If you are using vim or emacs and want to ignore certain files you can add `ignore-loader`:
-
-```
-yarn add ignore-loader
-```
-
-and add `ignore-loader` to `config/webpack/environment.js`
-
-```js
-// ignores vue~ swap files
-const { environment } = require('@rails/webpacker')
-environment.loaders.append('ignore', {
-  test:  /.vue~$/,
-  loader: 'ignore-loader'
-})
-```
-
-And now all files with `.vue~` will be ignored by the webpack compiler.
+version https://git-lfs.github.com/spec/v1
+oid sha256:e18217b23f5a735e670b610514ab6c4f6c2f5437151134ef6e26e61e0c6c8e45
+size 470

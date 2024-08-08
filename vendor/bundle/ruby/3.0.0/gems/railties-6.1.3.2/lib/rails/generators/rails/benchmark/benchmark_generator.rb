@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators/named_base"
-
-module Rails
-  module Generators
-    class BenchmarkGenerator < NamedBase
-      IPS_GEM_NAME = "benchmark-ips"
-
-      argument :reports, type: :array, default: ["before", "after"]
-
-      def generate_layout
-        add_ips_to_gemfile unless ips_installed?
-        template("benchmark.rb.tt", "script/benchmarks/#{file_name}.rb")
-      end
-
-    private
-      def add_ips_to_gemfile
-        gem(IPS_GEM_NAME, group: [:development, :test])
-      end
-
-      def ips_installed?
-        in_root do
-          return File.read("Gemfile").match?(/gem.*\b#{IPS_GEM_NAME}\b.*/)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:21832c08e45e1f89d1b529569e2a9074de2f6f47af7864468aeb780a39639b93
+size 677

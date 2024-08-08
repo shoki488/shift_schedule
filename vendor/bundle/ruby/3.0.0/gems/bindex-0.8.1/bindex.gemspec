@@ -1,27 +1,3 @@
-$LOAD_PATH << File.expand_path('../lib', __FILE__)
-
-require 'skiptrace/version'
-
-Gem::Specification.new do |spec|
-  spec.name          = "bindex"
-  spec.version       = Skiptrace::VERSION
-  spec.authors       = ["Genadi Samokovarov"]
-  spec.email         = ["gsamokovarov@gmail.com"]
-  spec.extensions    = ["ext/skiptrace/extconf.rb"]
-  spec.summary       = "Bindings for your Ruby exceptions"
-  spec.homepage      = "https://github.com/gsamokovarov/bindex"
-  spec.license       = "MIT"
-
-  spec.required_ruby_version = ">= 2.0.0"
-
-  spec.files         = `git ls-files -z`.split("\x0")
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
-  spec.extensions    = ["ext/skiptrace/extconf.rb"]
-
-  spec.add_development_dependency "minitest", "~> 5.4"
-  spec.add_development_dependency "bundler"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "rake-compiler"
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:dfd70ea48504221a105b9dad9ea5f9265d5747c25587b86abe384dd2b939d06a
+size 1006

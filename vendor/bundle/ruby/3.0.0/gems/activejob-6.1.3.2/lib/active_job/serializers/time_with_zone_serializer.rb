@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveJob
-  module Serializers
-    class TimeWithZoneSerializer < TimeObjectSerializer # :nodoc:
-      def deserialize(hash)
-        Time.iso8601(hash["value"]).in_time_zone
-      end
-
-      private
-        def klass
-          ActiveSupport::TimeWithZone
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5823608e225a7f3c62911dad7c3d1cd041367180ef1aa988d4d5bf86e6c81a3c
+size 323

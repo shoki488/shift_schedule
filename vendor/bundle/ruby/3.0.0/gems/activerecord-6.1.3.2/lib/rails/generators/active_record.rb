@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators/named_base"
-require "rails/generators/active_model"
-require "rails/generators/active_record/migration"
-require "active_record"
-
-module ActiveRecord
-  module Generators # :nodoc:
-    class Base < Rails::Generators::NamedBase # :nodoc:
-      include ActiveRecord::Generators::Migration
-
-      # Set the current directory as base for the inherited generators.
-      def self.base_root
-        __dir__
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ab381a0a3f4149f87e5ca130e7d31872b42892fe4993add6615605d12baa214
+size 483

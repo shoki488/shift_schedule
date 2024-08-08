@@ -1,4 +1,3 @@
-class Regexp::Syntax::V2_6_2 < Regexp::Syntax::V2_6_0
-  implements :property,    UnicodeProperty::V2_6_2
-  implements :nonproperty, UnicodeProperty::V2_6_2
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:914fbaac43ad684de1b9a9655003c89d6d79eb8e96cf8f9b1e7c82de1c09d158
+size 160

@@ -1,8 +1,3 @@
-<% @previews.each do |preview| %>
-<h3><%= link_to preview.preview_name.titleize, url_for(controller: "rails/mailers", action: "preview", path: preview.preview_name) %></h3>
-<ul>
-<% preview.emails.each do |email| %>
-<li><%= link_to email, url_for(controller: "rails/mailers", action: "preview", path: "#{preview.preview_name}/#{email}") %></li>
-<% end %>
-</ul>
-<% end %>
+version https://git-lfs.github.com/spec/v1
+oid sha256:14ceaa244cc999ad5189452d5458e4d79e280147b1491247691049e5906e2413
+size 370

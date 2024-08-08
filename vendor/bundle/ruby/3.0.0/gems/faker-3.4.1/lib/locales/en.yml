@@ -1,8 +1,3 @@
-en:
-  time:
-    formats:
-      us: "%m/%d/%Y %I:%M %p"
-    am: "AM"
-    pm: "PM"
-  faker:
-    separator: ' & '
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2f2c7bf1ba6d568b9bc12b71319cd23a24492b8288501095c6f330f5fe7ba46
+size 111

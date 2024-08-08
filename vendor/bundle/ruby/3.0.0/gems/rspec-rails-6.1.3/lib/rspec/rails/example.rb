@@ -1,13 +1,3 @@
-require 'rspec/rails/example/rails_example_group'
-require 'rspec/rails/example/controller_example_group'
-require 'rspec/rails/example/request_example_group'
-require 'rspec/rails/example/helper_example_group'
-require 'rspec/rails/example/view_example_group'
-require 'rspec/rails/example/mailer_example_group'
-require 'rspec/rails/example/routing_example_group'
-require 'rspec/rails/example/model_example_group'
-require 'rspec/rails/example/job_example_group'
-require 'rspec/rails/example/feature_example_group'
-require 'rspec/rails/example/system_example_group'
-require 'rspec/rails/example/channel_example_group'
-require 'rspec/rails/example/mailbox_example_group'
+version https://git-lfs.github.com/spec/v1
+oid sha256:c985b45204b2693b0c69f3cc7c90720071688e95dc316ba68dbf84a1b09f78ad
+size 665

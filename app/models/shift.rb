@@ -1,26 +1,3 @@
-# == Schema Information
-#
-# Table name: shifts
-#
-#  id         :integer          not null, primary key
-#  calendar   :date
-#  content    :text
-#  creator    :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  user_id    :integer
-#
-class Shift < ApplicationRecord
-  has_many :shift_users
-  has_many :users, through: :shift_users
-
-  validates :calendar, presence: true
-  validate :today_after_calendar
-  validates :creator, presence: true
-
-  def today_after_calendar
-    if calendar.present? && calendar < Date.today
-      errors.add(:calendar, "本日以降の日付を選んでください。")
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:79541959c9e6aabb36c55345e2ebb780ab133b6ba9ee7e9463c09263a3da86bd
+size 654

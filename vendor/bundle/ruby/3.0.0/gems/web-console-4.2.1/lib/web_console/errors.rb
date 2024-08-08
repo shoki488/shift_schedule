@@ -1,9 +1,3 @@
-# frozen_string_literal: true
-
-module WebConsole
-  # The base class for every Web Console related error.
-  Error = Class.new(StandardError)
-
-  # Raised when there is an attempt to render a console more than once.
-  DoubleRenderError = Class.new(Error)
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a4ca0018718cba85a012b8f4e517044614e8171e8af349b939c6664b75e7b02
+size 256

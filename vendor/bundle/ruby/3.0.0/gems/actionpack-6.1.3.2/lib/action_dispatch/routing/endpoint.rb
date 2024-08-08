@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module ActionDispatch
-  module Routing
-    class Endpoint # :nodoc:
-      def dispatcher?;   false; end
-      def redirect?;     false; end
-      def matches?(req);  true; end
-      def app;            self; end
-      def rack_app;        app; end
-
-      def engine?
-        rack_app.is_a?(Class) && rack_app < Rails::Engine
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a239d351ea8c5ca72db5b0cd325eaee4743f2e894828a9438e24060e00dbffa
+size 384

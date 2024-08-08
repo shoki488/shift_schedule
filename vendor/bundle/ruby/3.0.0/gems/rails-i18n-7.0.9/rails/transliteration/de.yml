@@ -1,13 +1,3 @@
-de:
-  i18n:
-    transliterate:
-      rule:
-        ä: "ae"
-        é: "e"
-        ü: "ue"
-        ö: "oe"
-        Ä: "Ae"
-        Ü: "Ue"
-        Ö: "Oe"
-        ß: "ss"
-        ẞ: "SS"
+version https://git-lfs.github.com/spec/v1
+oid sha256:17699a6e1be5235d1c12ee79d665344ff198f229fe2bf97c4cb60a6d61bdad59
+size 196

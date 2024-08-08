@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # A mixin that helps give collection nodes array polymorphism.
-    module CollectionNode
-      extend Forwardable
-
-      ARRAY_METHODS =
-        (Array.instance_methods - Object.instance_methods - [:to_a]).freeze
-      private_constant :ARRAY_METHODS
-
-      def_delegators :to_a, *ARRAY_METHODS
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c648d84b97c4800e98727001792f43395ddd98629ecc983f5f16cb4f916533fd
+size 376

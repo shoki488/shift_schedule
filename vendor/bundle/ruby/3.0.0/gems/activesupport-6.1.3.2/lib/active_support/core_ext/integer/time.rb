@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/duration"
-require "active_support/core_ext/numeric/time"
-
-class Integer
-  # Returns a Duration instance matching the number of months provided.
-  #
-  #   2.months # => 2 months
-  def months
-    ActiveSupport::Duration.months(self)
-  end
-  alias :month :months
-
-  # Returns a Duration instance matching the number of years provided.
-  #
-  #   2.years # => 2 years
-  def years
-    ActiveSupport::Duration.years(self)
-  end
-  alias :year :years
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:813f129470ac9f613107203c3d22ce1c5fdfe4da4f0b4ee320c899ee0dc692f9
+size 501

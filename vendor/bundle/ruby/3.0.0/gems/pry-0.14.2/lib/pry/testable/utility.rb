@@ -1,34 +1,3 @@
-# frozen_string_literal: true
-
-require 'tempfile'
-
-class Pry
-  module Testable
-    module Utility
-      #
-      # Creates a Tempfile then unlinks it after the block has yielded.
-      #
-      # @yieldparam [String] file
-      #   The path of the temp file
-      #
-      # @return [void]
-      #
-      def temp_file(ext = '.rb')
-        file = Tempfile.open(['pry', ext])
-        yield file
-      ensure
-        file.close(true) if file
-      end
-
-      def unindent(*args)
-        Pry::Helpers::CommandHelpers.unindent(*args)
-      end
-
-      def inner_scope
-        catch(:inner_scope) do
-          yield -> { throw(:inner_scope, self) }
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:016f728284a02234f5cce1f9d7ab7b884550c8e6c9aaeb3a3c6ab9a74c0859a6
+size 679

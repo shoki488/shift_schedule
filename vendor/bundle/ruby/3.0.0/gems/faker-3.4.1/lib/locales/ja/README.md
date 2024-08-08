@@ -1,13 +1,3 @@
-To keep the Japanese locale file from getting unwieldy, this directory is
-used for the translations that you might expect to find in `ja.yml` in
-the parent directory.  Each file in this directory corresponds to the
-Faker class of the same name.  That is, `internet.yml` in this directory
-contains the data for the methods in `Faker::Internet`.
-
-Use the following YAML as the beginning of any new file you add to this
-directory:
-
-```
-ja:
-  faker:
-```
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7c6bd71f52626be1a66f840ea0fa7e1cf9353f5d3f2d77c3b50deb420e32a63
+size 450

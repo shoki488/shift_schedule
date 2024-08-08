@@ -1,7 +1,3 @@
-14a
-recipe[o::new]
-recipe[p::new]
-recipe[q::new]
-recipe[r::new]
-.
-2d
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b31a2d87da8de9a618f272af955278687831aa1a1d677155beb2e2d58055be4
+size 69

@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveJob
-  class ConfiguredJob #:nodoc:
-    def initialize(job_class, options = {})
-      @options = options
-      @job_class = job_class
-    end
-
-    def perform_now(*args)
-      @job_class.new(*args).perform_now
-    end
-    ruby2_keywords(:perform_now) if respond_to?(:ruby2_keywords, true)
-
-    def perform_later(*args)
-      @job_class.new(*args).enqueue @options
-    end
-    ruby2_keywords(:perform_later) if respond_to?(:ruby2_keywords, true)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:21184908dabdac537fac54ed641cbaf208080018c06339bcf98412699f5f4bbe
+size 498

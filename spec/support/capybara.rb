@@ -1,30 +1,3 @@
-RSpec.configure do |config|
-  config.before(:each, type: :system) do
-    driven_by :selenium, using: :headless_chrome
-  end
-
-  Capybara.register_driver :remote_chrome do |app|
-    url = 'http://chrome:4444/wd/hub'
-    caps = ::Selenium::WebDriver::Remote::Capabilities.chrome(
-      'goog:chromeOptions' => {
-        'args' => [
-          'no-sandbox',
-          'headless',
-          'disable-gpu',
-          'window-size=1680,1050',
-        ],
-      }
-    )
-    Capybara::Selenium::Driver.new(app, browser: :remote, url: url, desired_capabilities: caps)
-  end
-end
-
-Capybara.register_driver :remote_chrome do |app|
-  url = ENV['SELENIUM_DRIVER_URL']
-  options = ::Selenium::WebDriver::Chrome::Options.new
-  options.add_argument('no-sandbox')
-  options.add_argument('headless')
-  options.add_argument('disable-gpu')
-  options.add_argument('window-size=1680,1050')
-  Capybara::Selenium::Driver.new(app, browser: :remote, url: url, options: options)
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf367aa8d42b41fb35dbd10d9d3aa89edbf1ecdde4e144e2178e02990667e5c7
+size 952

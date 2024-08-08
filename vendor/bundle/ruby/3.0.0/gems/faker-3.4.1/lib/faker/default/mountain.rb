@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class Mountain < Base
-    class << self
-      ##
-      # Produces a name of a mountain
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::Mountain.name #=> "Mount Everest"
-      #
-      #  @faker.version next
-      def name
-        fetch('mountain.name')
-      end
-
-      ##
-      # Produces a name of a range
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::Mountain.range #=> "Dhaulagiri Himalaya"
-      #
-      # @faker.version next
-      def range
-        fetch('mountain.range')
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:041f780d0f29e4247019bac10cb10b6b92cc3a4a6f0b32af033a25ef093fbb4e
+size 608

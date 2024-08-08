@@ -1,20 +1,3 @@
-/*
- * Copyright (c) 2011-2017 Tony Arcieri. Distributed under the MIT License.
- * See LICENSE.txt for further details.
- */
-
-#include "../libev/ev.c"
-#include "nio4r.h"
-
-void Init_NIO_Selector();
-void Init_NIO_Monitor();
-void Init_NIO_ByteBuffer();
-
-void Init_nio4r_ext()
-{
-    ev_set_allocator(xrealloc);
-
-    Init_NIO_Selector();
-    Init_NIO_Monitor();
-    Init_NIO_ByteBuffer();
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4641c36bcb9f22e71203d4bfe7f86b988e018c7c4c31a4e83068f7ce72c232b0
+size 384

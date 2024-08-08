@@ -1,10 +1,3 @@
-ja:
-  faker:
-    relationship:
-      familial:
-        direct: ['父', '母', '姉', '兄']
-        extended: ['祖父', '祖母', '叔父', '叔母', '従兄弟', '姪', '甥', '孫息子', '孫娘']
-      in_law: ['義父', '義母', '義姉', '義兄']
-      spouse: ['夫', '妻']
-      parent: ['父', '母']
-      sibling: ['姉', '兄']
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb1f069f00202b5993bd67d30d5abb7e9d0fecbdceefeb38bafb92407dd09c09
+size 344

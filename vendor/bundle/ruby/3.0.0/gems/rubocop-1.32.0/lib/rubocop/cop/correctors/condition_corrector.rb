@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # This class does condition autocorrection
-    class ConditionCorrector
-      class << self
-        def correct_negative_condition(corrector, node)
-          condition = negated_condition(node)
-
-          corrector.replace(node.loc.keyword, node.inverse_keyword)
-          corrector.replace(condition, condition.children.first.source)
-        end
-
-        private
-
-        def negated_condition(node)
-          condition = node.condition
-          condition = condition.children.first while condition.begin_type?
-          condition
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e6aa51ce19ab300f6a80bd2bf3e211bea5ce169010880a0117551a4821521cf0
+size 636

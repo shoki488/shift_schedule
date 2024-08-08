@@ -1,6 +1,3 @@
-.DS_Store
-pkg
-.*~
-
-*.gem
-Gemfile.lock
+version https://git-lfs.github.com/spec/v1
+oid sha256:2dde2e0545cc34d845a41bf1abc2f4969644d11468a2d4b927418e6fcede6c7a
+size 38

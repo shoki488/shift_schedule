@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-
-# Released under the MIT License.
-# Copyright, 2011-2018, by Tony Arcieri.
-# Copyright, 2018-2024, by Samuel Williams.
-# Copyright, 2023, by Tsimnuj Hawj.
-
-module NIO
-  VERSION = "2.7.3"
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea42a0f8640ae0d3b4e6029f8fbaa154192f1d5369525720ee58d9dd3326e0ab
+size 222

@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # This module provides functionality for checking if names match the
-    # configured EnforcedStyle.
-    module ConfigurableNaming
-      include ConfigurableFormatting
-
-      FORMATS = {
-        snake_case: /^@{0,2}[\d[[:lower:]]_]+[!?=]?$/,
-        camelCase:  /^@{0,2}(?:_|_?[[[:lower:]]][\d[[:lower:]][[:upper:]]]*)[!?=]?$/
-      }.freeze
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3217a6747bae391c7881368154f3c807e63bfaa7c7d1f9ebb5e30109b1ed4f7
+size 423

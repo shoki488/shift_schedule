@@ -1,15 +1,3 @@
-module Regexp::Syntax
-  module Token
-    module Anchor
-      Basic       = %i[bol eol]
-      Extended    = Basic + %i[word_boundary nonword_boundary]
-      String      = %i[bos eos eos_ob_eol]
-      MatchStart  = %i[match_start]
-
-      All = Extended + String + MatchStart
-      Type = :anchor
-    end
-
-    Map[Anchor::Type] = Anchor::All
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:95705c3b6f8861598e60718bf000e621664eff63513c497a807da5ba4b67ba75
+size 349

@@ -1,16 +1,3 @@
-/**
- * @headerfile signal_handlers.h
- * Signal handlers to stop the zombie hordes
- *
- * Catch and handle signals better so that we die faster like a good meat puppet.
- */
-
-
-#ifndef fsevent_watch_signal_handlers_h
-#define fsevent_watch_signal_handlers_h
-
-
-void install_signal_handlers(void);
-
-
-#endif // fsevent_watch_signal_handlers_h
+version https://git-lfs.github.com/spec/v1
+oid sha256:febf3a19c56547c4a4cacfd831071d3fa58d634e527ccd5d40fc808d8300e98c
+size 335

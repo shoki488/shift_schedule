@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module SassC
-  class Dependency
-    attr_reader :filename
-    attr_reader :options
-
-    def initialize(filename)
-      @filename = filename
-      @options = { filename: @filename }
-    end
-
-    def self.from_filenames(filenames)
-      filenames.map { |f| new(f) }
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f7d795c3310e7b62cf246d948ce76c94a3ac2151a5b91eaaaa22c797a74e14b5
+size 313

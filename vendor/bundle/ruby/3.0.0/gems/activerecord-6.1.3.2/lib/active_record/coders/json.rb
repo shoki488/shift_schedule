@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module Coders # :nodoc:
-    class JSON # :nodoc:
-      def self.dump(obj)
-        ActiveSupport::JSON.encode(obj)
-      end
-
-      def self.load(json)
-        ActiveSupport::JSON.decode(json) unless json.blank?
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba69ef7030541d46a28d1bcfce75cad9c312da5ecf95125467f4466c54eacada
+size 292

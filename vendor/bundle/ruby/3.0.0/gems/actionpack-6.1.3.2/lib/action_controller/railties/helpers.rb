@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-module ActionController
-  module Railties
-    module Helpers
-      def inherited(klass)
-        super
-        return unless klass.respond_to?(:helpers_path=)
-
-        if namespace = klass.module_parents.detect { |m| m.respond_to?(:railtie_helpers_paths) }
-          paths = namespace.railtie_helpers_paths
-        else
-          paths = ActionController::Helpers.helpers_path
-        end
-
-        klass.helpers_path = paths
-
-        if klass.superclass == ActionController::Base && ActionController::Base.include_all_helpers
-          klass.helper :all
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ccebe2738ded11d6bfab65fd4d733f78b4924fe25e94aa6db8b169e70644b69
+size 624

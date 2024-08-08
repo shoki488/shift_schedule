@@ -1,11 +1,3 @@
-module RailsI18n
-  def self.enabled_modules
-    @enabled_modules ||= Set.new
-  end
-
-  def self.enabled_modules=(other)
-    @enabled_modules = Set.new(other)
-  end
-end
-
-require 'rails_i18n/railtie'
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c819b9482faf4d47ae7098aa43c2d10f9e74b4699ff11ccfa9985d687792a76
+size 197

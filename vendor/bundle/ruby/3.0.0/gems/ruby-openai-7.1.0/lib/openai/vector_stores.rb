@@ -1,27 +1,3 @@
-module OpenAI
-  class VectorStores
-    def initialize(client:)
-      @client = client.beta(assistants: OpenAI::Assistants::BETA_VERSION)
-    end
-
-    def list(parameters: {})
-      @client.get(path: "/vector_stores", parameters: parameters)
-    end
-
-    def retrieve(id:)
-      @client.get(path: "/vector_stores/#{id}")
-    end
-
-    def create(parameters: {})
-      @client.json_post(path: "/vector_stores", parameters: parameters)
-    end
-
-    def modify(id:, parameters: {})
-      @client.json_post(path: "/vector_stores/#{id}", parameters: parameters)
-    end
-
-    def delete(id:)
-      @client.delete(path: "/vector_stores/#{id}")
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe7d2f3772112f42533051c6efe2a52f7032b0e7ff2e52ebbb75baa3d0b864c2
+size 653

@@ -1,11 +1,3 @@
-class Net::SMTP
-  class AuthLogin < Net::SMTP::Authenticator
-    auth_type :login
-
-    def auth(user, secret)
-      continue('AUTH LOGIN')
-      continue(base64_encode(user))
-      finish(base64_encode(secret))
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:69ca13a0b77cccdd549a07e00fa13c8bcd9c81bac79dc7526a5473a41cd4a779
+size 229

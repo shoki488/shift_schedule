@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class ShellMode < Pry::ClassCommand
-      match 'shell-mode'
-      group 'Input and Output'
-      description 'Toggle shell mode. Bring in pwd prompt and file completion.'
-
-      banner <<-'BANNER'
-        Toggle shell mode. Bring in pwd prompt and file completion.
-      BANNER
-
-      def process
-        state.disabled ^= true
-
-        if state.disabled
-          state.prev_prompt = pry_instance.prompt
-          pry_instance.prompt = Pry::Prompt[:shell]
-        else
-          pry_instance.prompt = state.prev_prompt
-        end
-      end
-    end
-
-    Pry::Commands.add_command(Pry::Command::ShellMode)
-    Pry::Commands.alias_command 'file-mode', 'shell-mode'
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:486916169c122b3fa078bfdf97233b7939f8e7bdf7b3d01a18b41f048558f4e6
+size 736

@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module ActionController
-  module ApiRendering
-    extend ActiveSupport::Concern
-
-    included do
-      include Rendering
-    end
-
-    def render_to_body(options = {})
-      _process_options(options)
-      super
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:87d2eb7dee440529f76053dffa8f6b64ff35b69fdc59e42dd8377a20be40908b
+size 260

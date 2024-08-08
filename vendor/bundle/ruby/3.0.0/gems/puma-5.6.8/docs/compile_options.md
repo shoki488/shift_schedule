@@ -1,21 +1,3 @@
-# Compile Options
-
-There are some `cflags` provided to change Puma's default configuration for its
-C extension.
-
-## Query String, `PUMA_QUERY_STRING_MAX_LENGTH`
-
-By default, the max length of `QUERY_STRING` is `1024 * 10`. But you may want to
-adjust it to accept longer queries in GET requests.
-
-For manual install, pass the `PUMA_QUERY_STRING_MAX_LENGTH` option like this:
-
-```
-gem install puma -- --with-cflags="-D PUMA_QUERY_STRING_MAX_LENGTH=64000"
-```
-
-For Bundler, use its configuration system:
-
-```
-bundle config build.puma "--with-cflags='-D PUMA_QUERY_STRING_MAX_LENGTH=64000'"
-```
+version https://git-lfs.github.com/spec/v1
+oid sha256:9f19f619c46bd67d1483e90b137ced8298029182e32e64861b71e483772356d8
+size 591

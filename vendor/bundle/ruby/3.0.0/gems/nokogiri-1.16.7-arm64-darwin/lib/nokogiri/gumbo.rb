@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-module Nokogiri
-  module Gumbo
-    # The default maximum number of attributes per element.
-    DEFAULT_MAX_ATTRIBUTES = 400
-
-    # The default maximum number of errors for parsing a document or a fragment.
-    DEFAULT_MAX_ERRORS = 0
-
-    # The default maximum depth of the DOM tree produced by parsing a document
-    # or fragment.
-    DEFAULT_MAX_TREE_DEPTH = 400
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:22af90f0f1003a6c0a5fac46a0bbcfa94436e5c4da19db0709ba8bc5f7431da3
+size 406

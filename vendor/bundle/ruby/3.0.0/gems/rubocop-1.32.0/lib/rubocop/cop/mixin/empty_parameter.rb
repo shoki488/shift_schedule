@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # Common code for empty parameter cops.
-    module EmptyParameter
-      extend NodePattern::Macros
-
-      private
-
-      # @!method empty_arguments?(node)
-      def_node_matcher :empty_arguments?, <<~PATTERN
-        (block _ $(args) _)
-      PATTERN
-
-      def check(node)
-        empty_arguments?(node) do |args|
-          return if args.empty_and_without_delimiters?
-
-          add_offense(args) { |corrector| autocorrect(corrector, args) }
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ce217120299a986d5f1357e8e5116ee1c2f6715d3c0c1bca1e17a0a1aedc77a5
+size 546

@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-# Mongoid 3 patches
-class Moped::Node
-  alias_method :process_without_profiling, :process
-  def process(*args, &blk)
-    return process_without_profiling(*args, &blk) unless SqlPatches.should_measure?
-
-    result, _record = SqlPatches.record_sql(args[0].log_inspect) do
-      process_without_profiling(*args, &blk)
-    end
-    result
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:203ae4b8d7cca5b9de9da9f8379ba8d820a38038a4d5f35bb7a28baf785cad40
+size 375

@@ -1,29 +1,3 @@
-{
-  "name": "@rails/actiontext",
-  "version": "6.1.3-2",
-  "description": "Edit and display rich text in Rails applications",
-  "main": "app/javascript/actiontext/index.js",
-  "files": [
-    "app/javascript/actiontext/*.js"
-  ],
-  "homepage": "https://rubyonrails.org/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rails/rails.git"
-  },
-  "bugs": {
-    "url": "https://github.com/rails/rails/issues"
-  },
-  "author": "Basecamp, LLC",
-  "contributors": [
-    "Javan Makhmali <javan@javan.us>",
-    "Sam Stephenson <sstephenson@gmail.com>"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "@rails/activestorage": "^6.0.0-alpha"
-  },
-  "peerDependencies": {
-    "trix": "^1.2.0"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d1fe38288ef5855ff1db3480253fd501bd59df749b47a28227e9ba071ca7e0d
+size 710

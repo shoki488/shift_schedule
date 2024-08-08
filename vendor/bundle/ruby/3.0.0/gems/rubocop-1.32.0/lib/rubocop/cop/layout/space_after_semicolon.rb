@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Layout
-      # Checks for semicolon (;) not followed by some kind of space.
-      #
-      # @example
-      #   # bad
-      #   x = 1;y = 2
-      #
-      #   # good
-      #   x = 1; y = 2
-      class SpaceAfterSemicolon < Base
-        include SpaceAfterPunctuation
-        extend AutoCorrector
-
-        def space_style_before_rcurly
-          cfg = config.for_cop('Layout/SpaceInsideBlockBraces')
-          cfg['EnforcedStyle'] || 'space'
-        end
-
-        def kind(token)
-          'semicolon' if token.semicolon?
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:42e78a06fe7bdba0ff6a3f7cf5437735730e9211ca3b3cbc7da85638d62c3bca
+size 627

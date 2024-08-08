@@ -1,28 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class ToggleColor < Pry::ClassCommand
-      match 'toggle-color'
-      group 'Misc'
-      description 'Toggle syntax highlighting.'
-
-      banner <<-'BANNER'
-        Usage: toggle-color
-
-        Toggle syntax highlighting.
-      BANNER
-
-      def process
-        pry_instance.color = color_toggle
-        output.puts "Syntax highlighting #{pry_instance.color ? 'on' : 'off'}"
-      end
-
-      def color_toggle
-        !pry_instance.color
-      end
-
-      Pry::Commands.add_command(self)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b45cef8c624039922cc80f8abf7561e8643a06f79130bbd1ae9559f42825443
+size 566

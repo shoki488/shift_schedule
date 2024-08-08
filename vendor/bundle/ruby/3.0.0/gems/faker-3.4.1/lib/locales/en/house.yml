@@ -1,5 +1,3 @@
-en:
-  faker:
-    house:
-      furniture: ["chair", "armchair", "table", "dining table", "stool", "sofa", "couch", "bath", "bed", "cupboard", "drawers", "dresser", "floor lamp", "bedside table", "futon"]
-      rooms: ["kitchen", "living room", "reception room", "bedroom", "master bedroom", "guest room", "drawing room", "conservatory", "porch", "hallway", "pantry", "sunroom", "bathroom", "ensuite bathroom", "cellar", "attic", "loft"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f705a3a65627c364d2144e02310a6b2bf76c1ea6894c6a61b25453b65c7b341
+size 436

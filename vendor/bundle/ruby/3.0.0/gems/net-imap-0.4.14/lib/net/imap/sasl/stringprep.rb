@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-module Net::IMAP::SASL
-
-  # Alias for Net::IMAP::StringPrep::SASLprep.
-  SASLprep            = Net::IMAP::StringPrep::SASLprep
-  StringPrep          = Net::IMAP::StringPrep                      # :nodoc:
-  BidiStringError     = Net::IMAP::StringPrep::BidiStringError     # :nodoc:
-  ProhibitedCodepoint = Net::IMAP::StringPrep::ProhibitedCodepoint # :nodoc:
-  StringPrepError     = Net::IMAP::StringPrep::StringPrepError     # :nodoc:
-
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a6abd40ac1ba7bca99d8dae7108a65387ee003f764fa2a2e4cfe4135d6d60d5a
+size 471

@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module ActionMailbox
-  # Returns the currently-loaded version of Action Mailbox as a <tt>Gem::Version</tt>.
-  def self.gem_version
-    Gem::Version.new VERSION::STRING
-  end
-
-  module VERSION
-    MAJOR = 6
-    MINOR = 1
-    TINY  = 3
-    PRE   = "2"
-
-    STRING = [MAJOR, MINOR, TINY, PRE].compact.join(".")
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9310ebcf6254a45a4e37be215992da5cad3add691d965f3a5b684e55fab6d0da
+size 349

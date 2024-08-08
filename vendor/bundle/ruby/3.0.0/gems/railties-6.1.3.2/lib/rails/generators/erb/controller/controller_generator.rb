@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators/erb"
-
-module Erb # :nodoc:
-  module Generators # :nodoc:
-    class ControllerGenerator < Base # :nodoc:
-      argument :actions, type: :array, default: [], banner: "action action"
-
-      def copy_view_files
-        base_path = File.join("app/views", class_path, file_name)
-        empty_directory base_path
-
-        actions.each do |action|
-          @action = action
-          formats.each do |format|
-            @path = File.join(base_path, filename_with_extensions(action, format))
-            template filename_with_extensions(:view, format), @path
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:82f4452fccad10c22056cd0270f31afa16a2889bd2c1827c5ac8389fd3ad4cfc
+size 665

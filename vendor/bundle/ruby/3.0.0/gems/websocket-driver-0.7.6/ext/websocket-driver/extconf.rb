@@ -1,4 +1,3 @@
-require 'mkmf'
-extension_name = 'websocket_mask'
-dir_config(extension_name)
-create_makefile(extension_name)
+version https://git-lfs.github.com/spec/v1
+oid sha256:92ee469c779f1697ad4a5f13f9661789dfa89e77e570115c2312d3ae63c8bcd7
+size 108

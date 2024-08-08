@@ -1,30 +1,3 @@
-#ifndef SASS_BASE64VLQ_H
-#define SASS_BASE64VLQ_H
-
-#include <string>
-
-namespace Sass {
-
-  class Base64VLQ {
-
-  public:
-
-    sass::string encode(const int number) const;
-
-  private:
-
-    char base64_encode(const int number) const;
-
-    int to_vlq_signed(const int number) const;
-
-    static const char* CHARACTERS;
-
-    static const int VLQ_BASE_SHIFT;
-    static const int VLQ_BASE;
-    static const int VLQ_BASE_MASK;
-    static const int VLQ_CONTINUATION_BIT;
-  };
-
-}
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:078b19edf7e1c51af5ef17a90db241af76707b6a77ed5123c578d6455b796c4c
+size 478

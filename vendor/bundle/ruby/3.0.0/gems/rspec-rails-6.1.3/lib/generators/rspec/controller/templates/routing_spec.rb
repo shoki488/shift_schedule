@@ -1,13 +1,3 @@
-require 'rails_helper'
-
-<% module_namespacing do -%>
-RSpec.describe '<%= class_name %>Controller', <%= type_metatag(:routing) %> do
-  describe 'routing' do
-<% for action in actions -%>
-    it 'routes to #<%= action %>' do
-      expect(get: "/<%= class_name.underscore %>/<%= action %>").to route_to("<%= class_name.underscore %>#<%= action  %>")
-    end
-<% end -%>
-  end
-end
-<% end -%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:9f5270f6720ee56f1aa06a3886f98ae45c14e537d9935663039f6bb4d700a0a1
+size 386

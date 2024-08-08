@@ -1,7 +1,3 @@
-require "test_helper"
-
-class <%= class_name %>Test < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:774cb1eafc9f516fc51f1d70cf95bdc84bfe025f3ff63ce1a69f5770ce5bccc8
+size 131

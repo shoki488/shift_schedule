@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/core_ext/time/zones"
-
-module ActiveModel
-  module Type
-    module Helpers # :nodoc: all
-      module Timezone
-        def is_utc?
-          ::Time.zone_default.nil? || ::Time.zone_default.match?("UTC")
-        end
-
-        def default_timezone
-          is_utc? ? :utc : :local
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d95ebf32432036a9785c0ae2496626a6caa85f45d37639aac55966252280a98a
+size 373

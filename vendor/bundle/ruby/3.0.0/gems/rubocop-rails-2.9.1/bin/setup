@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
-IFS=$'\n\t'
-set -vx
-
-bundle install
+version https://git-lfs.github.com/spec/v1
+oid sha256:16a3f35e6ace89d293a35e89d7f8344701dab94941664500e5308ba5a02c8554
+size 75

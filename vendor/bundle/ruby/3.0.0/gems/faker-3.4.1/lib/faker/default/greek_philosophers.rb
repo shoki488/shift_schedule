@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class GreekPhilosophers < Base
-    class << self
-      ##
-      # Produces the name of a Greek philosopher.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::GreekPhilosophers.name #=> "Socrates"
-      #
-      # @faker.version 1.9.0
-      def name
-        fetch('greek_philosophers.names')
-      end
-
-      ##
-      # Produces a quote from a Greek philosopher.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::GreekPhilosophers.quote #=> "Only the educated are free."
-      #
-      # @faker.version 1.9.0
-      def quote
-        fetch('greek_philosophers.quotes')
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:50a6ba2ea1ebb4c91863d92f22cce2ad525f47152873644d1f021c94b82a6665
+size 689

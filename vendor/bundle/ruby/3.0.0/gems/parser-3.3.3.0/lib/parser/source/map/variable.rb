@@ -1,31 +1,3 @@
-# frozen_string_literal: true
-
-module Parser
-  module Source
-
-    class Map::Variable < Map
-      attr_reader :name
-      attr_reader :operator
-
-      def initialize(name_l, expression_l=name_l)
-        @name = name_l
-
-        super(expression_l)
-      end
-
-      ##
-      # @api private
-      #
-      def with_operator(operator_l)
-        with { |map| map.update_operator(operator_l) }
-      end
-
-      protected
-
-      def update_operator(operator_l)
-        @operator = operator_l
-      end
-    end
-
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cd0246287786e8cef9e224b480da4b3e0589005cc5098c78a876332ec768416f
+size 513

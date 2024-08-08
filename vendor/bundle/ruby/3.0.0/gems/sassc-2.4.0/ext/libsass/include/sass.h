@@ -1,15 +1,3 @@
-#ifndef SASS_H
-#define SASS_H
-
-// #define DEBUG 1
-
-// include API headers
-#include <sass/base.h>
-#include <sass/version.h>
-#include <sass/values.h>
-#include <sass/functions.h>
-#include <sass/context.h>
-#include <sass2scss.h>
-
-#endif
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:c6e83e478340f599674d715b656755add918295e6a5b35acfb9aacfb6be47018
+size 234

@@ -1,6 +1,3 @@
-source "https://rubygems.org"
-
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-
-# Specify your gem's dependencies in webdriver.gemspec
-gemspec
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c6a67d77820d5dd766bce607737befce2dbb898a97a298741c9152c1ca1d4f7
+size 164

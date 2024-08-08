@@ -1,15 +1,3 @@
-require 'json/common'
-
-module JSON
-  # This module holds all the modules/classes that implement JSON's
-  # functionality as C extensions.
-  module Ext
-    require 'json/ext/parser'
-    require 'json/ext/generator'
-    $DEBUG and warn "Using Ext extension for JSON."
-    JSON.parser = Parser
-    JSON.generator = Generator
-  end
-
-  JSON_LOADED = true unless defined?(::JSON::JSON_LOADED)
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6759cf47337135c9954218820995d1f1337395906a1881264bba6c0cdb5d61cb
+size 391

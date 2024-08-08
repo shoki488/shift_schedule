@@ -1,16 +1,3 @@
-# A Ruby library implementing OpenBSD's bcrypt()/crypt_blowfish algorithm for
-# hashing passwords.
-module BCrypt
-end
-
-if RUBY_PLATFORM == "java"
-  require 'java'
-else
-  require "openssl"
-end
-
-require "bcrypt_ext"
-
-require 'bcrypt/error'
-require 'bcrypt/engine'
-require 'bcrypt/password'
+version https://git-lfs.github.com/spec/v1
+oid sha256:dded96afc49dbe46305eb26c23b54441c2856ee405a3aad0e0777e622bcaf888
+size 287

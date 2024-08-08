@@ -1,28 +1,3 @@
-# frozen_string_literal: true
-require_relative 'template'
-require 'prawn'
-
-module Tilt
-  # Prawn template implementation. See: http://prawnpdf.org
-  class PrawnTemplate < Template
-    self.default_mime_type = 'application/pdf'
-    
-    def prepare
-      @options[:page_size] = 'A4' unless @options.has_key?(:page_size)
-      @options[:page_layout] = :portrait unless @options.has_key?(:page_layout)
-      @engine = ::Prawn::Document.new(@options)
-    end
-    
-    def evaluate(scope, locals, &block)
-      pdf = @engine
-      locals = locals.dup
-      locals[:pdf] = pdf
-      super
-      pdf.render
-    end
-    
-    def precompiled_template(locals)
-      @data.to_str
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a19fb043f2da2e6641f46b8c82cf0c8d43e72f8d59aca5761a426ca840934f6
+size 687

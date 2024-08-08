@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-module Rails
-  module ConsoleMethods
-    # Gets the helper methods available to the controller.
-    #
-    # This method assumes an +ApplicationController+ exists, and it extends +ActionController::Base+
-    def helper
-      ApplicationController.helpers
-    end
-
-    # Gets a new instance of a controller object.
-    #
-    # This method assumes an +ApplicationController+ exists, and it extends +ActionController::Base+
-    def controller
-      @controller ||= ApplicationController.new
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:54f14251a3ab2e5e23844e5eba759a0d122b456a8e166fb6c7c256b5b6636a63
+size 536

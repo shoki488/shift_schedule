@@ -1,12 +1,3 @@
-#ifndef SQLITE3_AGGREGATOR_RUBY
-#define SQLITE3_AGGREGATOR_RUBY
-
-#include <sqlite3_ruby.h>
-
-VALUE
-rb_sqlite3_define_aggregator2(VALUE self, VALUE aggregator, VALUE ruby_name);
-
-void
-rb_sqlite3_aggregator_init(void);
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:b025cc0f5dc2bbb0e5c3c890e0c64319cfebfbdcf20c29ed93204a28f93035f5
+size 224

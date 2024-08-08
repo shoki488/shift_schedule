@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-module RuboCop
-  module Server
-    module ClientCommand
-      # This class is a client command to restart server process.
-      # @api private
-      class Restart < Base
-        def run
-          ClientCommand::Stop.new.run
-          ClientCommand::Start.new.run
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:3248e5bd2ccd74b6535b8dd8fa6c8e52e3ea56084322de6c36929741cdf86d7d
+size 533

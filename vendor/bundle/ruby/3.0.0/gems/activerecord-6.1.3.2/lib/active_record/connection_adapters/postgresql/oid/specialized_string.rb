@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module ConnectionAdapters
-    module PostgreSQL
-      module OID # :nodoc:
-        class SpecializedString < Type::String # :nodoc:
-          attr_reader :type
-
-          def initialize(type, **options)
-            @type = type
-            super(**options)
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a77250067b078d11e005defddbc25e5690017ce2a92c1d23cc7ba87aba6e5ce4
+size 364

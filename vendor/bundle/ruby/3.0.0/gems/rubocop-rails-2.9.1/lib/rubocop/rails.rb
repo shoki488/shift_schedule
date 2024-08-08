@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  # RuboCop Rails project namespace
-  module Rails
-    PROJECT_ROOT   = Pathname.new(__dir__).parent.parent.expand_path.freeze
-    CONFIG_DEFAULT = PROJECT_ROOT.join('config', 'default.yml').freeze
-    CONFIG         = YAML.safe_load(CONFIG_DEFAULT.read).freeze
-
-    private_constant(:CONFIG_DEFAULT, :PROJECT_ROOT)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f312d9bc235ee7f9fef27096dce4d2a2e29a5db21421a89f62ae85a6a017d300
+size 372

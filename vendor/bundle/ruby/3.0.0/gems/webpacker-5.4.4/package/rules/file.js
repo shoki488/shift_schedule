@@ -1,21 +1,3 @@
-const { join, normalize } = require('path')
-const { source_path: sourcePath, static_assets_extensions: fileExtensions } = require('../config')
-
-module.exports = {
-  test: new RegExp(`(${fileExtensions.join('|')})$`, 'i'),
-  use: [
-    {
-      loader: 'file-loader',
-      options: {
-        name(file) {
-          if (file.includes(normalize(sourcePath))) {
-            return 'media/[path][name]-[hash].[ext]'
-          }
-          return 'media/[folder]/[name]-[hash:8].[ext]'
-        },
-        esModule: false,
-        context: join(sourcePath)
-      }
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e610a77208da621a7892306fe9fca30505824d3b587b247b3307cf53c336855
+size 569

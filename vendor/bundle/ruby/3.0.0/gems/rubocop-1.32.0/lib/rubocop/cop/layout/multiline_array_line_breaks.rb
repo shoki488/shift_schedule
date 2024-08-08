@@ -1,35 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Layout
-      # Ensures that each item in a multi-line array
-      # starts on a separate line.
-      #
-      # @example
-      #
-      #   # bad
-      #   [
-      #     a, b,
-      #     c
-      #   ]
-      #
-      #   # good
-      #   [
-      #     a,
-      #     b,
-      #     c
-      #   ]
-      class MultilineArrayLineBreaks < Base
-        include MultilineElementLineBreaks
-        extend AutoCorrector
-
-        MSG = 'Each item in a multi-line array must start on a separate line.'
-
-        def on_array(node)
-          check_line_breaks(node, node.children)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0397d77c5d2dd7dd86cef2309510a5ef7c227331d75d4d68a6535f6f8b783dc9
+size 676

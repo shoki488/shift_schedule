@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Formatter
-    # This formatter displays just a list of the files with offenses in them,
-    # separated by newlines. The output is machine-parsable.
-    #
-    # Here's the format:
-    #
-    # /some/file
-    # /some/other/file
-    class FileListFormatter < BaseFormatter
-      def file_finished(file, offenses)
-        return if offenses.empty?
-
-        output.printf("%<path>s\n", path: file)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9aa6ba132cb0025a588159d7c83650fed9a33de56a6b314392709cbe0eb39f5a
+size 476

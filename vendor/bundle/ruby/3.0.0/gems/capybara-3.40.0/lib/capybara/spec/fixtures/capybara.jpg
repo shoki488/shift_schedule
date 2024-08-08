@@ -1,3 +1,3 @@
-This is a jpeg file :) Since it is rendered in the
-view it doesn't actually contain any binary data,
-as that would cause Nokogiri to go mad.
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc12a39d59d231dc0d76fe6add76981a4215fc7d7f7fdab10e4f33f69d73d892
+size 141

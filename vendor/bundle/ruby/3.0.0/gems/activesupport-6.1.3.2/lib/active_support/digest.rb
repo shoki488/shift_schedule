@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveSupport
-  class Digest #:nodoc:
-    class <<self
-      def hash_digest_class
-        @hash_digest_class ||= ::Digest::MD5
-      end
-
-      def hash_digest_class=(klass)
-        raise ArgumentError, "#{klass} is expected to implement hexdigest class method" unless klass.respond_to?(:hexdigest)
-        @hash_digest_class = klass
-      end
-
-      def hexdigest(arg)
-        hash_digest_class.hexdigest(arg)[0...32]
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c83aa44861ecf17c17082c6013e9844bc027bf374ffef5585c24aaf760db523
+size 486

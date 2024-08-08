@@ -1,36 +1,3 @@
-module CodeRay
-module Scanners
-  
-  class Taskpaper < Scanner
-    
-    register_for :taskpaper
-    file_extension 'taskpaper'
-    
-  protected
-    
-    def scan_tokens encoder, options
-      until eos?
-        if match = scan(/\S.*:.*$/)                  # project
-          encoder.text_token(match, :namespace)
-        elsif match = scan(/-.+@done.*/)             # completed task
-          encoder.text_token(match, :done)
-        elsif match = scan(/-(?:[^@\n]+|@(?!due))*/) # task
-          encoder.text_token(match, :plain)
-        elsif match = scan(/@due.*/)                 # comment
-          encoder.text_token(match, :important)
-        elsif match = scan(/.+/)                     # comment
-          encoder.text_token(match, :comment)
-        elsif match = scan(/\s+/)                    # space
-          encoder.text_token(match, :space)
-        else                                         # other
-          encoder.text_token getch, :error
-        end
-      end
-      
-      encoder
-    end
-    
-  end
-  
-end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:44c762947c08479b4e893a111b99456aee514b1430441d090f1d072099f5f466
+size 1032

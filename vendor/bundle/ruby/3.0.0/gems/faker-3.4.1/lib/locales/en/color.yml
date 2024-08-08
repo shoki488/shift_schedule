@@ -1,4 +1,3 @@
-en:
-  faker:
-    color:
-      name: [amaranth, amber, amethyst, apricot, aquamarine, azure, beige, black, blue, blush, bronze, brown, burgundy, byzantium, carmine, cerise, cerulean, champagne, chocolate, coffee, copper, coral, crimson, cyan, emerald, erin, fuchsia, gold, gray, green, grey, harlequin, indigo, ivory, jade, lavender, lemon, lilac, lime, magenta, maroon, mauve, ochre, olive, orange, orchid, peach, pear, periwinkle, pink, plum, puce, purple, raspberry, red, rose, ruby, salmon, sangria, sapphire, scarlet, silver, sky, tan, taupe, teal, turquoise, ultramarine, violet, viridian, white, yellow]
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac52318447a3b8bf0308f5befd04cc24f08dfbd3dee65dde70957d6ffc77e1c9
+size 610

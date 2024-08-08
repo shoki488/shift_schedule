@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-      /* Email styles need to be inline */
-    </style>
-  </head>
-
-  <body>
-    <%%= yield %>
-  </body>
-</html>
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b636a40774b909f84c578c2a79250e08c89a3fa65826232c7391bef6fa99627
+size 230

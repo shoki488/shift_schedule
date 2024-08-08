@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-require 'mkmf'
-if RUBY_ENGINE == 'ruby'
-  $INCFLAGS << " -I$(top_srcdir)" if $extmk
-  have_func("onig_region_memsize", "ruby.h")
-  have_func("rb_reg_onig_match", "ruby.h")
-  create_makefile 'strscan'
-else
-  File.write('Makefile', dummy_makefile("").join)
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0a18c84f963553513cec09741ec50ad9885e52315ef0750e3d30462407acb45
+size 289

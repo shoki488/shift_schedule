@@ -1,34 +1,3 @@
-module Skiptrace
-  class Location
-    attr_reader :binding
-
-    def initialize(location, binding)
-      @location = location
-      @binding = binding
-    end
-
-    def absolute_path
-      @location.absolute_path
-    end
-
-    def base_label
-      @location.base_label
-    end
-
-    def inspect
-      @location.inspect
-    end
-
-    def label
-      @location.label
-    end
-
-    def lineno
-      @location.lineno
-    end
-
-    def to_s
-      @location.to_s
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1dbe23bea5438890301e278b024c190d0cb634d7a92f4601586b83a7688682f
+size 468

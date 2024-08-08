@@ -1,10 +1,3 @@
-module Zip
-  module NullInputStream #:nodoc:all
-    include ::Zip::NullDecompressor
-    include ::Zip::IOExtras::AbstractInputStream
-  end
-end
-
-# Copyright (C) 2002, 2003 Thomas Sondergaard
-# rubyzip is free software; you can redistribute it and/or
-# modify it under the terms of the ruby license.
+version https://git-lfs.github.com/spec/v1
+oid sha256:54b83c2d382a2c4df0a81088ab0b935649c3d5442b01febc3f6ad766301c2404
+size 298

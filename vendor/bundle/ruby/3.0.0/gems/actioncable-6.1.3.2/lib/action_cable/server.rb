@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module ActionCable
-  module Server
-    extend ActiveSupport::Autoload
-
-    eager_autoload do
-      autoload :Base
-      autoload :Broadcasting
-      autoload :Connections
-      autoload :Configuration
-
-      autoload :Worker
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:adef8a127eca4e03b648febe7ea369f8b492c81cbf7ad54d6656fa5813144162
+size 274

@@ -1,5 +1,3 @@
-## All Submissions:
-
-* [ ] Have you followed the guidelines in our [Contributing document](../blob/main/CONTRIBUTING.md)?
-* [ ] Have you checked to ensure there aren't other open [Pull Requests](../pulls) for the same update/change?
-* [ ] Have you added an explanation of what your changes do and why you'd like us to include them?
+version https://git-lfs.github.com/spec/v1
+oid sha256:0cc92fcccb7568f7055e50ff45de057799387897cdb990a78f6aa6a91b848b58
+size 332

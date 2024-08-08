@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # Common functionality for checking minimum body length.
-    module MinBodyLength
-      private
-
-      def min_body_length?(node)
-        (node.loc.end.line - node.loc.keyword.line) > min_body_length
-      end
-
-      def min_body_length
-        length = cop_config['MinBodyLength'] || 1
-        return length if length.is_a?(Integer) && length.positive?
-
-        raise 'MinBodyLength needs to be a positive integer!'
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:05e6bbd1ffb8c637bc1847b2b5b594e68ce7538f5ae80ad7b6f1b5352bb6b1bd
+size 508

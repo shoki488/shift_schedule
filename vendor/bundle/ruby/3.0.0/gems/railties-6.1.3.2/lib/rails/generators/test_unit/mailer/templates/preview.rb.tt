@@ -1,13 +1,3 @@
-<% module_namespacing do -%>
-# Preview all emails at http://localhost:3000/rails/mailers/<%= file_path %>_mailer
-class <%= class_name %>MailerPreview < ActionMailer::Preview
-<% actions.each do |action| -%>
-
-  # Preview this email at http://localhost:3000/rails/mailers/<%= file_path %>_mailer/<%= action %>
-  def <%= action %>
-    <%= class_name %>Mailer.<%= action %>
-  end
-<% end -%>
-
-end
-<% end -%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:91eb8ff7d4779467d3d1af8eb629b98c5a3fbfcd94badb6e8c7e23d7bf5102dc
+size 402

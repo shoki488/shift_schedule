@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-module ActionView
-  # = Action View Renderable Template for objects that respond to #render_in
-  class Template
-    class Renderable # :nodoc:
-      def initialize(renderable)
-        @renderable = renderable
-      end
-
-      def identifier
-        @renderable.class.name
-      end
-
-      def render(context, *args)
-        @renderable.render_in(context)
-      end
-
-      def format
-        @renderable.format
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4e0afc30d8133f30358277e2f6761676cee8ca97751260d4e65f7b21323cffe
+size 469

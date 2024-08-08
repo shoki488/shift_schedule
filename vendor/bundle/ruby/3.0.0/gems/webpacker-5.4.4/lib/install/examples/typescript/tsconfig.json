@@ -1,24 +1,3 @@
-{
-  "compilerOptions": {
-    "declaration": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "lib": ["es6", "dom"],
-    "module": "es6",
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-        "*": ["node_modules/*", "app/javascript/*"]
-    },
-    "sourceMap": true,
-    "target": "es5",
-    "noEmit": true
-  },
-  "exclude": [
-    "**/*.spec.ts",
-    "node_modules",
-    "vendor",
-    "public"
-  ],
-  "compileOnSave": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cfca188abf9a1f4d1b5665fc1ea8c51392a1f5a10b8d31ab67e8899204551a91
+size 478

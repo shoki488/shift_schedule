@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module Loofah
-  module HTML4 # :nodoc:
-    #
-    #  Subclass of Nokogiri::HTML4::Document.
-    #
-    #  See Loofah::ScrubBehavior and Loofah::TextBehavior for additional methods.
-    #
-    class Document < Nokogiri::HTML4::Document
-      include Loofah::ScrubBehavior::Node
-      include Loofah::DocumentDecorator
-      include Loofah::TextBehavior
-      include Loofah::HtmlDocumentBehavior
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:74124d25b72f2f8b9ac0a51e31fe7e80e26a5c2fe3b6799b125cb277d4ca5598
+size 441

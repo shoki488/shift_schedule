@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # A node extension for `dstr` nodes. This will be used
-    # in place of a plain node when the builder constructs the AST, making
-    # its methods available to all `dstr` nodes within RuboCop.
-    class DstrNode < StrNode
-      def value
-        child_nodes.map do |child|
-          child.respond_to?(:value) ? child.value : child.source
-        end.join
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2394e1e2adf4decea31eea29eb13c3b3e40c9895f38fbe2cae740ec21ac3e96
+size 447

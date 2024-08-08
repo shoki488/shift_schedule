@@ -1,32 +1,3 @@
-# frozen_string_literal: true
-
-module Rails
-  module Generators
-    class MailboxGenerator < NamedBase
-      source_root File.expand_path("templates", __dir__)
-
-      check_class_collision suffix: "Mailbox"
-
-      def create_mailbox_file
-        template "mailbox.rb", File.join("app/mailboxes", class_path, "#{file_name}_mailbox.rb")
-
-        in_root do
-          if behavior == :invoke && !File.exist?(application_mailbox_file_name)
-            template "application_mailbox.rb", application_mailbox_file_name
-          end
-        end
-      end
-
-      hook_for :test_framework
-
-      private
-        def file_name # :doc:
-          @_file_name ||= super.sub(/_mailbox\z/i, "")
-        end
-
-        def application_mailbox_file_name
-          "app/mailboxes/application_mailbox.rb"
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2762aacdd78760abcfdee10b73c551db96796ca5bffeae9439557535881d14cd
+size 814

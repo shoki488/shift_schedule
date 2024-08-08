@@ -1,9 +1,3 @@
-// Load all the controllers within this directory and all subdirectories. 
-// Controller files must be named *_controller.js.
-
-import { Application } from "stimulus"
-import { definitionsFromContext } from "stimulus/webpack-helpers"
-
-const application = Application.start()
-const context = require.context("controllers", true, /_controller\.js$/)
-application.load(definitionsFromContext(context))
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a47f8f37415e31b032c94d5bebb96674dd898304e458b36364cdf71f2cf946a
+size 396

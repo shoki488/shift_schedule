@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Layout
-      # Checks for comma (,) preceded by space.
-      #
-      # @example
-      #   # bad
-      #   [1 , 2 , 3]
-      #   a(1 , 2)
-      #   each { |a , b| }
-      #
-      #   # good
-      #   [1, 2, 3]
-      #   a(1, 2)
-      #   each { |a, b| }
-      #
-      class SpaceBeforeComma < Base
-        include SpaceBeforePunctuation
-        extend AutoCorrector
-
-        def kind(token)
-          'comma' if token.comma?
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d216ce4b349a828a8f0b5963f3f5f2216d9d83081e20a0fcbba39f84aa51c952
+size 534

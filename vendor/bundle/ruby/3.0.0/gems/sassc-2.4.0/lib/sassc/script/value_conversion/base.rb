@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-module SassC
-  module Script
-    module ValueConversion
-      class Base
-        def initialize(value)
-          @value = value
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b2a32a3d88519713b8a6999742194c272c365b630af289a9b660def169d4177
+size 199

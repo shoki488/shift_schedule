@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveSupport
-  # A class with no predefined methods that behaves similarly to Builder's
-  # BlankSlate. Used for proxy classes.
-  class ProxyObject < ::BasicObject
-    undef_method :==
-    undef_method :equal?
-
-    # Let ActiveSupport::ProxyObject at least raise exceptions.
-    def raise(*args)
-      ::Object.send(:raise, *args)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f64a01353c7b2a02b0ec9c34fd9a6d1de0060f87d7cb1023f925c0e4f630ad88
+size 388

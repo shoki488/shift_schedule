@@ -1,17 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-require 'mail/parsers/content_location_parser'
-
-module Mail
-  class ContentLocationElement #:nodoc:
-    attr_reader :location
-
-    def initialize(string)
-      @location = Mail::Parsers::ContentLocationParser.parse(string).location
-    end
-
-    def to_s(*args)
-      location.to_s
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb92b034023a1b60491603209b3b3dbace4e563f3f207c80392759c65011a2ae
+size 347

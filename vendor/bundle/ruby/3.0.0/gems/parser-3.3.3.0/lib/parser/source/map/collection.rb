@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-module Parser
-  module Source
-
-    class Map::Collection < Map
-      attr_reader :begin
-      attr_reader :end
-
-      def initialize(begin_l, end_l, expression_l)
-        @begin, @end = begin_l, end_l
-
-        super(expression_l)
-      end
-    end
-
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a582ce032c03905dc9944e58a04bcbd24309c84332d2409598511745dfc578b
+size 290

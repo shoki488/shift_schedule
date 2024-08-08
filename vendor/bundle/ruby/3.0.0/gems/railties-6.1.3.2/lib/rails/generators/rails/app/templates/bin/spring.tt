@@ -1,13 +1,3 @@
-if !defined?(Spring) && [nil, "development", "test"].include?(ENV["RAILS_ENV"])
-  gem "bundler"
-  require "bundler"
-
-  # Load Spring without loading other gems in the Gemfile, for speed.
-  Bundler.locked_gems&.specs&.find { |spec| spec.name == "spring" }&.tap do |spring|
-    Gem.use_paths Gem.dir, Bundler.bundle_path.to_s, *Gem.path
-    gem "spring", spring.version
-    require "spring/binstub"
-  rescue Gem::LoadError
-    # Ignore when Spring is not installed.
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:876815037e087bb45735801f24c6c2f538411cf345786cf86517dc485db6a247
+size 474

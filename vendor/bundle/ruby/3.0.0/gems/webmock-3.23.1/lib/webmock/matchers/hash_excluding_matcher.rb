@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module WebMock
-  module Matchers
-    # this is a based on RSpec::Mocks::ArgumentMatchers::HashExcludingMatcher
-    # https://github.com/rspec/rspec-mocks/blob/master/lib/rspec/mocks/argument_matchers.rb
-    class HashExcludingMatcher < HashArgumentMatcher
-      def ==(actual)
-        super { |key, value| !actual.key?(key) || value != actual[key] }
-      end
-
-      def inspect
-        "hash_excluding(#{@expected.inspect})"
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e20ad08886a32db8cc52aeeba470bc2695fc50a43cdd1d6cb91e7c8385dfe3ad
+size 485

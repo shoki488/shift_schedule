@@ -1,16 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-require 'mail/fields/unstructured_field'
-
-module Mail
-  # The field names of any optional-field MUST NOT be identical to any
-  # field name specified elsewhere in this standard.
-  #
-  # optional-field  =       field-name ":" unstructured CRLF
-  class OptionalField < UnstructuredField #:nodoc:
-    private
-      def do_encode
-        "#{wrapped_value}\r\n"
-      end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:324e80d03301efc44ff6f5d0e2dca56240002fb3decfb7a9ce1b27a7c19c4235
+size 425

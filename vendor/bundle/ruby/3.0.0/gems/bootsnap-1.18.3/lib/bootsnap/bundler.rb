@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module Bootsnap
-  extend self
-
-  def bundler?
-    return false unless defined?(::Bundler)
-
-    # Bundler environment variable
-    %w(BUNDLE_BIN_PATH BUNDLE_GEMFILE).each do |current|
-      return true if ENV.key?(current)
-    end
-
-    false
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:310ea93cbf9fc612b8877b08af930b8d07be3291cc3f57065ee1dc1511b7359c
+size 282

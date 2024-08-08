@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-require "action_view/helpers/tags/placeholderable"
-
-module ActionView
-  module Helpers
-    module Tags # :nodoc:
-      class TextArea < Base # :nodoc:
-        include Placeholderable
-
-        def render
-          options = @options.stringify_keys
-          add_default_name_and_id(options)
-
-          if size = options.delete("size")
-            options["cols"], options["rows"] = size.split("x") if size.respond_to?(:split)
-          end
-
-          content_tag("textarea", options.delete("value") { value_before_type_cast }, options)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7057635c3f50a2edda5e23a758cdc9e9cddc63fa0fae053a63b5326f54124d6e
+size 606

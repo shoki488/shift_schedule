@@ -1,4 +1,3 @@
-en:
-  faker:
-    nato_phonetic_alphabet:
-      code_word: ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2fa7e4615994e56a99606ff24169c233f05f1118174a51e234981007886f0da
+size 303

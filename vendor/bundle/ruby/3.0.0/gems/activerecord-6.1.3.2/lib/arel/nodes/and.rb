@@ -1,32 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module Nodes
-    class And < Arel::Nodes::NodeExpression
-      attr_reader :children
-
-      def initialize(children)
-        super()
-        @children = children
-      end
-
-      def left
-        children.first
-      end
-
-      def right
-        children[1]
-      end
-
-      def hash
-        children.hash
-      end
-
-      def eql?(other)
-        self.class == other.class &&
-          self.children == other.children
-      end
-      alias :== :eql?
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:97b194dc757a7df88047d25757f084d349e0751be98f9f6e63e0f067f3c39a1d
+size 527

@@ -1,19 +1,3 @@
-#ifndef SASS_MAPPING_H
-#define SASS_MAPPING_H
-
-#include "position.hpp"
-#include "backtrace.hpp"
-
-namespace Sass {
-
-  struct Mapping {
-    Position original_position;
-    Position generated_position;
-
-    Mapping(const Position& original_position, const Position& generated_position)
-    : original_position(original_position), generated_position(generated_position) { }
-  };
-
-}
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:59a9eefd9ed63648d03c00f74073cb3ccdd408bfd6c2027a7e65351c7891fdb9
+size 386

@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-require "arel/collectors/plain_string"
-
-module Arel # :nodoc: all
-  module Collectors
-    class SQLString < PlainString
-      attr_accessor :preparable
-
-      def initialize(*)
-        super
-        @bind_index = 1
-      end
-
-      def add_bind(bind)
-        self << yield(@bind_index)
-        @bind_index += 1
-        self
-      end
-
-      def add_binds(binds, &block)
-        self << (@bind_index...@bind_index += binds.size).map(&block).join(", ")
-        self
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:30f38ac3dff0e0f8f04f651dfc4b1261e7a92234ebc142b98efd073a846280e7
+size 523

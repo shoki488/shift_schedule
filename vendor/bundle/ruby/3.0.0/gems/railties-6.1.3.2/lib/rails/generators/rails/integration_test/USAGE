@@ -1,10 +1,3 @@
-Description:
-    Generates a new integration test. Pass the name of the test, either
-    CamelCased or under_scored, as an argument.
-
-    This generator invokes the current integration tool, which defaults to
-    TestUnit.
-
-Example:
-    `bin/rails generate integration_test GeneralStories` creates a GeneralStories
-    integration test in test/integration/general_stories_test.rb
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8551320fe9d59f71ef67aeeb403900c423826269fb9673527c080d1e8a81125
+size 380

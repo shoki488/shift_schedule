@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module TestUnit
-  module Generators
-    class ChannelGenerator < ::Rails::Generators::NamedBase
-      source_root File.expand_path("templates", __dir__)
-
-      check_class_collision suffix: "ChannelTest"
-
-      def create_test_files
-        template "channel_test.rb", File.join("test/channels", class_path, "#{file_name}_channel_test.rb")
-      end
-
-      private
-        def file_name # :doc:
-          @_file_name ||= super.sub(/_channel\z/i, "")
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:daf8c6a75fe8b44c0a9398700b61b018c1686a5ca00322e1a78bf71193b0ccb6
+size 511

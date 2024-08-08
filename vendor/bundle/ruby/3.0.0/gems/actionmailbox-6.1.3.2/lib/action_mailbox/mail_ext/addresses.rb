@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-module Mail
-  class Message
-    def from_address
-      header[:from]&.address_list&.addresses&.first
-    end
-
-    def recipients_addresses
-      to_addresses + cc_addresses + bcc_addresses + x_original_to_addresses
-    end
-
-    def to_addresses
-      Array(header[:to]&.address_list&.addresses)
-    end
-
-    def cc_addresses
-      Array(header[:cc]&.address_list&.addresses)
-    end
-
-    def bcc_addresses
-      Array(header[:bcc]&.address_list&.addresses)
-    end
-
-    def x_original_to_addresses
-      Array(header[:x_original_to]).collect { |header| Mail::Address.new header.to_s }
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:66a3b175b2697c4c3ebf3e5563b41c50db96850bf26d102680f7169ef663bc37
+size 634

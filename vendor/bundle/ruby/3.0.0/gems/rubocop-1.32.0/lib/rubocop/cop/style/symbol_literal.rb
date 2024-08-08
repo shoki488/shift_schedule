@@ -1,28 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Style
-      # Checks symbol literal syntax.
-      #
-      # @example
-      #
-      #   # bad
-      #   :"symbol"
-      #
-      #   # good
-      #   :symbol
-      class SymbolLiteral < Base
-        extend AutoCorrector
-
-        MSG = 'Do not use strings for word-like symbol literals.'
-
-        def on_sym(node)
-          return unless /\A:["'][A-Za-z_]\w*["']\z/.match?(node.source)
-
-          add_offense(node) { |corrector| corrector.replace(node, node.source.delete(%q('"))) }
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e0d7e48912553a51be6b33d867551bccaf6d9eecb2380e069c782cdbf13c377
+size 590

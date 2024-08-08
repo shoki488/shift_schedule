@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-module SassC
-  module Script
-    module ValueConversion
-      SEPARATORS = {
-        space: :sass_space,
-        comma: :sass_comma
-      }
-
-      class List < Base
-        def to_native
-          list = @value.to_a
-          sep = SEPARATORS.fetch(@value.separator)
-          native_list = Native::make_list(list.size, sep)
-          list.each_with_index do |item, index|
-            native_item = ValueConversion.to_native(item)
-            Native::list_set_value(native_list, index, native_item)
-          end
-          native_list
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a1ca111ddf64e848fe6ec40559cdbe62c583fcba176c9a2571b3b738d9be756a
+size 606

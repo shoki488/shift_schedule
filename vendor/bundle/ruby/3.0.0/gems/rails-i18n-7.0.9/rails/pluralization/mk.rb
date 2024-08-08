@@ -1,21 +1,3 @@
-module RailsI18n
-  module Pluralization
-    module Macedonian
-      def self.rule
-        lambda do |n|
-          if n.is_a?(Numeric) && n % 10 == 1 && n != 11
-            :one
-          else
-            :other
-          end
-        end
-      end
-    end
-  end
-end
-
-{ :mk => {
-    :'i18n' => {
-      :plural => {
-        :keys => [:one, :other],
-        :rule => RailsI18n::Pluralization::Macedonian.rule }}}}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de2db285a1f9e9f5c0c5f554833621ab5f7fbb1176a69d0b93cf4b1220dee063
+size 410

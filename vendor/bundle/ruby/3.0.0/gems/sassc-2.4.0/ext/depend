@@ -1,4 +1,3 @@
-# Replaces default mkmf dependencies. Default mkmf dependencies include all libruby headers.
-# We don't need libruby and some of these headers are missing on JRuby (breaking compilation there).
-$(OBJS): $(HDRS)
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:2973cbc5a556bfe1e05eb109e3c8d0735bfed92c1d2526abf4ff8f1a7f02d456
+size 212

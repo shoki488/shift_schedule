@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-module Rake
-
-  # Default Rakefile loader used by +import+.
-  class DefaultLoader
-
-    ##
-    # Loads a rakefile into the current application from +fn+
-
-    def load(fn)
-      Rake.load_rakefile(File.expand_path(fn))
-    end
-  end
-
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8196ac6452ff56ea83ecd84a210cb5a55c542b89777223339d744e06feae86b6
+size 265

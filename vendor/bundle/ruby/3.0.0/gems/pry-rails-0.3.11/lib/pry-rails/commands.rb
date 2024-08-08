@@ -1,11 +1,3 @@
-# encoding: UTF-8
-
-PryRails::Commands = Pry::CommandSet.new
-
-command_glob = File.expand_path('../commands/*.rb', __FILE__)
-
-Dir[command_glob].each do |command|
-  require command
-end
-
-Pry.commands.import PryRails::Commands
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb041ac7245aa0e40073a48b292383079894ab609d905dbebc9acef0830d8131
+size 222

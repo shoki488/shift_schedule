@@ -1,10 +1,3 @@
-en:
-  faker:
-    relationship:
-      familial:
-        direct: ['Father', 'Mother', 'Sister', 'Brother']
-        extended: ['Grandfather', 'Grandmother', 'Uncle', 'Aunt', 'Cousin', 'Niece', 'Nephew', 'Grandson', 'Granddaughter']
-      in_law: ['Father-in-law', 'Mother-in-law', 'Sister-in-law', 'Brother-in-law']
-      spouse: ['Husband', 'Wife']
-      parent: ['Father', 'Mother']
-      sibling: ['Sister', 'Brother']
+version https://git-lfs.github.com/spec/v1
+oid sha256:688278cab2dc146c5d0ff4f467c374eca55e417f89739b49177a62841e1e6810
+size 419

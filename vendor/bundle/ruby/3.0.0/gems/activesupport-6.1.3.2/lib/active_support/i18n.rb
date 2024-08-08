@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/core_ext/hash/deep_merge"
-require "active_support/core_ext/hash/except"
-require "active_support/core_ext/hash/slice"
-begin
-  require "i18n"
-rescue LoadError => e
-  $stderr.puts "The i18n gem is not available. Please add it to your Gemfile and run bundle install"
-  raise e
-end
-require "active_support/lazy_load_hooks"
-
-ActiveSupport.run_load_hooks(:i18n)
-I18n.load_path << File.expand_path("locale/en.yml", __dir__)
-I18n.load_path << File.expand_path("locale/en.rb", __dir__)
+version https://git-lfs.github.com/spec/v1
+oid sha256:93756a7d3d6deca1ba72c87b93ae1649c842f8eac4943df23fc8b750ebab22ee
+size 531

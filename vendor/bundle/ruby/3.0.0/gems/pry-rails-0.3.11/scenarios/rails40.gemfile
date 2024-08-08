@@ -1,6 +1,3 @@
-source "https://rubygems.org"
-
-gem "rails", "~> 4.0.0"
-gem "sqlite3"
-
-gemspec :path => "../"
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa28a6adcb9df7b84a419a0f7529dc74c29cf83e3a7a848df0f0e61a7242cdaa
+size 93

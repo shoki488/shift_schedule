@@ -1,16 +1,3 @@
-APP_ROOT = File.expand_path('..', __dir__)
-Dir.chdir(APP_ROOT) do
-  yarn = ENV["PATH"].split(File::PATH_SEPARATOR).
-    select { |dir| File.expand_path(dir) != __dir__ }.
-    product(["yarn", "yarn.cmd", "yarn.ps1"]).
-    map { |dir, file| File.expand_path(file, dir) }.
-    find { |file| File.executable?(file) }
-
-  if yarn
-    exec yarn, *ARGV
-  else
-    $stderr.puts "Yarn executable was not detected in the system."
-    $stderr.puts "Download Yarn at https://yarnpkg.com/en/docs/install"
-    exit 1
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8dec22bd9d443dcf9c1772179da3fd9c1a3cea4444be8080b6b789a0c5f33fde
+size 513

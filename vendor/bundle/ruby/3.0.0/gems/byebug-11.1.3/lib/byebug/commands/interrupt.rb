@@ -1,34 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "../command"
-
-module Byebug
-  #
-  # Interrupting execution of current thread.
-  #
-  class InterruptCommand < Command
-    self.allow_in_control = true
-
-    def self.regexp
-      /^\s*int(?:errupt)?\s*$/
-    end
-
-    def self.description
-      <<-DESCRIPTION
-        int[errupt]
-
-        #{short_description}
-      DESCRIPTION
-    end
-
-    def self.short_description
-      "Interrupts the program"
-    end
-
-    def execute
-      Byebug.start
-
-      Byebug.thread_context(Thread.main).interrupt
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:63c5b6aaf38ec55cf5b1fa18316c16bd8f738d1a53373d7d3098ff95b6c8f0fc
+size 558

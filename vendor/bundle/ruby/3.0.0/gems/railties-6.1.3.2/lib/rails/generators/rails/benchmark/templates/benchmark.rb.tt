@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "../../config/environment"
-
-# Any benchmarking setup goes here...
-
-
-
-Benchmark.ips do |x|
-<%- reports.each do |report| -%>
-  x.report("<%= report %>") { }
-<%- end -%>
-
-  x.compare!
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d20ad0bf0b6fe880a2917dcbba32fb77efd420c766057f14566f9a112704f92d
+size 233

@@ -1,6 +1,3 @@
-<% if mountable? -%>
-<%= camelized_modules %>::Engine.routes.draw do
-<% else -%>
-Rails.application.routes.draw do
-<% end -%>
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a2f132ec2b9b6dad012853cb11a89ce488be610c75ce6b11b1d864a7847494e
+size 129

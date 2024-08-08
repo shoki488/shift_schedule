@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-module Sequel
-  class Database
-    alias_method :log_duration_original, :log_duration
-    def log_duration(duration, message)
-      # `duration` will be in seconds, but we need it in milliseconds for internal consistency.
-      ::Rack::MiniProfiler.record_sql(message, duration * 1000)
-      log_duration_original(duration, message)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0fd4aad4796a64c33ae0fa00426dbf4a721ea31b2c2291a8d50749eabbb0acb7
+size 382

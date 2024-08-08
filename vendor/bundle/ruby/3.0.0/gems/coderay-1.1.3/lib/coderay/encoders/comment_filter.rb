@@ -1,25 +1,3 @@
-module CodeRay
-module Encoders
-  
-  load :token_kind_filter
-  
-  # A simple Filter that removes all tokens of the :comment kind.
-  # 
-  # Alias: +remove_comments+
-  # 
-  # Usage:
-  #  CodeRay.scan('print # foo', :ruby).comment_filter.text
-  #  #-> "print "
-  # 
-  # See also: TokenKindFilter, LinesOfCode
-  class CommentFilter < TokenKindFilter
-    
-    register_for :comment_filter
-    
-    DEFAULT_OPTIONS = superclass::DEFAULT_OPTIONS.merge \
-      :exclude => [:comment, :docstring]
-    
-  end
-  
-end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a623d63f06c314a722812b84a9451d75ec12700581b70b5d284a60fdad4c7390
+size 509

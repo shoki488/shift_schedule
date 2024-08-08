@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-module ActionMailbox
-  # Routing a new InboundEmail is an asynchronous operation, which allows the ingress controllers to quickly
-  # accept new incoming emails without being burdened to hang while they're actually being processed.
-  class RoutingJob < ActiveJob::Base
-    queue_as { ActionMailbox.queues[:routing] }
-
-    def perform(inbound_email)
-      inbound_email.route
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:063b24df4d23e5ec1e6d08a4112e9720a777f8f84f173882a754c196909f001c
+size 424

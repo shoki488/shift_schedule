@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  class PredicateBuilder
-    class BasicObjectHandler # :nodoc:
-      def initialize(predicate_builder)
-        @predicate_builder = predicate_builder
-      end
-
-      def call(attribute, value)
-        bind = predicate_builder.build_bind_attribute(attribute.name, value)
-        attribute.eq(bind)
-      end
-
-      private
-        attr_reader :predicate_builder
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:72dd1abb83eca31c8c4c65167ae615333c0fcb2129533395832901001dfb0820
+size 432

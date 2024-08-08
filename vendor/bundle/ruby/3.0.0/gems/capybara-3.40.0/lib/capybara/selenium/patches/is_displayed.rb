@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module Capybara
-  module Selenium
-    module IsDisplayed
-      def commands(command)
-        case command
-        when :is_element_displayed
-          [:get, 'session/:session_id/element/:id/displayed']
-        else
-          super
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb0029a6da6ce5328d122450dab91b2c14786a7ae095a2a477865e64704ed6ad
+size 303

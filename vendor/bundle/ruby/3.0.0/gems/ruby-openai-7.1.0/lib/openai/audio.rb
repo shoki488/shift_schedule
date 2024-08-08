@@ -1,19 +1,3 @@
-module OpenAI
-  class Audio
-    def initialize(client:)
-      @client = client
-    end
-
-    def transcribe(parameters: {})
-      @client.multipart_post(path: "/audio/transcriptions", parameters: parameters)
-    end
-
-    def translate(parameters: {})
-      @client.multipart_post(path: "/audio/translations", parameters: parameters)
-    end
-
-    def speech(parameters: {})
-      @client.json_post(path: "/audio/speech", parameters: parameters)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:48bea03ae5a4ee6a92d390b34bd49352c14e0e42c9948b53eac555bb089f8fcd
+size 461

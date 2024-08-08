@@ -1,19 +1,3 @@
-module Zip
-  class Error < StandardError; end
-  class EntryExistsError < Error; end
-  class DestinationFileExistsError < Error; end
-  class CompressionMethodError < Error; end
-  class EntryNameError < Error; end
-  class EntrySizeError < Error; end
-  class InternalError < Error; end
-  class GPFBit3Error < Error; end
-  class DecompressionError < Error; end
-
-  # Backwards compatibility with v1 (delete in v2)
-  ZipError = Error
-  ZipEntryExistsError = EntryExistsError
-  ZipDestinationFileExistsError = DestinationFileExistsError
-  ZipCompressionMethodError = CompressionMethodError
-  ZipEntryNameError = EntryNameError
-  ZipInternalError = InternalError
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6590e3e5a8f591bb6a0fef56856cf7261011593ade5235ca0e678671671f1a06
+size 659

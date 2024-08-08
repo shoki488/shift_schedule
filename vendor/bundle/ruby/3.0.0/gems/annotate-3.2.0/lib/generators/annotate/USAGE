@@ -1,4 +1,3 @@
-Add a .rake file that automatically annotates models when you do a db:migrate
-in development mode:
-
-    rails generate annotate:install
+version https://git-lfs.github.com/spec/v1
+oid sha256:94c1f6da47e2714a55e40be21cee7758cdb242c876eb119891f4904d9efdfe43
+size 136

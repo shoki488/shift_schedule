@@ -1,32 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  class FixtureSet
-    class ModelMetadata # :nodoc:
-      def initialize(model_class)
-        @model_class = model_class
-      end
-
-      def primary_key_name
-        @primary_key_name ||= @model_class && @model_class.primary_key
-      end
-
-      def primary_key_type
-        @primary_key_type ||= @model_class && @model_class.type_for_attribute(@model_class.primary_key).type
-      end
-
-      def has_primary_key_column?
-        @has_primary_key_column ||= primary_key_name &&
-          @model_class.columns.any? { |col| col.name == primary_key_name }
-      end
-
-      def timestamp_column_names
-        @model_class.all_timestamp_attributes_in_model
-      end
-
-      def inheritance_column_name
-        @inheritance_column_name ||= @model_class && @model_class.inheritance_column
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:927e2c467e63a2a7fac3aa4470891a3d313c7272a1e3f9f8d8cbf5cb4f788254
+size 862

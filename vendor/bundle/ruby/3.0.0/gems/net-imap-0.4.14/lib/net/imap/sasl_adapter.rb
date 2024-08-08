@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-module Net
-  class IMAP
-
-    # Experimental
-    class SASLAdapter < SASL::ClientAdapter
-      include SASL::ProtocolAdapters::IMAP
-
-      RESPONSE_ERRORS = [NoResponseError, BadResponseError, ByeResponseError]
-        .freeze
-
-      def response_errors;          RESPONSE_ERRORS                 end
-      def sasl_ir_capable?;         client.capable?("SASL-IR")      end
-      def auth_capable?(mechanism); client.auth_capable?(mechanism) end
-      def drop_connection;          client.logout!                  end
-      def drop_connection!;         client.disconnect               end
-    end
-
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0f4f112a986af2e9b4dfba3e2577cf96d64c37e7a518ad2620585ea1a8633b3
+size 637

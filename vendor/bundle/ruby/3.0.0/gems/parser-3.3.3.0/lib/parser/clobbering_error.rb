@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-module Parser
-  ##
-  # {Parser::ClobberingError} is raised when {Parser::Source::Rewriter}
-  # detects a clobbering rewrite action. This class inherits {RuntimeError}
-  # rather than {StandardError} for backward compatibility.
-  #
-  # @api public
-  #
-  class ClobberingError < RuntimeError
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f0b2aee4291455b71cfc41193a03c1eb39dececcf3a272fa1dd7f52d81619a7
+size 331

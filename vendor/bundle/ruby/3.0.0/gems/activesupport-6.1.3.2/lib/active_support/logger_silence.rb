@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/concern"
-require "active_support/core_ext/module/attribute_accessors"
-require "active_support/logger_thread_safe_level"
-
-module ActiveSupport
-  module LoggerSilence
-    extend ActiveSupport::Concern
-
-    included do
-      cattr_accessor :silencer, default: true
-      include ActiveSupport::LoggerThreadSafeLevel
-    end
-
-    # Silences the logger for the duration of the block.
-    def silence(severity = Logger::ERROR)
-      silencer ? log_at(severity) { yield self } : yield(self)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d5584bded5ba1761124f374f54d11aaca3fc018ab795b3dd751e09e43049de7e
+size 557

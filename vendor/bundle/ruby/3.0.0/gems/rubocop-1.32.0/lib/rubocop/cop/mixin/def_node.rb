@@ -1,26 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # Common functionality for checking def nodes.
-    module DefNode
-      extend NodePattern::Macros
-      include VisibilityHelp
-
-      private
-
-      def non_public?(node)
-        non_public_modifier?(node.parent) || preceding_non_public_modifier?(node)
-      end
-
-      def preceding_non_public_modifier?(node)
-        node_visibility(node) != :public
-      end
-
-      # @!method non_public_modifier?(node)
-      def_node_matcher :non_public_modifier?, <<~PATTERN
-        (send nil? {:private :protected} ({def defs} ...))
-      PATTERN
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c9f13edad20f3b2e875363e779693d6fa8c7719e315c14fe6c08ba15f7a48059
+size 619

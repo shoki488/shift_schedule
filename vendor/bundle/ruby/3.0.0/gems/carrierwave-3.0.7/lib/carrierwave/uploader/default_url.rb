@@ -1,17 +1,3 @@
-module CarrierWave
-  module Uploader
-    module DefaultUrl
-
-      def url(*args)
-        super || default_url(*args)
-      end
-
-      ##
-      # Override this method in your uploader to provide a default url
-      # in case no file has been cached/stored yet.
-      #
-      def default_url(*args); end
-
-    end # DefaultPath
-  end # Uploader
-end # CarrierWave
+version https://git-lfs.github.com/spec/v1
+oid sha256:e4634dd0e1f2859864d6fe7aff0ec165ab8f722100719cc40b7086a755221f25
+size 360

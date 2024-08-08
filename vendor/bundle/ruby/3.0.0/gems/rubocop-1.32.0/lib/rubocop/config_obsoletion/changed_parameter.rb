@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  class ConfigObsoletion
-    # Encapsulation of a ConfigObsoletion rule for changing a parameter
-    # @api private
-    class ChangedParameter < ParameterRule
-      BASE_MESSAGE = 'obsolete parameter `%<parameter>s` (for `%<cop>s`) found in %<path>s'
-
-      def message
-        base = format(BASE_MESSAGE, parameter: parameter, cop: cop, path: smart_loaded_path)
-
-        if alternative
-          "#{base}\n`#{parameter}` has been renamed to `#{alternative.chomp}`."
-        else
-          "#{base}\n#{reason.chomp}"
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b921aa96211c8db03595b10849d4e24961eef83b713dafec8d0c198f07ee660
+size 603

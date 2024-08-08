@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "assertions/dom_assertions"
-require_relative "assertions/selector_assertions"
-
-module Rails
-  module Dom
-    module Testing
-      module Assertions
-        include DomAssertions
-        include SelectorAssertions
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a3d5e487ce8a19a8231e1df0866c5324a0906edc69833d512bfcc86d626d9aa
+size 289

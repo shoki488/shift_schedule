@@ -1,13 +1,3 @@
-class CreateActionMailboxTables < ActiveRecord::Migration[6.0]
-  def change
-    create_table :action_mailbox_inbound_emails do |t|
-      t.integer :status, default: 0, null: false
-      t.string  :message_id, null: false
-      t.string  :message_checksum, null: false
-
-      t.timestamps
-
-      t.index [ :message_id, :message_checksum ], name: "index_action_mailbox_inbound_emails_uniqueness", unique: true
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f139e64eee46a4bade9ca42a25f6e7fdc1552b96b74f0c7f797f50546a401ee5
+size 426

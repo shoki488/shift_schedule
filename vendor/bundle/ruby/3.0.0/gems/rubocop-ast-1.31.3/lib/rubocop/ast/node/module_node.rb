@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # A node extension for `module` nodes. This will be used in place of a
-    # plain node when the builder constructs the AST, making its methods
-    # available to all `module` nodes within RuboCop.
-    class ModuleNode < Node
-      # The identifier for this `module` node.
-      #
-      # @return [Node] the identifier of the module
-      def identifier
-        node_parts[0]
-      end
-
-      # The body of this `module` node.
-      #
-      # @return [Node, nil] the body of the module
-      def body
-        node_parts[1]
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b591af4a956d15ab7323706cea9aa31525abaeaad95c9ef427a9b429694ad3c8
+size 614

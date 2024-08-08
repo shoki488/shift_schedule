@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module Loofah
-  module XML # :nodoc:
-    #
-    #  Subclass of Nokogiri::XML::DocumentFragment.
-    #
-    #  See Loofah::ScrubBehavior for additional methods.
-    #
-    class DocumentFragment < Nokogiri::XML::DocumentFragment
-      class << self
-        def parse(tags)
-          doc = Loofah::XML::Document.new
-          doc.encoding = tags.encoding.name if tags.respond_to?(:encoding)
-          new(doc, tags)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:febba4a5b9ef2dd0c9b3f8110f35df55cecaab0eb26940b5daf7d53f0c4aa335
+size 482

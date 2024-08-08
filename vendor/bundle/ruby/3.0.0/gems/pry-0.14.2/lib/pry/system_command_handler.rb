@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  # @api private
-  # @since v0.13.0
-  module SystemCommandHandler
-    class << self
-      def default(output, command, _pry_instance)
-        return if Kernel.system(command)
-
-        output.puts(
-          "Error: there was a problem executing system command: #{command}"
-        )
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d36b6e74c68671d1d7782643e5fa6cdcdc3bb041ca3be016e527626f30361c4
+size 352

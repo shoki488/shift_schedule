@@ -1,27 +1,3 @@
-module FactoryBot
-  # @api private
-  class NullFactory
-    attr_reader :definition
-
-    def initialize
-      @definition = Definition.new(:null_factory)
-    end
-
-    delegate :defined_traits, :callbacks, :attributes, :constructor,
-      :to_create, to: :definition
-
-    def compile
-    end
-
-    def class_name
-    end
-
-    def evaluator_class
-      FactoryBot::Evaluator
-    end
-
-    def hierarchy_class
-      FactoryBot::DefinitionHierarchy
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f3d1773c39cb2dc1dfa0239d9eb5bd60f6ac2476be4a6969927ea797cc1afe73
+size 460

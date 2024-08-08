@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module Translation
-    include ActiveModel::Translation
-
-    # Set the lookup ancestors for ActiveModel.
-    def lookup_ancestors #:nodoc:
-      klass = self
-      classes = [klass]
-      return classes if klass == ActiveRecord::Base
-
-      while !klass.base_class?
-        classes << klass = klass.superclass
-      end
-      classes
-    end
-
-    # Set the i18n scope to overwrite ActiveModel.
-    def i18n_scope #:nodoc:
-      :activerecord
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ab48e743417ce4f96c28286608b28fb2c66c7cdfa3b2b7abc177d9807252154
+size 513

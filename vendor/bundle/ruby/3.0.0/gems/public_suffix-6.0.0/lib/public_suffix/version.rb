@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-# = Public Suffix
-#
-# Domain name parser based on the Public Suffix List.
-#
-# Copyright (c) 2009-2024 Simone Carletti <weppos@weppos.net>
-
-module PublicSuffix
-
-  # @return [String] the current library version
-  VERSION = "6.0.0"
-
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:35c2f4cf85d78ca5e9f8be23487e7f0756f229b14a9780f74ce2b82edd2a50a2
+size 265

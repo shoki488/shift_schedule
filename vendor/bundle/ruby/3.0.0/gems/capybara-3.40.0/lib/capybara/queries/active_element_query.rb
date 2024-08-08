@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-module Capybara
-  # @api private
-  module Queries
-    class ActiveElementQuery < BaseQuery
-      def initialize(**options)
-        @options = options
-        super(@options)
-      end
-
-      def resolve_for(session)
-        node = session.driver.active_element
-        [Capybara::Node::Element.new(session, node, nil, self)]
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6896f3e1fd7cd49632dadff7cc3a0aafc04b0225b7f0dfc3195ffbb0256db5bd
+size 384

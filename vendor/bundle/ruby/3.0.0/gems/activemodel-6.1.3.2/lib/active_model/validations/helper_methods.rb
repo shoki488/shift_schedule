@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveModel
-  module Validations
-    module HelperMethods # :nodoc:
-      private
-        def _merge_attributes(attr_names)
-          options = attr_names.extract_options!.symbolize_keys
-          attr_names.flatten!
-          options[:attributes] = attr_names
-          options
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:09bbce7b888627bbb1713d18bfea21716484efb64a8e751d1228b3851b76ed46
+size 347

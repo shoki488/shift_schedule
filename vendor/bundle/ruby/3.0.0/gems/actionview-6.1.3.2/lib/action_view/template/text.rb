@@ -1,32 +1,3 @@
-# frozen_string_literal: true
-
-module ActionView #:nodoc:
-  # = Action View Text Template
-  class Template #:nodoc:
-    class Text #:nodoc:
-      attr_accessor :type
-
-      def initialize(string)
-        @string = string.to_s
-      end
-
-      def identifier
-        "text template"
-      end
-
-      alias_method :inspect, :identifier
-
-      def to_str
-        @string
-      end
-
-      def render(*args)
-        to_str
-      end
-
-      def format
-        :text
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:728adae26fa53541e5de755d9c28399195ee47cb1c0c3433cdb5e5390dd7b9a9
+size 488

@@ -1,7 +1,3 @@
-#! /usr/bin/env ruby
-# frozen_string_literal: true
-
-$LOAD_PATH.unshift(File.expand_path('../../lib', __FILE__))
-require 'parser/runner/ruby_parse'
-
-Parser::Runner::RubyParse.go(ARGV)
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2b1ee9660322d29e4c60308c9403e51e712320a29b8cb18dbb11e12ce9c1718
+size 183

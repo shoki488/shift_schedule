@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "../setting"
-
-module Byebug
-  #
-  # Setting to display full paths in backtraces.
-  #
-  class FullpathSetting < Setting
-    DEFAULT = true
-
-    def banner
-      "Display full file names in backtraces"
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4934003c7bf01e88bfe733f0dffb5cdd027e1ba94c0588523a62111de88de88f
+size 266

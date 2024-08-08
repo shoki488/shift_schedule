@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # A node extension for `sclass` nodes. This will be used in place of a
-    # plain node when the builder constructs the AST, making its methods
-    # available to all `sclass` nodes within RuboCop.
-    class SelfClassNode < Node
-      # The identifier for this `sclass` node. (Always `self`.)
-      #
-      # @return [Node] the identifier of the class
-      def identifier
-        node_parts[0]
-      end
-
-      # The body of this `sclass` node.
-      #
-      # @return [Node, nil] the body of the class
-      def body
-        node_parts[1]
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:87939d01be1512d8d50583c4a6ac0fd9dd8f4475d6c2193c599e74cadc63b79c
+size 632

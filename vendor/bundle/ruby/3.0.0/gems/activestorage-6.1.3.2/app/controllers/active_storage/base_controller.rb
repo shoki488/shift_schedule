@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-# The base class for all Active Storage controllers.
-class ActiveStorage::BaseController < ActionController::Base
-  include ActiveStorage::SetCurrent
-
-  protect_from_forgery with: :exception
-
-  self.etag_with_template_digest = false
-
-  private
-    def stream(blob)
-      blob.download do |chunk|
-        response.stream.write chunk
-      end
-    ensure
-      response.stream.close
-    end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:915bded4e41785795bbf40d4b50689f0b32a1b4a4bd344ba2a38c89df4cc6f05
+size 424

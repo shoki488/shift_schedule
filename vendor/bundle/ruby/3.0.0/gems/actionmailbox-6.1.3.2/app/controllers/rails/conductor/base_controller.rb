@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-module Rails
-  # TODO: Move this to Rails::Conductor gem
-  class Conductor::BaseController < ActionController::Base
-    layout "rails/conductor"
-    before_action :ensure_development_env
-
-    private
-      def ensure_development_env
-        head :forbidden unless Rails.env.development?
-      end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8729c15b5549c2529d58d35e2a8d0abc385057f742cc782ee7aa944b7d625be1
+size 338

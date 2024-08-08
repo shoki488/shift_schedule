@@ -1,12 +1,3 @@
-require_relative "../lib/webdriver"
-
-s = (Webdriver::Client.new "http://localhost:9515/").session!
-
-s.url! "https://example.com"
-html_el = s.element "css selector", "html"
-
-puts html_el.text
-puts "-- 8< -----------------------"
-puts html_el.property "innerHTML"
-
-s.delete!
+version https://git-lfs.github.com/spec/v1
+oid sha256:0aede7b2cab7607857c6ea7f7ec3ebbd98efeda50bd7e8633a292fca153a137f
+size 273

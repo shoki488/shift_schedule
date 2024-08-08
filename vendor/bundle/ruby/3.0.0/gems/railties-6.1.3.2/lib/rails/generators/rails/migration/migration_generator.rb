@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-
-module Rails
-  module Generators
-    class MigrationGenerator < NamedBase # :nodoc:
-      argument :attributes, type: :array, default: [], banner: "field[:type][:index] field[:type][:index]"
-      hook_for :orm, required: true, desc: "ORM to be invoked"
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:285b49aa41050432334686130360b3db5f5971bf4d2f8c4bff602adc64e8749c
+size 303

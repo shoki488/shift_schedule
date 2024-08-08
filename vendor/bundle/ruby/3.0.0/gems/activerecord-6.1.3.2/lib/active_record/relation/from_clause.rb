@@ -1,30 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  class Relation
-    class FromClause # :nodoc:
-      attr_reader :value, :name
-
-      def initialize(value, name)
-        @value = value
-        @name = name
-      end
-
-      def merge(other)
-        self
-      end
-
-      def empty?
-        value.nil?
-      end
-
-      def ==(other)
-        self.class == other.class && value == other.value && name == other.name
-      end
-
-      def self.empty
-        @empty ||= new(nil, nil).freeze
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd1ae11351d6e6fb251e85851cc7cbc6b455d49dc9e93ad694dc23c7b086dadf
+size 515

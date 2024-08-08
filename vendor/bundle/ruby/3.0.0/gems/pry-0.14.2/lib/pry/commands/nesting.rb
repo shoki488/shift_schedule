@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class Nesting < Pry::ClassCommand
-      match 'nesting'
-      group 'Navigating Pry'
-      description 'Show nesting information.'
-
-      banner <<-'BANNER'
-        Show nesting information.
-      BANNER
-
-      def process
-        output.puts 'Nesting status:'
-        output.puts '--'
-        pry_instance.binding_stack.each_with_index do |obj, level|
-          if level == 0
-            output.puts "#{level}. #{Pry.view_clip(obj.eval('self'))} (Pry top level)"
-          else
-            output.puts "#{level}. #{Pry.view_clip(obj.eval('self'))}"
-          end
-        end
-      end
-    end
-
-    Pry::Commands.add_command(Pry::Command::Nesting)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2782d031fe3551c6d2b772f0730a4d8481d83ddd9f5936e590c3774025aa4ff
+size 719

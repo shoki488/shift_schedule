@@ -1,34 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "errors"
-
-module Byebug
-  #
-  # Holds an array of subcommands for a command
-  #
-  class CommandList
-    include Enumerable
-
-    def initialize(commands)
-      @commands = commands.sort_by(&:to_s)
-    end
-
-    def match(input)
-      find { |cmd| cmd.match(input) }
-    end
-
-    def each
-      @commands.each { |cmd| yield(cmd) }
-    end
-
-    def to_s
-      "\n" + map { |cmd| cmd.columnize(width) }.join + "\n"
-    end
-
-    private
-
-    def width
-      @width ||= map(&:to_s).max_by(&:size).size
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b91aa34cfd3ee5be960ca6bb3fe55fbf94148aeccee55e15a717b8b58770364c
+size 561

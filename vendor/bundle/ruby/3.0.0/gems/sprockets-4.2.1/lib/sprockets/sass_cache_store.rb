@@ -1,30 +1,3 @@
-# frozen_string_literal: true
-require 'sass'
-
-module Sprockets
-  class SassProcessor
-    # Internal: Cache wrapper for Sprockets cache adapter.
-    class CacheStore < ::Sass::CacheStores::Base
-      VERSION = '1'
-
-      def initialize(cache, version)
-        @cache, @version = cache, "#{VERSION}/#{version}"
-      end
-
-      def _store(key, version, sha, contents)
-        @cache.set("#{@version}/#{version}/#{key}/#{sha}", contents, true)
-      end
-
-      def _retrieve(key, version, sha)
-        @cache.get("#{@version}/#{version}/#{key}/#{sha}", true)
-      end
-
-      def path_to(key)
-        key
-      end
-    end
-  end
-
-  # Deprecated: Use Sprockets::SassProcessor::CacheStore instead.
-  SassCacheStore = SassProcessor::CacheStore
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d5bcccf90987d274e89d7af5da52c44ebdb9c3e681bf62e85bd8208c6126d44
+size 742

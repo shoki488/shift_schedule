@@ -1,16 +1,3 @@
-module Vips
-  # A direction on a compass used for placing images. See {Image#gravity}.
-  #
-  # * `:centre`
-  # * `:north`
-  # * `:east`
-  # * `:south`
-  # * `:west`
-  # * `:"north-east"`
-  # * `:"south-east"`
-  # * `:"south-west"`
-  # * `:"north-west"`
-
-  class CompassDirection < Symbol
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f438851e3b6ae72c88dafbab63eda8f06afee7b37b3200a2ce816a8149a05741
+size 298

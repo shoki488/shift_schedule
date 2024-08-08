@@ -1,25 +1,3 @@
-# -*- encoding: utf-8 -*-
-# stub: coderay 1.1.3 ruby lib
-
-Gem::Specification.new do |s|
-  s.name = "coderay".freeze
-  s.version = "1.1.3".freeze
-
-  s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
-  s.require_paths = ["lib".freeze]
-  s.authors = ["Kornelius Kalnbach".freeze]
-  s.date = "2020-05-30"
-  s.description = "Fast and easy syntax highlighting for selected languages, written in Ruby. Comes with RedCloth integration and LOC counter.".freeze
-  s.email = ["murphy@rubychan.de".freeze]
-  s.executables = ["coderay".freeze]
-  s.extra_rdoc_files = ["README_INDEX.rdoc".freeze]
-  s.files = ["README_INDEX.rdoc".freeze, "bin/coderay".freeze]
-  s.homepage = "http://coderay.rubychan.de".freeze
-  s.licenses = ["MIT".freeze]
-  s.rdoc_options = ["-SNw2".freeze, "-mREADME_INDEX.rdoc".freeze, "-t CodeRay Documentation".freeze]
-  s.required_ruby_version = Gem::Requirement.new(">= 1.8.6".freeze)
-  s.rubygems_version = "3.0.6".freeze
-  s.summary = "Fast syntax highlighting for selected languages.".freeze
-
-  s.installed_by_version = "3.5.14".freeze if s.respond_to? :installed_by_version
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a4fcaa371948aad830ae5bf04ab038a5a8f6c07d7daf91b37f77374e11d0639f
+size 1154

@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-require_relative 'template'
-require 'kramdown'
-
-dumb_quotes = [39, 39, 34, 34].freeze
-
-# Kramdown Markdown implementation. See: https://kramdown.gettalong.org/
-Tilt::KramdownTemplate = Tilt::StaticTemplate.subclass do
-  # dup as Krawmdown modifies the passed option with map!
-  @options[:smart_quotes] = dumb_quotes.dup unless @options[:smartypants]
-
-  Kramdown::Document.new(@data, @options).to_html
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6147aeee3cc0d67f178d610de21b25573ff94120a2d660c5a9b9f168bc0219e2
+size 435

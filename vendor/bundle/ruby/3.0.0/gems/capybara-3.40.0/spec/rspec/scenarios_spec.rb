@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-# rubocop:disable RSpec/MultipleDescribes
-
-require 'spec_helper'
-require 'capybara/rspec'
-
-RSpec.configuration.before(:each, file_path: './spec/rspec/scenarios_spec.rb') do
-  @in_filtered_hook = true
-end
-
-feature 'if fscenario aliases focused tag then' do
-  fscenario 'scenario should have focused meta tag' do |example| # rubocop:disable RSpec/Focus
-    expect(example.metadata[:focus]).to be true
-  end
-end
-
-feature 'if xscenario aliases to pending then' do
-  xscenario "this test should be 'temporarily disabled with xscenario'" do # rubocop:disable RSpec/PendingWithoutReason
-  end
-end
-
-# rubocop:enable RSpec/MultipleDescribes
+version https://git-lfs.github.com/spec/v1
+oid sha256:908793ab31a0dc72b6781a339036afb0b0439ff20f1d74bd5e2a9539d3e2b823
+size 663

@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module ActionView
-  module Helpers
-    module Tags # :nodoc:
-      class TimeZoneSelect < Base # :nodoc:
-        def initialize(object_name, method_name, template_object, priority_zones, options, html_options)
-          @priority_zones = priority_zones
-          @html_options   = html_options
-
-          super(object_name, method_name, template_object, options)
-        end
-
-        def render
-          select_content_tag(
-            time_zone_options_for_select(value || @options[:default], @priority_zones, @options[:model] || ActiveSupport::TimeZone), @options, @html_options
-          )
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f6eb766a701582c962302aafdd2858f41607ef23be2792baf60cdfbd853f1a2
+size 665

@@ -1,9 +1,3 @@
-require 'rails_helper'
-
-RSpec.describe "<%= class_name.pluralize %>", <%= type_metatag(:system) %> do
-  before do
-    driven_by(:rack_test)
-  end
-
-  pending "add some scenarios (or delete) #{__FILE__}"
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cbc9a08de546ea90847d3e56c14a927d880e81b478e56f39444d2a29a49e27d2
+size 206

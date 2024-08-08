@@ -1,29 +1,3 @@
-module OpenAI
-  class Assistants
-    BETA_VERSION = "v2".freeze
-
-    def initialize(client:)
-      @client = client.beta(assistants: OpenAI::Assistants::BETA_VERSION)
-    end
-
-    def list
-      @client.get(path: "/assistants")
-    end
-
-    def retrieve(id:)
-      @client.get(path: "/assistants/#{id}")
-    end
-
-    def create(parameters: {})
-      @client.json_post(path: "/assistants", parameters: parameters)
-    end
-
-    def modify(id:, parameters: {})
-      @client.json_post(path: "/assistants/#{id}", parameters: parameters)
-    end
-
-    def delete(id:)
-      @client.delete(path: "/assistants/#{id}")
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:04b8660071373c5783de44ff5cb0428ee8d76bd269fe664f77f5627739e30235
+size 628

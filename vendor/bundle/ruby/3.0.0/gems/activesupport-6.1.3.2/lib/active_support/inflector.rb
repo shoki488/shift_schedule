@@ -1,9 +1,3 @@
-# frozen_string_literal: true
-
-# in case active_support/inflector is required without the rest of active_support
-require "active_support/inflector/inflections"
-require "active_support/inflector/transliterate"
-require "active_support/inflector/methods"
-
-require "active_support/inflections"
-require "active_support/core_ext/string/inflections"
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5beb5f1b221feb6b0578dceeced68fc4954a0e2d890e33469a14f4ea6a2c461
+size 343

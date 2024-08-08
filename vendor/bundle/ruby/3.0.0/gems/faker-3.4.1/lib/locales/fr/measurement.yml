@@ -1,7 +1,3 @@
-fr:
-  faker:
-    measurement:
-      metric_height: ["millimètre", "centimètre", "mètre"]
-      metric_length: ["millimètre", "centimètre", "décimètre", "mètre", "décamètre", "hectomètre", "kilomètre"]
-      metric_volume: ["millilitre", "centilitre", "décilitre", "litre", "décalitre", "hectolitre", "décimètre cube", "mètre cube"]
-      metric_weight: ["milligramme", "centigramme", "décigramme", "gramme", "décagramme", "hectogramme", "kilogramme", "tonne", "kilotonne"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:baa32e02509c53d9552257356db34133ccf6d04f819f10f3d30deee30562871b
+size 492

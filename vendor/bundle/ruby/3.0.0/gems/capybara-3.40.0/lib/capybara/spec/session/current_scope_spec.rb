@@ -1,31 +1,3 @@
-# frozen_string_literal: true
-
-Capybara::SpecHelper.spec '#current_scope' do
-  before do
-    @session.visit('/with_scope')
-  end
-
-  context 'when not in a #within block' do
-    it 'should return the document' do
-      expect(@session.current_scope).to be_a Capybara::Node::Document
-    end
-  end
-
-  context 'when in a #within block' do
-    it 'should return the element in scope' do
-      @session.within(:css, '#simple_first_name') do
-        expect(@session.current_scope[:name]).to eq 'first_name'
-      end
-    end
-  end
-
-  context 'when in a nested #within block' do
-    it 'should return the element in scope' do
-      @session.within("//div[@id='for_bar']") do
-        @session.within(".//input[@value='Peter']") do
-          expect(@session.current_scope[:name]).to eq 'form[first_name]'
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ebfe13d2227dfa2b547f5d82adca5b12a48a4eec51324d5808de8d759a3931a
+size 836

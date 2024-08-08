@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-require "rack"
-Rack::Server.start
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c8f8c478935b9c69de06ea74caf84cfebefe12f8a21bf98a2d7d0a408ca1408
+size 85

@@ -1,24 +1,3 @@
-describe RuboCop::Cop::Airbnb::NoTimeout, :config do
-  context 'send' do
-    it 'rejects Timeout.timeout' do
-      expect_offense(<<~RUBY)
-        def some_method(a)
-          Timeout.timeout(5) do
-          ^^^^^^^^^^^^^^^^^^ Do not use Timeout.timeout. [...]
-            some_other_method(a)
-          end
-        end
-      RUBY
-    end
-
-    it 'accepts foo.timeout' do
-      expect_no_offenses(<<~RUBY)
-        def some_method(a)
-          foo.timeout do
-            some_other_method(a)
-          end
-        end
-      RUBY
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf7c7ca8d73e5a060f22809cd323e7745a331e3a8551ee00f65883cca2c3e751
+size 546

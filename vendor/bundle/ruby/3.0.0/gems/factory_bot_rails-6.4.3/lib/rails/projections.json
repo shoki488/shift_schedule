@@ -1,26 +1,3 @@
-{
-  "spec/factories/*.rb": {
-    "alternate": "app/models/{singular}.rb",
-    "collection": "model",
-    "command": "factory",
-    "template": [
-      "FactoryBot.define do",
-      "  factory :{singular} do",
-      "  end",
-      "end"
-    ],
-    "test": "spec/models/{singular}_spec.rb"
-  },
-  "test/factories/*.rb": {
-    "alternate": "app/models/{singular}.rb",
-    "collection": "model",
-    "command": "factory",
-    "template": [
-      "FactoryBot.define do",
-      "  factory :{singular} do",
-      "  end",
-      "end"
-    ],
-    "test": "test/models/{singular}_test.rb"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d858fb68b796ac8c66578aba2d1c3d0f6cfcd8e96f16df5f27cbcd1caa79ee5d
+size 585

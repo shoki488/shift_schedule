@@ -1,6 +1,3 @@
-$(function() {
-  $(document).on('click dblclick contextmenu', function(e){
-    e.preventDefault();
-    $(document.body).append('<div id="has-been-clicked">Has been clicked at ' + e.clientX + ',' + e.clientY + '</div>');
-  })
-})
+version https://git-lfs.github.com/spec/v1
+oid sha256:fcc57829495c537406b17b3b195c678596e069eff92c13bfff12f9d4b1b192de
+size 227

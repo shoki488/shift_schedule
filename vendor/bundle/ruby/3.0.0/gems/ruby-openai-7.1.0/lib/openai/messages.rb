@@ -1,23 +1,3 @@
-module OpenAI
-  class Messages
-    def initialize(client:)
-      @client = client.beta(assistants: OpenAI::Assistants::BETA_VERSION)
-    end
-
-    def list(thread_id:, parameters: {})
-      @client.get(path: "/threads/#{thread_id}/messages", parameters: parameters)
-    end
-
-    def retrieve(thread_id:, id:)
-      @client.get(path: "/threads/#{thread_id}/messages/#{id}")
-    end
-
-    def create(thread_id:, parameters: {})
-      @client.json_post(path: "/threads/#{thread_id}/messages", parameters: parameters)
-    end
-
-    def modify(id:, thread_id:, parameters: {})
-      @client.json_post(path: "/threads/#{thread_id}/messages/#{id}", parameters: parameters)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea73206c1d00ad6dae08df035d3b88db55134e8ef0eeb01a9cfe2b69f6325878
+size 681

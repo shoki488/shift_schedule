@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class Bang < Pry::ClassCommand
-      match(/^\s*!\s*$/)
-      group 'Editing'
-      description 'Clear the input buffer.'
-      command_options use_prefix: false, listing: '!'
-
-      banner <<-'BANNER'
-        Clear the input buffer. Useful if the parsing process goes wrong and you get
-        stuck in the read loop.
-      BANNER
-
-      def process
-        output.puts 'Input buffer cleared!'
-        eval_string.replace('')
-      end
-    end
-
-    Pry::Commands.add_command(Pry::Command::Bang)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:02949c0ec7293335d9f68105c34b99ba5072fa2b69b4f11e4d04803ee65d5122
+size 567

@@ -1,6 +1,3 @@
----
-lb:
-  number:
-    nth:
-      ordinals: "."
-      ordinalized: "%{number}."
+version https://git-lfs.github.com/spec/v1
+oid sha256:f44a41fa323dad555e023a72b27d961d2dcb1330448d4cffb0ceead31b82430f
+size 79

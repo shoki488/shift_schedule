@@ -1,32 +1,3 @@
-# frozen_string_literal: true
-
-module WebSocket
-  module ExceptionHandler
-    attr_accessor :error
-
-    def self.included(base)
-      base.extend(ClassMethods)
-    end
-
-    module ClassMethods
-      # Rescue from WebSocket::Error errors.
-      #
-      # @param [String] method_name Name of method that should be wrapped and rescued
-      # @param [Hash] options Options for rescue
-      #
-      # @option options [Any] :return Value that should be returned instead of raised error
-      def rescue_method(method_name, options = {})
-        define_method "#{method_name}_with_rescue" do |*args|
-          begin
-            send("#{method_name}_without_rescue", *args)
-          rescue WebSocket::Error => e
-            self.error = e.message.to_sym
-            WebSocket.should_raise ? raise : options[:return]
-          end
-        end
-        alias_method "#{method_name}_without_rescue", method_name
-        alias_method method_name, "#{method_name}_with_rescue"
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0aec78480380aec13cca315c0e3c9fc39a8990b7d53eaac35d235de5619c547
+size 993

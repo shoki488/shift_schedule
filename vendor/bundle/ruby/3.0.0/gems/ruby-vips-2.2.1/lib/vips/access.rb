@@ -1,11 +1,3 @@
-module Vips
-  # The type of access an operation has to supply.
-  #
-  # *   `:random` means requests can come in any order.
-  #
-  # *   `:sequential` means requests will be top-to-bottom, but with some
-  #     amount of buffering behind the read point for small non-local
-  #     accesses.
-  class Access < Symbol
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b31246eed7648d824c8e0804506e97c7f839484459b1d97cb10db8da47bd6dda
+size 323

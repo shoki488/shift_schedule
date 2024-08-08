@@ -1,9 +1,3 @@
-# frozen_string_literal: true
-module Builder
-  VERSION_NUMBERS = [
-    VERSION_MAJOR = 3,
-    VERSION_MINOR = 3,
-    VERSION_BUILD = 0,
-  ]
-  VERSION = VERSION_NUMBERS.join(".")
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:3fe13dedef7fbd96164401737d54a714333017692dcbf5f7ca47c9dd506324bb
+size 182

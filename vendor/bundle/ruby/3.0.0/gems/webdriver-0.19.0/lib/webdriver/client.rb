@@ -1,27 +1,3 @@
-module Webdriver
-  class Client
-    def initialize(endpoint, desired_capabilities={}, opts={})
-      uri = URI(endpoint)
-      @connection = Webdriver::Connection.new endpoint, **opts
-      @desired_capabilities = desired_capabilities
-    end
-
-    def status
-      @connection.get "status"
-    end
-
-    def sessions
-      value = @connection.get "sessions"
-      value.map { |json| Webdriver::Session.new json, @connection }
-    end
-
-    def session!
-      json = @connection.post "session", {}, {
-        desiredCapabilities: @desired_capabilities
-      }
-
-      Webdriver::Session.new json, @connection
-    end
-
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:294cc8c872da48830b6fcfb9f5c97ca521237a9d524b38d38c47ac910ef49fc1
+size 624

@@ -1,23 +1,3 @@
-module CodeRay
-module Encoders
-  
-  load :html
-  
-  # Wraps HTML output into a DIV element, using inline styles by default.
-  # 
-  # See Encoders::HTML for available options.
-  class Div < HTML
-    
-    FILE_EXTENSION = 'div.html'
-    
-    register_for :div
-    
-    DEFAULT_OPTIONS = HTML::DEFAULT_OPTIONS.merge \
-      :css          => :style,
-      :wrap         => :div,
-      :line_numbers => false
-    
-  end
-  
-end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:58b8c214aa818255b7970c1a20cc973fe9eb2c665e4b7a2d5f9ce6fd9cd0dff9
+size 426

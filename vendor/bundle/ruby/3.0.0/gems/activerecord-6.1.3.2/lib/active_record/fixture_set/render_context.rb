@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-# NOTE: This class has to be defined in compact style in
-# order for rendering context subclassing to work correctly.
-class ActiveRecord::FixtureSet::RenderContext # :nodoc:
-  def self.create_subclass
-    Class.new(ActiveRecord::FixtureSet.context_class) do
-      def get_binding
-        binding()
-      end
-
-      def binary(path)
-        %(!!binary "#{Base64.strict_encode64(File.binread(path))}")
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:eef62cb15ce04b8544373e3c81f032c668c7a3671333b47b53ccf2fffc184df5
+size 459

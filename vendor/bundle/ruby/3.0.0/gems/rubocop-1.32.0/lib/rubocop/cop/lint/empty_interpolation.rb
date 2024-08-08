@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Lint
-      # Checks for empty interpolation.
-      #
-      # @example
-      #
-      #   # bad
-      #
-      #   "result is #{}"
-      #
-      # @example
-      #
-      #   # good
-      #
-      #   "result is #{some_result}"
-      class EmptyInterpolation < Base
-        include Interpolation
-        extend AutoCorrector
-
-        MSG = 'Empty interpolation detected.'
-
-        def on_interpolation(begin_node)
-          return unless begin_node.children.empty?
-
-          add_offense(begin_node) { |corrector| corrector.remove(begin_node.loc.expression) }
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:19a7bb645becd0720ba956971ec496dcd425122487340a656d194f559847bd3c
+size 665

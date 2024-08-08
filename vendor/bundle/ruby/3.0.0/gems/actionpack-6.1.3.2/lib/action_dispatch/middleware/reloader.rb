@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-module ActionDispatch
-  # ActionDispatch::Reloader wraps the request with callbacks provided by ActiveSupport::Reloader
-  # callbacks, intended to assist with code reloading during development.
-  #
-  # By default, ActionDispatch::Reloader is included in the middleware stack
-  # only in the development environment; specifically, when +config.cache_classes+
-  # is false.
-  class Reloader < Executor
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b4586b77910f84ff3b1840006fd787b0febf99bac462852639818f1c1e45c706
+size 441

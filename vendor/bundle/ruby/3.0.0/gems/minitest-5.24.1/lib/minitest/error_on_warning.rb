@@ -1,11 +1,3 @@
-module Minitest
-
-  module ErrorOnWarning
-    def warn(message, category: nil)
-      message = "[#{category}] #{message}" if category
-      raise UnexpectedWarning, message
-    end
-  end
-
-  ::Warning.singleton_class.prepend(ErrorOnWarning)
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c5812d7f0f6301edc5747f4eebfbbe7beb51bcca8547ef01632c1af819070b3c
+size 243

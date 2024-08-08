@@ -1,11 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-require 'mail/fields/structured_field'
-
-module Mail
-  class NamedStructuredField < StructuredField #:nodoc:
-    def initialize(value = nil, charset = nil)
-      super self.class::NAME, value, charset
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5bc7976132ac6035f00f9781e4701eee873a1a9a5473af5a3ce7acea42444a07
+size 266

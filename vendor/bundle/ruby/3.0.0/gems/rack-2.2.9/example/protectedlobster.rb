@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-require 'rack'
-require 'rack/lobster'
-
-lobster = Rack::Lobster.new
-
-protected_lobster = Rack::Auth::Basic.new(lobster) do |username, password|
-  Rack::Utils.secure_compare('secret', password)
-end
-
-protected_lobster.realm = 'Lobster 2.0'
-
-pretty_protected_lobster = Rack::ShowStatus.new(Rack::ShowExceptions.new(protected_lobster))
-
-Rack::Server.start app: pretty_protected_lobster, Port: 9292
+version https://git-lfs.github.com/spec/v1
+oid sha256:afbe142a22ff064fbcd1399699b1b8ff07d45c7a6a2858204edaa5d62e85912e
+size 424

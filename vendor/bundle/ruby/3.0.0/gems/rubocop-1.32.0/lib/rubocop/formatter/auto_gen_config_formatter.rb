@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Formatter
-    # Does not show individual offenses in the console.
-    class AutoGenConfigFormatter < ProgressFormatter
-      def finished(inspected_files)
-        output.puts
-
-        report_summary(inspected_files.size,
-                       @total_offense_count,
-                       @total_correction_count,
-                       @total_correctable_count)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f98f6d7c401b2d92c804a5b351fb7b0e849dc2be13f50d9e415f73f9abd8ac0a
+size 446

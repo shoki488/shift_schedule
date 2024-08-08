@@ -1,26 +1,3 @@
-module Regexp::Expression
-  module Shared
-    def inspect
-      [
-        "#<#{self.class}",
-        pretty_print_instance_variables.map { |v| " #{v}=#{instance_variable_get(v).inspect}" },
-        ">"
-      ].join
-    end
-
-    # Make pretty-print work despite #inspect implementation.
-    def pretty_print(q)
-      q.pp_object(self)
-    end
-
-    # Called by pretty_print (ruby/pp) and #inspect.
-    def pretty_print_instance_variables
-      [
-        (:@text unless text.to_s.empty?),
-        (:@quantifier if quantified?),
-        (:@options unless options.empty?),
-        (:@expressions unless terminal?),
-      ].compact
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb3563206e5ce0b7a71c8155fb20259a7222e8edc085f717c92c88b06090b65b
+size 644

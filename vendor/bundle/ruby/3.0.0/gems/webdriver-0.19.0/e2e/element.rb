@@ -1,9 +1,3 @@
-session = $client.session!
-
-e = session.element "css selector", "html"
-raise "text" unless e.text == ""
-raise "property" unless e.property("innerHTML") == "<head></head><body></body>"
-raise "attribute" unless e.attribute("innerHTML") == "<head></head><body></body>"
-raise "tag" unless e.tag == "html"
-
-raise "child" unless e.element("css selector", "body").tag == "body"
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c6d41760d946934bc50acde2d1e88ecf5f5b7a9f792fd14f2b1cb89cba94dac
+size 371

@@ -1,28 +1,3 @@
-# frozen_string_literal: true
-
-module Zeitwerk
-  require_relative "zeitwerk/real_mod_name"
-  require_relative "zeitwerk/internal"
-  require_relative "zeitwerk/cref"
-  require_relative "zeitwerk/loader"
-  require_relative "zeitwerk/gem_loader"
-  require_relative "zeitwerk/registry"
-  require_relative "zeitwerk/explicit_namespace"
-  require_relative "zeitwerk/inflector"
-  require_relative "zeitwerk/gem_inflector"
-  require_relative "zeitwerk/null_inflector"
-  require_relative "zeitwerk/kernel"
-  require_relative "zeitwerk/error"
-  require_relative "zeitwerk/version"
-
-  # This is a dangerous method.
-  #
-  # @experimental
-  # @sig () -> void
-  def self.with_loader
-    loader = Zeitwerk::Loader.new
-    yield loader
-  ensure
-    loader.unregister
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f21b203b18f263b0706adf2e7ba0c0f9f418cfbf0f7b4c293ee037fdc661c25c
+size 761

@@ -1,23 +1,3 @@
-module OpenAI
-  class Batches
-    def initialize(client:)
-      @client = client.beta(assistants: OpenAI::Assistants::BETA_VERSION)
-    end
-
-    def list(parameters: {})
-      @client.get(path: "/batches", parameters: parameters)
-    end
-
-    def retrieve(id:)
-      @client.get(path: "/batches/#{id}")
-    end
-
-    def create(parameters: {})
-      @client.json_post(path: "/batches", parameters: parameters)
-    end
-
-    def cancel(id:)
-      @client.post(path: "/batches/#{id}/cancel")
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:36e8135f7d370b32329d1c9dd1043ab120531684ff01561a6e171fb23ff4158e
+size 506

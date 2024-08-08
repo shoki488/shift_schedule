@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-require "action_dispatch/testing/request_encoder"
-
-module ActionDispatch
-  # Integration test methods such as ActionDispatch::Integration::Session#get
-  # and ActionDispatch::Integration::Session#post return objects of class
-  # TestResponse, which represent the HTTP response results of the requested
-  # controller actions.
-  #
-  # See Response for more information on controller response objects.
-  class TestResponse < Response
-    def self.from_response(response)
-      new response.status, response.headers, response.body
-    end
-
-    def parsed_body
-      @parsed_body ||= response_parser.call(body)
-    end
-
-    def response_parser
-      @response_parser ||= RequestEncoder.parser(media_type)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:75d0ee15474b7bad1acb806e963fc2c0912b69821018500f182c537f04724c2f
+size 750

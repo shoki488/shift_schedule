@@ -1,5 +1,3 @@
-lib/*.rb
-lib/**/*.rb
--
-CHANGELOG.rdoc
-LICENSE.md
+version https://git-lfs.github.com/spec/v1
+oid sha256:45f9c595dc9fde0ea0653eddf96fd4e4fad1b75f50b507e4a3ba958bbd126923
+size 49

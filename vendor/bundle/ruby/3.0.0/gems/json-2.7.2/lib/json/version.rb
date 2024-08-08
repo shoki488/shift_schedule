@@ -1,9 +1,3 @@
-# frozen_string_literal: false
-module JSON
-  # JSON version
-  VERSION         = '2.7.2'
-  VERSION_ARRAY   = VERSION.split(/\./).map { |x| x.to_i } # :nodoc:
-  VERSION_MAJOR   = VERSION_ARRAY[0] # :nodoc:
-  VERSION_MINOR   = VERSION_ARRAY[1] # :nodoc:
-  VERSION_BUILD   = VERSION_ARRAY[2] # :nodoc:
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:26f9b262d9196ba7cf1c46111ffa2ad9979e39d58a3c0398c1c91616ebd44db0
+size 302

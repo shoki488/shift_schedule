@@ -1,11 +1,3 @@
-# frozen_string_literal: true
-
-module ActionController
-  module TemplateAssertions # :nodoc:
-    def assert_template(options = {}, message = nil)
-      raise NoMethodError,
-        "assert_template has been extracted to a gem. To continue using it,
-        add `gem 'rails-controller-testing'` to your Gemfile."
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b74be1a2037321604c913b9050a3ab36b026aebe0298ce383e6347cf9d60b83
+size 330

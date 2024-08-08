@@ -1,21 +1,3 @@
-# -*- encoding: utf-8 -*-
-# stub: parallel 1.25.1 ruby lib
-
-Gem::Specification.new do |s|
-  s.name = "parallel".freeze
-  s.version = "1.25.1".freeze
-
-  s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
-  s.metadata = { "bug_tracker_uri" => "https://github.com/grosser/parallel/issues", "documentation_uri" => "https://github.com/grosser/parallel/blob/v1.25.1/Readme.md", "source_code_uri" => "https://github.com/grosser/parallel/tree/v1.25.1", "wiki_uri" => "https://github.com/grosser/parallel/wiki" } if s.respond_to? :metadata=
-  s.require_paths = ["lib".freeze]
-  s.authors = ["Michael Grosser".freeze]
-  s.date = "2024-06-08"
-  s.email = "michael@grosser.it".freeze
-  s.homepage = "https://github.com/grosser/parallel".freeze
-  s.licenses = ["MIT".freeze]
-  s.required_ruby_version = Gem::Requirement.new(">= 2.7".freeze)
-  s.rubygems_version = "3.4.10".freeze
-  s.summary = "Run any kind of code in parallel processes".freeze
-
-  s.installed_by_version = "3.5.14".freeze if s.respond_to? :installed_by_version
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0a8e45e00a2410f43d3e37d00ac10d5a2fee61fc7fdbfa9016a619947c94463c
+size 1080

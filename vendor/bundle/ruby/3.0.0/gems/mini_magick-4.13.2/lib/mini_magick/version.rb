@@ -1,17 +1,3 @@
-module MiniMagick
-  ##
-  # @return [Gem::Version]
-  #
-  def self.version
-    Gem::Version.new VERSION::STRING
-  end
-
-  module VERSION
-    MAJOR = 4
-    MINOR = 13
-    TINY  = 2
-    PRE   = nil
-
-    STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:65fa1285aa1fa1532e07a2c0ad3f87a1eddc083837cd6fdf3dd11fd07dc3cc42
+size 261

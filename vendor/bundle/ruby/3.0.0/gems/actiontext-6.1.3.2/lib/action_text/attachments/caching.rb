@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module ActionText
-  module Attachments
-    module Caching
-      def cache_key(*args)
-        [self.class.name, cache_digest, *attachable.cache_key(*args)].join("/")
-      end
-
-      private
-        def cache_digest
-          Digest::SHA256.hexdigest(node.to_s)
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a50bbef524fef6b1207f176ce4c6f94d4180854062d3f533cd342503a0d4f064
+size 322

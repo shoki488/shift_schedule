@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/deprecation"
-
-ActiveSupport::Deprecation.warn "Sass::Rails::Logger has been removed, please stop requiring sass/rails/logger."
+version https://git-lfs.github.com/spec/v1
+oid sha256:4334bf9511ad3418168a9b9ca4d1ccea6cb607bf4f374b6c9b8cb9faa23419b6
+size 182

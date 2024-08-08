@@ -1,26 +1,3 @@
-# Used for Cornish, Inari Sami, Inuktitut, Lule Sami, Nama, Northern Sami,
-# Sami Language, Skolt Sami, Southern Sami.
-
-module RailsI18n
-  module Pluralization
-    module OneTwoOther
-      def self.rule
-        lambda do |n|
-          case n
-          when 1 then :one
-          when 2 then :two
-          else :other
-          end
-        end
-      end
-
-      def self.with_locale(locale)
-        { locale => {
-            :'i18n' => {
-              :plural => {
-                :keys => [:one, :two, :other],
-                :rule => rule }}}}
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1e535b7def644fcd4c34f7079b7c9d0433d029b60bd3f8bb981d367fe804a5e
+size 574

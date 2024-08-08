@@ -1,14 +1,3 @@
-recipe[a::default]
-recipe[b::default]
-recipe[c::default]
-recipe[d::default]
-recipe[e::default]
-recipe[f::default]
-recipe[g::default]
-recipe[h::default]
-recipe[i::default]
-recipe[j::default]
-recipe[k::default]
-recipe[l::default]
-recipe[m::default]
-recipe[n::default]
+version https://git-lfs.github.com/spec/v1
+oid sha256:07eac2987e68e05df3b901ca34b4fd9500835339921e9884a90ab18630d6c786
+size 266

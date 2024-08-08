@@ -1,15 +1,3 @@
-package puma;
-
-import java.io.IOException;
-
-import org.jruby.Ruby;
-import org.jruby.runtime.load.BasicLibraryService;
-
-import org.jruby.puma.Http11;
-
-public class PumaHttp11Service implements BasicLibraryService {
-    public boolean basicLoad(final Ruby runtime) throws IOException {
-        Http11.createHttp11(runtime);
-        return true;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe7a33eb5081cb280072bc6ee37e4f2364308f811a2fd498d58dfedac33cb628
+size 351

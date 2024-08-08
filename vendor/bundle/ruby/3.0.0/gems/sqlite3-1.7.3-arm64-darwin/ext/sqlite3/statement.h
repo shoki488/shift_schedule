@@ -1,16 +1,3 @@
-#ifndef SQLITE3_STATEMENT_RUBY
-#define SQLITE3_STATEMENT_RUBY
-
-#include <sqlite3_ruby.h>
-
-struct _sqlite3StmtRuby {
-  sqlite3_stmt *st;
-  int done_p;
-};
-
-typedef struct _sqlite3StmtRuby sqlite3StmtRuby;
-typedef sqlite3StmtRuby * sqlite3StmtRubyPtr;
-
-void init_sqlite3_statement();
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:c10d98184447ec57752b4575d2d5a549ff57119dd99d00c226dc719fb23a45bd
+size 289

@@ -1,10 +1,3 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-git_path = File.expand_path("../../.git", __dir__)
-
-if File.exist?(git_path)
-  railties_path = File.expand_path("../lib", __dir__)
-  $:.unshift(railties_path)
-end
-require "rails/cli"
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e3a776f47ad9f861264a206865115671c3b5c3c2e5a65ed3bf62dfc06078473
+size 234

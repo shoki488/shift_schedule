@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module HTTP
-  class Client
-    alias_method :__perform__, :perform
-
-    def perform(request, options)
-      return __perform__(request, options) unless webmock_enabled?
-
-      WebMockPerform.new(request, options) { __perform__(request, options) }.exec
-    end
-
-    def webmock_enabled?
-      ::WebMock::HttpLibAdapters::HttpRbAdapter.enabled?
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8b2fd66f2eb667be69462827ba101e2348a0a257c2e7e83d8e11b04cb5eb7c9e
+size 392

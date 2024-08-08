@@ -1,9 +1,3 @@
-require "test_helper"
-
-<% module_namespacing do -%>
-class <%= class_name %>Test < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-end
-<% end -%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:77941962fa2c677139b7fc3baaed31724bd8e7fdc93db98e2213fe23473bfc22
+size 171

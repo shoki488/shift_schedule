@@ -1,4 +1,3 @@
-ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__)
-
-require "bundler/setup" # Set up gems listed in the Gemfile.
-require "bootsnap/setup" # Speed up boot time by caching expensive operations.
+version https://git-lfs.github.com/spec/v1
+oid sha256:5226cbfc6138569ddb86a2200c5d31de848d0588232bed98818ad425cf2ffc00
+size 207

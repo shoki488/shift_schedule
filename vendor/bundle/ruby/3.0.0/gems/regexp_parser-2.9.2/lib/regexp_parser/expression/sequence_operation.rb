@@ -1,20 +1,3 @@
-module Regexp::Expression
-  # abstract class
-  class SequenceOperation < Regexp::Expression::Subexpression
-    alias :sequences :expressions
-    alias :operands :expressions
-    alias :operator :text
-
-    def ts
-      (head = expressions.first) ? head.ts : @ts
-    end
-
-    def <<(exp)
-      expressions.last << exp
-    end
-
-    def add_sequence(active_opts = {}, params = { ts: 0 })
-      self.class::OPERAND.add_to(self, params, active_opts)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5499591504c021a90723441bc14193962443376eeae8de03f4d1576708c8bdad
+size 462

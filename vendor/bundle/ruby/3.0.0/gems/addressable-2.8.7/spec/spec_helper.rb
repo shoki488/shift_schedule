@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-
-require 'bundler/setup'
-require 'rspec/its'
-
-begin
-  require 'coveralls'
-  Coveralls.wear! do
-    add_filter "spec/"
-    add_filter "vendor/"
-  end
-rescue LoadError
-  warn "warning: coveralls gem not found; skipping Coveralls"
-  require 'simplecov'
-  SimpleCov.start do
-    add_filter "spec/"
-    add_filter "vendor/"
-  end
-end if Gem.loaded_specs.key?("simplecov")
-
-class TestHelper
-  def self.native_supported?
-    mri = RUBY_ENGINE == "ruby"
-    windows = RUBY_PLATFORM.include?("mingw")
-
-    mri && !windows
-  end
-end
-
-RSpec.configure do |config|
-  config.warnings = true
-  config.filter_run_when_matching :focus
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb22cc9e26201b39b3118a67d349254244dfd6fed91a6d9d0ba2309c665bca4d
+size 652

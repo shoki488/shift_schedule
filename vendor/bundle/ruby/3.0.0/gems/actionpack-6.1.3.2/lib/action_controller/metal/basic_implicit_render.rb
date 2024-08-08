@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-module ActionController
-  module BasicImplicitRender # :nodoc:
-    def send_action(method, *args)
-      super.tap { default_render unless performed? }
-    end
-
-    def default_render
-      head :no_content
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c24978ab88f0eb28ecae1a7acd3a599d410fde4acee0988ec25243ef6a8184e6
+size 255

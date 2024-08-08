@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators/test_unit"
-
-module TestUnit # :nodoc:
-  module Generators # :nodoc:
-    class ControllerGenerator < Base # :nodoc:
-      argument :actions, type: :array, default: [], banner: "action action"
-      class_option :skip_routes, type: :boolean
-
-      check_class_collision suffix: "ControllerTest"
-
-      def create_test_files
-        template "functional_test.rb",
-                 File.join("test/controllers", class_path, "#{file_name}_controller_test.rb")
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1906ac0c548c2a4c2d1a3a61ff814733f508ac81d2da86529d5edc258fb71330
+size 540

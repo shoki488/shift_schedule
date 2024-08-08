@@ -1,11 +1,3 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-require 'listen'
-require 'listen/cli'
-
-if !defined?(JRUBY_VERSION) && Signal.list.keys.include?('INT')
-  Signal.trap('INT') { Thread.new { Listen.stop } }
-end
-
-Listen::CLI.start
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd9016bec3233b9b73a19dcbc478eae7392ff7941f7943bb28824ca7470bbac7
+size 229

@@ -1,10 +1,3 @@
-module Regexp::Expression
-  # A sequence of expressions, used by Alternation as one of its alternatives.
-  class Alternative < Regexp::Expression::Sequence; end
-
-  class Alternation < Regexp::Expression::SequenceOperation
-    OPERAND = Alternative
-
-    alias :alternatives :expressions
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3e68bda0ef07a614539de2fcc7e9a72430c6a2fdc1f59a8be1d1558691e6586
+size 296

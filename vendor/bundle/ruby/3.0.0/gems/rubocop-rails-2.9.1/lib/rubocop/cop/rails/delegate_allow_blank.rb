@@ -1,36 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Rails
-      # This cop looks for delegations that pass :allow_blank as an option
-      # instead of :allow_nil. :allow_blank is not a valid option to pass
-      # to ActiveSupport#delegate.
-      #
-      # @example
-      #   # bad
-      #   delegate :foo, to: :bar, allow_blank: true
-      #
-      #   # good
-      #   delegate :foo, to: :bar, allow_nil: true
-      class DelegateAllowBlank < Base
-        extend AutoCorrector
-
-        MSG = '`allow_blank` is not a valid option, use `allow_nil`.'
-        RESTRICT_ON_SEND = %i[delegate].freeze
-
-        def_node_matcher :allow_blank_option, <<~PATTERN
-          (send nil? :delegate _ (hash <$(pair (sym :allow_blank) true) ...>))
-        PATTERN
-
-        def on_send(node)
-          return unless (offending_node = allow_blank_option(node))
-
-          add_offense(offending_node) do |corrector|
-            corrector.replace(offending_node.key.source_range, 'allow_nil')
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e730b901ae5900ada1e9351f3fef17a950f0691130f7866df851d9dd361f2e1
+size 1047

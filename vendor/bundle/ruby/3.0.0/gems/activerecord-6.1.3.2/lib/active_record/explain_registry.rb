@@ -1,32 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/per_thread_registry"
-
-module ActiveRecord
-  # This is a thread locals registry for EXPLAIN. For example
-  #
-  #   ActiveRecord::ExplainRegistry.queries
-  #
-  # returns the collected queries local to the current thread.
-  #
-  # See the documentation of ActiveSupport::PerThreadRegistry
-  # for further details.
-  class ExplainRegistry # :nodoc:
-    extend ActiveSupport::PerThreadRegistry
-
-    attr_accessor :queries, :collect
-
-    def initialize
-      reset
-    end
-
-    def collect?
-      @collect
-    end
-
-    def reset
-      @collect = false
-      @queries = []
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b33acb4dda5d37f8f757655e1b49eb87341e5599e5d986b8ff189c089f669f8c
+size 638

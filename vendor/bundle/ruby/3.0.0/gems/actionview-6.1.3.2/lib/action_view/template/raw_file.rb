@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-module ActionView #:nodoc:
-  # = Action View RawFile Template
-  class Template #:nodoc:
-    class RawFile #:nodoc:
-      attr_accessor :type, :format
-
-      def initialize(filename)
-        @filename = filename.to_s
-        extname = ::File.extname(filename).delete(".")
-        @type = Template::Types[extname] || Template::Types[:text]
-        @format = @type.symbol
-      end
-
-      def identifier
-        @filename
-      end
-
-      def render(*args)
-        ::File.read(@filename)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:59e9edc7fb6c55c3cd2e353b605a407a68c64fa6c6be534ef733725be1775359
+size 544

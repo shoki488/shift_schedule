@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-require "minitest/autorun"
-require "rails"
-require "rails/test_help"
-require "byebug"
-
-require_relative "test_app/config/environment"
-
-Rails.env = "production"
-
-Webpacker.instance = ::Webpacker::Instance.new
-
-class Webpacker::Test < Minitest::Test
-  private
-    def reloaded_config
-      Webpacker.instance.instance_variable_set(:@env, nil)
-      Webpacker.instance.instance_variable_set(:@config, nil)
-      Webpacker.instance.instance_variable_set(:@dev_server, nil)
-      Webpacker.env
-      Webpacker.config
-      Webpacker.dev_server
-    end
-
-    def with_rails_env(env)
-      original = Rails.env
-      Rails.env = ActiveSupport::StringInquirer.new(env)
-      reloaded_config
-      yield
-    ensure
-      Rails.env = ActiveSupport::StringInquirer.new(original)
-      reloaded_config
-    end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0343b21a5bf6e82a1d440e2a1bb6b97189f0f03048895844305687291a027b2a
+size 831

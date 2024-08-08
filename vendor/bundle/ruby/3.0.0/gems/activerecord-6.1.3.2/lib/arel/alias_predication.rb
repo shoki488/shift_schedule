@@ -1,9 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module AliasPredication
-    def as(other)
-      Nodes::As.new self, Nodes::SqlLiteral.new(other)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2babcce98356ce20e7ab05a05c2756766a0d8821542742547260a1369847114
+size 174

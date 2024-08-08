@@ -1,6 +1,3 @@
-<% if spring_install? -%>
-load File.expand_path("spring", __dir__)
-<% end -%>
-require_relative "../config/boot"
-require "rake"
-Rake.application.run
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a20f739eb6e7131103bf8f0bb60785298b42488b8b611755af7e28b9acf9610
+size 148

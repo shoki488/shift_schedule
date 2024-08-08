@@ -1,6 +1,3 @@
-source 'https://rubygems.org'
-
-gem "rails", "~> 4.2.0"
-
-# Specify your gem's dependencies in sassc-rails.gemspec
-gemspec path: "../"
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c5f7bad28c8f549a72a304f50a2ba56e8ecd46a295e87a2e8887550eb679d2a
+size 133

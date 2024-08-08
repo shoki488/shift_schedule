@@ -1,10 +1,3 @@
-require 'rails_helper'
-
-RSpec.describe "<%= class_name.pluralize %>", <%= type_metatag(:request) %> do
-  describe "GET /<%= name.underscore.pluralize %>" do
-    it "works! (now write some real specs)" do
-      get <%= index_helper %>_path
-      expect(response).to have_http_status(200)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ecc158a1a0230370f900b0db7b6478453a15d104252a6d9edcae1ef80e938cc
+size 305

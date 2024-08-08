@@ -1,32 +1,3 @@
-module ImageProcessing
-  class Builder
-    include Chainable
-
-    attr_reader :options
-
-    def initialize(options)
-      @options = options
-    end
-
-    # Calls the pipeline to perform the processing from built options.
-    def call!(**call_options)
-      instrument do
-        Pipeline.new(pipeline_options).call(**call_options)
-      end
-    end
-
-    private
-
-    def instrument
-      return yield unless options[:instrumenter]
-
-      result = nil
-      options[:instrumenter].call(**pipeline_options) { result = yield }
-      result
-    end
-
-    def pipeline_options
-      options.reject { |key, _| key == :instrumenter }
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:de1709ae33c0ebbac2da6b82c182d52cebbcf4b3001eec96a0a45d684c7f5674
+size 644

@@ -1,24 +1,3 @@
-require 'sprockets/exporters/base'
-
-module Sprockets
-  module Exporters
-    # Writes a an asset file to disk
-    class FileExporter < Exporters::Base
-      def skip?(logger)
-        if ::File.exist?(target)
-          logger.debug "Skipping #{ target }, already exists"
-          true
-        else
-          logger.info "Writing #{ target }"
-          false
-        end
-      end
-
-      def call
-        write(target) do |file|
-          file.write(asset.source)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e19cfb6aded7ddb61d6831436dacbdbc920c430f82e3330b5553de113af84fa
+size 502

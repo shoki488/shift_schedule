@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module Nodes
-    class SqlLiteral < String
-      include Arel::Expressions
-      include Arel::Predications
-      include Arel::AliasPredication
-      include Arel::OrderPredications
-
-      def encode_with(coder)
-        coder.scalar = self.to_s
-      end
-
-      def fetch_attribute
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ab925a251e1e547ac97246fd7b3c3ca54226f28df9057fed6bc6304487919f49
+size 370

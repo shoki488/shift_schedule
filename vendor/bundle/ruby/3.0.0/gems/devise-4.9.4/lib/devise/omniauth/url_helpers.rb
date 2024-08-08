@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-module Devise
-  module OmniAuth
-    module UrlHelpers
-      def omniauth_authorize_path(resource_or_scope, provider, *args)
-        scope = Devise::Mapping.find_scope!(resource_or_scope)
-        _devise_route_context.send("#{scope}_#{provider}_omniauth_authorize_path", *args)
-      end
-
-      def omniauth_authorize_url(resource_or_scope, provider, *args)
-        scope = Devise::Mapping.find_scope!(resource_or_scope)
-        _devise_route_context.send("#{scope}_#{provider}_omniauth_authorize_url", *args)
-      end
-
-      def omniauth_callback_path(resource_or_scope, provider, *args)
-        scope = Devise::Mapping.find_scope!(resource_or_scope)
-        _devise_route_context.send("#{scope}_#{provider}_omniauth_callback_path", *args)
-      end
-
-      def omniauth_callback_url(resource_or_scope, provider, *args)
-        scope = Devise::Mapping.find_scope!(resource_or_scope)
-        _devise_route_context.send("#{scope}_#{provider}_omniauth_callback_url", *args)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d546f46984a968db9c0e59a179f5f62f1d6278c2f2d10af7db0fccc68d11a8b
+size 1030

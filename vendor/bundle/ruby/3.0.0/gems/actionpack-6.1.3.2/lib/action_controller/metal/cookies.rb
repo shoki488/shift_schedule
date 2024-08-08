@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-module ActionController #:nodoc:
-  module Cookies
-    extend ActiveSupport::Concern
-
-    included do
-      helper_method :cookies if defined?(helper_method)
-    end
-
-    private
-      # The cookies for the current request. See ActionDispatch::Cookies for
-      # more information.
-      def cookies # :doc:
-        request.cookie_jar
-      end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f8f55922a44da0e3107f09989eff7c1bc836e91debba79e74b894fa9d3d4c202
+size 385

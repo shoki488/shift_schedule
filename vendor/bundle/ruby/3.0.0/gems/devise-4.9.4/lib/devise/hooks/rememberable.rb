@@ -1,9 +1,3 @@
-# frozen_string_literal: true
-
-Warden::Manager.after_set_user except: :fetch do |record, warden, options|
-  scope = options[:scope]
-  if record.respond_to?(:remember_me) && options[:store] != false &&
-     record.remember_me && warden.authenticated?(scope)
-    Devise::Hooks::Proxy.new(warden).remember_me(record)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0674378a6ea4ff9b289ced26dd694edb867c55d82fcbf01ce85fdd5bde1e3510
+size 324

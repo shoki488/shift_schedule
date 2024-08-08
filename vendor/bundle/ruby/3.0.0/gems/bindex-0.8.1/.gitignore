@@ -1,15 +1,3 @@
-/.bundle/
-/.yardoc
-/Gemfile.lock
-/_yardoc/
-/coverage/
-/doc/
-/pkg/
-/spec/reports/
-/tmp/
-*.bundle
-*.so
-*.o
-*.a
-.ycm_extra_conf.py*
-mkmf.log
+version https://git-lfs.github.com/spec/v1
+oid sha256:da042d461a1c74be96e6d707ca4676dce59bcafa8d5c7f179a943ca8ed4514c6
+size 138

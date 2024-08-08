@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
-
-require_relative "../config/application"
-require "importmap/commands"
+version https://git-lfs.github.com/spec/v1
+oid sha256:aaaf65c0637afc4a2cd13b04660761cfaee83d7f6e81446986a3e3aaafb84da5
+size 91

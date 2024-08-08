@@ -1,5 +1,3 @@
-class AddUserIdToOpenAi < ActiveRecord::Migration[6.1]
-  def change
-    add_reference :open_ais, :user, null: false, foreign_key: true
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:afbaada4c748af49b17acb9e80fdf68c0d52212592ab66e204b991ff77198c20
+size 145

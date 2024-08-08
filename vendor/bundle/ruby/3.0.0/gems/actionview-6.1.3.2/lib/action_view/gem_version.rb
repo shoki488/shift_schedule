@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module ActionView
-  # Returns the version of the currently loaded Action View as a <tt>Gem::Version</tt>
-  def self.gem_version
-    Gem::Version.new VERSION::STRING
-  end
-
-  module VERSION
-    MAJOR = 6
-    MINOR = 1
-    TINY  = 3
-    PRE   = "2"
-
-    STRING = [MAJOR, MINOR, TINY, PRE].compact.join(".")
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f850186c0b80ef4463717540511829470e15ebcef5689c7d13ff6932ed0320ee
+size 346

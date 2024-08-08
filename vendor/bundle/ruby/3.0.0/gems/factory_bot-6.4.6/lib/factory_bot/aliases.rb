@@ -1,18 +1,3 @@
-module FactoryBot
-  class << self
-    attr_accessor :aliases
-  end
-
-  self.aliases = [
-    [/(.+)_id/, '\1'],
-    [/(.*)/, '\1_id']
-  ]
-
-  def self.aliases_for(attribute)
-    aliases.map { |(pattern, replace)|
-      if pattern.match?(attribute)
-        attribute.to_s.sub(pattern, replace).to_sym
-      end
-    }.compact << attribute
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e9743736dc63dfba8ff8171583aefec39f39c34206e81b6cbc6eecad6f5c26d8
+size 344

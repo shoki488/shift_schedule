@@ -1,27 +1,3 @@
-Gumbo HTML parser THANKS file
-
-Gumbo was originally written by Jonathan Tang, but many people helped out through suggestions, question-answering, code reviews, bugfixes, and organizational support.  Here is a list of these people.  Help me keep it complete and exempt of errors.
-
-Adam Barth
-Adam Roben
-Ben Noordhuis
-Bowen Han
-Constantinos Michael
-Craig Barnes
-Geoffrey Sneddon
-Ian Hickson
-Jack Deng
-Joel Low
-Jonathan Shneier
-Kevin Hendricks
-Mason Tang
-Maxim Zakharov
-Michal Zalewski
-Neal Norwitz
-Othar Hansson
-Ryan Grove
-Stefan Haustein
-Steffen Meschkat
-Steven Kabbes
-Thiago Farina
-Vicent Marti
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc13a811f09605aa36c61cc5dcbc70d0b59df35acc1203475f179572c47b2235
+size 595

@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module ConnectionAdapters
-    module SQLite3
-      class SchemaCreation < SchemaCreation # :nodoc:
-        private
-          def supports_index_using?
-            false
-          end
-
-          def add_column_options!(sql, options)
-            if options[:collation]
-              sql << " COLLATE \"#{options[:collation]}\""
-            end
-            super
-          end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:682378862c19b89a28ab62350c8b8082b519364104142def4f3cda3b579b3b9c
+size 455

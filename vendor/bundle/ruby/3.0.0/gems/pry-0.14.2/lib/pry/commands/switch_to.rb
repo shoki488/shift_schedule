@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class SwitchTo < Pry::ClassCommand
-      match 'switch-to'
-      group 'Navigating Pry'
-      description 'Start a new subsession on a binding in the current stack.'
-
-      banner <<-'BANNER'
-        Start a new subsession on a binding in the current stack (numbered by nesting).
-      BANNER
-
-      def process(selection)
-        selection = selection.to_i
-
-        if selection < 0 || selection > pry_instance.binding_stack.size - 1
-          raise CommandError,
-                "Invalid binding index #{selection} - use `nesting` command " \
-                "to view valid indices."
-        else
-          Pry.start(pry_instance.binding_stack[selection])
-        end
-      end
-    end
-
-    Pry::Commands.add_command(Pry::Command::SwitchTo)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:24c3334c971582eaa81d779b7fb17628eb91cdb768835ff1c6c0d8f0a9cf7252
+size 814

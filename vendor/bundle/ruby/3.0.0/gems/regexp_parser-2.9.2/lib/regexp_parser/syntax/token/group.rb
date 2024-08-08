@@ -1,23 +1,3 @@
-module Regexp::Syntax
-  module Token
-    module Group
-      Basic     = %i[capture close]
-      Extended  = Basic + %i[options options_switch]
-
-      Named     = %i[named]
-      Atomic    = %i[atomic]
-      Passive   = %i[passive]
-      Comment   = %i[comment]
-
-      V1_8_6 = Group::Extended + Group::Named + Group::Atomic +
-               Group::Passive + Group::Comment
-
-      V2_4_1 = %i[absence]
-
-      All = V1_8_6 + V2_4_1
-      Type = :group
-    end
-
-    Map[Group::Type] = Group::All
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:63f972e07b7a8542b2ad7987f5b7c6a5a487f702e8ae290cda5c281322c5bd2d
+size 503

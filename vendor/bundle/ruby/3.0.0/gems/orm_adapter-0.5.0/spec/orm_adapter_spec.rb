@@ -1,13 +1,3 @@
-require 'spec_helper'
-
-describe OrmAdapter do
-  subject { OrmAdapter }
-  
-  describe "when a new adapter is created (by inheriting form OrmAdapter::Base)" do
-    let!(:adapter) { Class.new(OrmAdapter::Base) }
-    
-    its(:adapters) { should include(adapter) }
-    
-    after { OrmAdapter.adapters.delete(adapter) }
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:329bc14415ecd6a6aa5ec9364bba1956dd3c017afe42272c621296faa859e1b6
+size 326

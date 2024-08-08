@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title><%= humanized %></title>
-  <%%= csrf_meta_tags %>
-  <%%= csp_meta_tag %>
-
-  <%%= stylesheet_link_tag    "<%= namespaced_name %>/application", media: "all" %>
-  <%- unless options[:skip_javascript] -%>
-  <%%= javascript_include_tag "<%= namespaced_name %>/application" %>
-  <%- end -%>
-</head>
-<body>
-
-<%%= yield %>
-
-</body>
-</html>
+version https://git-lfs.github.com/spec/v1
+oid sha256:856372c7f9f81157ba3ab4e62bde660f0fe1d0603c548d1355e46cf86d6e4cd1
+size 371

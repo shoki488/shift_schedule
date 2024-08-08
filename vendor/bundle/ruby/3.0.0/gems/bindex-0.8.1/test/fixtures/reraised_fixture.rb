@@ -1,23 +1,3 @@
-module Skiptrace
-  module ReraisedFixture
-    extend self
-
-    def call
-      reraise_an_error
-    rescue => exc
-      exc
-    end
-
-    private
-
-    def raise_an_error_in_eval
-      method_that_raises
-    rescue => exc
-      raise exc
-    end
-
-    def method_that_raises
-      raise
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:268cf5b5ba824cb9b77ab55a152de314051d607834ff06d93d5d5caad6248514
+size 301

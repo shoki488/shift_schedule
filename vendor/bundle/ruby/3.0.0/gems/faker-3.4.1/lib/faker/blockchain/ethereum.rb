@@ -1,26 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class Blockchain
-    class Ethereum < Base
-      class << self
-        ##
-        # Produces a random Ethereum wallet address
-        #
-        # @return [String]
-        #
-        # @example
-        #   Faker::Blockchain::Ethereum.address
-        #     #=> "0xd392b0c0500700d02d27ab30805ec80ddd3320ff"
-        #
-        # @faker.version 1.9.1
-        def address
-          hex_alphabet = '0123456789abcdef'
-          var = +'0x'
-          40.times { var << sample(shuffle(hex_alphabet.chars)) }
-          var
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cd2d23c5646fb0d4085d494d35faf84ac97e6ca03bae187aa1326ce7e56df0d7
+size 596

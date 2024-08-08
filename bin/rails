@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-load File.expand_path("spring", __dir__)
-APP_PATH = File.expand_path('../config/application', __dir__)
-require_relative "../config/boot"
-require "rails/commands"
+version https://git-lfs.github.com/spec/v1
+oid sha256:76a229c194965a0cd66516b0ecb477ca2f534e7cec066c7c1dd0e741178d8c4d
+size 182

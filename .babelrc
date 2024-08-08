@@ -1,8 +1,3 @@
-{
-  "presets": ["@babel/preset-env"],
-  "plugins": [
-    ["@babel/plugin-transform-class-properties", { "loose": true }],
-    ["@babel/plugin-transform-private-methods", { "loose": true }],
-    ["@babel/plugin-transform-private-property-in-object", { "loose": true }]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f01fbf509c57214f593ee1e07abb8c42ed215261a7b17d4c8d15933b399b395
+size 274

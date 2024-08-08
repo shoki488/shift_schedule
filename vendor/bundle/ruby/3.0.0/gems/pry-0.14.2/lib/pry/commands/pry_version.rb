@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class Version < Pry::ClassCommand
-      match 'pry-version'
-      group 'Misc'
-      description 'Show Pry version.'
-
-      banner <<-'BANNER'
-        Show Pry version.
-      BANNER
-
-      def process
-        output.puts "Pry version: #{Pry::VERSION} on Ruby #{RUBY_VERSION}."
-      end
-    end
-
-    Pry::Commands.add_command(Pry::Command::Version)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c3bd301ad0f1ffe222cf10bd567fa8144147c0c2752e705c76636ebb66eb8724
+size 420

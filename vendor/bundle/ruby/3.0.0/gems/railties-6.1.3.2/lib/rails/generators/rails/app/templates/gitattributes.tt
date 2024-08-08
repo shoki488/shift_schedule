@@ -1,14 +1,3 @@
-# See https://git-scm.com/docs/gitattributes for more about git attribute files.
-
-<% unless options[:skip_active_record] -%>
-# Mark the database schema as having been generated.
-db/schema.rb linguist-generated
-<% end -%>
-
-<% unless options[:skip_javascript] -%>
-# Mark the yarn lockfile as having been generated.
-yarn.lock linguist-generated
-<% end -%>
-
-# Mark any vendored files as having been vendored.
-vendor/* linguist-vendored
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc4991a8d4b8c5bf3d97313cc3ced5ec60c1a52fadfabbe590863c536d18cac2
+size 432

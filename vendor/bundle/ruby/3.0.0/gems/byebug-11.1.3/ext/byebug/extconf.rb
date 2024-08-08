@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-require "mkmf"
-
-makefile_config = RbConfig::MAKEFILE_CONFIG
-
-makefile_config["CC"] = ENV["CC"] if ENV["CC"]
-
-makefile_config["CFLAGS"] << " -gdwarf-2 -g3 -O0" if ENV["debug"]
-
-dir_config("ruby")
-with_cflags(makefile_config["CFLAGS"]) { create_makefile("byebug/byebug") }
+version https://git-lfs.github.com/spec/v1
+oid sha256:b579bcc662c30f6bc3143cf7650f8805feb98f3fd767d4eb66470c866bd99159
+size 302

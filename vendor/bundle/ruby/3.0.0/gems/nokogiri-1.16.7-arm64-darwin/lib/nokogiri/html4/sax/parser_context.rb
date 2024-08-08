@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module Nokogiri
-  module HTML4
-    module SAX
-      ###
-      # Context for HTML SAX parsers. This class is usually not instantiated by the user. Instead,
-      # you should be looking at Nokogiri::HTML4::SAX::Parser
-      class ParserContext < Nokogiri::XML::SAX::ParserContext
-        def self.new(thing, encoding = "UTF-8")
-          if [:read, :close].all? { |x| thing.respond_to?(x) }
-            super
-          else
-            memory(thing, encoding)
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:346bfbcbd16e967abf7117c14b68311eee13a39db87b286a8d4ca021ae9f9ceb
+size 544

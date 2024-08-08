@@ -1,9 +1,3 @@
-# frozen_string_literal: true
-
-class LoadError
-  # Returns true if the given path name (except perhaps for the ".rb"
-  # extension) is the missing file which caused the exception to be raised.
-  def is_missing?(location)
-    location.delete_suffix(".rb") == path.to_s.delete_suffix(".rb")
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1a579026f4d717fe85b3914a0cf5ca89e426a56c23d74d58ebbf0657c113223c
+size 299

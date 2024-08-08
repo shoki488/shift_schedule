@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-
-module ActionView #:nodoc:
-  # = Action View HTML Template
-  class Template #:nodoc:
-    class HTML #:nodoc:
-      attr_reader :type
-
-      def initialize(string, type)
-        @string = string.to_s
-        @type   = type
-      end
-
-      def identifier
-        "html template"
-      end
-
-      alias_method :inspect, :identifier
-
-      def to_str
-        ERB::Util.h(@string)
-      end
-
-      def render(*args)
-        to_str
-      end
-
-      def format
-        @type
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e683727ee9d7f7088f65e696bb500fa366e44e33b3a6277ee77e29cc7e60759a
+size 528

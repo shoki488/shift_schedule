@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-require 'test/unit'
-require 'webmock'
-
-WebMock.enable!
-
-module Test
-  module Unit
-    class TestCase
-      include WebMock::API
-
-      teardown
-      def teardown_with_webmock
-        WebMock.reset!
-      end
-
-    end
-  end
-end
-
-WebMock::AssertionFailure.error_class = Test::Unit::AssertionFailedError
+version https://git-lfs.github.com/spec/v1
+oid sha256:52973bd1fa7a97a5c653b5012caf40184887f02e55137277070f4bfb463537d8
+size 333

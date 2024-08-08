@@ -1,21 +1,3 @@
-require 'concurrent/executor/ruby_thread_pool_executor'
-
-module Concurrent
-
-  # @!macro single_thread_executor
-  # @!macro abstract_executor_service_public_api
-  # @!visibility private
-  class RubySingleThreadExecutor < RubyThreadPoolExecutor
-
-    # @!macro single_thread_executor_method_initialize
-    def initialize(opts = {})
-      super(
-        min_threads: 1,
-        max_threads: 1,
-        max_queue: 0,
-        idletime: DEFAULT_THREAD_IDLETIMEOUT,
-        fallback_policy: opts.fetch(:fallback_policy, :discard),
-      )
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c3c2b308b2e98846ca6b8a5b673b7a49128b8a1f8ab9e630c99901f27d9b4d4
+size 549

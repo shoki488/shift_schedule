@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-# cattr_* became mattr_* aliases in 7dfbd91b0780fbd6a1dd9bfbc176e10894871d2d,
-# but we keep this around for libraries that directly require it knowing they
-# want cattr_*. No need to deprecate.
-require "active_support/core_ext/module/attribute_accessors"
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a588909f87086e7c76d5225128d0441b4202c14438d2c87e17e0375a74bd823
+size 286

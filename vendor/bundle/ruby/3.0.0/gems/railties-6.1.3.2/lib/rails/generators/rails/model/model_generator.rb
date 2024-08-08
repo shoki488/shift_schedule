@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators/model_helpers"
-
-module Rails
-  module Generators
-    class ModelGenerator < NamedBase # :nodoc:
-      include Rails::Generators::ModelHelpers
-
-      argument :attributes, type: :array, default: [], banner: "field[:type][:index] field[:type][:index]"
-      hook_for :orm, required: true, desc: "ORM to be invoked"
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:53d44b33d53df224678166bb11d256b6262b66b9bd6725dd09bfbad67be47519
+size 388

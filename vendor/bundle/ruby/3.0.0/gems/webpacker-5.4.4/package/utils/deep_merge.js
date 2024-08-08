@@ -1,22 +1,3 @@
-const {
-  isObject, isArray, isEqual, isEmpty
-} = require('./helpers')
-
-const deepMerge = (target, source) => {
-  if (isEmpty(target)) return source
-  if (isEmpty(source)) return target
-  if (isEqual(target, source)) return source
-  if (isArray(target) && isArray(source)) return [...new Set([...target, ...source])]
-  if (!(isObject(target) && isObject(source))) return source
-
-  return [...Object.keys(target), ...Object.keys(source)].reduce(
-    (result, key) => ({
-
-      ...result,
-      [key]: deepMerge(target[key], source[key])
-    }),
-    {}
-  )
-}
-
-module.exports = deepMerge
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d659496f93d4f86467a835af3933fd49d512b98c7c9aaf59adb1e7253455d54
+size 585

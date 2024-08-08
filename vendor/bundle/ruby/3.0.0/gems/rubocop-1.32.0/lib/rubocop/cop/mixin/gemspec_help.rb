@@ -1,30 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # Common functionality for checking gem declarations.
-    module GemspecHelp
-      extend NodePattern::Macros
-
-      # @!method gem_specification?(node)
-      def_node_matcher :gem_specification?, <<~PATTERN
-        (block
-          (send
-            (const
-              (const {cbase nil?} :Gem) :Specification) :new)
-          (args
-            (arg $_)) ...)
-      PATTERN
-
-      # @!method gem_specification(node)
-      def_node_search :gem_specification, <<~PATTERN
-        (block
-          (send
-            (const
-              (const {cbase nil?} :Gem) :Specification) :new)
-          (args
-            (arg $_)) ...)
-      PATTERN
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e52cbe436b9a1dbc6e6e37b7f0e9c1eb13543df3aec9e623ee41c87d2453190b
+size 722

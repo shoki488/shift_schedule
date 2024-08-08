@@ -1,26 +1,3 @@
-# frozen_string_literal: true
-
-require 'ffi'
-
-module Puma
-  module JRubyRestart
-    extend FFI::Library
-    ffi_lib 'c'
-
-    attach_function :execlp, [:string, :varargs], :int
-    attach_function :chdir, [:string], :int
-    attach_function :fork, [], :int
-    attach_function :exit, [:int], :void
-    attach_function :setsid, [], :int
-
-    def self.chdir_exec(dir, argv)
-      chdir(dir)
-      cmd = argv.first
-      argv = ([:string] * argv.size).zip(argv).flatten
-      argv << :string
-      argv << nil
-      execlp(cmd, *argv)
-      raise SystemCallError.new(FFI.errno)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6fd78d60e46ac0d12d5ebcd8147c445df2619d12a33df28159589a5040b8ba44
+size 592

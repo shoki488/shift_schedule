@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module Webdrivers
-  #
-  # @example Enable full logging
-  #   Webdrivers.logger.level = :debug
-  #
-  # @example Log to file
-  #   Webdrivers.logger.output = 'webdrivers.log'
-  #
-  # @example Use logger manually
-  #   Webdrivers.logger.info('This is info message')
-  #   Webdrivers.logger.warn('This is warning message')
-  #
-  class Logger < Selenium::WebDriver::Logger
-    def initialize
-      super('Webdrivers')
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:76b82be054d765d4f90c9febb0a41800b0205d85b78b4926fea894b545243815
+size 462

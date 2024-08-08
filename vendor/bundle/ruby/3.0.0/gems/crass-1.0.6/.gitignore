@@ -1,5 +1,3 @@
-.yardoc/
-doc/
-pkg/
-.DS_Store
-Gemfile.lock
+version https://git-lfs.github.com/spec/v1
+oid sha256:06b3881078abb341d52fc5b6aa81446c406f7a15b92e2f2dc90e56b351bbbf4d
+size 42

@@ -1,24 +1,3 @@
-module CodeRay
-module Scanners
-  
-  map \
-    :'c++'       => :cpp,
-    :cplusplus   => :cpp,
-    :ecmascript  => :java_script,
-    :ecma_script => :java_script,
-    :rhtml       => :erb,
-    :eruby       => :erb,
-    :irb         => :ruby,
-    :javascript  => :java_script,
-    :js          => :java_script,
-    :pascal      => :delphi,
-    :patch       => :diff,
-    :plain       => :text,
-    :plaintext   => :text,
-    :xhtml       => :html,
-    :yml         => :yaml
-  
-  default :text
-  
-end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe9b7e5893de4f9333094cadb2c3abd11cfc488514ffcbcca523b82c645ebf1d
+size 502

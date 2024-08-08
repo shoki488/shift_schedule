@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module Nodes
-    class Descending < Ordering
-      def reverse
-        Ascending.new(expr)
-      end
-
-      def direction
-        :desc
-      end
-
-      def ascending?
-        false
-      end
-
-      def descending?
-        true
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:52832a5d6a252cbd57a74a60017a3cd8a91ef15aa7168db3387617748b8681e1
+size 315

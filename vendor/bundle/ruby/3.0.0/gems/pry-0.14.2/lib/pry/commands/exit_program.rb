@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class ExitProgram < Pry::ClassCommand
-      match 'exit-program'
-      group 'Navigating Pry'
-      description 'End the current program.'
-
-      banner <<-'BANNER'
-        Usage:   exit-program [--help]
-        Aliases: quit-program
-                 !!!
-
-        End the current program.
-      BANNER
-
-      def process
-        Kernel.exit target.eval(arg_string).to_i
-      end
-    end
-
-    Pry::Commands.add_command(Pry::Command::ExitProgram)
-    Pry::Commands.alias_command 'quit-program', 'exit-program'
-    Pry::Commands.alias_command '!!!', 'exit-program'
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6bcbae1e29279583bd564ea0f3ac78444ffd5b45aec07a2f3ee7cd9060cb0880
+size 634

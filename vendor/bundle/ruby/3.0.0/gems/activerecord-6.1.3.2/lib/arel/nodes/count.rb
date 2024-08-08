@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module Nodes
-    class Count < Arel::Nodes::Function
-      def initialize(expr, distinct = false, aliaz = nil)
-        super(expr, aliaz)
-        @distinct = distinct
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4abec531199ad88b636a11297bbfb96d8b999097fbade306d6888666da7f0f7e
+size 254

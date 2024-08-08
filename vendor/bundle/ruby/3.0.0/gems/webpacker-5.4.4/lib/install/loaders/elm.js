@@ -1,25 +1,3 @@
-const { resolve } = require('path')
-
-const isProduction = process.env.NODE_ENV === 'production'
-const isDevelopment = process.env.NODE_ENV === 'development'
-const elmSource = resolve(process.cwd())
-const elmBinary = `${elmSource}/node_modules/.bin/elm`
-
-const options = { 
-  cwd: elmSource, 
-  pathToElm: elmBinary, 
-  optimize: isProduction, 
-  verbose: isDevelopment, 
-  debug: isDevelopment  
-}
-
-const elmWebpackLoader = {
-  loader: 'elm-webpack-loader',
-  options: options
-}
-
-module.exports = {
-  test: /\.elm(\.erb)?$/,
-  exclude: [/elm-stuff/, /node_modules/],
-  use: isProduction ? [elmWebpackLoader] : [{ loader: 'elm-hot-webpack-loader' }, elmWebpackLoader]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a3ffd3e9c72f9d3a61592ab25d1dbeeb4d09550ebd5940f78a497837979f9f2
+size 669

@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-class Rack::MiniProfiler::Context
-  attr_accessor :inject_js, :current_timer, :page_struct, :skip_backtrace,
-                :full_backtrace, :discard, :mpt_init, :measure
-
-  def initialize(opts = {})
-    opts["measure"] = true unless opts.key? "measure"
-    opts.each do |k, v|
-      self.instance_variable_set('@' + k, v)
-    end
-  end
-
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0047272973bd8118294a9850b3227b7d4d167ab70f524b2376551d2a2f3beb14
+size 374

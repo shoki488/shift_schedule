@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveSupport
-  module Testing
-    # Logs a "PostsControllerTest: test name" heading before each test to
-    # make test.log easier to search and follow along with.
-    module TaggedLogging #:nodoc:
-      attr_writer :tagged_logger
-
-      def before_setup
-        if tagged_logger && tagged_logger.info?
-          heading = "#{self.class}: #{name}"
-          divider = "-" * heading.size
-          tagged_logger.info divider
-          tagged_logger.info heading
-          tagged_logger.info divider
-        end
-        super
-      end
-
-      private
-        def tagged_logger
-          @tagged_logger ||= (defined?(Rails.logger) && Rails.logger)
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5700af3c84a46a0a206632c4e6dbfd3bc83662888f5ce3af109f9dc102d2f9b
+size 714

@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # This autocorrects string literals
-    class StringLiteralCorrector
-      extend Util
-
-      class << self
-        def correct(corrector, node, style)
-          return if node.dstr_type?
-
-          str = node.str_content
-          if style == :single_quotes
-            corrector.replace(node, to_string_literal(str))
-          else
-            corrector.replace(node, str.inspect)
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a52570a6155dfd4a704d7ccfee0454887cf08b3ee792d2d6e28c8a48510cff95
+size 500

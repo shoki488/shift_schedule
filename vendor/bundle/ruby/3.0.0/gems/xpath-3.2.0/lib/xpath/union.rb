@@ -1,31 +1,3 @@
-# frozen_string_literal: true
-
-module XPath
-  class Union
-    include Enumerable
-
-    attr_reader :expressions
-    alias_method :arguments, :expressions
-
-    def initialize(*expressions)
-      @expressions = expressions
-    end
-
-    def expression
-      :union
-    end
-
-    def each(&block)
-      arguments.each(&block)
-    end
-
-    def method_missing(*args) # rubocop:disable Style/MethodMissingSuper, Style/MissingRespondToMissing
-      XPath::Union.new(*arguments.map { |e| e.send(*args) })
-    end
-
-    def to_xpath(type = nil)
-      Renderer.render(self, type)
-    end
-    alias_method :to_s, :to_xpath
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3438cbe9a792a3be504dbce591e21018bbf0fc299d03adcfc88d04a44ddf331
+size 618

@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-Capybara::SpecHelper.spec '#go_forward', requires: [:js] do
-  it 'should fetch a response from the driver from the previous page' do
-    @session.visit('/')
-    expect(@session).to have_content('Hello world!')
-    @session.visit('/foo')
-    expect(@session).to have_content('Another World')
-    @session.go_back
-    expect(@session).to have_content('Hello world!')
-    @session.go_forward
-    expect(@session).to have_content('Another World')
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:83ffc2e956320332ca2a3244184403e570aa0f0762a69e3f4f61a13c97166adc
+size 484

@@ -1,31 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveModel
-  # Raised when forbidden attributes are used for mass assignment.
-  #
-  #   class Person < ActiveRecord::Base
-  #   end
-  #
-  #   params = ActionController::Parameters.new(name: 'Bob')
-  #   Person.new(params)
-  #   # => ActiveModel::ForbiddenAttributesError
-  #
-  #   params.permit!
-  #   Person.new(params)
-  #   # => #<Person id: nil, name: "Bob">
-  class ForbiddenAttributesError < StandardError
-  end
-
-  module ForbiddenAttributesProtection # :nodoc:
-    private
-      def sanitize_for_mass_assignment(attributes)
-        if attributes.respond_to?(:permitted?)
-          raise ActiveModel::ForbiddenAttributesError if !attributes.permitted?
-          attributes.to_h
-        else
-          attributes
-        end
-      end
-      alias :sanitize_forbidden_attributes :sanitize_for_mass_assignment
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ceedbf795acd92f34877bab82ed9e628267a330d7be3d7c18be55fdad15e6546
+size 862

@@ -1,14 +1,3 @@
-module WebSocket
-  module Mask
-    def self.mask(payload, mask)
-      return payload if mask.nil? || payload.empty?
-
-      payload.tap do |result|
-        payload.bytesize.times do |i|
-          result.setbyte(i, payload.getbyte(i) ^ mask.getbyte(i % 4))
-        end
-      end
-    end
-
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a7b16d181197ce6aec305b34bfb302bfa5ae925e8e91079401bd1b7720883d9
+size 296

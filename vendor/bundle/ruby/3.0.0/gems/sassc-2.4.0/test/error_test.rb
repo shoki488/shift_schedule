@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "test_helper"
-
-module SassC
-  class ErrorTest < MiniTest::Test
-    def render(data, opts={})
-      Engine.new(data, opts).render
-    end
-
-    def test_first_backtrace_is_sass
-      filename = "app/assets/stylesheets/application.scss"
-
-      begin
-        template = <<-SCSS
-.foo {
-  baz: bang;
-  padding top: 10px;
-}
-      SCSS
-
-        render(template, filename: filename)
-      rescue SassC::SyntaxError => err
-        expected = "#{filename}:3"
-        assert_equal expected, err.backtrace.first
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ee21a8c2ea05b78385997000a142da3305805d0072e3b4928a2813b68620a89
+size 575

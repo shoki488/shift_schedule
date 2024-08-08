@@ -1,17 +1,3 @@
-<% module_namespacing do -%>
-class <%= class_name %>Mailer < ApplicationMailer
-<% actions.each do |action| -%>
-
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.<%= file_path.tr("/",".") %>_mailer.<%= action %>.subject
-  #
-  def <%= action %>
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
-  end
-<% end -%>
-end
-<% end -%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:672080eb3570cf5724da14f977dffc0d440d3209dfc5da4363afece81e7e1d5b
+size 388

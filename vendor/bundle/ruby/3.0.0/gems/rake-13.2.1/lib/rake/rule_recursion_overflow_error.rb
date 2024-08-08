@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-module Rake
-
-  # Error indicating a recursion overflow error in task selection.
-  class RuleRecursionOverflowError < StandardError
-    def initialize(*args)
-      super
-      @targets = []
-    end
-
-    def add_target(target)
-      @targets << target
-    end
-
-    def message
-      super + ": [" + @targets.reverse.join(" => ") + "]"
-    end
-  end
-
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:66868fc21d8c430f24e8367941f312aa5bd594195ee1dab0883c91fcd8602ebd
+size 382

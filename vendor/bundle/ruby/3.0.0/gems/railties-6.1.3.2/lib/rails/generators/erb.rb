@@ -1,26 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators/named_base"
-
-module Erb # :nodoc:
-  module Generators # :nodoc:
-    class Base < Rails::Generators::NamedBase #:nodoc:
-      private
-        def formats
-          [format]
-        end
-
-        def format
-          :html
-        end
-
-        def handler
-          :erb
-        end
-
-        def filename_with_extensions(name, file_format = format)
-          [name, file_format, handler].compact.join(".")
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e147df8f8864389365721716209202d3c3f45e312db6ac701998b3bc9205147
+size 490

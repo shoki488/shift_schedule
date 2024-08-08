@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-require "mail"
-
-# The hope is to upstream most of these basic additions to the Mail gem's Mail object. But until then, here they lay!
-Dir["#{File.expand_path(File.dirname(__FILE__))}/mail_ext/*"].each { |path| require "action_mailbox/mail_ext/#{File.basename(path)}" }
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb66bd67978bdab28e8d7066973898a8364c165c837189eef679687c40185953
+size 300

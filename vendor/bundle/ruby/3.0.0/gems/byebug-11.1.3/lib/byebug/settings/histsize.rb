@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "../setting"
-
-module Byebug
-  #
-  # Setting to customize the number of byebug commands to be saved in history.
-  #
-  class HistsizeSetting < Setting
-    DEFAULT = 256
-
-    def banner
-      "Maximum number of commands that can be stored in byebug history"
-    end
-
-    def to_s
-      "Maximum size of byebug's command history is #{value}"
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d50bc7ce887c2d8adfb493e4bcd3fe8a83d889d1232342074320f57ec0ad31ab
+size 404

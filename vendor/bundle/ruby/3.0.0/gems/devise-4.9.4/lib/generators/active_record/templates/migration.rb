@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-class DeviseCreate<%= table_name.camelize %> < ActiveRecord::Migration<%= migration_version %>
-  def change
-    create_table :<%= table_name %><%= primary_key_type %> do |t|
-<%= migration_data -%>
-
-<% attributes.each do |attribute| -%>
-      t.<%= attribute.type %> :<%= attribute.name %>
-<% end -%>
-
-      t.timestamps null: false
-    end
-
-    add_index :<%= table_name %>, :email,                unique: true
-    add_index :<%= table_name %>, :reset_password_token, unique: true
-    # add_index :<%= table_name %>, :confirmation_token,   unique: true
-    # add_index :<%= table_name %>, :unlock_token,         unique: true
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ae3ac93809e4d7a631558093b9321af779b54a502ff3a0b4cf34e754b446ef85
+size 666

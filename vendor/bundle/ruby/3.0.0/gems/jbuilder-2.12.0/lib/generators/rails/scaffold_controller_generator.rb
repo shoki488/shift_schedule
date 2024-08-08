@@ -1,18 +1,3 @@
-require 'rails/generators'
-require 'rails/generators/rails/scaffold_controller/scaffold_controller_generator'
-
-module Rails
-  module Generators
-    class ScaffoldControllerGenerator
-      source_paths << File.expand_path('../templates', __FILE__)
-
-      hook_for :jbuilder, type: :boolean, default: true
-
-      private
-
-        def permitted_params
-          attributes_names.map { |name| ":#{name}" }.join(', ')
-        end unless private_method_defined? :permitted_params
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:78032ae2ee9501a7e0ee4ee65632e89b8c4ce002504e19a9e18794608434075e
+size 492

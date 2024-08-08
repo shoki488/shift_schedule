@@ -1,7 +1,3 @@
-#! /usr/bin/env ruby
-# frozen_string_literal: true
-
-$LOAD_PATH.unshift(File.expand_path('../../lib', __FILE__))
-require 'parser/runner/ruby_rewrite'
-
-Parser::Runner::RubyRewrite.go(ARGV)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2de4cb588f94476a79cd32b6d53f2c2a7aae3e1b414fac068afb9887ac7f98a0
+size 187

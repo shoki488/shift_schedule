@@ -1,12 +1,3 @@
-say "Appending Stimulus setup code to #{Webpacker.config.source_entry_path}/application.js"
-append_to_file "#{Webpacker.config.source_entry_path}/application.js" do
-  "\n" + open("#{__dir__}/examples/stimulus/application.js").read
-end
-
-say "Creating controllers directory"
-directory "#{__dir__}/examples/stimulus/controllers", "#{Webpacker.config.source_path}/controllers"
-
-say "Installing all Stimulus dependencies"
-run "yarn add stimulus"
-
-say "Webpacker now supports Stimulus.js 🎉", :green
+version https://git-lfs.github.com/spec/v1
+oid sha256:08dbbb2a9c8a46aaeadb059ea540433d5fa699357ec477f6bc7579b7cb4bb0af
+size 496

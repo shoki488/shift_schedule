@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-source "https://rubygems.org"
-
-gemspec
-
-gem "digest"
-gem "strscan"
-gem "base64"
-
-gem "rake"
-gem "rdoc"
-gem "test-unit"
-gem "test-unit-ruby-core", git: "https://github.com/ruby/test-unit-ruby-core"
-
-gem "benchmark-driver"
+version https://git-lfs.github.com/spec/v1
+oid sha256:a4cab25b6490203904c5f40ed447ffc84112807a6b4c020248e9b6c79c8f5a4b
+size 252

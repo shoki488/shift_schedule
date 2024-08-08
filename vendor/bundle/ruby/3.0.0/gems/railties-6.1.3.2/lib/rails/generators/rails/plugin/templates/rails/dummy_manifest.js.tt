@@ -1,10 +1,3 @@
-<% unless api? -%>
-//= link_tree ../images
-<% end -%>
-<% unless options.skip_javascript -%>
-//= link_directory ../javascripts .js
-<% end -%>
-//= link_directory ../stylesheets .css
-<% if mountable? && !api? -%>
-//= link <%= underscored_name %>_manifest.js
-<% end -%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff51383111c1983479c4618aa110e17d53dc22385b9bc02afd389853bd41da8c
+size 266

@@ -1,36 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-require 'mail/fields/named_structured_field'
-require 'mail/utilities'
-
-module Mail
-  class ContentIdField < NamedStructuredField #:nodoc:
-    NAME = 'Content-ID'
-
-    def self.singular?
-      true
-    end
-
-    def initialize(value = nil, charset = nil)
-      value = Mail::Utilities.generate_message_id if Utilities.blank?(value)
-      super value, charset
-    end
-
-    def element
-      @element ||= Mail::MessageIdsElement.new(value)
-    end
-
-    def content_id
-      element.message_id
-    end
-
-    private
-      def do_decode
-        "<#{content_id}>"
-      end
-
-      def do_encode
-        "#{name}: #{do_decode}\r\n"
-      end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:caf7f625f03ee2f67ca6e0c80c5a8eedeefd4e02b1b55bd00236f30ec33bf256
+size 691

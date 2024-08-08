@@ -1,9 +1,3 @@
-require "application_system_test_case"
-
-class <%= class_name.pluralize %>Test < ApplicationSystemTestCase
-  # test "visiting the index" do
-  #   visit <%= plural_table_name %>_url
-  #
-  #   assert_selector "h1", text: "<%= class_name %>"
-  # end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:af6931f6acb0c97097206a12c14f5b9f90cd763b209579c8c7f8a3fbb7a90d00
+size 250

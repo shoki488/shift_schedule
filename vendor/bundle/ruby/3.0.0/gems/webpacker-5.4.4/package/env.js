@@ -1,18 +1,3 @@
-const { safeLoad } = require('js-yaml')
-const { readFileSync } = require('fs')
-
-const NODE_ENVIRONMENTS = ['development', 'production', 'test']
-const DEFAULT = 'production'
-const configPath = require('./configPath')
-
-const railsEnv = process.env.RAILS_ENV
-const nodeEnv = process.env.NODE_ENV
-
-const config = safeLoad(readFileSync(configPath), 'utf8')
-const availableEnvironments = Object.keys(config).join('|')
-const regex = new RegExp(`^(${availableEnvironments})$`, 'g')
-
-module.exports = {
-  railsEnv: railsEnv && railsEnv.match(regex) ? railsEnv : DEFAULT,
-  nodeEnv: nodeEnv && NODE_ENVIRONMENTS.includes(nodeEnv) ? nodeEnv : DEFAULT
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:20d658b01f6e93a6861af1bbec2fff9193345016ada804caf6d0a2ec63fa8b67
+size 642

@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-module RuboCop
-  module Server
-    # @api private
-    class InvalidTokenError < StandardError; end
-
-    # @api private
-    class ServerStopRequest < StandardError; end
-
-    # @api private
-    class UnknownServerCommandError < StandardError; end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2c926637d73842977916eea839f0d03ec07d4f76bbeb4735eea83b26fb5d75e
+size 485

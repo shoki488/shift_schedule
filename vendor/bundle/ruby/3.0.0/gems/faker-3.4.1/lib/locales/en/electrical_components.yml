@@ -1,6 +1,3 @@
-en:
-  faker:
-    electrical_components:
-      active: ["Diode", "LED", "Rectifier", "Transistor", "JFET", "MOSFET", "Integrated Circuit", "LCD", "Cathode Ray Tube", "Vacuum Tube", "Battery", "Fuel Cell", "Power Supply"]
-      passive: ["Resistor", "Potentiometer", "Trim Pot", "Varistor", "Capacitor", "Varicap Diode", "Inductor", "Transformer", "Generator", "Motor", "Solenoid", "Magnetic Amplifier", "Speaker", "Motion Sensor", "Accelerometer", "Thermocouple", "Antenna", "Oscillator", "Breadboard"]
-      electromechanical: ["Piezoelectric device", "crystal", "Ultrasonic Motor", "Terminal", "Socket", "Power Cord", "Toggle Switch", "Slide Switch", "DIP Switch", "Footswitch", "Keypad", "Circuit Breaker", "Fuse", "Printed Circuit Board"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:d09553064ebc84724d54832966006f86d83902e7fa7759c5bc0372dc83d11cdf
+size 741

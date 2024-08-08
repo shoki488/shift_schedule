@@ -1,10 +1,3 @@
-module FFI
-  interface _DataConverter[N, R, in C]
-    def from_native: (N value, C ctx) -> R
-    def native_type: (?ffi_auto_type? type) -> Type
-    def to_native: (R value, C ctx) -> N
-  end
-  module DataConverter[N, R, in C]
-    include _DataConverter[N, R, C]
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:3fbf2c147d291626b5f1355221c419207dffdf7636a373168ba9225ef4a56125
+size 273

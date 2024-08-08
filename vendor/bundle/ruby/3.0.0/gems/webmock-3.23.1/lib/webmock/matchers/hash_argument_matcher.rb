@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module WebMock
-  module Matchers
-    # Base class for Hash matchers
-    # https://github.com/rspec/rspec-mocks/blob/master/lib/rspec/mocks/argument_matchers.rb
-    class HashArgumentMatcher
-      def initialize(expected)
-        @expected = Hash[WebMock::Util::HashKeysStringifier.stringify_keys!(expected, deep: true).sort]
-      end
-
-      def ==(_actual, &block)
-        @expected.all?(&block)
-      rescue NoMethodError
-        false
-      end
-
-      def self.from_rspec_matcher(matcher)
-        new(matcher.instance_variable_get(:@expected))
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ecaa7dd51a6fefabeab69f65cf3c62871c75fae3cee00225a4e053ab9e6a81da
+size 606

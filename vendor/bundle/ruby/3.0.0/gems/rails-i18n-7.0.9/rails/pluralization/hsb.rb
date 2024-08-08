@@ -1,26 +1,3 @@
-module RailsI18n
-  module Pluralization
-    module UpperSorbian
-      def self.rule
-        lambda do |n|
-          return :other unless n.is_a?(Numeric)
-
-          mod100 = n % 100
-
-          case mod100
-          when 1 then :one
-          when 2 then :two
-          when 3, 4 then :few
-          else :other
-          end
-        end
-      end
-    end
-  end
-end
-
-{ :hsb => {
-    :'i18n' => {
-      :plural => {
-        :keys => [:one, :two, :few, :other],
-        :rule => RailsI18n::Pluralization::UpperSorbian.rule }}}}
+version https://git-lfs.github.com/spec/v1
+oid sha256:47b7619e949b8c287d91726cabdfbc95f6690db50b5802ebba20df5d95a8db37
+size 525

@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-# Provides asynchronous analysis of ActiveStorage::Blob records via ActiveStorage::Blob#analyze_later.
-class ActiveStorage::AnalyzeJob < ActiveStorage::BaseJob
-  queue_as { ActiveStorage.queues[:analysis] }
-
-  discard_on ActiveRecord::RecordNotFound
-  retry_on ActiveStorage::IntegrityError, attempts: 10, wait: :exponentially_longer
-
-  def perform(blob)
-    blob.analyze
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f1480041bd5f545518f586ccf2aa1c5537279e910dbbffc9abb7021435bf174
+size 413

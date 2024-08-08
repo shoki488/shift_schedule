@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-# Provides asynchronous purging of ActiveStorage::Blob records via ActiveStorage::Blob#purge_later.
-class ActiveStorage::PurgeJob < ActiveStorage::BaseJob
-  queue_as { ActiveStorage.queues[:purge] }
-
-  discard_on ActiveRecord::RecordNotFound
-  retry_on ActiveRecord::Deadlocked, attempts: 10, wait: :exponentially_longer
-
-  def perform(blob)
-    blob.purge
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0b4f9078ff4cc061baf4e107c333e8a48860ba9c96bc93af9fbe130ca881f9d
+size 398

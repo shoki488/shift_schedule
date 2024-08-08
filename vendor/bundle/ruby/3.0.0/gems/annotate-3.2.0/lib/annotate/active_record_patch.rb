@@ -1,9 +1,3 @@
-# monkey patches
-
-module ::ActiveRecord
-  class Base
-    def self.method_missing(_name, *_args)
-      # ignore this, so unknown/unloaded macros won't cause parsing to fail
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c5e427c9009c5a9c440da79242938fc1fd161aefb811e7d06bde8ab3cb932f57
+size 190

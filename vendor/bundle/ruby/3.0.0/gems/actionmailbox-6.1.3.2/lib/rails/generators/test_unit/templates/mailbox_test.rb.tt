@@ -1,11 +1,3 @@
-require "test_helper"
-
-class <%= class_name %>MailboxTest < ActionMailbox::TestCase
-  # test "receive mail" do
-  #   receive_inbound_email_from_mail \
-  #     to: '"someone" <someone@example.com>',
-  #     from: '"else" <else@example.com>',
-  #     subject: "Hello world!",
-  #     body: "Hello?"
-  # end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:11375315ec020de499daaeb94724c284f7d100d8ceaf9e693565bcb6602a467d
+size 309

@@ -1,35 +1,3 @@
-# frozen_string_literal: true
-
-require "active_model/type/immutable_string"
-
-module ActiveModel
-  module Type
-    class String < ImmutableString # :nodoc:
-      def changed_in_place?(raw_old_value, new_value)
-        if new_value.is_a?(::String)
-          raw_old_value != new_value
-        end
-      end
-
-      def to_immutable_string
-        ImmutableString.new(
-          true: @true,
-          false: @false,
-          limit: limit,
-          precision: precision,
-          scale: scale,
-        )
-      end
-
-      private
-        def cast_value(value)
-          case value
-          when ::String then ::String.new(value)
-          when true then @true
-          when false then @false
-          else value.to_s
-          end
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:561de343dd80b7832896570bcf297d552aa5836ad45b09ee084e623c038aefdc
+size 762

@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "../setting"
-require_relative "../commands/list"
-
-module Byebug
-  #
-  # Setting for automatically listing source code on every stop.
-  #
-  class AutolistSetting < Setting
-    DEFAULT = 1
-
-    def initialize
-      ListCommand.always_run = DEFAULT
-    end
-
-    def banner
-      "Invoke list command on every stop"
-    end
-
-    def value=(val)
-      ListCommand.always_run = val ? 1 : 0
-    end
-
-    def value
-      ListCommand.always_run == 1
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7af2c38bac1666064da2a5a4408138114576cf9e6b4a9b6841fa3ba4b71f8893
+size 507

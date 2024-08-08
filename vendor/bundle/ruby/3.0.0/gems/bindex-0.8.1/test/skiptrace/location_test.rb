@@ -1,18 +1,3 @@
-require 'test_helper'
-
-module Skiptrace
-  class LocationTest < Test
-    test 'behaves like Thread::Backtrace::Location' do
-      native_location = caller_locations.first
-      location = Skiptrace::Location.new(native_location, binding)
-
-      assert_equal native_location.absolute_path, location.absolute_path
-      assert_equal native_location.base_label, location.base_label
-      assert_equal native_location.inspect, location.inspect
-      assert_equal native_location.label, location.label
-      assert_equal native_location.to_s, location.to_s
-
-      assert_equal [__FILE__, __LINE__ - 8], location.binding.source_location
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf77ef09ea9f041a1f9ce7c2b4b7d3e16574e403c24ad55563a2268e86b073ac
+size 648

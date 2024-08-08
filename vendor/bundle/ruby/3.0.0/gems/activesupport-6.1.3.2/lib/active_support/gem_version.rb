@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveSupport
-  # Returns the version of the currently loaded Active Support as a <tt>Gem::Version</tt>.
-  def self.gem_version
-    Gem::Version.new VERSION::STRING
-  end
-
-  module VERSION
-    MAJOR = 6
-    MINOR = 1
-    TINY  = 3
-    PRE   = "2"
-
-    STRING = [MAJOR, MINOR, TINY, PRE].compact.join(".")
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:37c46075bcc87ea244912e2754b186d6f2b69b0d76481a81ef67c52af4be2555
+size 353

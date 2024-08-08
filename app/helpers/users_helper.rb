@@ -1,12 +1,3 @@
-module UsersHelper
-  def bootstrap_alert(key)
-    case key
-    when "alert"
-      "warning"
-    when "notice"
-      "success"
-    when "error"
-      "danger"
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:206c5e61182eef773a71d1d263688a03760aa78112b49ba0239aaa62fa945bbc
+size 176

@@ -1,7 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/core_ext/time/acts_like"
-require "active_support/core_ext/time/calculations"
-require "active_support/core_ext/time/compatibility"
-require "active_support/core_ext/time/conversions"
-require "active_support/core_ext/time/zones"
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ad3e96a88c462f628b8c6cbcbd4f05e5af14d53b1c243b8379f88c9dc056697
+size 281

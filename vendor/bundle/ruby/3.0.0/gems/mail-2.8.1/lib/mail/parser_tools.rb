@@ -1,15 +1,3 @@
-module Mail
-  # Extends each field parser with utility methods.
-  module ParserTools #:nodoc:
-    # Slice bytes from ASCII-8BIT data and mark as UTF-8.
-    if 'string'.respond_to?(:force_encoding)
-      def chars(data, from_bytes, to_bytes)
-        data.slice(from_bytes..to_bytes).force_encoding(Encoding::UTF_8)
-      end
-    else
-      def chars(data, from_bytes, to_bytes)
-        data.slice(from_bytes..to_bytes)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:37384cfe2545cbced77e13cbed9965f522709ba2b94b9117f371d296602e0ac0
+size 446

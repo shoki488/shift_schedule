@@ -1,30 +1,3 @@
-require 'yaml'
-
-module Mail
-  module YAML
-    def self.load(yaml)
-      permitted_classes = [
-        Symbol,
-
-        Mail::Body,
-
-        # Delivery methods as listed in mail/configuration.rb
-        Mail::SMTP,
-        Mail::Sendmail,
-        Mail::Exim,
-        Mail::FileDelivery,
-        Mail::SMTPConnection,
-        Mail::TestMailer,
-        Mail::LoggerDelivery,
-
-        Mail.delivery_method.class,
-      ]
-
-      if Gem::Version.new(Psych::VERSION) >= Gem::Version.new('3.1.0.pre1')
-        ::YAML.safe_load(yaml, :permitted_classes => permitted_classes)
-      else
-        ::YAML.safe_load(yaml, permitted_classes)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:69f2be8204ca76bcd8fc699d8f74c0ff959a6d82df1d6149c3925a7fc5d6a767
+size 655

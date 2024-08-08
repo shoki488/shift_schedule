@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators"
-require "rails/generators/rails/db/system/change/change_generator"
-
-module Rails
-  module Command
-    module Db
-      module System
-        class ChangeCommand < Base # :nodoc:
-          class_option :to, desc: "The database system to switch to."
-
-          def initialize(positional_args, option_args, *)
-            @argv = positional_args + option_args
-            super
-          end
-
-          def perform
-            Rails::Generators::Db::System::ChangeGenerator.start(@argv)
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e41e9bb424885b9282634dd30bb6c5944918d8c9ea3f8ab15bd07d3ae1660515
+size 595

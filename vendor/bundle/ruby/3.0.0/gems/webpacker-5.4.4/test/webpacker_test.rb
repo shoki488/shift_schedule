@@ -1,13 +1,3 @@
-require "test_helper"
-
-class WebpackerTest < Webpacker::Test
-  def test_config_params
-    assert_equal Rails.env, Webpacker.config.env
-    assert_equal Webpacker.instance.root_path, Webpacker.config.root_path
-    assert_equal Webpacker.instance.config_path, Webpacker.config.config_path
-
-    with_rails_env("test") do
-      assert_equal "test", Webpacker.config.env
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e48cab34a6fc097fb73ef433e567202aaa84a8fe130dcd4274e0747808309349
+size 384

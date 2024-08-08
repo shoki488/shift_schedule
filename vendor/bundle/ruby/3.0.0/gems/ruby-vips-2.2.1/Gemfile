@@ -1,6 +1,3 @@
-source "https://rubygems.org"
-
-# all gems are handled by .gemspec (since this repo is for a gem)
-gemspec
-
-gem "github-markup"
+version https://git-lfs.github.com/spec/v1
+oid sha256:202df4e656138ef448c3983d5010b429c50194824a1d692d45664c7aca69d4ab
+size 126

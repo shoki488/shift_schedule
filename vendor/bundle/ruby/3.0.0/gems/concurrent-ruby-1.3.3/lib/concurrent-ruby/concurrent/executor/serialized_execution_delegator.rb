@@ -1,28 +1,3 @@
-require 'delegate'
-require 'concurrent/executor/serial_executor_service'
-require 'concurrent/executor/serialized_execution'
-
-module Concurrent
-
-  # A wrapper/delegator for any `ExecutorService` that
-  # guarantees serialized execution of tasks.
-  #
-  # @see [SimpleDelegator](http://www.ruby-doc.org/stdlib-2.1.2/libdoc/delegate/rdoc/SimpleDelegator.html)
-  # @see Concurrent::SerializedExecution
-  class SerializedExecutionDelegator < SimpleDelegator
-    include SerialExecutorService
-
-    def initialize(executor)
-      @executor   = executor
-      @serializer = SerializedExecution.new
-      super(executor)
-    end
-
-    # @!macro executor_service_method_post
-    def post(*args, &task)
-      raise ArgumentError.new('no block given') unless block_given?
-      return false unless running?
-      @serializer.post(@executor, *args, &task)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ab7a584f6632a18cc1a2ee4bdcf61cca2df4c85a41ac0b45a491620b0467e7e
+size 859

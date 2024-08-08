@@ -1,26 +1,3 @@
-# -*- encoding: utf-8 -*-
-# stub: net-pop 0.1.2 ruby lib
-
-Gem::Specification.new do |s|
-  s.name = "net-pop".freeze
-  s.version = "0.1.2".freeze
-
-  s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
-  s.metadata = { "homepage_uri" => "https://github.com/ruby/net-pop", "source_code_uri" => "https://github.com/ruby/net-pop" } if s.respond_to? :metadata=
-  s.require_paths = ["lib".freeze]
-  s.authors = ["Yukihiro Matsumoto".freeze]
-  s.bindir = "exe".freeze
-  s.date = "2022-09-28"
-  s.description = "Ruby client library for POP3.".freeze
-  s.email = ["matz@ruby-lang.org".freeze]
-  s.homepage = "https://github.com/ruby/net-pop".freeze
-  s.licenses = ["Ruby".freeze, "BSD-2-Clause".freeze]
-  s.rubygems_version = "3.4.0.dev".freeze
-  s.summary = "Ruby client library for POP3.".freeze
-
-  s.installed_by_version = "3.5.14".freeze if s.respond_to? :installed_by_version
-
-  s.specification_version = 4
-
-  s.add_runtime_dependency(%q<net-protocol>.freeze, [">= 0".freeze])
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2f9ade5423b489f88c8f8227d32f5f3d25e437f62e89f5f9cbc5f76352d1675c
+size 1035

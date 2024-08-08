@@ -1,32 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Rails
-      # This cop checks that controllers subclass ApplicationController.
-      #
-      # @example
-      #
-      #  # good
-      #  class MyController < ApplicationController
-      #    # ...
-      #  end
-      #
-      #  # bad
-      #  class MyController < ActionController::Base
-      #    # ...
-      #  end
-      class ApplicationController < Base
-        extend AutoCorrector
-
-        MSG = 'Controllers should subclass `ApplicationController`.'
-        SUPERCLASS = 'ApplicationController'
-        BASE_PATTERN = '(const (const nil? :ActionController) :Base)'
-
-        # rubocop:disable Layout/ClassStructure
-        include RuboCop::Cop::EnforceSuperclass
-        # rubocop:enable Layout/ClassStructure
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:90902a352a198c97d01901da7e5e3f2a1c804217c75a3f9fe4bf245bf5ac0a44
+size 813

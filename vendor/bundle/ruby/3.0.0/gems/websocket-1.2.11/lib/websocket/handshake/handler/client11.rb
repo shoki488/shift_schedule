@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module WebSocket
-  module Handshake
-    module Handler
-      class Client11 < Client04
-        private
-
-        # @see WebSocket::Handshake::Handler::Base#handshake_keys
-        def handshake_keys
-          super.collect do |key_pair|
-            if key_pair[0] == 'Sec-WebSocket-Origin'
-              ['Origin', key_pair[1]]
-            else
-              key_pair
-            end
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b22411e0ead6c15c2276bbaf331c82900a4dd76a1f3cb06acff88649af7f921
+size 467

@@ -1,22 +1,3 @@
-module Webdriver
-  # 7
-  class NoSuchElementError < StandardError; end
-  # 7
-  class NoSuchFrameError < StandardError; end
-  # 10
-  class StaleElementReferenceError < StandardError; end
-  # 11
-  class ElementNotInteractableError < StandardError; end
-  # 13
-  class UnknownErrorUnhandledInspectorError < StandardError; end
-  # 17
-  class JavascriptError < StandardError; end
-  # 23
-  class NoSuchWindow < StandardError; end
-  # 26
-  class UnexpectedAlertOpen < StandardError; end
-  # 27
-  class NoSuchAlert < StandardError; end
-  # 28
-  class ScriptTimeout < StandardError; end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e49bd94e172009f2e5bb383a0f90cc587ef416402b791dab29c80b0a31d03c0
+size 581

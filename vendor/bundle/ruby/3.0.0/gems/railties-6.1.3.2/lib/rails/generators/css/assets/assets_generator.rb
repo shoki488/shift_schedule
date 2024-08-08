@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators/named_base"
-
-module Css # :nodoc:
-  module Generators # :nodoc:
-    class AssetsGenerator < Rails::Generators::NamedBase # :nodoc:
-      source_root File.expand_path("templates", __dir__)
-
-      def copy_stylesheet
-        copy_file "stylesheet.css", File.join("app/assets/stylesheets", class_path, "#{file_name}.css")
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2b73e01b8cacdaa48509864008089990d73471213c27709057185611b3760b5
+size 404

@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveStorage
-  class Analyzer::NullAnalyzer < Analyzer # :nodoc:
-    def self.accept?(blob)
-      true
-    end
-
-    def self.analyze_later?
-      false
-    end
-
-    def metadata
-      {}
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:156af87ff0794417e51293e272d5c95d55c75247460aea5f250659b4ce7ec269
+size 244

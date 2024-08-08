@@ -1,28 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # Common functionality for checking `rescue` nodes.
-    module RescueNode
-      def on_new_investigation
-        @modifier_locations = processed_source.tokens.select(&:rescue_modifier?).map(&:pos)
-      end
-
-      private
-
-      def rescue_modifier?(node)
-        node&.resbody_type? && @modifier_locations.include?(node.loc.keyword)
-      end
-
-      # @deprecated Use ResbodyNode#exceptions instead
-      def rescued_exceptions(resbody)
-        rescue_group, = *resbody
-        if rescue_group
-          rescue_group.values
-        else
-          []
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2167d363c4dd246aa1c41870b306613f9406653a8edc6af5cf3eecf8bde1ed58
+size 654

@@ -1,30 +1,3 @@
-# frozen_string_literal: true
-
-require "action_view/helpers/tags/collection_helpers"
-
-module ActionView
-  module Helpers
-    module Tags # :nodoc:
-      class CollectionRadioButtons < Base # :nodoc:
-        include CollectionHelpers
-
-        class RadioButtonBuilder < Builder # :nodoc:
-          def radio_button(extra_html_options = {})
-            html_options = extra_html_options.merge(@input_html_options)
-            html_options[:skip_default_ids] = false
-            @template_object.radio_button(@object_name, @method_name, @value, html_options)
-          end
-        end
-
-        def render(&block)
-          render_collection_for(RadioButtonBuilder, &block)
-        end
-
-        private
-          def render_component(builder)
-            builder.radio_button + builder.label
-          end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:63b308d72fdd1f9df6f012efe79b093f79f14b51d097624b6af54d892903b4bd
+size 830

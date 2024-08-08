@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class NatoPhoneticAlphabet < Base
-    class << self
-      ##
-      # Produces a code word from the NATO phonetic alphabet.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::NatoPhoneticAlphabet.code_word #=> "Hotel"
-      #
-      # @faker.version 1.9.0
-      def code_word
-        fetch('nato_phonetic_alphabet.code_word')
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c6f2d303e9ba18940e4fa1587020b85dbc73f18eb68c3e9859424e38429f9685
+size 422

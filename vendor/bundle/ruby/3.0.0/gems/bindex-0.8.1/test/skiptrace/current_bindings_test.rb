@@ -1,11 +1,3 @@
-require 'test_helper'
-
-module Skiptrace
-  class CurrentBindingsTest < Test
-    test 'first binding returned is the current one' do
-      _, lineno = Skiptrace.current_bindings.first.source_location
-
-      assert_equal __LINE__ - 2, lineno
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa224825b983ebcff48a0c0d8922cd3432e9e6cfa8b6839f9a12acacaffd3ce9
+size 257

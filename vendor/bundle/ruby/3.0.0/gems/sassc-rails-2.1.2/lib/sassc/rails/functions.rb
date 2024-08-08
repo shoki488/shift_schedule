@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-require 'sprockets/sass_functions'
-
-module Sprockets
-  module SassFunctions
-    def asset_data_url(path)
-      ::SassC::Script::Value::String.new("url(" + sprockets_context.asset_data_uri(path.value) + ")")
-    end
-  end
-end
-
-::SassC::Script::Functions.send :include, Sprockets::SassFunctions
+version https://git-lfs.github.com/spec/v1
+oid sha256:94701b30048394da1da0491076e749496152a8c885777ac1ce9cb84be6b32e0d
+size 324

@@ -1,15 +1,3 @@
-<% provide :title, @inbound_email.message_id %>
-
-<h1><%= @inbound_email.message_id %>: <%= @inbound_email.status %></h1>
-
-<ul>
-  <li><%= button_to "Route again", main_app.rails_conductor_inbound_email_reroute_path(@inbound_email), method: :post %></li>
-  <li>Incinerate</li>
-</ul>
-
-<details>
-  <summary>Full email source</summary>
-  <pre><%= @inbound_email.source %></pre>
-</details>
-
-<%= link_to "Back to all inbound emails", main_app.rails_conductor_inbound_emails_path %>
+version https://git-lfs.github.com/spec/v1
+oid sha256:944f037e4ccca25c2bf04cf01f39b30714d9277c12c6271bd00da4f749e4787d
+size 474

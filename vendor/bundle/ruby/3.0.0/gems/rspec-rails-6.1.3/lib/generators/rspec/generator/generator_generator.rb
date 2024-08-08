@@ -1,24 +1,3 @@
-require 'generators/rspec'
-
-module Rspec
-  module Generators
-    # @private
-    class GeneratorGenerator < Base
-      class_option :generator_specs, type: :boolean, default: true, desc: 'Generate generator specs'
-
-      def generate_generator_spec
-        return unless options[:generator_specs]
-
-        template template_name, target_path('generator', class_path, filename)
-      end
-
-      def template_name
-        'generator_spec.rb'
-      end
-
-      def filename
-        "#{file_name}_generator_spec.rb"
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:21b1067c4f5f98f3cadc72337c2eb9cf51294baf62f390f703b620fabf859631
+size 538

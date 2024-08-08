@@ -1,30 +1,3 @@
-module FactoryBotRails
-  module Generators
-    class RSpecGenerator
-      def initialize(generators)
-        @generators = generators
-      end
-
-      def run
-        @generators.fixture_replacement(
-          fixture_replacement_setting,
-          dir: factory_bot_directory
-        )
-      end
-
-      private
-
-      def fixture_replacement_setting
-        @generators.options[:rails][:fixture_replacement] || :factory_bot
-      end
-
-      def factory_bot_directory
-        factory_bot_options.fetch(:dir, "spec/factories")
-      end
-
-      def factory_bot_options
-        @generators.options.fetch(:factory_bot, {})
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:95226ddb860fac99856b8f9949e26d2f8af8c07f215fbe9d6a1d3322b922ed55
+size 646

@@ -1,18 +1,3 @@
-# frozen_string_literal: false
-require_relative "../child"
-module REXML
-  module DTD
-    class ElementDecl < Child
-      START = "<!ELEMENT"
-      START_RE = /^\s*#{START}/um
-      # PATTERN_RE = /^\s*(#{START}.*?)>/um
-      PATTERN_RE = /^\s*#{START}\s+((?:[:\w][-\.\w]*:)?[-!\*\.\w]*)(.*?)>/
-      #\s*((((["']).*?\5)|[^\/'">]*)*?)(\/)?>/um, true)
-
-      def initialize match
-        @name = match[1]
-        @rest = match[2]
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2301c19f38347c027a739cc5b133bfeb8cef4e21cd3b9794b858be268a81523
+size 456

@@ -1,31 +1,3 @@
-AllCops:
-  TargetRubyVersion: 2.6
-  NewCops: enable
-  SuggestExtensions: false
-
-Style/Documentation:
-  # Skips checking to make sure top level modules / classes have a comment.
-  Enabled: false
-
-Layout/LineLength:
-  Max: 100
-  Exclude:
-    - "**/*.gemspec"
-
-Lint/AmbiguousOperator:
-  # https://github.com/rubocop/rubocop/issues/4294
-  Exclude:
-    - "lib/openai/client.rb"
-
-Metrics/AbcSize:
-  Max: 20
-
-Metrics/BlockLength:
-  Exclude:
-    - "spec/**/*"
-
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
-
-Style/FrozenStringLiteralComment:
-  Enabled: false
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e5e4808f0dd2577a7242ef7bdcbec1bc08c263055799c37ca8f58b0ad4e35e4
+size 558

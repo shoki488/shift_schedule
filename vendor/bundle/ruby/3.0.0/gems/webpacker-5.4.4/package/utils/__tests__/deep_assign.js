@@ -1,32 +1,3 @@
-/* global test expect */
-
-const deepAssign = require('../deep_assign')
-
-describe('deepAssign()', () => {
-  test('deeply assigns nested properties', () => {
-    const object = { foo: { bar: { } } }
-    const path = 'foo.bar'
-    const value = { x: 1, y: 2 }
-    const expectation = { foo: { bar: { x: 1, y: 2 } } }
-    expect(deepAssign(object, path, value)).toEqual(expectation)
-  })
-
-  test('allows assignment of a literal false', () => {
-    const object = { foo: { bar: { } } }
-    const path = 'foo.bar'
-    const value = false
-    const expectation = { foo: { bar: false } }
-    expect(deepAssign(object, path, value)).toEqual(expectation)
-  })
-
-  test('does not allow assignment of other falsy values', () => {
-    const object = { foo: { bar: { } } }
-    const path = 'foo.bar'
-    const values = [undefined, null, 0, '']
-
-    values.forEach(value => {
-      const expectation = new Error(`Value can't be ${value}`)
-      expect(() => deepAssign(object, path, value)).toThrow(expectation)
-    })
-  })
-})
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe17de4e650320d7352af336edda8235e2ea8c2d1f78360cb1c3bc13ea9e16d6
+size 1011

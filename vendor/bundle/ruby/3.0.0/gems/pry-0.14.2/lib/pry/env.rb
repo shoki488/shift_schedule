@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  # Env is a helper module to work with environment variables.
-  #
-  # @since v0.13.0
-  # @api private
-  module Env
-    def self.[](key)
-      return unless ENV.key?(key)
-
-      value = ENV[key]
-      return if value == ''
-
-      value
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa2f53eb35ae2ea0faf541ac44dd036adb1e865a01aedfa2152172f7c86f9eb3
+size 295

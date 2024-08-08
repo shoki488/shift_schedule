@@ -1,24 +1,3 @@
-module RailsI18n
-  module Pluralization
-    module Slovenian
-      def self.rule
-        lambda do |n|
-          return :other unless n.is_a?(Numeric)
-
-          case n % 100
-          when 1 then :one
-          when 2 then :two
-          when 3, 4 then :few
-          else :other
-          end
-        end
-      end
-    end
-  end
-end
-
-{ :sl => {
-    :'i18n' => {
-      :plural => {
-        :keys => [:one, :two, :few, :other],
-        :rule => RailsI18n::Pluralization::Slovenian.rule }}}}
+version https://git-lfs.github.com/spec/v1
+oid sha256:136470c9d94f599d51b7baaa6fcf464adc8998e13853c02028f4de8b2b096ffc
+size 491

@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # extend this module to signal autocorrection support
-    module AutoCorrector
-      def support_autocorrect?
-        true
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3d64252a2b94d0d70c6498267640a40f4fbaccf361dd84596979ec727e8a862
+size 214

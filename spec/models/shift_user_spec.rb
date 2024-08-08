@@ -1,25 +1,3 @@
-# == Schema Information
-#
-# Table name: shift_users
-#
-#  id         :integer          not null, primary key
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  shift_id   :integer
-#  user_id    :integer
-#
-require 'rails_helper'
-
-RSpec.describe ShiftUser, type: :model do
-  describe 'アソシエーションのテスト' do
-    it 'shift_usersjはuserと1対1の関係持つこと' do
-      association = described_class.reflect_on_association(:user)
-      expect(association.macro).to eq :belongs_to
-    end
-
-    it 'shift_usersはShiftと1対1の関係持つこと' do
-      association = described_class.reflect_on_association(:shift)
-      expect(association.macro).to eq :belongs_to
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:75d6937a764c7aeba55e4d65f3afc37e580d62a98e1c82476c3d955edbb2a153
+size 739

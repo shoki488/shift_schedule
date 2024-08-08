@@ -1,17 +1,3 @@
-# == Schema Information
-#
-# Table name: shift_users
-#
-#  id         :integer          not null, primary key
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  shift_id   :integer
-#  user_id    :integer
-#
-require "test_helper"
-
-class ShiftUserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7970f3763e2423b2e72b9d5adfee3bac05a39f327fe0ebafb23822b4c8f8018b
+size 361

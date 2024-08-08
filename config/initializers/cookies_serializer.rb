@@ -1,5 +1,3 @@
-# Be sure to restart your server when you modify this file.
-
-# Specify a serializer for the signed and encrypted cookie jars.
-# Valid options are :json, :marshal, and :hybrid.
-Rails.application.config.action_dispatch.cookies_serializer = :json
+version https://git-lfs.github.com/spec/v1
+oid sha256:94782fa044850c5e6ec02c87eab7df522e2d589d4ba8d746bbf30fe63c9da23a
+size 244

@@ -1,32 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Layout
-      # Checks for comma (,) not followed by some kind of space.
-      #
-      # @example
-      #
-      #   # bad
-      #   [1,2]
-      #   { foo:bar,}
-      #
-      #   # good
-      #   [1, 2]
-      #   { foo:bar, }
-      class SpaceAfterComma < Base
-        include SpaceAfterPunctuation
-        extend AutoCorrector
-
-        def space_style_before_rcurly
-          cfg = config.for_cop('Layout/SpaceInsideHashLiteralBraces')
-          cfg['EnforcedStyle'] || 'space'
-        end
-
-        def kind(token)
-          'comma' if token.comma?
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd86a025752d95768ac017e625316c55885bf08fcb861bdf89770fde2a796640
+size 658

@@ -1,19 +1,3 @@
-module FactoryBot
-  module Strategy
-    class Build
-      def association(runner)
-        runner.run
-      end
-
-      def result(evaluation)
-        evaluation.object.tap do |instance|
-          evaluation.notify(:after_build, instance)
-        end
-      end
-
-      def to_sym
-        :build
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:de2f61334573411486ddef84d0d5e04a12fb30f5eda9a3071a5d2e807b2563c4
+size 320

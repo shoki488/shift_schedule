@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class Artist < Base
-    class << self
-      ##
-      # Produces the name of an artist.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::Artist.name #=> "Michelangelo"
-      #
-      # @faker.version 1.8.8
-      def name
-        fetch('artist.names')
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:202e40b5be16f6809e71563aae2b523db86ef014ee45c43b1c00f1c49c33cc8e
+size 349

@@ -1,4 +1,3 @@
-# Run this example by adding <%= javascript_pack_tag 'hello_coffee' %> to the head of your layout file,
-# like app/views/layouts/application.html.erb.
-
-console.log 'Hello world from coffeescript'
+version https://git-lfs.github.com/spec/v1
+oid sha256:d499989fc84ae35325630605a5971ab57ae295c1dc14628408d0bacd0ded14fa
+size 196

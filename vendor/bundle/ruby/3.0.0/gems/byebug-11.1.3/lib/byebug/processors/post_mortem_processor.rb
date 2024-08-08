@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "command_processor"
-
-module Byebug
-  #
-  # Processes commands in post_mortem mode
-  #
-  class PostMortemProcessor < CommandProcessor
-    def commands
-      super.select(&:allow_in_post_mortem)
-    end
-
-    def prompt
-      "(byebug:post_mortem) "
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:581e374c009679881c200620070fc0a77a2c8ebf7a2aace48d3301f87d57d443
+size 313

@@ -1,4 +1,3 @@
-lib/*
-node_modules/*
-vendor/*
-**/__tests__/**/*
+version https://git-lfs.github.com/spec/v1
+oid sha256:b758477858acaac1b876986e2c6a776c8abb548de94eb81a7a719b175f9e7454
+size 48

@@ -1,9 +1,3 @@
-module FFI
-  class StructLayout
-    #TODO
-
-    class Field
-      #TODO
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc9955d3d5c79182ab8d16c28fb3d9f0951719162accfe9c38065aa051490ae2
+size 89

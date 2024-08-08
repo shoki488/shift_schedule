@@ -1,7 +1,3 @@
-source 'https://rubygems.org'
-
-gemspec
-
-group :test do
-  gem 'pry'
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd67346dfd234608501cf8b91c71ce2332052e111766b36f80bdd47cc0525ea1
+size 71

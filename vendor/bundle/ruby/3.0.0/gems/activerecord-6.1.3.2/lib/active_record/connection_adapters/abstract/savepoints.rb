@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module ConnectionAdapters
-    module Savepoints
-      def current_savepoint_name
-        current_transaction.savepoint_name
-      end
-
-      def create_savepoint(name = current_savepoint_name)
-        execute("SAVEPOINT #{name}", "TRANSACTION")
-      end
-
-      def exec_rollback_to_savepoint(name = current_savepoint_name)
-        execute("ROLLBACK TO SAVEPOINT #{name}", "TRANSACTION")
-      end
-
-      def release_savepoint(name = current_savepoint_name)
-        execute("RELEASE SAVEPOINT #{name}", "TRANSACTION")
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0119b2bf2254be93232404debf9547e16b7f250702d49dc11386b67aaf5ea29
+size 599

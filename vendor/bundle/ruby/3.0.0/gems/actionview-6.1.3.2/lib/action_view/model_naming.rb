@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-module ActionView
-  module ModelNaming #:nodoc:
-    # Converts the given object to an ActiveModel compliant one.
-    def convert_to_model(object)
-      object.respond_to?(:to_model) ? object.to_model : object
-    end
-
-    def model_name_from_record_or_class(record_or_class)
-      convert_to_model(record_or_class).model_name
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:146d4b3ca8cf89c1c85a488f6a2cb931a4af1068c5f4d7c97724970dfad5e893
+size 375

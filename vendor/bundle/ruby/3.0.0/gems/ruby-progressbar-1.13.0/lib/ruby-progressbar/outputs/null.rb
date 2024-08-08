@@ -1,33 +1,3 @@
-require 'ruby-progressbar/output'
-
-class   ProgressBar
-module  Outputs
-class   Null < Output
-  alias refresh_with_format_change with_refresh
-
-  def clear;        end
-  def log(_string); end
-  def refresh(*);   end
-
-  def clear_string
-    ''
-  end
-
-  def bar_update_string
-    ''
-  end
-
-  def default_format
-    ''
-  end
-
-  def resolve_format(_format)
-    ''
-  end
-
-  def eol
-    ''
-  end
-end
-end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b6d5f4e18e81771a7a0d83d020d9488230fb0eaaca751a31f390f5a2707886b7
+size 400

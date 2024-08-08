@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-require_relative 'presenter'
-require_relative 'global'
-
-module Rainbow
-  refine String do
-    Presenter.instance_methods(false).each do |method_name|
-      define_method(method_name) do |*args|
-        ::Rainbow.global.wrap(self).send(method_name, *args)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8dc3ea2e66119fc39a768e8ad580d01eee18e2964a4d56dde3e1f3fc4e76918e
+size 314

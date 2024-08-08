@@ -1,3 +1,3 @@
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/alexrudall/ruby-openai. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/alexrudall/ruby-openai/blob/main/CODE_OF_CONDUCT.md).
+version https://git-lfs.github.com/spec/v1
+oid sha256:aad39df79d27a3c4c36778e4e6f4536db994d566cede0bc25a1ad616ff96f3ac
+size 327

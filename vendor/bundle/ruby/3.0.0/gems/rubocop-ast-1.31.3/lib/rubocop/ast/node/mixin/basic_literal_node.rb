@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # Common functionality for primitive literal nodes: `sym`, `str`,
-    # `int`, `float`, ...
-    module BasicLiteralNode
-      # Returns the value of the literal.
-      #
-      # @return [mixed] the value of the literal
-      def value
-        node_parts[0]
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c891ea2afa941f83c621c3f03e84f88f411f8bfba933344b815a2f032bab1147
+size 348

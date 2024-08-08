@@ -1,35 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/core_ext/symbol/starts_ends_with"
-
-module ActiveSupport
-  # Wrapping a string in this class gives you a prettier way to test
-  # for equality. The value returned by <tt>Rails.env</tt> is wrapped
-  # in a StringInquirer object, so instead of calling this:
-  #
-  #   Rails.env == 'production'
-  #
-  # you can call this:
-  #
-  #   Rails.env.production?
-  #
-  # == Instantiating a new StringInquirer
-  #
-  #   vehicle = ActiveSupport::StringInquirer.new('car')
-  #   vehicle.car?   # => true
-  #   vehicle.bike?  # => false
-  class StringInquirer < String
-    private
-      def respond_to_missing?(method_name, include_private = false)
-        method_name.end_with?("?") || super
-      end
-
-      def method_missing(method_name, *arguments)
-        if method_name.end_with?("?")
-          self == method_name[0..-2]
-        else
-          super
-        end
-      end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a32470cd31e5d6dd2170d0dee3549757547423421df5c19481c213f81d576fb3
+size 928

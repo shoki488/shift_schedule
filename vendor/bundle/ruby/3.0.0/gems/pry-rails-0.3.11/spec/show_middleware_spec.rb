@@ -1,14 +1,3 @@
-# encoding: UTF-8
-
-require 'spec_helper'
-
-describe "show-middleware" do
-  it "should print a list of middleware" do
-    output = mock_pry('show-middleware', 'exit-all')
-
-    output.must_match %r{^use ActionDispatch::Static$}
-    output.must_match %r{^use ActionDispatch::ShowExceptions$}
-    output.must_match %r{^run TestApp.routes\Z}
-  end
-end
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:10ec319a0625075d68c05e3f9e2359f130875976820d01b578bd9a3e46b39244
+size 347

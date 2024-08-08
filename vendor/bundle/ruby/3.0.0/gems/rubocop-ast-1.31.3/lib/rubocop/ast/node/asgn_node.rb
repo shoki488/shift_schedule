@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # A node extension for `lvasgn`, `ivasgn`, `cvasgn`, and `gvasgn` nodes.
-    # This will be used in place of a plain node when the builder constructs
-    # the AST, making its methods available to all assignment nodes within RuboCop.
-    class AsgnNode < Node
-      # The name of the variable being assigned as a symbol.
-      #
-      # @return [Symbol] the name of the variable being assigned
-      def name
-        node_parts[0]
-      end
-
-      # The expression being assigned to the variable.
-      #
-      # @return [Node] the expression being assigned.
-      def expression
-        node_parts[1]
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:11b2b9f6277beb91cc4da81f509453afd03e3556c501f379fdbcf2eccab3cf38
+size 693

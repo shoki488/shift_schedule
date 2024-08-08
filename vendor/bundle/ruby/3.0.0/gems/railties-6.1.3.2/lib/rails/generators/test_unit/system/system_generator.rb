@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators/test_unit"
-
-module TestUnit # :nodoc:
-  module Generators # :nodoc:
-    class SystemGenerator < Base # :nodoc:
-      check_class_collision suffix: "Test"
-
-      def create_test_files
-        if !File.exist?(File.join("test/application_system_test_case.rb"))
-          template "application_system_test_case.rb", File.join("test", "application_system_test_case.rb")
-        end
-
-        template "system_test.rb", File.join("test/system", class_path, "#{file_name.pluralize}_test.rb")
-      end
-
-      private
-        def file_name
-          @_file_name ||= super.sub(/_test\z/i, "")
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:32f66cea61131823bce8d2d94f26910561b545d7fcec06554a900ba3ad8a5daf
+size 670

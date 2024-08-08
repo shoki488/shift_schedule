@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-module ActionDispatch
-  module Journey # :nodoc:
-    module NFA # :nodoc:
-      module Dot # :nodoc:
-        def to_dot
-          edges = transitions.map { |from, sym, to|
-            "  #{from} -> #{to} [label=\"#{sym || 'ε'}\"];"
-          }
-
-          <<-eodot
-digraph nfa {
-  rankdir=LR;
-  node [shape = doublecircle];
-  #{accepting_states.join ' '};
-  node [shape = circle];
-#{edges.join "\n"}
-}
-          eodot
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:58c1e501003bf96e4d1b83c5073ae78e1475fe5b1367d008315610bd337f6d12
+size 489

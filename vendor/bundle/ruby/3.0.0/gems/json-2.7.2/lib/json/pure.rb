@@ -1,15 +1,3 @@
-require 'json/common'
-
-module JSON
-  # This module holds all the modules/classes that implement JSON's
-  # functionality in pure ruby.
-  module Pure
-    require 'json/pure/parser'
-    require 'json/pure/generator'
-    $DEBUG and warn "Using Pure library for JSON."
-    JSON.parser = Parser
-    JSON.generator = Generator
-  end
-
-  JSON_LOADED = true unless defined?(::JSON::JSON_LOADED)
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f14b7098f8675877c53b4f3f1310dbc7cff97b62a551340df14bdc9a62853b05
+size 390

@@ -1,11 +1,3 @@
-require_relative 'error'
-
-module Regexp::Syntax
-  class SyntaxError < Regexp::Parser::Error; end
-end
-
-require_relative 'syntax/token'
-require_relative 'syntax/base'
-require_relative 'syntax/any'
-require_relative 'syntax/version_lookup'
-require_relative 'syntax/versions'
+version https://git-lfs.github.com/spec/v1
+oid sha256:4098d94181a5dd7cba22231a39e8aec6c19a70704b7087960511e7b9f7c05e81
+size 271

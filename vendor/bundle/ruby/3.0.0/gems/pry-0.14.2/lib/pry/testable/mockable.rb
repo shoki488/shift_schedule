@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-require 'stringio'
-
-class Pry
-  module Testable
-    module Mockable
-      def mock_command(cmd, args = [], opts = {})
-        output = StringIO.new
-        pry = Pry.new(output: output)
-        ret = cmd.new(opts.merge(pry_instance: pry, output: output)).call_safely(*args)
-        Struct.new(:output, :return).new(output.string, ret)
-      end
-
-      def mock_exception(*mock_backtrace)
-        StandardError.new.tap do |e|
-          e.define_singleton_method(:backtrace) { mock_backtrace }
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4de9e4196cdb96758f1ddc3b78aaa202aa7701211c3bb3438e34656c71468cac
+size 563

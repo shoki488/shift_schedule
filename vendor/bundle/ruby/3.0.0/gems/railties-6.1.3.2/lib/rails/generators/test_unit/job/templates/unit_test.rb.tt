@@ -1,9 +1,3 @@
-require "test_helper"
-
-<% module_namespacing do -%>
-class <%= class_name %>JobTest < ActiveJob::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-end
-<% end -%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:dfdf23cbcfd2a4567f87a605e0d0e8a680539e6ba6a521e02a9a42084272d065
+size 170

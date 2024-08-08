@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # A node extension for `op_asgn` nodes.
-    # This will be used in place of a plain node when the builder constructs
-    # the AST, making its methods available to all assignment nodes within RuboCop.
-    class OrAsgnNode < OpAsgnNode
-      # The operator being used for assignment as a symbol.
-      #
-      # @return [Symbol] the assignment operator
-      def operator
-        :'||'
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7235a50203f623cdbebca7b884c7acdcd83192df78f0ae780721aa190f90477b
+size 476

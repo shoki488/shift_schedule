@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module RSpec
-    # Because RuboCop doesn't yet support plugins, we have to monkey patch in a
-    # bit of our configuration.
-    module Inject
-      def self.defaults!
-        project_root = Pathname.new(__dir__).parent.parent.parent.expand_path
-        config_default = project_root.join('config', 'default.yml')
-        path = config_default.to_s
-        hash = ConfigLoader.send(:load_yaml_configuration, path)
-        config = RuboCop::Config.new(hash, path)
-        puts "configuration from #{path}" if ConfigLoader.debug?
-        config = ConfigLoader.merge_with_default(config, path)
-        ConfigLoader.instance_variable_set(:@default_configuration, config)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1994c89a5f89779c4b3cd9d45121b05efd1242741d39f46870c29fc7b5d52b3e
+size 743

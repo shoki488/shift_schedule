@@ -1,11 +1,3 @@
-require "test_helper"
-
-class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCase
-  # test "connects with cookies" do
-  #   cookies.signed[:user_id] = 42
-  #
-  #   connect
-  #
-  #   assert_equal connection.user_id, "42"
-  # end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1599d9a35251fb215cd8a95395e8654488476f2d3e2e948e3ed7a1b27656aff0
+size 248

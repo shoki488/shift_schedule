@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveStorage::SetBlob #:nodoc:
-  extend ActiveSupport::Concern
-
-  included do
-    before_action :set_blob
-  end
-
-  private
-    def set_blob
-      @blob = ActiveStorage::Blob.find_signed!(params[:signed_blob_id] || params[:signed_id])
-    rescue ActiveSupport::MessageVerifier::InvalidSignature
-      head :not_found
-    end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cddfc0a6666f25a5d08923a98b4f0c0cd133aba5546641fa645900a6598e2a01
+size 367

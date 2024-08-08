@@ -1,2 +1,3 @@
---require spec_helper
---format documentation
+version https://git-lfs.github.com/spec/v1
+oid sha256:bd97061ab2a48fd323f5059bfd260a66f8e45a70fb2ec7040a39bdc27eace68a
+size 45

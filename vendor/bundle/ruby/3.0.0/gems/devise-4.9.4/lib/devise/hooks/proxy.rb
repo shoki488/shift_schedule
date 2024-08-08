@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module Devise
-  module Hooks
-    # A small warden proxy so we can remember, forget and
-    # sign out users from hooks.
-    class Proxy #:nodoc:
-      include Devise::Controllers::Rememberable
-      include Devise::Controllers::SignInOut
-
-      attr_reader :warden
-      delegate :cookies, :request, to: :warden
-
-      def initialize(warden)
-        @warden = warden
-      end
-
-      def session
-        warden.request.session
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:154acc2be4989bb3713d4257db286f12ac6dead8efa06010dda7b71512c6b6a3
+size 486

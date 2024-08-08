@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-module ActionCable
-  module Server
-    class Worker
-      module ActiveRecordConnectionManagement
-        extend ActiveSupport::Concern
-
-        included do
-          if defined?(ActiveRecord::Base)
-            set_callback :work, :around, :with_database_connections
-          end
-        end
-
-        def with_database_connections
-          connection.logger.tag(ActiveRecord::Base.logger) { yield }
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7980e96c72cdaa874a3c5ff6bd34124006d7fbf0496cf2c65c9aa968cbac6efa
+size 472

@@ -1,18 +1,3 @@
-language: ruby
-
-rvm:
-  - ruby-2.5
-  - ruby-2.6
-  - ruby-head
-
-allow_failures:
-    - rvm: ruby-head
-    - rvm: jruby-head
-
-env:
-  global:
-    - JRUBY_OPTS=--dev
-
-before_install: gem install bundler
-
-cache: bundler
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d3d1c7a10be7687dd28fae48cc4786728ba0739660ba5fe2d56bc550828872f
+size 213

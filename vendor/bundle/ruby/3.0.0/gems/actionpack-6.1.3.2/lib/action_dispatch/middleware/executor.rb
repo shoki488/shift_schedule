@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-require "rack/body_proxy"
-
-module ActionDispatch
-  class Executor
-    def initialize(app, executor)
-      @app, @executor = app, executor
-    end
-
-    def call(env)
-      state = @executor.run!
-      begin
-        response = @app.call(env)
-        returned = response << ::Rack::BodyProxy.new(response.pop) { state.complete! }
-      ensure
-        state.complete! unless returned
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:801857adfb32b71f2d480bf1ab916b262af7b07cf841e7409ab76d3f76ea00fd
+size 439

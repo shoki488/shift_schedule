@@ -1,15 +1,3 @@
-module OpenAI
-  class RunSteps
-    def initialize(client:)
-      @client = client.beta(assistants: OpenAI::Assistants::BETA_VERSION)
-    end
-
-    def list(thread_id:, run_id:, parameters: {})
-      @client.get(path: "/threads/#{thread_id}/runs/#{run_id}/steps", parameters: parameters)
-    end
-
-    def retrieve(thread_id:, run_id:, id:)
-      @client.get(path: "/threads/#{thread_id}/runs/#{run_id}/steps/#{id}")
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c176a8f34f60dcbd4d856396e81eaf1b377b42c38c1ea98bf8ee3e60ff24e2b2
+size 432

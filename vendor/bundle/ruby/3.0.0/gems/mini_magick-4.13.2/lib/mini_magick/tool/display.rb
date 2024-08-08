@@ -1,14 +1,3 @@
-module MiniMagick
-  class Tool
-    ##
-    # @see http://www.imagemagick.org/script/display.php
-    #
-    class Display < MiniMagick::Tool
-
-      def initialize(*args)
-        super("display", *args)
-      end
-
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2347d795fa80dd69450423309ce25f7b639a3d3bf4fc3065376eec515fdb3cd2
+size 228

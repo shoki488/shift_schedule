@@ -1,12 +1,3 @@
-Tasks on this page:
-
-- {Relationships}[#label-Relationships]
-  - {Task: Set the Parent}[#label-Task-3A+Set+the+Parent]
-  - {Task: Insert Previous Sibling}[#label-Task-3A+Insert+Previous+Sibling]
-  - {Task: Insert Next Sibling}[#label-Task-3A+Insert+Next+Sibling]
-- {Removal or Replacement}[#label-Removal+or+Replacement]
-  - {Task: Remove Child from Parent}[#label-Task-3A+Remove+Child+from+Parent]
-  - {Task: Replace Child}[#label-Task-3A+Replace+Child]
-- {Document}[#label-Document]
-  - {Task: Get the Document}[#label-Task-3A+Get+the+Document]
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:348735542033e282b5c45b3e2be16c8ca1251ad56c5eb6a78bdc4a5b0a8e500e
+size 548

@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-require 'spec_helper'
-require 'selenium-webdriver'
-
-RSpec.describe Capybara::Selenium::Driver do
-  it 'should exit with a zero exit status' do
-    options = { browser: ENV.fetch('SELENIUM_BROWSER', :firefox).to_sym }
-    browser = described_class.new(TestApp, **options).browser
-    expect(browser).to be_truthy
-    expect(true).to be(true) # rubocop:disable RSpec/ExpectActual,RSpec/IdenticalEqualityAssertion
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f5c93e4ed189c8d9662d57f2b7e6d7ef49121b33e51bded6843f397fff9bd1d
+size 452

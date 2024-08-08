@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Formatter
-    # Common logic for UI texts.
-    module TextUtil
-      module_function
-
-      def pluralize(number, thing, options = {})
-        if number.zero? && options[:no_for_zero]
-          "no #{thing}s"
-        elsif number == 1
-          "1 #{thing}"
-        else
-          "#{number} #{thing}s"
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:48e64f10c52a170005f676d23a395a1dc48695249aebd44a79cf21cbd1026da2
+size 398

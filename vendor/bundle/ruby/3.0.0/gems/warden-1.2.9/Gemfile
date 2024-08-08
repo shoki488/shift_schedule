@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-source 'https://rubygems.org'
-
-gemspec
-
-gem 'rake'
-gem 'pry'
-
-group :test do
-  gem 'rspec', '~> 3'
-  gem 'rack-test'
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:aacf74c156527bcbbc3811561227ec68a7529fc3db0f45c43e9f7bb3901f1bb9
+size 151

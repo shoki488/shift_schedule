@@ -1,19 +1,3 @@
-# == Schema Information
-#
-# Table name: shifts
-#
-#  id         :integer          not null, primary key
-#  calendar   :date
-#  content    :text
-#  creator    :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  user_id    :integer
-#
-require "test_helper"
-
-class ShiftTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ba55956619f486bf8983dac3443cfa010f65df3a74e91e4e1319d09fcfc87e9
+size 391

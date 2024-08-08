@@ -1,11 +1,3 @@
-# Define an application-wide HTTP permissions policy. For further
-# information see https://developers.google.com/web/updates/2018/06/feature-policy
-#
-# Rails.application.config.permissions_policy do |f|
-#   f.camera      :none
-#   f.gyroscope   :none
-#   f.microphone  :none
-#   f.usb         :none
-#   f.fullscreen  :self
-#   f.payment     :self, "https://secure.example.com"
-# end
+version https://git-lfs.github.com/spec/v1
+oid sha256:45a556a49bf668ecbc183e45a6f1fe41e920db0e7ef5d847f09310d356ceaaf8
+size 384

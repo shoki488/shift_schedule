@@ -1,27 +1,3 @@
-# Temporary workaround to resolve circular dependency between rspec-rails' spec
-# suite and ammeter.
-require 'rspec/rails/matchers'
-
-if ::Rails::VERSION::MAJOR >= 7
-  require 'active_support/current_attributes/test_helper'
-  require 'active_support/execution_context/test_helper'
-end
-
-module RSpec
-  module Rails
-    # @api public
-    # Common rails example functionality.
-    module RailsExampleGroup
-      extend ActiveSupport::Concern
-      include RSpec::Rails::SetupAndTeardownAdapter
-      include RSpec::Rails::MinitestLifecycleAdapter
-      include RSpec::Rails::MinitestAssertionAdapter
-      include RSpec::Rails::FixtureSupport
-      if ::Rails::VERSION::MAJOR >= 7
-        include RSpec::Rails::TaggedLoggingAdapter
-        include ActiveSupport::CurrentAttributes::TestHelper
-        include ActiveSupport::ExecutionContext::TestHelper
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:844be72fb1d4862a5a17d3995bcbb2b86c00dfd69405d544f4285ab7c05fd28c
+size 877

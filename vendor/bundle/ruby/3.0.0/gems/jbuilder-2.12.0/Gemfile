@@ -1,7 +1,3 @@
-source "https://rubygems.org"
-
-gemspec
-
-gem "rake"
-gem "mocha", require: false
-gem "appraisal"
+version https://git-lfs.github.com/spec/v1
+oid sha256:052fffea808dc002332fb85c519f633f3e046018a37cd8acb6675029c6c98feb
+size 95

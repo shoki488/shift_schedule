@@ -1,25 +1,3 @@
-#!/usr/bin/env ruby
-#
-# Copyright (c) 2014 Evan Phoenix
-#
-
-require 'rubygems'
-
-cli_arg = ARGV.shift
-
-inc = ""
-
-if cli_arg == "-I"
-  inc = ARGV.shift
-  $LOAD_PATH.concat inc.split(":")
-end
-
-module Puma; end
-
-Puma.const_set("WILD_ARGS", ["-I", inc])
-
-require 'puma/cli'
-
-cli = Puma::CLI.new ARGV
-
-cli.run
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ee4eb31b8af4bc9a3fe44aaaafee6b886708460eb609f5d18db4964f961af8f
+size 303

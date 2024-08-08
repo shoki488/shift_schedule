@@ -1,16 +1,3 @@
-# system crap
-.DS_Store
-
-# local ruby/gems dev stuff
-.rvmrc
-.bundle
-Gemfile.lock
-gemfiles/*.lock
-
-# built docs
-.yardoc
-doc
-
-# built gems
-pkg
-*.gem
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb1fb601eb1a385556885d35b0df7556a66632d7653b5876a15038ae50b31e8c
+size 147

@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveStorage::SetHeaders #:nodoc:
-  extend ActiveSupport::Concern
-
-  private
-    def set_content_headers_from(blob)
-      response.headers["Content-Type"] = blob.content_type_for_serving
-      response.headers["Content-Disposition"] = ActionDispatch::Http::ContentDisposition.format \
-        disposition: blob.forced_disposition_for_serving || params[:disposition] || "inline", filename: blob.filename.sanitized
-    end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ab428691b776245540ada2dd81bf804a62fff1303e7cda6d8fd21971f48f2809
+size 464

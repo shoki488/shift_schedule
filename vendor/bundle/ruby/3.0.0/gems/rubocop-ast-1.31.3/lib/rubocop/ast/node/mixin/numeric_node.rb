@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # Common functionality for primitive numeric nodes: `int`, `float`, ...
-    module NumericNode
-      SIGN_REGEX = /\A[+-]/.freeze
-      private_constant :SIGN_REGEX
-
-      # Checks whether this is literal has a sign.
-      #
-      # @example
-      #
-      #   +42
-      #
-      # @return [Boolean] whether this literal has a sign.
-      def sign?
-        source.match(SIGN_REGEX)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b03d13fa27c7d5af4fca8fa4ac00859b63bd6be9d3f204eca63550b6361bb90a
+size 471

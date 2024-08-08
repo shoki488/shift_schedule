@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-module Puma
-  module MiniSSL
-    class Socket
-      def read_nonblock(size, *_)
-        wait_states = %i[wait_readable wait_writable]
-
-        loop do
-          output = engine_read_all
-          return output if output
-
-          data = @socket.read_nonblock(size, exception: false)
-          raise IO::EAGAINWaitReadable if wait_states.include? data
-          return nil if data.nil?
-
-          @engine.inject(data)
-          output = engine_read_all
-
-          return output if output
-
-          while (neg_data = @engine.extract)
-            @socket.write neg_data
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:76b1ee6e4958c1eab1fd71c6dfc7c22672d13f9a0e18d98a8cfd124d25e44808
+size 654

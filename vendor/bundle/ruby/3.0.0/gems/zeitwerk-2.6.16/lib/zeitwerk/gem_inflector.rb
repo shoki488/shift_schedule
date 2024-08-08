@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module Zeitwerk
-  class GemInflector < Inflector
-    # @sig (String) -> void
-    def initialize(root_file)
-      namespace     = File.basename(root_file, ".rb")
-      root_dir      = File.dirname(root_file)
-      @version_file = File.join(root_dir, namespace, "version.rb")
-    end
-
-    # @sig (String, String) -> String
-    def camelize(basename, abspath)
-      abspath == @version_file ? "VERSION" : super
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:691faebac8363f2047161d4f68feb277cf44e913e9dd16d54e05be96b79dee82
+size 457

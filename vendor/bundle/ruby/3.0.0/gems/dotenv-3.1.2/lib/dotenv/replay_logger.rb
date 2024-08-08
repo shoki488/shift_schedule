@@ -1,20 +1,3 @@
-module Dotenv
-  # A logger that can be used before the apps real logger is initialized.
-  class ReplayLogger < Logger
-    def initialize
-      super(nil) # Doesn't matter what this is, it won't be used.
-      @logs = []
-    end
-
-    # Override the add method to store logs so we can replay them to a real logger later.
-    def add(*args, &block)
-      @logs.push([args, block])
-    end
-
-    # Replay the store logs to a real logger.
-    def replay(logger)
-      @logs.each { |args, block| logger.add(*args, &block) }
-      @logs.clear
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7737b8413ef5ba25b5495c2746389ee1ddd9220c97300a7d3f31c19f1a1c39cd
+size 553

@@ -1,15 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-require 'mail/parsers/mime_version_parser'
-
-module Mail
-  class MimeVersionElement #:nodoc:
-    attr_reader :major, :minor
-
-    def initialize(string)
-      mime_version = Mail::Parsers::MimeVersionParser.parse(string)
-      @major = mime_version.major
-      @minor = mime_version.minor
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f67972fa5206f417136fdd1b14e09d07e675d712f11d53b718e0c97be8e3f156
+size 353

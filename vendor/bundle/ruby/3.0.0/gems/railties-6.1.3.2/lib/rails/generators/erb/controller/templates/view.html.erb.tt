@@ -1,2 +1,3 @@
-<h1><%= class_name %>#<%= @action %></h1>
-<p>Find me in <%= @path %></p>
+version https://git-lfs.github.com/spec/v1
+oid sha256:a4a9e6cf73e93521148d943e16c077ee443ca00aca2107a4889dfd6e3e48bb3f
+size 73

@@ -1,14 +1,3 @@
-#ifndef SASS_C2AST_H
-#define SASS_C2AST_H
-
-#include "position.hpp"
-#include "backtrace.hpp"
-#include "ast_fwd_decl.hpp"
-
-namespace Sass {
-
-  Value* c2ast(union Sass_Value* v, Backtraces traces, SourceSpan pstate);
-
-}
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:deea3299b267474c58d152f4579d46ec501d743cbf48d0d78c391889ce6649b3
+size 225

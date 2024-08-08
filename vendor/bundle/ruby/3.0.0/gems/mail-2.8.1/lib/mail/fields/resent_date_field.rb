@@ -1,11 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-require 'mail/fields/common_date_field'
-
-module Mail
-  #
-  # resent-date     =       "Resent-Date:" date-time CRLF
-  class ResentDateField < CommonDateField #:nodoc:
-    NAME = 'Resent-Date'
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6158fd548a8cf68ab336a816e16d2a90d1e736822bb33233aa9cebc1bf626dbc
+size 249

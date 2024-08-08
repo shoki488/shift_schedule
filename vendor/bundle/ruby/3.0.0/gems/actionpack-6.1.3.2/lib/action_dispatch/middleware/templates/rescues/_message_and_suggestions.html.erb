@@ -1,22 +1,3 @@
-<% if exception.respond_to?(:original_message) && exception.respond_to?(:corrections) %>
-  <div class="exception-message">
-    <%= simple_format h(exception.original_message), { class: "message" }, wrapper_tag: "div" %>
-  </div>
-  <%
-    # The 'did_you_mean' gem can raise exceptions when calling #corrections on
-    # the exception. If it does there are no corrections to show.
-    corrections = exception.corrections rescue []
-  %>
-  <% if corrections.any? %>
-    <b>Did you mean?</b>
-    <ul>
-    <% corrections.each do |correction| %>
-      <li style="list-style-type: none"><%= h correction %></li>
-    <% end %>
-    </ul>
-  <% end %>
-<% else %>
-  <div class="exception-message">
-    <%= simple_format h(exception.message), { class: "message" }, wrapper_tag: "div" %>
-  </div>
-<% end %>
+version https://git-lfs.github.com/spec/v1
+oid sha256:452b6842dcce53e16d598ad9a1ed01fb8f488177c77a15048d679cc59ea8477c
+size 792

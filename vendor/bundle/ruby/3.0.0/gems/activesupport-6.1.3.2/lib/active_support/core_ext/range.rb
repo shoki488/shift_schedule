@@ -1,7 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/core_ext/range/conversions"
-require "active_support/core_ext/range/compare_range"
-require "active_support/core_ext/range/include_time_with_zone"
-require "active_support/core_ext/range/overlaps"
-require "active_support/core_ext/range/each"
+version https://git-lfs.github.com/spec/v1
+oid sha256:adcfe6c55372368d371dfb6ca877f0c656178ed828bf94e999ca82baed22bc0c
+size 294

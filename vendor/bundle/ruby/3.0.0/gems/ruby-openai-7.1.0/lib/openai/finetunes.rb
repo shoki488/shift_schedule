@@ -1,27 +1,3 @@
-module OpenAI
-  class Finetunes
-    def initialize(client:)
-      @client = client
-    end
-
-    def list
-      @client.get(path: "/fine_tuning/jobs")
-    end
-
-    def create(parameters: {})
-      @client.json_post(path: "/fine_tuning/jobs", parameters: parameters)
-    end
-
-    def retrieve(id:)
-      @client.get(path: "/fine_tuning/jobs/#{id}")
-    end
-
-    def cancel(id:)
-      @client.json_post(path: "/fine_tuning/jobs/#{id}/cancel", parameters: {})
-    end
-
-    def list_events(id:)
-      @client.get(path: "/fine_tuning/jobs/#{id}/events")
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:912276ae4d5727724b2adbd488d6264f489ea6a70cbb319524b32be6a8ab9ab7
+size 566

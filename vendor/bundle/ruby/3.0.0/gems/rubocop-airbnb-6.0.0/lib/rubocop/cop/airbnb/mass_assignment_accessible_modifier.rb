@@ -1,18 +1,3 @@
-module RuboCop
-  module Cop
-    module Airbnb
-      # Modifying Mass assignment restrictions eliminates the entire point of disabling
-      # mass assignment. It's a lazy, potentially dangerous approach that should be discouraged.
-      class MassAssignmentAccessibleModifier < Base
-        MSG = 'Do no override and objects mass assignment restrictions.'.freeze
-
-        def on_send(node)
-          _receiver, method_name, *_args = *node
-
-          return unless method_name == :accessible=
-          add_offense(node, message: MSG)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d3202916aff815d6acacdc0863b83dc0112638d7b3d44ed4af52075e8c422b5
+size 574

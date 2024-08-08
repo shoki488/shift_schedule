@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/per_thread_registry"
-
-module ActiveRecord
-  # This is a thread locals registry for Active Record. For example:
-  #
-  #   ActiveRecord::RuntimeRegistry.connection_handler
-  #
-  # returns the connection handler local to the current thread.
-  #
-  # See the documentation of ActiveSupport::PerThreadRegistry
-  # for further details.
-  class RuntimeRegistry # :nodoc:
-    extend ActiveSupport::PerThreadRegistry
-
-    attr_accessor :sql_runtime
-
-    [:sql_runtime].each do |val|
-      class_eval %{ def self.#{val}; instance.#{val}; end }, __FILE__, __LINE__
-      class_eval %{ def self.#{val}=(x); instance.#{val}=x; end }, __FILE__, __LINE__
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:71790f7dfe65b70ee9bede213858b305aad477bd623e90ff2d2e5bda96a383ca
+size 712

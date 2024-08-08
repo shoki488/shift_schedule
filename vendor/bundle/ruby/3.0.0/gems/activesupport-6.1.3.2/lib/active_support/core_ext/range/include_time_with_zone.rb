@@ -1,28 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/time_with_zone"
-require "active_support/deprecation"
-
-module ActiveSupport
-  module IncludeTimeWithZone #:nodoc:
-    # Extends the default Range#include? to support ActiveSupport::TimeWithZone.
-    #
-    #   (1.hour.ago..1.hour.from_now).include?(Time.current) # => true
-    #
-    def include?(value)
-      if self.begin.is_a?(TimeWithZone) || self.end.is_a?(TimeWithZone)
-        ActiveSupport::Deprecation.warn(<<-MSG.squish)
-          Using `Range#include?` to check the inclusion of a value in
-          a date time range is deprecated.
-          It is recommended to use `Range#cover?` instead of `Range#include?` to
-          check the inclusion of a value in a date time range.
-        MSG
-        cover?(value)
-      else
-        super
-      end
-    end
-  end
-end
-
-Range.prepend(ActiveSupport::IncludeTimeWithZone)
+version https://git-lfs.github.com/spec/v1
+oid sha256:233915cda3d9e93e170bd84957263d40e0bfdb1efe8f36efe0085abfe87a6b21
+size 878

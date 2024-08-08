@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module Nodes
-    class UnqualifiedColumn < Arel::Nodes::Unary
-      alias :attribute :expr
-      alias :attribute= :expr=
-
-      def relation
-        @expr.relation
-      end
-
-      def column
-        @expr.column
-      end
-
-      def name
-        @expr.name
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:093cfb58f2b860b4de76cd248b16dbca51b5aaae4dd50f73902e209b56fc4a6e
+size 346

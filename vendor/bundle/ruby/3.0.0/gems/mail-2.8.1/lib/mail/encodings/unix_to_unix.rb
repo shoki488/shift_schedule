@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-module Mail
-  module Encodings
-    class UnixToUnix < TransferEncoding
-      NAME = "x-uuencode"
-
-      def self.decode(str)
-        str.sub(/\Abegin \d+ [^\n]*\n/, '').unpack('u').first
-      end
-
-      def self.encode(str)
-        [str].pack("u")
-      end
-
-      Encodings.register(NAME, self)
-      Encodings.register("uuencode", self)
-      Encodings.register("x-uue", self)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8150a51e33cccbc81ae0bddf34dc628d907c5e1d5ebb5aa7b70f27f589e6a681
+size 428

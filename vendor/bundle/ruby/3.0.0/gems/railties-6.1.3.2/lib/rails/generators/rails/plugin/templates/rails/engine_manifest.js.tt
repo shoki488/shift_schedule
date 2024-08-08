@@ -1,6 +1,3 @@
-<% if mountable? -%>
-<% if !options.skip_javascript -%>
-//= link_directory ../javascripts/<%= namespaced_name %> .js
-<% end -%>
-//= link_directory ../stylesheets/<%= namespaced_name %> .css
-<% end -%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:c5335efa50c32f35c110646bb8c1d26591570dd992d0b6ee1c6e7293400d504b
+size 201

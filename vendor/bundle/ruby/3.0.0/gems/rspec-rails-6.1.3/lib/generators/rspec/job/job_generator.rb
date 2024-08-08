@@ -1,13 +1,3 @@
-require 'generators/rspec'
-
-module Rspec
-  module Generators
-    # @private
-    class JobGenerator < Base
-      def create_job_spec
-        file_suffix = file_name.end_with?('job') ? 'spec.rb' : 'job_spec.rb'
-        template 'job_spec.rb.erb', target_path('jobs', class_path, [file_name, file_suffix].join('_'))
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2bfe58af1aa40e7bff21ab799e3633d13161fec117c32ac1782ce50b184bc471
+size 341

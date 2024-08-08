@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
-
-require 'rspec/core'
-RSpec::Core::Runner.invoke
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c85a20cd0a0617782053aa3b7f2cfe1252207b91a7c1f16a408959401690e78
+size 69

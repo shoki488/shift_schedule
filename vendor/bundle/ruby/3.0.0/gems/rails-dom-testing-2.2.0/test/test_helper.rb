@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-require "rails-dom-testing"
-require "active_support/test_case"
-require "minitest/autorun"
-
-ActiveSupport::TestCase.test_order = :random
-
-module DomTestingHelpers
-  def jruby?
-    !! Nokogiri.jruby?
-  end
-
-  def with_default_html_version(version)
-    old_version = Rails::Dom::Testing.default_html_version
-    begin
-      Rails::Dom::Testing.default_html_version = version
-      yield
-    ensure
-      Rails::Dom::Testing.default_html_version = old_version
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f7e816f9a573290fa3ea0140fbb0b53ccf847a9158e14c905db075ce4142bca9
+size 505

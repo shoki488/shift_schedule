@@ -1,8 +1,3 @@
-# frozen_string_literal: true
-require 'rake/testtask'
-
-Rake::TestTask.new do |t|
-  t.libs << "test"
-  t.test_files = FileList['test/test*.rb']
-  t.verbose = true
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a70f7a84a433eeee5a046c52fe9285e6955540e8e272c6430bdd2e0255458941
+size 166

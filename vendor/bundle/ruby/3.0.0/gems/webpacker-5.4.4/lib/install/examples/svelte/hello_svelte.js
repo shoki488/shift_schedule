@@ -1,20 +1,3 @@
-/* eslint no-console: 0 */
-// Run this example by adding <%= javascript_pack_tag 'hello_svelte' %> (and
-// <%= stylesheet_pack_tag 'hello_svelte' %> if you have styles in your component)
-// to the head of your layout file,
-// like app/views/layouts/application.html.erb.
-// All it does is render <div>Hello Svelte!</div> at the bottom of the page.
-
-import App from '../app.svelte'
-
-document.addEventListener('DOMContentLoaded', () => {
-  const app = new App({
-    target: document.body,
-    props: {
-      name: 'Svelte'
-    }
-  });
-
-  window.app = app;
-})
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ab9e92124ef008c3a90299851bd786d9734fb247f98ade8eb5ac4bb466f2ffc
+size 558

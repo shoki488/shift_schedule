@@ -1,17 +1,3 @@
-Security/Eval:
-  Description: The use of eval represents a serious security risk.
-  Enabled: true
-
-Security/JSONLoad:
-  Enabled: false
-
-Security/MarshalLoad:
-  Enabled: false
-
-Security/Open:
-  Description: 'The use of Kernel#open represents a serious security risk.'
-  Enabled: false
-
-Security/YAMLLoad:
-  Enabled: false
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:7cc4ec87ea42d44d616f7f8b4d2c736ba6d9ece01cff75038e8475dcb8133d7b
+size 322

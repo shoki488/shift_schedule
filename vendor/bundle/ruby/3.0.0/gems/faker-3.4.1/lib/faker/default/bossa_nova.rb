@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class BossaNova < Base
-    class << self
-      ##
-      # Produces the name of a bossa nova artist.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::BossaNova.artist #=> "Tom Jobin"
-      #
-      # @faker.version 1.8.3
-      def artist
-        fetch('bossa_nova.artists')
-      end
-
-      ##
-      # Produces a bossa nova song.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::BossaNova.song #=> "Chega de Saudade"
-      #
-      # @faker.version 1.8.3
-      def song
-        fetch('bossa_nova.songs')
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e98a99d6324c4dec9270268867251f5b4c1c8faeb8853bf57384ffe5deba8108
+size 627

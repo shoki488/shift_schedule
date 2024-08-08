@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-namespace :active_storage do
-  # Prevent migration installation task from showing up twice.
-  Rake::Task["install:migrations"].clear_comments
-
-  desc "Copy over the migration needed to the application"
-  task install: :environment do
-    if Rake::Task.task_defined?("active_storage:install:migrations")
-      Rake::Task["active_storage:install:migrations"].invoke
-    else
-      Rake::Task["app:active_storage:install:migrations"].invoke
-    end
-  end
-
-  # desc "Copy over the migrations needed to the application upgrading"
-  task update: :environment do
-    ENV["MIGRATIONS_PATH"] = "db/update_migrate"
-
-    Rake::Task["active_storage:install"].invoke
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d8d5c0cd24a82b9ed15009b24d1fe7af09f0bb8ebad146173b957b8839bfd69
+size 695

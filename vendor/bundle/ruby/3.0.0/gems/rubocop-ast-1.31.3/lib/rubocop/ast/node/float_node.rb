@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # A node extension for `float` nodes. This will be used in place of a plain
-    # node when the builder constructs the AST, making its methods available to
-    # all `float` nodes within RuboCop.
-    class FloatNode < Node
-      include BasicLiteralNode
-      include NumericNode
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c5ba875c78aab5a79df583a0bda7864c722ee6e7b84bdb5a7fba78a4ebb86a1
+size 361

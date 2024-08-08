@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "test_helper"
-
-module SassC
-  class Sass2ScssTest < MiniTest::Test
-    def test_compact_output
-      assert_equal ".blat { color: red; }", Sass2Scss.convert(<<SASS)
-.blat
-  color: red
-SASS
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:198d1333e8eeab87be267cb380fe7bc1ce0b45cfc76d047209f87a759d72e037
+size 255

@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveStorage
-  class Attached::Changes::CreateOneOfMany < Attached::Changes::CreateOne #:nodoc:
-    private
-      def find_attachment
-        record.public_send("#{name}_attachments").detect { |attachment| attachment.blob_id == blob.id }
-      end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8fb23d3cd1fb1649c08c4c6e63f59b4970b765d53f7cf0ae48d2d3efcb6996cb
+size 297

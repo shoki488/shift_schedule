@@ -1,16 +1,3 @@
-# Use this Dockerfile to create minimal reproductions of issues
-
-FROM ruby:3.1
-
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
-
-WORKDIR /usr/src/app
-
-COPY . .
-RUN gem install bundler
-RUN bundle install
-RUN bundle exec rake compile
-
-EXPOSE 9292
-CMD bundle exec bin/puma test/rackup/hello.ru
+version https://git-lfs.github.com/spec/v1
+oid sha256:0a3a6b458cd36e2742a6d6dd7d8995669bba03479e222b76102c1ca3b7f80192
+size 342

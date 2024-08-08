@@ -1,11 +1,3 @@
-RSpec.configure do |rspec|
-  # Delay this in order to give users a chance to configure `expect_with`...
-  rspec.before(:suite) do
-    if defined?(RSpec::Matchers) &&
-        RSpec::Matchers.configuration.respond_to?(:syntax) && # RSpec 4 dropped support for monkey-patching `should` syntax
-        RSpec::Matchers.configuration.syntax.include?(:should) &&
-        defined?(ActiveRecord::Associations)
-      RSpec::Matchers.configuration.add_should_and_should_not_to ActiveRecord::Associations::CollectionProxy
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f571791444606a3cd385ef29b3f7dd6c2b1fe122782963991e70379867b0e1d
+size 528

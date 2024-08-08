@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-require 'capybara/rspec/matchers/base'
-
-module Capybara
-  module RSpecMatchers
-    module Matchers
-      class HaveCurrentPath < WrappedElementMatcher
-        def element_matches?(el)
-          el.assert_current_path(current_path, **@kw_args, &@filter_block)
-        end
-
-        def element_does_not_match?(el)
-          el.assert_no_current_path(current_path, **@kw_args, &@filter_block)
-        end
-
-        def description
-          "have current path #{current_path.inspect}"
-        end
-
-      private
-
-        def current_path
-          @args.first
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c22064f8d26f52f458f97281f3beb985cdadf9aceaa9989d40367669dc64857a
+size 627

@@ -1,24 +1,3 @@
-class ForwardHost < Rack::Proxy
-
-  def rewrite_env(env)
-    env["HTTP_HOST"] = "example.com"
-    env
-  end
-
-  def rewrite_response(triplet)
-    status, headers, body = triplet
-
-    # example of inserting an additional header
-    headers["X-Foo"] = "Bar"
-    
-    # if you rewrite env, it appears that content-length isn't calculated correctly
-    # resulting in only partial responses being sent to users
-    # you can remove it or recalculate it here
-    headers["content-length"] = nil
-
-    triplet
-  end
-
-end
-
-Rails.application.config.middleware.use ForwardHost, backend: 'http://example.com', streaming: false
+version https://git-lfs.github.com/spec/v1
+oid sha256:e2f5d3b33c9dfa8b5b535d86f2bca7146ce373a805456f58e33ce2e1ccc9d57f
+size 614

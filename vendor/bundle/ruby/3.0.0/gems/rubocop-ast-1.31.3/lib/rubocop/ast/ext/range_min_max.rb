@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    module Ext
-      # Refinement to circumvent broken `Range#minmax` for infinity ranges in 2.6-
-      module RangeMinMax
-        if ::Range.instance_method(:minmax).owner != ::Range
-          refine ::Range do
-            def minmax
-              [min, max]
-            end
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:42f92ed759be80c9e5617b526763e6220b44df7825f73b28bc8d94c0c051e926
+size 389

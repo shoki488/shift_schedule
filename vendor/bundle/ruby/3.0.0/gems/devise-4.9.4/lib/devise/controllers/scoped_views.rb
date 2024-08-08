@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-module Devise
-  module Controllers
-    module ScopedViews
-      extend ActiveSupport::Concern
-
-      module ClassMethods
-        def scoped_views?
-          defined?(@scoped_views) ? @scoped_views : Devise.scoped_views
-        end
-
-        def scoped_views=(value)
-          @scoped_views = value
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:78f2a2824343713daa55a741d5125ac576a23ef66cc455be74e589f99b334a1c
+size 368

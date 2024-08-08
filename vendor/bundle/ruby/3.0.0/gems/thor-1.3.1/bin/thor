@@ -1,6 +1,3 @@
-#!/usr/bin/env ruby
-# -*- mode: ruby -*-
-
-require "thor/runner"
-$thor_runner = true
-Thor::Runner.start
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac3e4290a2a28af3cc2bd1cba63933ae5584172d0df5fbb3685835fed338cb13
+size 103

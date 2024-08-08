@@ -1,25 +1,3 @@
-# Used for Czech, Slovak.
-
-module RailsI18n
-  module Pluralization
-    module WestSlavic
-      def self.rule
-        lambda do |n|
-          case n
-          when 1 then :one
-          when 2, 3, 4 then :few
-          else :other
-          end
-        end
-      end
-
-      def self.with_locale(locale)
-        { locale => {
-            :'i18n' => {
-              :plural => {
-                :keys => [:one, :few, :other],
-                :rule => rule }}}}
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6018acb4c8cf92fcc92d6591be527a3b93df931b4122981e52de9b909bbaaed0
+size 486

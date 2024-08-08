@@ -1,24 +1,3 @@
-module CodeRay
-module Encoders
-  
-  load :html
-  
-  # Wraps the output into a HTML page, using CSS classes and
-  # line numbers in the table format by default.
-  # 
-  # See Encoders::HTML for available options.
-  class Page < HTML
-    
-    FILE_EXTENSION = 'html'
-    
-    register_for :page
-    
-    DEFAULT_OPTIONS = HTML::DEFAULT_OPTIONS.merge \
-      :css          => :class,
-      :wrap         => :page,
-      :line_numbers => :table
-    
-  end
-  
-end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e832770fca8c1c747d5fa2f31bbba4074b9cbe22c2c574c84c0e937391c63e54
+size 462

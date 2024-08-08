@@ -1,32 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/tagged_logging"
-require "active_support/logger"
-
-module ActiveJob
-  module Logging #:nodoc:
-    extend ActiveSupport::Concern
-
-    included do
-      cattr_accessor :logger, default: ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new(STDOUT))
-      class_attribute :log_arguments, instance_accessor: false, default: true
-
-      around_enqueue { |_, block| tag_logger(&block) }
-      around_perform { |job, block| tag_logger(job.class.name, job.job_id, &block) }
-    end
-
-    private
-      def tag_logger(*tags)
-        if logger.respond_to?(:tagged)
-          tags.unshift "ActiveJob" unless logger_tagged_by_active_job?
-          logger.tagged(*tags) { yield }
-        else
-          yield
-        end
-      end
-
-      def logger_tagged_by_active_job?
-        logger.formatter.current_tags.include?("ActiveJob")
-      end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8b6d17b05547e2c04e41987828e9bdc084578c24980512e767263c00a5025480
+size 895

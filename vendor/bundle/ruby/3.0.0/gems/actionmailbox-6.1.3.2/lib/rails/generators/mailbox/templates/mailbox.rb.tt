@@ -1,4 +1,3 @@
-class <%= class_name %>Mailbox < ApplicationMailbox
-  def process
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:15f0bb6bdfdc4354237cf7da98992626702c598b610aceacaed311bd172250db
+size 76

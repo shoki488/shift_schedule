@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/core_ext/hash/conversions"
-require "active_support/core_ext/hash/deep_merge"
-require "active_support/core_ext/hash/deep_transform_values"
-require "active_support/core_ext/hash/except"
-require "active_support/core_ext/hash/indifferent_access"
-require "active_support/core_ext/hash/keys"
-require "active_support/core_ext/hash/reverse_merge"
-require "active_support/core_ext/hash/slice"
+version https://git-lfs.github.com/spec/v1
+oid sha256:3554b337019f2bcc89fb61b49b62fecd9da886b5c837c7ac2f26c0e1c50aa893
+size 439

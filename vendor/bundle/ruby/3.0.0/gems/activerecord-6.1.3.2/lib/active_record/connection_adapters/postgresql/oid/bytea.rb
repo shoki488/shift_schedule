@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module ConnectionAdapters
-    module PostgreSQL
-      module OID # :nodoc:
-        class Bytea < Type::Binary # :nodoc:
-          def deserialize(value)
-            return if value.nil?
-            return value.to_s if value.is_a?(Type::Binary::Data)
-            PG::Connection.unescape_bytea(super)
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:45defc5a77f98615383caae41d56550f97999dfc5dbe1ff15303e7e5483b4811
+size 407

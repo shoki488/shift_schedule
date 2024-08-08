@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module ActionController
-  module Logging
-    extend ActiveSupport::Concern
-
-    module ClassMethods
-      # Set a different log level per request.
-      #
-      #   # Use the debug log level if a particular cookie is set.
-      #   class ApplicationController < ActionController::Base
-      #     log_at :debug, if: -> { cookies[:debug] }
-      #   end
-      #
-      def log_at(level, **options)
-        around_action ->(_, action) { logger.log_at(level, &action) }, **options
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:637533010caf963cf5967893fc7b4af467ad10937a2831b88fc3aa4374d529e8
+size 536

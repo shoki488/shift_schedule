@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class FixIndent < Pry::ClassCommand
-      match 'fix-indent'
-      group 'Input and Output'
-
-      description "Correct the indentation for contents of the input buffer"
-
-      banner <<-USAGE
-        Usage: fix-indent
-      USAGE
-
-      def process
-        indented_str = Pry::Indent.indent(eval_string)
-        pry_instance.eval_string = indented_str
-      end
-    end
-
-    Pry::Commands.add_command(Pry::Command::FixIndent)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:42b83cbe810fbd72a1b9f6a13bdf9471f155562903ab0697e36b3938c1ff5510
+size 498

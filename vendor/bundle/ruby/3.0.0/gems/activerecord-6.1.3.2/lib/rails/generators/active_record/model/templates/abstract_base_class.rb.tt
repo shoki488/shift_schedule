@@ -1,7 +1,3 @@
-<% module_namespacing do -%>
-class <%= abstract_class_name %> < ApplicationRecord
-  self.abstract_class = true
-
-  connects_to database: { <%= ActiveRecord::Base.writing_role %>: :<%= database -%> }
-end
-<% end -%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:be8694c4964a7a5760e8481bac009590e6ea9aefbb903098c98cadb57db03990
+size 213

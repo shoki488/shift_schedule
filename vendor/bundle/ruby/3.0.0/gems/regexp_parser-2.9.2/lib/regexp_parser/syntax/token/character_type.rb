@@ -1,16 +1,3 @@
-module Regexp::Syntax
-  module Token
-    module CharacterType
-      Basic     = []
-      Extended  = %i[digit nondigit space nonspace word nonword]
-      Hex       = %i[hex nonhex]
-
-      Clustered = %i[linebreak xgrapheme]
-
-      All = Basic + Extended + Hex + Clustered
-      Type = :type
-    end
-
-    Map[CharacterType::Type] = CharacterType::All
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:72d2025adb484dd9d702db63c66f6f4ac5cc8707c9520e827bb044095ed8c288
+size 360

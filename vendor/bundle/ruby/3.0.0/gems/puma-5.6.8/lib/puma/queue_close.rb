@@ -1,26 +1,3 @@
-class ClosedQueueError < StandardError; end
-module Puma
-
-  # Queue#close was added in Ruby 2.3.
-  # Add a simple implementation for earlier Ruby versions.
-  #
-  module QueueClose
-    def close
-      num_waiting.times {push nil}
-      @closed = true
-    end
-    def closed?
-      @closed ||= false
-    end
-    def push(object)
-      raise ClosedQueueError if closed?
-      super
-    end
-    alias << push
-    def pop(non_block=false)
-      return nil if !non_block && closed? && empty?
-      super
-    end
-  end
-  ::Queue.prepend QueueClose
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b36cdab35cff876463f073caa06e11d9c83766ec113f0bbd3ced47327a3b648
+size 544

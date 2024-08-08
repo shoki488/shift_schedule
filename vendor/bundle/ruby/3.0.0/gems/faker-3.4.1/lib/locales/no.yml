@@ -1,7 +1,3 @@
-no-NO:
-  faker:
-    invoice:
-      reference:
-        # Source: https://www.nordea.com/Images/37-48872/Func_Spec_Credit_Advice.pdf
-        check_digit_method: kidmod10
-        pattern: '\d{24}#'
+version https://git-lfs.github.com/spec/v1
+oid sha256:25a1026742e568ee0a31da60188db0f8db88b449ca2d70d7bc9c422064ff38eb
+size 195

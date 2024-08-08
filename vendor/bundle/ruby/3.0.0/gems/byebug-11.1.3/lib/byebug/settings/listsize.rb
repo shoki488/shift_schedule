@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "../setting"
-
-module Byebug
-  #
-  # Setting to customize the number of source code lines to be displayed every
-  # time the "list" command is invoked.
-  #
-  class ListsizeSetting < Setting
-    DEFAULT = 10
-
-    def banner
-      "Set number of source lines to list by default"
-    end
-
-    def to_s
-      "Number of source lines to list is #{value}\n"
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2fe176dd980c8057e940379dee63d4706a021765904f105e537acae140daff4
+size 417

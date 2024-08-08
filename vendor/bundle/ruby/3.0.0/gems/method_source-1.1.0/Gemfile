@@ -1,6 +1,3 @@
-source 'https://rubygems.org'
-
-gemspec
-
-gem "rake"
-gem "rspec"
+version https://git-lfs.github.com/spec/v1
+oid sha256:8aaed5e61073864cd97090566ef0d0b85d7509a453b98a2abb2c07cfb8f21a78
+size 63

@@ -1,10 +1,3 @@
-source 'https://rubygems.org'
-
-gemspec name: 'skiptrace'
-
-# Rubinius 2.2.2 travis tests complain about this one.
-platforms :rbx do
-  gem "rubysl-mutex_m"
-  gem "rubysl-open3"
-  gem "rubysl-singleton"
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8206e1423e22372b697cd2894235f14f6b7283cc0d34baa5564ade9fc25a930
+size 204

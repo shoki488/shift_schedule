@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module XPath
-  class Expression
-    attr_accessor :expression, :arguments
-    include XPath::DSL
-
-    def initialize(expression, *arguments)
-      @expression = expression
-      @arguments = arguments
-    end
-
-    def current
-      self
-    end
-
-    def to_xpath(type = nil)
-      Renderer.render(self, type)
-    end
-    alias_method :to_s, :to_xpath
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:48b84a618748336a22fca1252a4cb34ce39612d6d0dfd8130836cd2221cbac49
+size 392

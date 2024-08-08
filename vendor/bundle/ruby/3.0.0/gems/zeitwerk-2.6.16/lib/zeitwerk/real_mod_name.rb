@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module Zeitwerk::RealModName
-  UNBOUND_METHOD_MODULE_NAME = Module.instance_method(:name)
-  private_constant :UNBOUND_METHOD_MODULE_NAME
-
-  # Returns the real name of the class or module, as set after the first
-  # constant to which it was assigned (or nil).
-  #
-  # The name method can be overridden, hence the indirection in this method.
-  #
-  # @sig (Module) -> String?
-  if UnboundMethod.method_defined?(:bind_call)
-    def real_mod_name(mod)
-      UNBOUND_METHOD_MODULE_NAME.bind_call(mod)
-    end
-  else
-    def real_mod_name(mod)
-      UNBOUND_METHOD_MODULE_NAME.bind(mod).call
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d222eb2abb616f87043a283ec2165c0edfbbca5aaa3dd2f20b5bc18db7f8f84
+size 634

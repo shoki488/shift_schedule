@@ -1,14 +1,3 @@
-# CHANGELOG
-
-## Unreleased
-
-### Added
-
-- Add the ability to set Content-ID header for ParamPart [#62](https://github.com/socketry/multipart-post/pull/62)
-- Allow mixed key types for parts headers [#79](https://github.com/socketry/multipart-post/pull/79)
-
-### Changed
-
-- Refactor `Parts` into a `Multipart::Post` namespace  [#65](https://github.com/socketry/multipart-post/pull/65)
-- Use mutable strings where needed [#70](https://github.com/socketry/multipart-post/pull/70)
-- Use `frozen_string_literal` everywhere [#78](https://github.com/socketry/multipart-post/pull/78)
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b991d82529f0269f3dd33653879f28794c0a3fe011e92317be4716da9536504
+size 573

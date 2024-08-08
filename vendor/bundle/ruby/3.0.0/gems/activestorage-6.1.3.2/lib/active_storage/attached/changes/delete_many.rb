@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveStorage
-  class Attached::Changes::DeleteMany #:nodoc:
-    attr_reader :name, :record
-
-    def initialize(name, record)
-      @name, @record = name, record
-    end
-
-    def attachables
-      []
-    end
-
-    def attachments
-      ActiveStorage::Attachment.none
-    end
-
-    def blobs
-      ActiveStorage::Blob.none
-    end
-
-    def save
-      record.public_send("#{name}_attachments=", [])
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:47e6423bd21f25b8037d38bf864d713902b47d36f803eb7b82b04277887a7e66
+size 451

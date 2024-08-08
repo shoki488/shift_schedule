@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-module Nokogiri
-  module HTML4
-    class ElementDescription
-      ###
-      # Is this element a block element?
-      def block?
-        !inline?
-      end
-
-      ###
-      # Convert this description to a string
-      def to_s
-        "#{name}: #{description}"
-      end
-
-      ###
-      # Inspection information
-      def inspect
-        "#<#{self.class.name}: #{name} #{description}>"
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d52c26e4a13e80d5c401a81f92308f69edd31c575485739aa65dd1c959aeb92
+size 445

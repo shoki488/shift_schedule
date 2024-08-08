@@ -1,28 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Shift_Schedule</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-  <body>
-  <%= render "shared/header" %>
-  
-  <% flash.each do |key, value| %>
-    <% if key != "alert" %>
-      <div class="flash alert-<%= bootstrap_alert(key)%> close-flash"><%= value %></div>
-    <% end %>
-  <% end %>
-  
-  <%= yield %>
-  </body>
-</html>
+version https://git-lfs.github.com/spec/v1
+oid sha256:c4b725fe18e1a1f2384bd77bba2964dbc37f64983e2000511134bb4d6a3dd1e1
+size 1337

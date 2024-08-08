@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module Nokogiri
-  module XML
-    class EntityDecl < Nokogiri::XML::Node
-      undef_method :attribute_nodes
-      undef_method :attributes
-      undef_method :namespace
-      undef_method :namespace_definitions
-      undef_method :line if method_defined?(:line)
-
-      def self.new(name, doc, *args)
-        doc.create_entity(name, *args)
-      end
-
-      private
-
-      def inspect_attributes
-        [:to_s]
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f76dcb5122f00702a17befe99ec894423ce8c3a299a908d7a9691fafc81cae2c
+size 469

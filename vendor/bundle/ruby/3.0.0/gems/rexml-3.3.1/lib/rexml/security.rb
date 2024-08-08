@@ -1,28 +1,3 @@
-# frozen_string_literal: false
-module REXML
-  module Security
-    @@entity_expansion_limit = 10_000
-
-    # Set the entity expansion limit. By default the limit is set to 10000.
-    def self.entity_expansion_limit=( val )
-      @@entity_expansion_limit = val
-    end
-
-    # Get the entity expansion limit. By default the limit is set to 10000.
-    def self.entity_expansion_limit
-      return @@entity_expansion_limit
-    end
-
-    @@entity_expansion_text_limit = 10_240
-
-    # Set the entity expansion limit. By default the limit is set to 10240.
-    def self.entity_expansion_text_limit=( val )
-      @@entity_expansion_text_limit = val
-    end
-
-    # Get the entity expansion limit. By default the limit is set to 10240.
-    def self.entity_expansion_text_limit
-      return @@entity_expansion_text_limit
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:33f3c742be5c5d5d56abe23da4ffd2cd95fdf4ef05485fd6a89825b2fcd43dd8
+size 824

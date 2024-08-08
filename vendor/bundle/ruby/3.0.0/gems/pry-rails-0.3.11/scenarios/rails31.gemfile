@@ -1,8 +1,3 @@
-source "https://rubygems.org"
-
-gem "rails", "~> 3.1.0"
-gem "mongoid"
-gem "sqlite3"
-gem "test-unit"
-
-gemspec :path => "../"
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e239533a8bcde55da742b1e030d6851492aa9602beae1e1e9e53384520fcac9
+size 123

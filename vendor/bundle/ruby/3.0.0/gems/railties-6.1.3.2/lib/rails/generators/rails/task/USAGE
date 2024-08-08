@@ -1,9 +1,3 @@
-Description:
-    Generates a new Rake task. Pass the namespace name, and a list of tasks as arguments.
-
-    This generates a task file in lib/tasks.
-
-Example:
-    `bin/rails generate task feeds fetch erase add`
-
-        Task:      lib/tasks/feeds.rake
+version https://git-lfs.github.com/spec/v1
+oid sha256:21cc7cc18418e9424a41018df5416635b823604e20ed26aa62154d60a41d9551
+size 252

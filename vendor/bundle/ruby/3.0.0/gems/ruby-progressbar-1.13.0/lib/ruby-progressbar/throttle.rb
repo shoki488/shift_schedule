@@ -1,25 +1,3 @@
-class   ProgressBar
-class   Throttle
-  attr_accessor :rate,
-                :started_at,
-                :stopped_at,
-                :timer
-
-  def initialize(options = {})
-    self.rate       = options[:throttle_rate] || 0.01
-    self.started_at = nil
-    self.stopped_at = nil
-    self.timer      = options.fetch(:throttle_timer, Timer.new)
-  end
-
-  def choke(options = {})
-    return unless !timer.started?                        ||
-                  options.fetch(:force_update_if, false) ||
-                  timer.elapsed_seconds >= rate
-
-    timer.restart
-
-    yield
-  end
-end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7645dd77636fb0a269491dd6ddb184e7dc13b9ba7e9ff00052eda7b485e374bf
+size 588

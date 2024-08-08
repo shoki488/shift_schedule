@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-# This is a private module.
-module Zeitwerk::Internal
-  def internal(method_name)
-    private method_name
-
-    mangled = "__#{method_name}"
-    alias_method mangled, method_name
-    public mangled
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b335807effc349c13fc453562007315fdb942127e103e2be4624474285343919
+size 238

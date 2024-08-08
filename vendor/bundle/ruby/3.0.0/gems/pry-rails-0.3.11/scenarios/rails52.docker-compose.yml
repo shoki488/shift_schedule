@@ -1,15 +1,3 @@
----
-version: "2"
-services:
-  scenario:
-    build:
-      context: ..
-      dockerfile: scenarios/rails52.dockerfile
-    image: pryrails_scenario_rails52
-    volumes:
-    - "..:/scenario"
-    - "bundle_rails52:/usr/local/bundle"
-    environment:
-      BUNDLE_GEMFILE: scenarios/rails52.gemfile
-volumes:
-  bundle_rails52: {}
+version https://git-lfs.github.com/spec/v1
+oid sha256:525d87e54504a302b8f29a5b46caceb7838e40699f0fc1741fbe29f24f169fa1
+size 322

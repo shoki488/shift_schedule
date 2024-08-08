@@ -1,10 +1,3 @@
-source "https://rubygems.org"
-
-gemspec
-
-group :development do
-  gem "bundler"
-  gem "rake"
-  gem "test-unit"
-  gem "test-unit-ruby-core"
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc1dcf5e3c77b048b712cb872491940b1051e45c4dd325d9c289471fbda9c7e1
+size 141

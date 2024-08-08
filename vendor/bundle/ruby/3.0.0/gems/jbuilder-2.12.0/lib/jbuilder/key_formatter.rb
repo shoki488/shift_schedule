@@ -1,34 +1,3 @@
-require 'jbuilder/jbuilder'
-require 'active_support/core_ext/array'
-
-class Jbuilder
-  class KeyFormatter
-    def initialize(*args)
-      @format = {}
-      @cache = {}
-
-      options = args.extract_options!
-      args.each do |name|
-        @format[name] = []
-      end
-      options.each do |name, parameters|
-        @format[name] = parameters
-      end
-    end
-
-    def initialize_copy(original)
-      @cache = {}
-    end
-
-    def format(key)
-      @cache[key] ||= @format.inject(key.to_s) do |result, args|
-        func, args = args
-        if ::Proc === func
-          func.call result, *args
-        else
-          result.send func, *args
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:16efbebfb6539640bd907e22e63a7a055b7b04066896190f703d297c92e3b194
+size 685

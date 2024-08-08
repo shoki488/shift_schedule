@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveJob
-  module QueueAdapters
-    # == Active Job Inline adapter
-    #
-    # When enqueuing jobs with the Inline adapter the job will be executed
-    # immediately.
-    #
-    # To use the Inline set the queue_adapter config to +:inline+.
-    #
-    #   Rails.application.config.active_job.queue_adapter = :inline
-    class InlineAdapter
-      def enqueue(job) #:nodoc:
-        Base.execute(job.serialize)
-      end
-
-      def enqueue_at(*) #:nodoc:
-        raise NotImplementedError, "Use a queueing backend to enqueue jobs in the future. Read more at https://guides.rubyonrails.org/active_job_basics.html"
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a01dc415cb8703e7f324e4e1cf3d4d0f5c3ecd83c0d185bc38c1e15345395255
+size 675

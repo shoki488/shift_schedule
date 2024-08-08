@@ -1,9 +1,3 @@
-source "https://rubygems.org"
-
-gemspec path: "../"
-
-gem "rails", "~> 5.2.0"
-gem "rake", ">= 11.1"
-gem "rack-proxy", require: false
-gem "minitest", "~> 5.0"
-gem "byebug"
+version https://git-lfs.github.com/spec/v1
+oid sha256:713022356c407e3203cd90a715a242057da084674ab50128dadc3060b352dec3
+size 169

@@ -1,30 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Rails
-      # This cop checks for scope calls where it was passed
-      # a method (usually a scope) instead of a lambda/proc.
-      #
-      # @example
-      #
-      #   # bad
-      #   scope :something, where(something: true)
-      #
-      #   # good
-      #   scope :something, -> { where(something: true) }
-      class ScopeArgs < Base
-        MSG = 'Use `lambda`/`proc` instead of a plain method call.'
-        RESTRICT_ON_SEND = %i[scope].freeze
-
-        def_node_matcher :scope?, '(send nil? :scope _ $send)'
-
-        def on_send(node)
-          scope?(node) do |second_arg|
-            add_offense(second_arg)
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:86da3b9d0a369d7714f7fe7d60d682db82438b949dbd96e4e73ff0bf0e7b0894
+size 741

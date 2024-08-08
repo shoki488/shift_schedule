@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-module ActionView
-  module Template::Handlers
-    class Builder
-      class_attribute :default_format, default: :xml
-
-      def call(template, source)
-        require_engine
-        "xml = ::Builder::XmlMarkup.new(:indent => 2);" \
-          "self.output_buffer = xml.target!;" +
-          source +
-          ";xml.target!;"
-      end
-
-      private
-        def require_engine # :doc:
-          @required ||= begin
-            require "builder"
-            true
-          end
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1eb3522e284dd6bb8c9ad32bce7439db02990bb18dced2e668fd04296d58b404
+size 537

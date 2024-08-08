@@ -1,11 +1,3 @@
-# frozen_string_literal: true
-
-module WebSocket
-  module Frame
-    autoload :Base,     "#{::WebSocket::ROOT}/websocket/frame/base"
-    autoload :Data,     "#{::WebSocket::ROOT}/websocket/frame/data"
-    autoload :Handler,  "#{::WebSocket::ROOT}/websocket/frame/handler"
-    autoload :Incoming, "#{::WebSocket::ROOT}/websocket/frame/incoming"
-    autoload :Outgoing, "#{::WebSocket::ROOT}/websocket/frame/outgoing"
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ee097b123af07569f2bd15cef85a9b20196309800b278408586afa165788c292
+size 424

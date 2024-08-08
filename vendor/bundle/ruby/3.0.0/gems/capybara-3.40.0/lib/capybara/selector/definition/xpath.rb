@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
-Capybara.add_selector(:xpath, locator_type: [:to_xpath, String], raw_locator: true) do
-  xpath { |xpath| xpath }
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf7d4987585c1c285dd054252536501c5ba10c779a2f95d0f32edd1a4c76af5b
+size 148

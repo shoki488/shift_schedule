@@ -1,5 +1,3 @@
-en:
-  faker:
-    markdown:
-      headers: ["#", "##", "###", "####", "#####", "######"]
-      emphasis: ["_", "~", "*", "**"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f66a6df22091e995f5b42aa7c295a795f9cc353173b2b183e4f78059032e2d4
+size 126

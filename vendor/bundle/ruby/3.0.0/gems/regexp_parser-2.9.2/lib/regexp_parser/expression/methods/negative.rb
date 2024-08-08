@@ -1,20 +1,3 @@
-module Regexp::Expression
-  module Shared
-    def negative?
-      false
-    end
-
-    # not an alias so as to respect overrides of #negative?
-    def negated?
-      negative?
-    end
-  end
-
-  Anchor::NonWordBoundary.class_eval       { def negative?; true                          end }
-  Assertion::NegativeLookahead.class_eval  { def negative?; true                          end }
-  Assertion::NegativeLookbehind.class_eval { def negative?; true                          end }
-  CharacterSet.class_eval                  { def negative?; negative                      end }
-  CharacterType::Base.class_eval           { def negative?; token.to_s.start_with?('non') end }
-  PosixClass.class_eval                    { def negative?; type == :nonposixclass        end }
-  UnicodeProperty::Base.class_eval         { def negative?; type == :nonproperty          end }
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:27519b8f011e5405c77d5eb9e93dd1a7474953bd9ece98258b103a4e5b260559
+size 865

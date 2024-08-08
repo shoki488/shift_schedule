@@ -1,13 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-require 'mail/fields/named_unstructured_field'
-
-module Mail
-  class ContentDescriptionField < NamedUnstructuredField #:nodoc:
-    NAME = 'Content-Description'
-
-    def self.singular?
-      true
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:023d183c22505c277fa6c43f54f8ac8e0d8245a83ce20d535de3b32c0995c5d9
+size 260

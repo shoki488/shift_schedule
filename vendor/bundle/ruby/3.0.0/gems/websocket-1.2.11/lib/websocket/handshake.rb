@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-
-module WebSocket
-  module Handshake
-    autoload :Base,    "#{::WebSocket::ROOT}/websocket/handshake/base"
-    autoload :Client,  "#{::WebSocket::ROOT}/websocket/handshake/client"
-    autoload :Handler, "#{::WebSocket::ROOT}/websocket/handshake/handler"
-    autoload :Server,  "#{::WebSocket::ROOT}/websocket/handshake/server"
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4be7703ea34bd45cf202a47719af58f854e0327b230b5f95b28519c409cb58c2
+size 368

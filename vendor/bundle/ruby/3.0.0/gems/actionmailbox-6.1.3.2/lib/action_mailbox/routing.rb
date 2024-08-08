@@ -1,26 +1,3 @@
-# frozen_string_literal: true
-
-module ActionMailbox
-  # See +ActionMailbox::Base+ for how to specify routing.
-  module Routing
-    extend ActiveSupport::Concern
-
-    included do
-      cattr_accessor :router, default: ActionMailbox::Router.new
-    end
-
-    class_methods do
-      def routing(routes)
-        router.add_routes(routes)
-      end
-
-      def route(inbound_email)
-        router.route(inbound_email)
-      end
-
-      def mailbox_for(inbound_email)
-        router.mailbox_for(inbound_email)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9d7175b92a0e8aa156431277ed9d0abdf574a4538c4ed920620c5d3371cb4ca8
+size 529

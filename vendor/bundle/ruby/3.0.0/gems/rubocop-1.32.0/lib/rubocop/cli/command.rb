@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  class CLI
-    # Home of subcommands in the CLI.
-    # @api private
-    module Command
-      class << self
-        # Find the command with a given name and run it in an environment.
-        def run(env, name)
-          class_for(name).new(env).run
-        end
-
-        private
-
-        def class_for(name)
-          Base.by_command_name(name)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f7f99e5a5833f8479857ccebd42ddfd03aa2f2dee660fccafa75159c21f83b72
+size 430

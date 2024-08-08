@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-module Rack
-  # Rack::Head returns an empty body for all HEAD requests. It leaves
-  # all other requests unchanged.
-  class Head
-    def initialize(app)
-      @app = app
-    end
-
-    def call(env)
-      status, headers, body = @app.call(env)
-
-      if env[REQUEST_METHOD] == HEAD
-        [
-          status, headers, Rack::BodyProxy.new([]) do
-            body.close if body.respond_to? :close
-          end
-        ]
-      else
-        [status, headers, body]
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:3963238648c2a4acfb899584dec4e2af7b78f756e4becd6749af2d378437916b
+size 520

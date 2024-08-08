@@ -1,19 +1,3 @@
-## Prerequisite 
-
-- Install "git-flow" (`brew install git-flow`)
-- Install "bump" gem (`gem install bump`)
-
-
-## Perform a release
-
-- `git flow release start <release>`
-- Update the `CHANGELOG.md` file
-- `bump current`
-- `bump patch`
-- `rm -rf dist`
-- `rake spec`
-- `rake gem`
-- `git flow release finish <release>`
-
-- `rake gem:publish`
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:d94ec0a188a67618871d7ffe8673edd7feec255be89c8e89229dae36ac6e330a
+size 337

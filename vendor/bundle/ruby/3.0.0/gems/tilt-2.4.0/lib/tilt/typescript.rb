@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-require_relative 'template'
-require 'typescript-node'
-
-Tilt::TypeScriptTemplate = Tilt::StaticTemplate.subclass(mime_type: 'application/javascript') do
-  option_args = []
-
-  @options.each do |key, value|
-    next unless value
-
-    option_args << "--#{key}"
-
-    if value != true
-      option_args << value.to_s
-    end
-  end
-
-  TypeScript::Node.compile(@data, *option_args)
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:28ba33c18fb8abe261d936fcdb45c12e77f6b10b5f8ab6462c951b06a26f4bc6
+size 408

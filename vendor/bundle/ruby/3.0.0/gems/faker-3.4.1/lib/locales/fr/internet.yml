@@ -1,4 +1,3 @@
-fr:
-  faker:
-    internet:
-      domain_suffix: [com, fr, eu, info, name, net, org, immo, paris, alsace, bzh]
+version https://git-lfs.github.com/spec/v1
+oid sha256:63d2c3f36ecdcbe53d9add49e446c4d3a8f0d30a7fc14841d49b0db5c7857343
+size 110

@@ -1,5 +1,3 @@
-<%= wrap_in_modules <<~rb
-  class Railtie < ::Rails::Railtie
-  end
-rb
-%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:e12387511d3270a36722f83e4680555dcb6f7a38f15501a153e07ec74046b6b7
+size 73

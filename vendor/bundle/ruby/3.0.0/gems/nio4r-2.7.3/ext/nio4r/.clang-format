@@ -1,16 +1,3 @@
----
-Language: Cpp
-BasedOnStyle: WebKit
-AllowAllParametersOfDeclarationOnNextLine: false
-BinPackArguments: false
-BinPackParameters: false
-AlignConsecutiveMacros: false
-AlignConsecutiveAssignments: false
-BreakBeforeBraces: Linux
-BraceWrapping:
-  AfterControlStatement: Never
-IndentCaseLabels: true
-PointerAlignment: Right
-SpaceBeforeParens: ControlStatements
-IndentWidth: 4
-...
+version https://git-lfs.github.com/spec/v1
+oid sha256:06d73b30cc53294c270fbb14521de0685ca84c8cf5483efbf8dd8e8b6f1d3c6d
+size 376

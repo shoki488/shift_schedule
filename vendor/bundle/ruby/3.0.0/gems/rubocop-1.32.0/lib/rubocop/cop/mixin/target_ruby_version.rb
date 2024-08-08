@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # Common functionality for checking target ruby version.
-    module TargetRubyVersion
-      def required_minimum_ruby_version
-        @minimum_target_ruby_version
-      end
-
-      def minimum_target_ruby_version(version)
-        @minimum_target_ruby_version = version
-      end
-
-      def support_target_ruby_version?(version)
-        required_minimum_ruby_version <= version
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:febe87181c90127536ad4bbdd2210437fa9a1bd59c29e7d1b1389cc0a225f7da
+size 467

@@ -1,7 +1,3 @@
-source "https://rubygems.org"
-
-group :development do
-  gem "bundler"
-  gem "rake"
-  gem "test-unit"
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d2d73a7097190ffab460c5bcef0e768ca75780f8bbddb89d91a7c030fae2d82
+size 104

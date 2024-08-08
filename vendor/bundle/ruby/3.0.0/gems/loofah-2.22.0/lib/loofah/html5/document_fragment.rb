@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-module Loofah
-  module HTML5 # :nodoc:
-    #
-    #  Subclass of Nokogiri::HTML5::DocumentFragment.
-    #
-    #  See Loofah::ScrubBehavior and Loofah::TextBehavior for additional methods.
-    #
-    class DocumentFragment < Nokogiri::HTML5::DocumentFragment
-      include Loofah::TextBehavior
-      include Loofah::HtmlFragmentBehavior
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a9ea2ff8d57564ba9f2aac93abe3b366fca246d4615434e26bd4ccf9d686da2
+size 383

@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-module ActionView
-  module Helpers
-    module Tags # :nodoc:
-      class MonthField < DatetimeField # :nodoc:
-        private
-          def format_date(value)
-            value&.strftime("%Y-%m")
-          end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:bec1f44049e006996ae36de1f71088fd34138320e9997734f9f3821707f919fb
+size 269

@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # This module provides functionality for checking if numbering match the
-    # configured EnforcedStyle.
-    module ConfigurableNumbering
-      include ConfigurableFormatting
-
-      implicit_param = /\A_\d+\z/
-      FORMATS = {
-        snake_case:  /(?:\D|_\d+|\A\d+)\z/,
-        normalcase:  /(?:\D|[^_\d]\d+|\A\d+)\z|#{implicit_param}/,
-        non_integer: /(\D|\A\d+)\z|#{implicit_param}/
-      }.freeze
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:341a70d448ef754a1165b57fae1b01c83577e0df3a6752b1641d750df854172b
+size 489

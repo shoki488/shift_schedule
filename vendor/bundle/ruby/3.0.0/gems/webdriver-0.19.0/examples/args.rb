@@ -1,16 +1,3 @@
-require_relative "../lib/webdriver"
-
-capabilities = {
-  chromeOptions: {
-    args: [
-      '--window-size=800,600',
-      '--window-position=0,0',
-    ]
-  }
-}
-
-wd = Webdriver::Client.new "http://localhost:9515/wd/hub", capabilities
-s = wd.session!
-w = s.windows.first
-
-s.delete!
+version https://git-lfs.github.com/spec/v1
+oid sha256:99b4250309dcf3a6dff105c0b1054079c7322931ebe963f3af47998e962573a3
+size 279

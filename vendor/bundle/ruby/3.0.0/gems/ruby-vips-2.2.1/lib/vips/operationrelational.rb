@@ -1,14 +1,3 @@
-module Vips
-  # The type of relational operation to perform on an image. See
-  # {Image#relational}.
-  #
-  # * ':more' more than
-  # * ':less' less than
-  # * ':moreeq' more than or equal to
-  # * ':lesseq' less than or equal to
-  # * ':equal' equal to
-  # * ':noteq' not equal to
-
-  class OperationRelational < Symbol
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:19b61c3010c0831464893f8963a49b75fcaa602054820e2c8822d941cb32eedf
+size 329

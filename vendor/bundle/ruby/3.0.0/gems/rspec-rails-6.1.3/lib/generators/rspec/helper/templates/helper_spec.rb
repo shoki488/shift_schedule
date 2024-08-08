@@ -1,17 +1,3 @@
-require 'rails_helper'
-
-# Specs in this file have access to a helper object that includes
-# the <%= class_name %>Helper. For example:
-#
-# describe <%= class_name %>Helper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
-<% module_namespacing do -%>
-RSpec.describe <%= class_name %>Helper, <%= type_metatag(:helper) %> do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
-<% end -%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:78f76054f907984a67b25799167e3756eb7ded05e3f7516cfedb10ac03a392e4
+size 521

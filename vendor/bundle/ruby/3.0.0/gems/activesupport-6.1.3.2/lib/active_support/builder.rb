@@ -1,8 +1,3 @@
-# frozen_string_literal: true
-
-begin
-  require "builder"
-rescue LoadError => e
-  $stderr.puts "You don't have builder installed in your application. Please add it to your Gemfile and run bundle install"
-  raise e
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ce10494247ca7c8c294c847745903ed771f0486d9080f001b3701a52792f06ac
+size 217

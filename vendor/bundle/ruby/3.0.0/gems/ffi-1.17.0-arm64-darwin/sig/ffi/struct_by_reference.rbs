@@ -1,11 +1,3 @@
-module FFI
-  class StructByReference[S < Struct[P, untyped], P < AbstractMemory]
-    include DataConverter[P, S, untyped]
-    attr_reader struct_class: Struct[P, untyped]
-
-    def initialize: (S struct_class) -> void
-    def from_native: (P value, untyped ctx) -> S
-    def native_type: () -> Type::Builtin
-    def to_native: (S? value, untyped ctx) -> P
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d85f85337b78307833ecf5dfea070009866c4f7acedbab4f2109f953ff6a07c
+size 365

@@ -1,21 +1,3 @@
-# Used for French, Fulah, Kabyle.
-
-module RailsI18n
-  module Pluralization
-    module OneUptoTwoOther
-      def self.rule
-        lambda do |n|
-          n.is_a?(Numeric) && n >= 0 && n < 2 ? :one : :other
-        end
-      end
-
-      def self.with_locale(locale)
-        { locale => {
-            :'i18n' => {
-              :plural => {
-                :keys => [:one, :other],
-                :rule => rule }}}}
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:32c7f3b78da1ebdb11c42fd4fb308708210ce6f881a925d89193d12ea5262ca0
+size 442

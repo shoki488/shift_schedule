@@ -1,15 +1,3 @@
-%%{
-  # RFC 2183 The Content-Disposition Header Field
-  # https://tools.ietf.org/html/rfc2183#section-2
-  #
-  # TODO: recognize filename, size, creation date, etc.
-  machine rfc2183_content_disposition;
-  alphtype int;
-
-  include rfc2045_content_type "rfc2045_content_type.rl";
-
-  disposition_type = 'inline'i | 'attachment'i | extension_token;
-  disposition_parm = parameter;
-  disposition = (disposition_type >disp_type_s %disp_type_e)
-                (";" disposition_parm)*;
-}%%
+version https://git-lfs.github.com/spec/v1
+oid sha256:24d08e4d8fceee7556c6c9bacdb3d64629388c8554c9e9a42e92ff89a987c054
+size 483

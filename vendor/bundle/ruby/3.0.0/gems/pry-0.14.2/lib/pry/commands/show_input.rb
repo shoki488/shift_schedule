@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class ShowInput < Pry::ClassCommand
-      match 'show-input'
-      group 'Editing'
-      description 'Show the contents of the input buffer for the current ' \
-                  'multi-line expression.'
-
-      banner <<-'BANNER'
-        Show the contents of the input buffer for the current multi-line expression.
-      BANNER
-
-      def process
-        output.puts Code.new(eval_string).with_line_numbers
-      end
-    end
-
-    Pry::Commands.add_command(Pry::Command::ShowInput)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2805ee3fb41b0703d00a702c5a2ae0883b725c8059516db7e354c7299ae238e5
+size 551

@@ -1,15 +1,3 @@
-#if !defined(SQLITE3_BACKUP_RUBY) && defined(HAVE_SQLITE3_BACKUP_INIT)
-#define SQLITE3_BACKUP_RUBY
-
-#include <sqlite3_ruby.h>
-
-struct _sqlite3BackupRuby {
-  sqlite3_backup *p;
-};
-
-typedef struct _sqlite3BackupRuby sqlite3BackupRuby;
-typedef sqlite3BackupRuby * sqlite3BackupRubyPtr;
-
-void init_sqlite3_backup();
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:9cd3c7af64124004c9025f9b913e2074ed0daa518ff5849af60473924693b8c2
+size 320

@@ -1,1 +1,3 @@
-<script async nonce="{cspNonce}" type="text/javascript" id="mini-profiler" src="{url}" data-css-url="{cssUrl}" data-version="{version}" data-path="{path}" data-current-id="{currentId}" data-ids="{ids}" data-horizontal-position="{horizontalPosition}" data-vertical-position="{verticalPosition}" data-trivial="{showTrivial}" data-children="{showChildren}" data-max-traces="{maxTracesToShow}" data-controls="{showControls}" data-total-sql-count="{showTotalSqlCount}" data-authorized="{authorized}" data-toggle-shortcut="{toggleShortcut}" data-start-hidden="{startHidden}" data-collapse-results="{collapseResults}" data-html-container="{htmlContainer}" data-hidden-custom-fields="{hiddenCustomFields}" data-turbo-permanent="{hotwireTurboDriveSupport}"></script>
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d4dae497a855a75a3b9d23b13796a8923073b53debd3367518774cdc9286da7
+size 758

@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-# Ensure that the +InboundEmail+ is automatically scheduled for later incineration if the status has been
-# changed to +processed+. The later incineration will be invoked at the time specified by the
-# +ActionMailbox.incinerate_after+ time using the +IncinerationJob+.
-module ActionMailbox::InboundEmail::Incineratable
-  extend ActiveSupport::Concern
-
-  included do
-    after_update_commit :incinerate_later, if: -> { ActionMailbox.incinerate && status_previously_changed? && processed? }
-  end
-
-  def incinerate_later
-    ActionMailbox::IncinerationJob.schedule self
-  end
-
-  def incinerate
-    Incineration.new(self).run
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f25ed9d6ab9bd4e2f9a46c1a61430e9b4bf464a2ab03b94d15ad4616873eee95
+size 664

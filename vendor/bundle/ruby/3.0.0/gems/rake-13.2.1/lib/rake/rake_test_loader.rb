@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-require "rake/file_list"
-
-# Load the test files from the command line.
-argv = ARGV.select do |argument|
-  case argument
-  when /^-/ then
-    argument
-  when /\*/ then
-    Rake::FileList[argument].to_a.each do |file|
-      require File.expand_path file
-    end
-
-    false
-  else
-    path = File.expand_path argument
-
-    abort "\nFile does not exist: #{path}\n\n" unless File.exist?(path)
-
-    require path
-
-    false
-  end
-end
-
-ARGV.replace argv
+version https://git-lfs.github.com/spec/v1
+oid sha256:09ff41d1905c3f0cec4422b80cfecd22c5c30849a543f3fc339b403ca4272c64
+size 477

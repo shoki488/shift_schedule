@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-module WebMock
-  class HashValidator
-    def initialize(hash)
-      @hash = hash
-    end
-
-    #This code is based on https://github.com/rails/rails/blob/master/activesupport/lib/active_support/core_ext/hash/keys.rb
-    def validate_keys(*valid_keys)
-      valid_keys.flatten!
-      @hash.each_key do |k|
-        unless valid_keys.include?(k)
-          raise ArgumentError.new("Unknown key: #{k.inspect}. Valid keys are: #{valid_keys.map(&:inspect).join(', ')}")
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:739e70cfba803d1a053f75c6427a72227dd0c785f6d19b04558ba4cc1b76f632
+size 533

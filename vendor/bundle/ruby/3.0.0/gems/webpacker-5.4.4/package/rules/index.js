@@ -1,20 +1,3 @@
-const babel = require('./babel')
-const file = require('./file')
-const css = require('./css')
-const sass = require('./sass')
-const moduleCss = require('./module.css')
-const moduleSass = require('./module.sass')
-const nodeModules = require('./node_modules')
-
-// Webpack loaders are processed in reverse order
-// https://webpack.js.org/concepts/loaders/#loader-features
-// Lastly, process static files using file loader
-module.exports = {
-  file,
-  css,
-  sass,
-  moduleCss,
-  moduleSass,
-  nodeModules,
-  babel
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2d21692fd8470e1f7c3c98c823911abc76ec630ae21bb4138fbf487f1ae44d3
+size 511

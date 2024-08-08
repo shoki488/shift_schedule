@@ -1,26 +1,3 @@
-describe RuboCop::Cop::Airbnb::SimpleUnless, :config do
-  it 'rejects unless with multiple conditionals' do
-    expect_offense(<<~RUBY)
-      unless boolean_condition || another_method
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Unless usage is okay when there is only one conditional
-        return true
-      end
-    RUBY
-  end
-
-  it 'allows if with multiple conditionals' do
-    expect_no_offenses(<<~RUBY)
-      if boolean_condition || another_method
-        return true
-      end
-    RUBY
-  end
-
-  it 'allows with modifier if operator conditional' do
-    expect_no_offenses(<<~RUBY)
-      unless boolean_condition
-        return true
-      end
-    RUBY
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa323862fad0ec16c7cbba303c27b62e82939355ac3709444fd3a4216f2d42c5
+size 673

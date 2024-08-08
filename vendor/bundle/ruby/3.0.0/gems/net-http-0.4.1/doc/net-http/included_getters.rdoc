@@ -1,3 +1,3 @@
-This class also includes (indirectly) module Net::HTTPHeader,
-which gives access to its
-{methods for getting headers}[rdoc-ref:Net::HTTPHeader@Getters].
+version https://git-lfs.github.com/spec/v1
+oid sha256:7763fa0fcbefbddb6e8ef385ab278279bbd0bdd7d4860d9be27624b6eac7d20d
+size 153

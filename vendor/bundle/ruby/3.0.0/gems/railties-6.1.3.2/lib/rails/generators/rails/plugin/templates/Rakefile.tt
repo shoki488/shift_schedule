@@ -1,14 +1,3 @@
-require "bundler/setup"
-<% if engine? && !options[:skip_active_record] && with_dummy_app? -%>
-
-APP_RAKEFILE = File.expand_path("<%= dummy_path -%>/Rakefile", __dir__)
-load "rails/tasks/engine.rake"
-<% end -%>
-<% if engine? -%>
-
-load "rails/tasks/statistics.rake"
-<% end -%>
-<% unless options[:skip_gemspec] -%>
-
-require "bundler/gem_tasks"
-<% end -%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7bc9858863dbfe658582cf589028e863dfa222e9472af5eb1e084255018f4ce
+size 351

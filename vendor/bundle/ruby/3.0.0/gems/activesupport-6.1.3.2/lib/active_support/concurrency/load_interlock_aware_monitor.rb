@@ -1,35 +1,3 @@
-# frozen_string_literal: true
-
-require "monitor"
-
-module ActiveSupport
-  module Concurrency
-    # A monitor that will permit dependency loading while blocked waiting for
-    # the lock.
-    class LoadInterlockAwareMonitor < Monitor
-      EXCEPTION_NEVER = { Exception => :never }.freeze
-      EXCEPTION_IMMEDIATE = { Exception => :immediate }.freeze
-      private_constant :EXCEPTION_NEVER, :EXCEPTION_IMMEDIATE
-
-      # Enters an exclusive section, but allows dependency loading while blocked
-      def mon_enter
-        mon_try_enter ||
-          ActiveSupport::Dependencies.interlock.permit_concurrent_loads { super }
-      end
-
-      def synchronize
-        Thread.handle_interrupt(EXCEPTION_NEVER) do
-          mon_enter
-
-          begin
-            Thread.handle_interrupt(EXCEPTION_IMMEDIATE) do
-              yield
-            end
-          ensure
-            mon_exit
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:15c9e2a6d47aaaa476daa91d36cc21a6e1bf7d955ac65b565fd1e1c8587a45e3
+size 931

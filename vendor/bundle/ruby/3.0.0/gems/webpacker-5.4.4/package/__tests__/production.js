@@ -1,29 +1,3 @@
-/* test expect, describe, afterAll, beforeEach */
-
-const { resolve } = require('path')
-const { chdirTestApp, chdirCwd } = require('../utils/helpers')
-
-chdirTestApp()
-
-describe('Production environment', () => {
-  afterAll(chdirCwd)
-
-  describe('toWebpackConfig', () => {
-    beforeEach(() => jest.resetModules())
-
-    test('should use production config and environment', () => {
-      process.env.RAILS_ENV = 'production'
-      process.env.NODE_ENV = 'production'
-
-      const { environment } = require('../index')
-      const config = environment.toWebpackConfig()
-
-      expect(config.output.path).toEqual(resolve('public', 'packs'))
-      expect(config.output.publicPath).toEqual('/packs/')
-      expect(config).toMatchObject({
-        devtool: 'source-map',
-        stats: 'normal'
-      })
-    })
-  })
-})
+version https://git-lfs.github.com/spec/v1
+oid sha256:78f123bd77d626b0059049c9bb9983d866b18d353fed603d4c8dcf045c4d2698
+size 809

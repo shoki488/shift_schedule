@@ -1,17 +1,3 @@
-module Sprockets
-  module Rails
-    # Resolve assets referenced in CSS `url()` calls and replace them with the digested paths
-    class AssetUrlProcessor
-      REGEX = /url\(\s*["']?(?!(?:\#|data|http))(?<relativeToCurrentDir>\.\/)?(?<path>[^"'\s)]+)\s*["']?\)/
-      def self.call(input)
-        context = input[:environment].context_class.new(input)
-        data    = input[:data].gsub(REGEX) do |_match|
-          path = Regexp.last_match[:path]
-          "url(#{context.asset_path(path)})"
-        end
-
-        context.metadata.merge(data: data)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1502fea2dee8f7d0741d573acfcd559b7cd3b55c78341c8810804e9cdc53f4aa
+size 578

@@ -1,20 +1,3 @@
-module WebSocket
-  class Driver
-    class Hybi
-
-      class Frame
-        attr_accessor :final,
-                      :rsv1,
-                      :rsv2,
-                      :rsv3,
-                      :opcode,
-                      :masked,
-                      :masking_key,
-                      :length_bytes,
-                      :length,
-                      :payload
-      end
-
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f48620cbc08a8d03a4709486ec472273fab671708b443acce58e43aa75aa204
+size 409

@@ -1,11 +1,3 @@
-class CreateActiveStorageVariantRecords < ActiveRecord::Migration[6.0]
-  def change
-    create_table :active_storage_variant_records do |t|
-      t.belongs_to :blob, null: false, index: false
-      t.string :variation_digest, null: false
-
-      t.index %i[ blob_id variation_digest ], name: "index_active_storage_variant_records_uniqueness", unique: true
-      t.foreign_key :active_storage_blobs, column: :blob_id
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:89c7e5b0110a1c90049b7d1437f1dc9828ffc23948edc8b0bef1de1dadb2cbb8
+size 433

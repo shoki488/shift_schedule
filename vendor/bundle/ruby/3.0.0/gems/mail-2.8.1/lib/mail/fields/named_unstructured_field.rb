@@ -1,11 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-require 'mail/fields/unstructured_field'
-
-module Mail
-  class NamedUnstructuredField < UnstructuredField #:nodoc:
-    def initialize(value = nil, charset = nil)
-      super self.class::NAME, value, charset
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:96e7fada63b49525a12ac4b7517783f586f5d862402af31f6ab30f4e03f04cce
+size 272

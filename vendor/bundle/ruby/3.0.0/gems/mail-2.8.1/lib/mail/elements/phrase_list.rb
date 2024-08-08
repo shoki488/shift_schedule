@@ -1,19 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-require 'mail/parsers/phrase_lists_parser'
-require 'mail/utilities'
-
-module Mail
-  class PhraseList #:nodoc:
-    attr_reader :phrases
-
-    def initialize(string)
-      @phrases =
-        if Utilities.blank? string
-          []
-        else
-          Mail::Parsers::PhraseListsParser.parse(string).phrases.map { |p| Mail::Utilities.unquote(p) }
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:405161b2e0ec3b3010f0d6c58e64d051cbe1daa70bda5f57c4c7bf85a9206a77
+size 422

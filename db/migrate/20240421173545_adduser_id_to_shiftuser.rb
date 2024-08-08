@@ -1,6 +1,3 @@
-class AdduserIdToShiftuser < ActiveRecord::Migration[6.1]
-  def change
-    add_column :shift_users, :user_id, :integer
-    add_column :shift_users, :shift_id, :integer
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ddbe9467670245bb1d7be55dc7872174c59afdaf595cc3bab5b1e4afe6dde86
+size 178

@@ -1,9 +1,3 @@
-module FFI
-  class DynamicLibrary
-    # TODO
-
-    class Symbol < Pointer
-      # TODO
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac22f605aef6ec601360375f457e078e079bc407f79195191d10440d02a30a3d
+size 104

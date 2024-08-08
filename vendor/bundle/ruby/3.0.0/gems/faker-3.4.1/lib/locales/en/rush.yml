@@ -1,32 +1,3 @@
-en:
-  faker:
-    rush:
-      players:
-        - Geddy Lee
-        - Alex Lifeson
-        - Neil Peart
-        - John Rutsey
-      albums:
-        - Rush
-        - Fly by Night
-        - Caress of Steel
-        - '2112'
-        - A Farewell to Kings
-        - Hemispheres
-        - Permanent Waves
-        - Moving Pictures
-        - Signals
-        - Grace Under Pressure
-        - Power Windows
-        - Hold Your Fire
-        - Presto
-        - Roll the Bones
-        - Counterparts
-        - Test for Echo
-        - Vapor Trails
-        - Snakes & Arrows
-        - Clockwork Angels
-        - All the World's a Stage
-        - Exit...Stage Left
-        - A Show of Hands
-        - Different Stages
+version https://git-lfs.github.com/spec/v1
+oid sha256:b9ab0269e109a0c468c098b77f902b64c7ae4fa9d459e709a23b5c8195064a8d
+size 701

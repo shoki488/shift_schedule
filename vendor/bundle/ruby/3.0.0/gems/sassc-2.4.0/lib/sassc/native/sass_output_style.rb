@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-module SassC
-  module Native
-    SassOutputStyle = enum(
-      :sass_style_nested,
-      :sass_style_expanded,
-      :sass_style_compact,
-      :sass_style_compressed
-    )
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:06ba4676f283cdd022f9574b2758d4663c567e6f418101291e9603e73645ef22
+size 214

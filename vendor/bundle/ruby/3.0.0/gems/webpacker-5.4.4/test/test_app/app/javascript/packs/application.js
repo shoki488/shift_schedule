@@ -1,10 +1,3 @@
-/* eslint no-console:0 */
-// This file is automatically compiled by Webpack, along with any other files
-// present in this directory. You're encouraged to place your actual application logic in
-// a relevant structure within app/javascript and only use these pack files to reference
-// that code so it'll be compiled.
-//
-// To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
-// layout file, like app/views/layouts/application.html.erb
-
-console.log('Hello World from Webpacker')
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea574c1eb9f4d8499f20c63a9eafe98b6e4601d0f3139525cb92330193b7c444
+size 515

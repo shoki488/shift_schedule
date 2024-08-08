@@ -1,8 +1,3 @@
-#ifndef SQLITE3_EXCEPTION_RUBY
-#define SQLITE3_EXCEPTION_RUBY
-
-#define CHECK(_db, _status) rb_sqlite3_raise(_db, _status);
-
-void rb_sqlite3_raise(sqlite3 * db, int status);
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4f7ec6dfe67b6c4020363ba821b6fa9e30b592a67426afe550f46e14db80d2d
+size 181

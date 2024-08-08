@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module ActionView
-  module Helpers
-    module Tags # :nodoc:
-      class NumberField < TextField # :nodoc:
-        def render
-          options = @options.stringify_keys
-
-          if range = options.delete("in") || options.delete("within")
-            options.update("min" => range.min, "max" => range.max)
-          end
-
-          @options = options
-          super
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cac565c7d8d997171f984150f16a3ad1fdd8c1fd9dea3a813e9de99e7df6ae26
+size 439

@@ -1,26 +1,3 @@
-# -*- encoding: utf-8 -*-
-# stub: net-smtp 0.5.0 ruby lib
-
-Gem::Specification.new do |s|
-  s.name = "net-smtp".freeze
-  s.version = "0.5.0".freeze
-
-  s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
-  s.metadata = { "homepage_uri" => "https://github.com/ruby/net-smtp", "source_code_uri" => "https://github.com/ruby/net-smtp" } if s.respond_to? :metadata=
-  s.require_paths = ["lib".freeze]
-  s.authors = ["Yukihiro Matsumoto".freeze]
-  s.date = "2024-03-26"
-  s.description = "Simple Mail Transfer Protocol client library for Ruby.".freeze
-  s.email = ["matz@ruby-lang.org".freeze]
-  s.homepage = "https://github.com/ruby/net-smtp".freeze
-  s.licenses = ["Ruby".freeze, "BSD-2-Clause".freeze]
-  s.required_ruby_version = Gem::Requirement.new(">= 2.6.0".freeze)
-  s.rubygems_version = "3.5.3".freeze
-  s.summary = "Simple Mail Transfer Protocol client library for Ruby.".freeze
-
-  s.installed_by_version = "3.5.14".freeze if s.respond_to? :installed_by_version
-
-  s.specification_version = 4
-
-  s.add_runtime_dependency(%q<net-protocol>.freeze, [">= 0".freeze])
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2a3486f51fcc784540ee3cda1d958564a49a3a80fa03742e14e2a879865498a
+size 1128

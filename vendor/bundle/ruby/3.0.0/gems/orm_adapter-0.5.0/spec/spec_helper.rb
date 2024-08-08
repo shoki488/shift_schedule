@@ -1,14 +1,3 @@
-require 'rubygems'
-require 'rspec'
-
-$:.unshift(File.dirname(__FILE__) + '/../lib')
-
-['dm-core', 'dm-active_model','mongoid', 'active_record', 'mongo_mapper'].each do |orm|
-  begin
-    require orm
-  rescue LoadError
-    puts "#{orm} not available"
-  end
-end
-
-require 'orm_adapter'
+version https://git-lfs.github.com/spec/v1
+oid sha256:502b7878ce0f4253924134f28656daf164009ecd218c40df02860a20b4d3448a
+size 280

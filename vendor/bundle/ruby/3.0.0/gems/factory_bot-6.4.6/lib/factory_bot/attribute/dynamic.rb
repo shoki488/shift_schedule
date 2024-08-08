@@ -1,25 +1,3 @@
-module FactoryBot
-  class Attribute
-    # @api private
-    class Dynamic < Attribute
-      def initialize(name, ignored, block)
-        super(name, ignored)
-        @block = block
-      end
-
-      def to_proc
-        block = @block
-
-        -> {
-          value = case block.arity
-          when 1, -1, -2 then instance_exec(self, &block)
-          else instance_exec(&block)
-          end
-          raise SequenceAbuseError if FactoryBot::Sequence === value
-
-          value
-        }
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cba72f11a3abf3dbf2855b543ea581d490331e4f668f686cbcddb9141e2662bf
+size 514

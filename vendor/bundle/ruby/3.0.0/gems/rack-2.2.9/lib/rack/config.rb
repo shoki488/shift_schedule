@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module Rack
-  # Rack::Config modifies the environment using the block given during
-  # initialization.
-  #
-  # Example:
-  #     use Rack::Config do |env|
-  #       env['my-key'] = 'some-value'
-  #     end
-  class Config
-    def initialize(app, &block)
-      @app = app
-      @block = block
-    end
-
-    def call(env)
-      @block.call(env)
-      @app.call(env)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9fa2303f67b99e7f62e6636ac6e0d483b33b18baf7f20164c6d6dff85602190d
+size 410

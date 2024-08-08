@@ -1,34 +1,3 @@
-# frozen_string_literal: true
-
-class Capybara::Selenium::Node
-  module FileInputClickEmulation
-    def click(keys = [], **options)
-      super
-    rescue Selenium::WebDriver::Error::InvalidArgumentError
-      return emulate_click if attaching_file? && visible_file_field?
-
-      raise
-    end
-
-  private
-
-    def visible_file_field?
-      (attrs(:tagName, :type).map { |val| val&.downcase } == %w[input file]) && visible?
-    end
-
-    def attaching_file?
-      caller_locations.any? { |cl| cl.base_label == 'attach_file' }
-    end
-
-    def emulate_click
-      driver.execute_script(<<~JS, self)
-        arguments[0].dispatchEvent(
-          new MouseEvent('click', {
-            view: window,
-            bubbles: true,
-            cancelable: true
-          }));
-      JS
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:15788ccc816db5aa4baab7770d5f362488ae05e0d8ecb3675e8e5e8f68291345
+size 791

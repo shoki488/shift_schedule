@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-=begin
-
-= net/https -- SSL/TLS enhancement for Net::HTTP.
-
-  This file has been merged with net/http.  There is no longer any need to
-  require 'net/https' to use HTTPS.
-
-  See Net::HTTP for details on how to make HTTPS connections.
-
-== Info
-  'OpenSSL for Ruby 2' project
-  Copyright (C) 2001 GOTOU Yuuzou <gotoyuzo@notwork.org>
-  All rights reserved.
-
-== Licence
-  This program is licensed under the same licence as Ruby.
-  (See the file 'LICENCE'.)
-
-=end
-
-require_relative 'http'
-require 'openssl'
+version https://git-lfs.github.com/spec/v1
+oid sha256:b65d4eda28ef8e01e798eeed00341b5f65e4a64fd834c8dfecb21f86c6b5aa8a
+size 531

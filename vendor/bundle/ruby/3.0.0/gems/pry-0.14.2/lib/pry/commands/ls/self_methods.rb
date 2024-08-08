@@ -1,34 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class Ls < Pry::ClassCommand
-      class SelfMethods < Pry::Command::Ls::Formatter
-        include Pry::Command::Ls::Interrogatable
-        include Pry::Command::Ls::MethodsHelper
-
-        def initialize(interrogatee, no_user_opts, opts, pry_instance)
-          super(pry_instance)
-          @interrogatee = interrogatee
-          @no_user_opts = no_user_opts
-          @ppp_switch = opts[:ppp]
-          @jruby_switch = opts['all-java']
-        end
-
-        def output_self
-          methods = all_methods(true).select do |m|
-            m.owner == @interrogatee && grep.regexp[m.name]
-          end
-          heading = "#{Pry::WrappedModule.new(@interrogatee).method_prefix}methods"
-          output_section(heading, format(methods))
-        end
-
-        private
-
-        def correct_opts?
-          @no_user_opts && interrogating_a_module?
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0bce6b1ca2b1d6aab1c008e198dabbfc36418c53d9c43085b79229eac9f20770
+size 944

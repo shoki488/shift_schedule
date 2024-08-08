@@ -1,16 +1,3 @@
-<% provide :title, "Deliver new inbound email" %>
-
-<h1>All inbound emails</h1>
-
-<table>
-  <tr><th>Message ID</th><th>Status</th></tr>
-  <% @inbound_emails.each do |inbound_email| %>
-    <tr>
-      <td><%= link_to inbound_email.message_id, main_app.rails_conductor_inbound_email_path(inbound_email) %></td>
-      <td><%= inbound_email.status %></td>
-    </tr>
-  <% end %>
-</table>
-
-<%= link_to "New inbound email by form", main_app.new_rails_conductor_inbound_email_path %> |
-<%= link_to "New inbound email by source", main_app.new_rails_conductor_inbound_email_source_path %>
+version https://git-lfs.github.com/spec/v1
+oid sha256:924ed263d63796822dcdccb64e864e6be8d095eb4969abdc265b94c4d75554e9
+size 576

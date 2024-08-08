@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-# Allows to disable WebMock stubs
-module DisablingStub
-  def disable
-    @disabled = true
-  end
-
-  def disabled?
-    @disabled
-  end
-
-  WebMock::RequestStub.prepend self
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:292a421fff71344d9d39e7af889c14aa78c3188c5744a61eae4a0af554871d63
+size 205

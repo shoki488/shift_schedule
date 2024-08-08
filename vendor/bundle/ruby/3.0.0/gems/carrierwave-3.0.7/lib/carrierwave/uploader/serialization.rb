@@ -1,28 +1,3 @@
-require "json"
-require "active_support/core_ext/hash"
-
-module CarrierWave
-  module Uploader
-    module Serialization
-      extend ActiveSupport::Concern
-
-      def serializable_hash(options = nil)
-        {"url" => url}.merge Hash[versions.map { |name, version| [name.to_s, { "url" => version.url }] }]
-      end
-
-      def as_json(options=nil)
-        serializable_hash
-      end
-
-      def to_json(options=nil)
-        JSON.generate(as_json)
-      end
-
-      def to_xml(options={})
-        merged_options = options.merge(:root => mounted_as || "uploader", :type => 'uploader')
-        serializable_hash.to_xml(merged_options)
-      end
-
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ae66083b03d9a193e8cd0428e3bb90c6dda7a6b4f36a5bb6863eed4de115f65
+size 657

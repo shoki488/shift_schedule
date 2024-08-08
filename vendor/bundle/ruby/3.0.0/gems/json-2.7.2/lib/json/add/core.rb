@@ -1,12 +1,3 @@
-#frozen_string_literal: false
-# This file requires the implementations of ruby core's custom objects for
-# serialisation/deserialisation.
-
-require 'json/add/date'
-require 'json/add/date_time'
-require 'json/add/exception'
-require 'json/add/range'
-require 'json/add/regexp'
-require 'json/add/struct'
-require 'json/add/symbol'
-require 'json/add/time'
+version https://git-lfs.github.com/spec/v1
+oid sha256:716d5acec53b4cc1f31e5b7fa2d960a5eb59369d62dc550c70934cfa44df42d8
+size 348

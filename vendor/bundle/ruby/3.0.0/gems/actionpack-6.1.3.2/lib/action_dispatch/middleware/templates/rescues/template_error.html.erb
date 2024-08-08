@@ -1,20 +1,3 @@
-<header>
-  <h1>
-    <%= @exception.cause.class.to_s %> in
-    <%= @request.parameters["controller"].camelize if @request.parameters["controller"] %>#<%= @request.parameters["action"] %>
-  </h1>
-</header>
-
-<div id="container">
-  <p>
-    Showing <i><%= @exception.file_name %></i> where line <b>#<%= @exception.line_number %></b> raised:
-  </p>
-  <pre><code><%= h @exception.message %></code></pre>
-
-  <%= render "rescues/source", source_extracts: @source_extracts, show_source_idx: @show_source_idx %>
-
-  <p><%= @exception.sub_template_message %></p>
-
-  <%= render "rescues/trace", traces: @traces, trace_to_show: @trace_to_show %>
-  <%= render template: "rescues/_request_and_response" %>
-</div>
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d8d43ee0c33626252c612443ca90709b773c9bc00caae16b3dc638e37c7a2bb
+size 696

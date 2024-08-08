@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-
-require 'rspec'
-
-require 'websocket'
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
-
-RSpec.configure do |config|
-  config.disable_monkey_patching!
-
-  config.before(:suite) do
-    WebSocket.max_frame_size = 100 * 1024 # 100kb
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec031a088817d35bbc9f7ac08cfe2b671a92b7422ca65cef83745494fa270681
+size 291

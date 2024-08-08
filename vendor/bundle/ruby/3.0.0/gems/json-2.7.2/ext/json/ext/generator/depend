@@ -1,1 +1,3 @@
-generator.o: generator.c generator.h $(srcdir)/../fbuffer/fbuffer.h
+version https://git-lfs.github.com/spec/v1
+oid sha256:34f9df4d5fdd49f5483b05c6e1e96ea53f7e1f6ca5e92da3dcaddf48f6ef7846
+size 68

@@ -1,4 +1,3 @@
-OpenAI.configure do |config|
-    config.access_token = ENV.fetch("OPENAI_ACCESS_KEY")
-end
-  
+version https://git-lfs.github.com/spec/v1
+oid sha256:5fdd61d1f4b70eb8675774b5b083ceaccc890d1ff55579b6ca2f21cf51e3107a
+size 92

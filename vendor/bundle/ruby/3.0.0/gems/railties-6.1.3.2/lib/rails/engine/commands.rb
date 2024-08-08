@@ -1,9 +1,3 @@
-# frozen_string_literal: true
-
-unless defined?(APP_PATH)
-  if File.exist?(File.expand_path("test/dummy/config/application.rb", ENGINE_ROOT))
-    APP_PATH = File.expand_path("test/dummy/config/application", ENGINE_ROOT)
-  end
-end
-
-require "rails/commands"
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a447fa1207fbb8df9f50e78a5d0d618d1b8eadd22d0a57038783ef266de019d
+size 255

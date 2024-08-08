@@ -1,5 +1,3 @@
-fr:
-  faker:
-    phone_number:
-      country_code:
-        - '33'
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d0f5b058503f557b220e99473ed3032fbbab4b080e1dc05e3983a52789cc32e
+size 66

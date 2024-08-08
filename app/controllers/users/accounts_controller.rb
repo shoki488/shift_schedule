@@ -1,16 +1,3 @@
-class Users::AccountsController < ApplicationController
-  before_action :ensure_normal_user, only: [:show]
-  def index; end
-
-  def show
-    @user = current_user
-  end
-
-  protected
-
-  def ensure_normal_user
-    if current_user.email == 'guest@example.com'
-      redirect_to root_path, alert: 'ゲストユーザーのアカウント情報は閲覧・変更できません。'
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:be0396a645b73583b2d7a4926006ee209844d2a9f2d585941495cd4a77853c18
+size 393

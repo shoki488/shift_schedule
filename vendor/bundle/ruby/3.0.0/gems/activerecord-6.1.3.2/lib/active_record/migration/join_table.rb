@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  class Migration
-    module JoinTable #:nodoc:
-      private
-        def find_join_table_name(table_1, table_2, options = {})
-          options.delete(:table_name) || join_table_name(table_1, table_2)
-        end
-
-        def join_table_name(table_1, table_2)
-          ModelSchema.derive_join_table_name(table_1, table_2).to_sym
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:20767c157b1e2753ca995077cc5f904f762d51c229ec6207b59ae1ea968e9f21
+size 412

@@ -1,26 +1,3 @@
-module CodeRay
-  module Scanners
-    
-    # Scanner for plain text.
-    # 
-    # Yields just one token of the kind :plain.
-    # 
-    # Alias: +plaintext+, +plain+
-    class Text < Scanner
-      
-      register_for :text
-      title 'Plain text'
-      
-      KINDS_NOT_LOC = [:plain]  # :nodoc:
-      
-    protected
-      
-      def scan_tokens encoder, options
-        encoder.text_token string, :plain
-        encoder
-      end
-      
-    end
-    
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4e0f708ff14f04c17dc62a83d1a0d2e1593a9dfd5e1087d44977d937368fe28
+size 460

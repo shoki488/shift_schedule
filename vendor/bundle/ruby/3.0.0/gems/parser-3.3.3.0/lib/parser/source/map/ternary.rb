@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-module Parser
-  module Source
-
-    class Map::Ternary < Map
-      attr_reader :question
-      attr_reader :colon
-
-      def initialize(question_l, colon_l, expression_l)
-        @question, @colon = question_l, colon_l
-
-        super(expression_l)
-      end
-    end
-
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8b1224840dc23807237c82b37d1457ddd9c68f76880ec836543fcd4a01e5156c
+size 307

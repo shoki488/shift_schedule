@@ -1,29 +1,3 @@
-# -*- encoding: utf-8 -*-
-# stub: dotenv 3.1.2 ruby lib
-
-Gem::Specification.new do |s|
-  s.name = "dotenv".freeze
-  s.version = "3.1.2".freeze
-
-  s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
-  s.require_paths = ["lib".freeze]
-  s.authors = ["Brandon Keepers".freeze]
-  s.date = "2024-05-06"
-  s.description = "Loads environment variables from `.env`.".freeze
-  s.email = ["brandon@opensoul.org".freeze]
-  s.executables = ["dotenv".freeze]
-  s.files = ["bin/dotenv".freeze]
-  s.homepage = "https://github.com/bkeepers/dotenv".freeze
-  s.licenses = ["MIT".freeze]
-  s.required_ruby_version = Gem::Requirement.new(">= 3.0".freeze)
-  s.rubygems_version = "3.5.9".freeze
-  s.summary = "Loads environment variables from `.env`.".freeze
-
-  s.installed_by_version = "3.5.14".freeze if s.respond_to? :installed_by_version
-
-  s.specification_version = 4
-
-  s.add_development_dependency(%q<rake>.freeze, [">= 0".freeze])
-  s.add_development_dependency(%q<rspec>.freeze, [">= 0".freeze])
-  s.add_development_dependency(%q<standard>.freeze, [">= 0".freeze])
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e41d13bbafb435e6dbfa6c85a5ae8f5bcfb003dd067f963ef30140c6a502217e
+size 1115

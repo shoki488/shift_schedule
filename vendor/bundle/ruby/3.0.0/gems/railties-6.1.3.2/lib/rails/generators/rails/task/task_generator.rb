@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-module Rails
-  module Generators
-    class TaskGenerator < NamedBase # :nodoc:
-      argument :actions, type: :array, default: [], banner: "action action"
-
-      def create_task_files
-        template "task.rb", File.join("lib/tasks", "#{file_name}.rake")
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:061a32c5cf72d013fa93c3bd0aa9167ebb66f29c2ac446890dedf6236e13ef23
+size 315

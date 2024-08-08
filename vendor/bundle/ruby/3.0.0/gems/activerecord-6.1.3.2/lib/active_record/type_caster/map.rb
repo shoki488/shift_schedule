@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module TypeCaster
-    class Map # :nodoc:
-      def initialize(klass)
-        @klass = klass
-      end
-
-      def type_cast_for_database(attr_name, value)
-        type = type_for_attribute(attr_name)
-        type.serialize(value)
-      end
-
-      def type_for_attribute(name)
-        klass.type_for_attribute(name)
-      end
-
-      private
-        attr_reader :klass
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:24c5a20af5f296e9eb5122dad5a3722f6261db93f4a8587ff384efaf2e96d7b3
+size 438

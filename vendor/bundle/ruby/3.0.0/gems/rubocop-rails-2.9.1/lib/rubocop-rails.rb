@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-require 'rubocop'
-require 'rack/utils'
-require 'active_support/inflector'
-
-require_relative 'rubocop/rails'
-require_relative 'rubocop/rails/version'
-require_relative 'rubocop/rails/inject'
-require_relative 'rubocop/rails/schema_loader'
-require_relative 'rubocop/rails/schema_loader/schema'
-
-RuboCop::Rails::Inject.defaults!
-
-require_relative 'rubocop/cop/rails_cops'
+version https://git-lfs.github.com/spec/v1
+oid sha256:355db099e76a7dc7841f58a8a43c98e4e84fac8eb94a16ae3da47bd875da573a
+size 398

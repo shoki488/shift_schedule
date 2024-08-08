@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # A node extension for `str`, `dstr`, and `xstr` nodes. This will be used
-    # in place of a plain node when the builder constructs the AST, making
-    # its methods available to all `str` nodes within RuboCop.
-    class StrNode < Node
-      include BasicLiteralNode
-
-      def character_literal?
-        loc.respond_to?(:begin) && loc.begin && loc.begin.is?('?')
-      end
-
-      def heredoc?
-        loc.is_a?(Parser::Source::Map::Heredoc)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e87ed3ae179d2a684fc9c9c8b6a358fc83a840246e4e9e28a32e9024148e433e
+size 534

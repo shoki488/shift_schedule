@@ -1,6 +1,3 @@
-source "https://rubygems.org"
-
-gem "rake", ">= 10"
-gem "activerecord", "~> 4.0.1"
-gem "rspec", ">= 2.4.0"
-gem "sqlite3", ">= 1.3.2"
+version https://git-lfs.github.com/spec/v1
+oid sha256:4abafb5165aa4bdb285fc89fb809259bfd65437bd5d8ba2d8d2e8cdf7ef32436
+size 132

@@ -1,4 +1,3 @@
-# desc "Explaining what the task does"
-# task :<%= underscored_name %> do
-#   # Task goes here
-# end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e4fba9cd8c8e04dc28b63d4c12091a92208791b7a522b912d9eab74dedd11bff
+size 101

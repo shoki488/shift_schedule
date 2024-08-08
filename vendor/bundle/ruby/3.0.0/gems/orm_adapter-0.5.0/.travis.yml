@@ -1,17 +1,3 @@
-language: ruby
-
-matrix:
-  include:
-    - rvm: 1.9.3
-      gemfile: Gemfile
-      services: mongodb
-
-    - rvm: 2.0.0
-      gemfile: Gemfile
-      services: mongodb
-
-    - rvm: 1.9.3
-      gemfile: gemfiles/activerecord-4.gemfile
-
-    - rvm: 2.0.0
-      gemfile: gemfiles/activerecord-4.gemfile
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e39c54995e7e60cf5645740aafaba77714662b46aa7879262b8936aa38b88d9
+size 294

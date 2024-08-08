@@ -1,13 +1,3 @@
-module Vips
-  # Pick the algorithm vips uses to decide image "interestingness". This is
-  # used by {Image#smartcrop}, for example, to decide what parts of the image
-  # to keep.
-  #
-  # * `:none` do nothing
-  # * `:centre` just take the centre
-  # * `:entropy` use an entropy measure
-  # * `:attention` look for features likely to draw human attention
-
-  class Interesting < Symbol
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec566a9ab6df12988dff998d47dbfec4b9d84b2599434aebc50cf909b64b1b0b
+size 393

@@ -1,11 +1,3 @@
-# frozen_string_literal: true
-
-module Nokogiri
-  module XML
-    class Text < Nokogiri::XML::CharacterData
-      def content=(string)
-        self.native_content = string.to_s
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ade375a9e1e16cbe45f7a342654f90af6aa35cc52947ecb418debce4107afe5
+size 203

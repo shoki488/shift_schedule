@@ -1,20 +1,3 @@
-#!/usr/bin/env ruby
-
-require "bundler/setup"
-require "webdriver"
-
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
-
-# (If you use this, don't forget to add pry to your Gemfile!)
-require "pry"
-
-c = Webdriver::Client.new "http://localhost:9515"
-
-s = if c.sessions.length > 0
-  c.sessions.last
-else
-  c.session!
-end
-
-Pry.start
+version https://git-lfs.github.com/spec/v1
+oid sha256:b6dbb89e24ff690fe9954c62522980ffe10ba6d4ae6a8e9ae4757f204db872a5
+size 427

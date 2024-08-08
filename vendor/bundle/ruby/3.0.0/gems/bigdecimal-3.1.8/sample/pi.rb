@@ -1,21 +1,3 @@
-#!/usr/local/bin/ruby
-# frozen_string_literal: false
-
-#
-# pi.rb
-#
-# Calculates 3.1415.... (the number of times that a circle's diameter
-# will fit around the circle) using J. Machin's formula.
-#
-
-require "bigdecimal"
-require "bigdecimal/math.rb"
-
-include BigMath
-
-if ARGV.size == 1
-    print "PI("+ARGV[0]+"):\n"
-    p PI(ARGV[0].to_i)
-else
-    print "TRY: ruby pi.rb 1000 \n"
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4266b242145fd408a834be82d0c986f9b61f97943fbeb13caf7192e9e2dc0318
+size 381

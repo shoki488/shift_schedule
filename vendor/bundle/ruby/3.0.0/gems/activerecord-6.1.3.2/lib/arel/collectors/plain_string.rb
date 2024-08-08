@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module Collectors
-    class PlainString
-      def initialize
-        @str = +""
-      end
-
-      def value
-        @str
-      end
-
-      def <<(str)
-        @str << str
-        self
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a020f6317e55f960c6278c392fc931c45668fc9176bc36c91b2bd18333f6df92
+size 269

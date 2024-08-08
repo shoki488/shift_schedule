@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module ActionView #:nodoc:
-  class Template #:nodoc:
-    class Inline < Template #:nodoc:
-      # This finalizer is needed (and exactly with a proc inside another proc)
-      # otherwise templates leak in development.
-      Finalizer = proc do |method_name, mod| # :nodoc:
-        proc do
-          mod.module_eval do
-            remove_possible_method method_name
-          end
-        end
-      end
-
-      def compile(mod)
-        super
-        ObjectSpace.define_finalizer(self, Finalizer[method_name, mod])
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f7c19370beeb884a807cec133f1d6bd633520ec71027fa9a2a277880dbe45e8
+size 570

@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-
-require 'capybara/rspec/matchers/base'
-
-module Capybara
-  module RSpecMatchers
-    module Matchers
-      class HaveText < CountableWrappedElementMatcher
-        def element_matches?(el)
-          el.assert_text(*@args, **@kw_args)
-        end
-
-        def element_does_not_match?(el)
-          el.assert_no_text(*@args, **@kw_args)
-        end
-
-        def description
-          "have text #{format(text)}"
-        end
-
-        def format(content)
-          content.inspect
-        end
-
-      private
-
-        def text
-          @args[0].is_a?(Symbol) ? @args[1] : @args[0]
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d2f30617d7639822f24588aeac788d7860b2eadfab1501ce89cf149502a5e94c
+size 645

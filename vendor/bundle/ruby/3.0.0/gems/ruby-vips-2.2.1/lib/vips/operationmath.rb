@@ -1,17 +1,3 @@
-module Vips
-  # The math operation to perform on an image. See {Image#math}.
-  #
-  # * ':sin' sin(), angles in degrees
-  # * ':cos' cos(), angles in degrees
-  # * ':tan' tan(), angles in degrees
-  # * ':asin' asin(), angles in degrees
-  # * ':acos' acos(), angles in degrees
-  # * ':atan' atan(), angles in degrees
-  # * ':log' log base e
-  # * ':log10' log base 10
-  # * ':exp' e to the something
-  # * ':exp10' 10 to the something
-
-  class OperationMath < Symbol
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:11e922728b219fe6f6bbed8af48a4dc664eb7764795a94f759965ce9fea1f6f3
+size 475

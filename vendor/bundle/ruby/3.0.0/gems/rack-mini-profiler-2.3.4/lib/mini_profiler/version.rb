@@ -1,8 +1,3 @@
-# frozen_string_literal: true
-
-module Rack
-  class MiniProfiler
-    VERSION = '2.3.4'
-    SOURCE_CODE_URI = 'https://github.com/MiniProfiler/rack-mini-profiler'
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:489e220f80d1d079e17aaf84a07ceddfc702ed88fe13c053ebd109fcb28478d9
+size 171

@@ -1,5 +1,3 @@
-en:
-  faker:
-    id_number:
-      valid: "#{IdNumber.ssn_valid}"
-      invalid: ['000-##-####', '###-00-####', '###-##-0000', '666-##-####', '9##-##-####']
+version https://git-lfs.github.com/spec/v1
+oid sha256:78c33adce05a84bf3a6526f32c60f79f005d5fc6b270b07f88343d7f72f36c48
+size 156

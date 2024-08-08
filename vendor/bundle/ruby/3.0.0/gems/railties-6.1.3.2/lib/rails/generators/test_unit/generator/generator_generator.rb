@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators/test_unit"
-
-module TestUnit # :nodoc:
-  module Generators # :nodoc:
-    class GeneratorGenerator < Base # :nodoc:
-      check_class_collision suffix: "GeneratorTest"
-
-      class_option :namespace, type: :boolean, default: true,
-                               desc: "Namespace generator under lib/generators/name"
-
-      def create_generator_files
-        template "generator_test.rb", File.join("test/lib/generators", class_path, "#{file_name}_generator_test.rb")
-      end
-
-    private
-      def generator_path
-        if options[:namespace]
-          File.join("generators", regular_class_path, file_name, "#{file_name}_generator")
-        else
-          File.join("generators", regular_class_path, "#{file_name}_generator")
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8781ff31cca1ae3485b20f640903da5ba4bb9ca78c7fb67e83cf714a3a2651d3
+size 825

@@ -1,14 +1,3 @@
-===============================================================================
-
-Some setup you must do manually if you haven't yet:
-
-  Ensure you have overridden routes for generated controllers in your routes.rb.
-  For example:
-
-    Rails.application.routes.draw do
-      devise_for :users, controllers: {
-        sessions: 'users/sessions'
-      }
-    end
-
-===============================================================================
+version https://git-lfs.github.com/spec/v1
+oid sha256:99c59ab5e9cfc1ea86f711a94aec6b4888ebad255dcf736e80cdb5316e80f31c
+size 440

@@ -1,7 +1,3 @@
-#ifdef _WIN32
-#define EV_SELECT_IS_WINSOCKET 1
-#define EV_USE_MONOTONIC 0
-#define EV_USE_REALTIME 0
-#endif
-
-#include "../libev/ev.h"
+version https://git-lfs.github.com/spec/v1
+oid sha256:f20696acd90453c46ebfea6731f3e61c12b0ad6d4353430c5d73c7fe57eb3c55
+size 133

@@ -1,11 +1,3 @@
-# encoding: UTF-8
-
-require 'pry'
-require 'pry-rails/version'
-
-if defined?(Rails) && !ENV['DISABLE_PRY_RAILS']
-  require 'pry-rails/railtie'
-  require 'pry-rails/commands'
-  require 'pry-rails/model_formatter'
-  require 'pry-rails/prompt'
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:78eff2aa115e56182bfa6fd25f96701a1baf9882ede67a451cca0f1a34436cad
+size 242

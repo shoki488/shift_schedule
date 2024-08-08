@@ -1,31 +1,3 @@
-# frozen_string_literal: true
-
-RSpec.describe Faraday::MiddlewareRegistry do
-  before do
-    stub_const('CustomMiddleware', custom_middleware_klass)
-  end
-  let(:custom_middleware_klass) { Class.new(Faraday::Middleware) }
-  let(:dummy) { Class.new { extend Faraday::MiddlewareRegistry } }
-
-  after { dummy.unregister_middleware(:custom) }
-
-  it 'allows to register with constant' do
-    dummy.register_middleware(custom: custom_middleware_klass)
-    expect(dummy.lookup_middleware(:custom)).to eq(custom_middleware_klass)
-  end
-
-  it 'allows to register with symbol' do
-    dummy.register_middleware(custom: :CustomMiddleware)
-    expect(dummy.lookup_middleware(:custom)).to eq(custom_middleware_klass)
-  end
-
-  it 'allows to register with string' do
-    dummy.register_middleware(custom: 'CustomMiddleware')
-    expect(dummy.lookup_middleware(:custom)).to eq(custom_middleware_klass)
-  end
-
-  it 'allows to register with Proc' do
-    dummy.register_middleware(custom: -> { custom_middleware_klass })
-    expect(dummy.lookup_middleware(:custom)).to eq(custom_middleware_klass)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:84c7906de8d4eeb4e112e81b089a336f6240d9fad2db392229eb53f70f98f62a
+size 1087

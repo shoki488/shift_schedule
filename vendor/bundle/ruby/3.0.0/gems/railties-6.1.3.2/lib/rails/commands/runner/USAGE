@@ -1,20 +1,3 @@
-Examples:
-
-Run `puts Rails.env` after loading the app:
-
-  <%= executable %> 'puts Rails.env'
-
-Run the Ruby file located at `path/to/filename.rb` after loading the app:
-
-  <%= executable %> path/to/filename.rb
-
-Run the Ruby script read from stdin after loading the app:
-  <%= executable %> -
-
-<% unless Gem.win_platform? %>
-You can also use the runner command as a shebang line for your executables:
-
-  #!/usr/bin/env <%= File.expand_path(executable) %>
-
-  Product.all.each { |p| p.price *= 2 ; p.save! }
-<% end %>
+version https://git-lfs.github.com/spec/v1
+oid sha256:cfacd24deea0269684f9b0e1a36a434117d4679ed410b0fe05dd8de5032dd8e7
+size 514

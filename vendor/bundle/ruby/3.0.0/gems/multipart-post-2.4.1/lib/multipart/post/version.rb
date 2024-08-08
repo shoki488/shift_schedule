@@ -1,11 +1,3 @@
-# frozen_string_literal: true
-
-# Released under the MIT License.
-# Copyright, 2019, by Patrick Davey.
-# Copyright, 2021-2024, by Samuel Williams.
-
-module Multipart
-  module Post
-    VERSION = "2.4.1"
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:70a17f441d7e12fa949c445404f492ef3ad50990dbc9b6c00c12287986d1832f
+size 210

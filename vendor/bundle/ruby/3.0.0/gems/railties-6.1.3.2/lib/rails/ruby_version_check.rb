@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-if Gem::Version.new(RUBY_VERSION) < Gem::Version.new("2.5.0") && RUBY_ENGINE == "ruby"
-  desc = defined?(RUBY_DESCRIPTION) ? RUBY_DESCRIPTION : "ruby #{RUBY_VERSION} (#{RUBY_RELEASE_DATE})"
-  abort <<-end_message
-
-    Rails 6 requires Ruby 2.5.0 or newer.
-
-    You're running
-      #{desc}
-
-    Please upgrade to Ruby 2.5.0 or newer to continue.
-
-  end_message
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:537e5faee2fbcd93c8c621e8815d7700d46f5ec43932c742a0aef9f6ef4379d9
+size 396

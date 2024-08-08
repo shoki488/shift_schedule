@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-class GlobalID
-  module FixtureSet
-    def global_id(fixture_set_name, label, column_type: :integer, **options)
-      create_global_id(fixture_set_name, label, column_type: column_type, klass: GlobalID, **options)
-    end
-
-    def signed_global_id(fixture_set_name, label, column_type: :integer, **options)
-      create_global_id(fixture_set_name, label, column_type: column_type, klass: SignedGlobalID, **options)
-    end
-
-    private
-      def create_global_id(fixture_set_name, label, klass:, column_type: :integer, **options)
-        identifier = identify(label, column_type)
-        model_name = default_fixture_model_name(fixture_set_name)
-        uri = URI::GID.build([GlobalID.app, model_name, identifier, {}])
-        klass.new(uri, **options)
-      end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9514743e72d64669616be3a9adfa205dd6dbba5bad769423102179b8a9b86aa3
+size 804

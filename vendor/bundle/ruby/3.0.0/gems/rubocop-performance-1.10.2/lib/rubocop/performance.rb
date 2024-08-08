@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  # RuboCop Performance project namespace
-  module Performance
-    PROJECT_ROOT = Pathname.new(__dir__).parent.parent.expand_path.freeze
-    CONFIG_DEFAULT = PROJECT_ROOT.join('config', 'default.yml').freeze
-    CONFIG = YAML.safe_load(CONFIG_DEFAULT.read).freeze
-
-    private_constant(:CONFIG_DEFAULT, :PROJECT_ROOT)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d6b2037ac7bc26323d8d9d972ac6efe1637901bf0d94288b7a5de495dda983e
+size 374

@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-module Parser
-  module Source
-
-    class Map::ObjcKwarg < Map
-      attr_reader :keyword
-      attr_reader :operator
-      attr_reader :argument
-
-      def initialize(keyword_l, operator_l, argument_l, expression_l)
-        @keyword, @operator, @argument = keyword_l, operator_l, argument_l
-
-        super(expression_l)
-      end
-    end
-
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8b54b4ff74d2589e8544a33d7d855ff85e655ac8dff96a276ee8108fe6c78f4
+size 380

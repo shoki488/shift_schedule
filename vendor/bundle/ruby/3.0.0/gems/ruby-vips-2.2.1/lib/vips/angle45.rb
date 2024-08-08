@@ -1,15 +1,3 @@
-module Vips
-  # Various fixed 45 degree rotation angles. See {Image#rot45}.
-  #
-  # * `:d0` no rotate
-  # * `:d45` 45 degrees clockwise
-  # * `:d90` 90 degrees clockwise
-  # * `:d135` 135 degrees clockwise
-  # * `:d180` 180 degrees
-  # * `:d225` 135 degrees anti-clockwise
-  # * `:d270` 90 degrees anti-clockwise
-  # * `:d315` 45 degrees anti-clockwise
-
-  class Angle45 < Symbol
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e42fb1c46cbce780638c27988a8baf5378b6a8753454a0995a1ed10918cd1f6f
+size 389

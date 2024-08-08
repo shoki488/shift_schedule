@@ -1,34 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  class UpdateManager < Arel::TreeManager
-    include TreeManager::StatementMethods
-
-    def initialize
-      super
-      @ast = Nodes::UpdateStatement.new
-      @ctx = @ast
-    end
-
-    ###
-    # UPDATE +table+
-    def table(table)
-      @ast.relation = table
-      self
-    end
-
-    def set(values)
-      if String === values
-        @ast.values = [values]
-      else
-        @ast.values = values.map { |column, value|
-          Nodes::Assignment.new(
-            Nodes::UnqualifiedColumn.new(column),
-            value
-          )
-        }
-      end
-      self
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:71908fc0c2b46ae8eefc99d8c96b900a0651c1b51a0078421b7c42b489f8137e
+size 640

@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Style
-      #
-      # This cop checks for BEGIN blocks.
-      #
-      # @example
-      #   # bad
-      #   BEGIN { test }
-      #
-      class BeginBlock < Base
-        MSG = 'Avoid the use of `BEGIN` blocks.'
-
-        def on_preexe(node)
-          add_offense(node.loc.keyword)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa93e426b3f1d759cc4895e8c6fa62813451f98b90729e03ef0d8c68719519d7
+size 388

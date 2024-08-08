@@ -1,33 +1,3 @@
-#--
-#
-#
-#
-# Copyright (c) 1999-2006 Minero Aoki
-#
-# This program is free software.
-# You can distribute/modify this program under the same terms of ruby.
-# see the file "COPYING".
-#
-#++
-
-unless Object.method_defined?(:__send)
-  class Object
-    alias __send __send__
-  end
-end
-
-unless Object.method_defined?(:__send!)
-  class Object
-    alias __send! __send__
-  end
-end
-
-unless Array.method_defined?(:map!)
-  class Array
-    if Array.method_defined?(:collect!)
-      alias map! collect!
-    else
-      alias map! filter
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2261596b562f3275e707186bcfdb370f63ae167fe8c64f45138123492b85a0d8
+size 538

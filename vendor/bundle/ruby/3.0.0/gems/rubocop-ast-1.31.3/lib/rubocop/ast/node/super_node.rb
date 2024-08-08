@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # A node extension for `super`- and `zsuper` nodes. This will be used in
-    # place of a plain node when the builder constructs the AST, making its
-    # methods available to all `super`- and `zsuper` nodes within RuboCop.
-    class SuperNode < Node
-      include ParameterizedNode
-      include MethodDispatchNode
-
-      # Custom destructuring method. This can be used to normalize
-      # destructuring for different variations of the node.
-      #
-      # @return [Array] the different parts of the `super` node
-      def node_parts
-        [nil, :super, *to_a]
-      end
-
-      alias arguments children
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:fad0175e856bd8a0e09d1b3d5f7a7014f1ca5933c0f80f30dac05406b7a7e546
+size 689

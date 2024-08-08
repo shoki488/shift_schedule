@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module ActionCable
-  module Connection
-    extend ActiveSupport::Autoload
-
-    eager_autoload do
-      autoload :Authorization
-      autoload :Base
-      autoload :ClientSocket
-      autoload :Identification
-      autoload :InternalChannel
-      autoload :MessageBuffer
-      autoload :Stream
-      autoload :StreamEventLoop
-      autoload :Subscriptions
-      autoload :TaggedLoggerProxy
-      autoload :TestCase
-      autoload :WebSocket
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0583059f7ce7741e3e196178ca54fcb604bec6a35722154d301ce9dd05e3a8e8
+size 489

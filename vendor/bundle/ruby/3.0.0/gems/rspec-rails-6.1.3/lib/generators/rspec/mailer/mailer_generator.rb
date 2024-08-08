@@ -1,30 +1,3 @@
-require 'generators/rspec'
-require "rspec/rails/feature_check"
-
-module Rspec
-  module Generators
-    # @private
-    class MailerGenerator < Base
-      argument :actions, type: :array, default: [], banner: "method method"
-
-      def generate_mailer_spec
-        file_suffix = file_name.end_with?('mailer') ? 'spec.rb' : 'mailer_spec.rb'
-        template "mailer_spec.rb", target_path('mailers', class_path, [file_name, file_suffix].join('_'))
-      end
-
-      def generate_fixtures_files
-        actions.each do |action|
-          @action, @path = action, File.join(file_path, action)
-          template "fixture", target_path("fixtures", @path)
-        end
-      end
-
-      def generate_preview_files
-        return unless RSpec::Rails::FeatureCheck.has_action_mailer_preview?
-
-        file_suffix = file_name.end_with?('mailer') ? 'preview.rb' : 'mailer_preview.rb'
-        template "preview.rb", target_path("mailers/previews", class_path, [file_name, file_suffix].join('_'))
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc65d753e844091b590f99ed9411ff6b478394bcd552eda54b75a819a0d2b36b
+size 1006

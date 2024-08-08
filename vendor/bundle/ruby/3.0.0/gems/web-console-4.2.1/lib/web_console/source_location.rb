@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module WebConsole
-  class SourceLocation
-    def initialize(binding)
-      @binding = binding
-    end
-
-    if RUBY_VERSION >= "2.6"
-      def path() @binding.source_location.first end
-      def lineno() @binding.source_location.last end
-    else
-      def path() @binding.eval("__FILE__") end
-      def lineno() @binding.eval("__LINE__") end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c20ad0011e10e3b57a2c9dc14335413ca66bd008284c86553f73bb0f56917a0
+size 391

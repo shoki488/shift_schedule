@@ -1,22 +1,3 @@
-require 'generators/rspec'
-
-module Rspec
-  module Generators
-    # @private
-    class ViewGenerator < Base
-      argument :actions, type: :array, default: [], banner: "action action"
-
-      class_option :template_engine, desc: "Template engine to generate view files"
-
-      def create_view_specs
-        empty_directory target_path("views", file_path)
-
-        actions.each do |action|
-          @action = action
-          template 'view_spec.rb',
-                   target_path("views", file_path, "#{@action}.html.#{options[:template_engine]}_spec.rb")
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d419a62f155abb3abbb7f38c057c823f0db03aa0c262aa754dfda2526924a78a
+size 596

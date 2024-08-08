@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-require "active_record"
-
-class Person < ActiveRecord::Base
-  establish_connection adapter: "sqlite3", database: "foobar.db"
-  connection.create_table table_name, force: true do |t|
-    t.string :name
-  end
-end
-
-bob = Person.create!(name: "bob")
-puts Person.all.inspect
-bob.destroy
-puts Person.all.inspect
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f2fecd1f7d8a3553e09601e3a5033ff58a36b9a81c9f244822051875a3e50f1
+size 336

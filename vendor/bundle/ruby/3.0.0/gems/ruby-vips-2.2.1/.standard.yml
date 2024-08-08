@@ -1,17 +1,3 @@
-fix: false              # default: false
-parallel: true          # default: false
-format: progress        # default: Standard::Formatter
-ruby_version: 2.0       # default: RUBY_VERSION
-default_ignores: false  # default: true
-
-ignore:                 # default: []
-  - '**/*':
-    - Standard/SemanticBlocks
-  - 'lib/vips/methods.rb'
-  - '{lib,example}/**/*':
-    - Lint/IneffectiveAccessModifier
-    - Lint/RescueException
-    - Style/GlobalVars
-  - 'spec/**/*':
-      - Lint/BinaryOperatorWithIdenticalOperands
-  - 'vendor/**/*'
+version https://git-lfs.github.com/spec/v1
+oid sha256:368db41a8a02824fd9affe7616761c87d4b16f0e5547882101755c7137194089
+size 529

@@ -1,6 +1,3 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-require "byebug/runner"
-
-Byebug::Runner.new.run
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3e1fe9a70f1381bf175f95a612e6e0621ec434b7543ed2bece8822a81806053
+size 99

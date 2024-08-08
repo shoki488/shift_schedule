@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-class WebMock::Util::ValuesStringifier
-  def self.stringify_values(value)
-    case value
-    when String, Numeric, TrueClass, FalseClass
-      value.to_s
-    when Hash
-      Hash[
-        value.map do |k, v|
-          [k, stringify_values(v)]
-        end
-      ]
-    when Array
-      value.map do |v|
-        stringify_values(v)
-      end
-    else
-      value
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9f4fbb75687b55840c8cc2d61df00a734dff5e5595e16a0e51707e9ab9574b22
+size 409

@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-module Listen
-  module MonotonicTime
-    class << self
-      if defined?(Process::CLOCK_MONOTONIC)
-
-        def now
-          Process.clock_gettime(Process::CLOCK_MONOTONIC)
-        end
-
-      elsif defined?(Process::CLOCK_MONOTONIC_RAW)
-
-        def now
-          Process.clock_gettime(Process::CLOCK_MONOTONIC_RAW)
-        end
-
-      else
-
-        def now
-          Time.now.to_f
-        end
-
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ddff4edad23b95eacb711d6046688fbbc7ee68bdb5a868af526c3a0ce64765c1
+size 454

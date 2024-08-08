@@ -1,6 +1,3 @@
-lib/**/*.rb
--
-GETTING_STARTED.md
-CONTRIBUTING.md
-NAME.md
-LICENSE
+version https://git-lfs.github.com/spec/v1
+oid sha256:78ce99f862f602ec101e6304ee1453d0a81ed18c894423b9c09d7eca5c759436
+size 65

@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/core_ext/object/acts_like"
-
-class Date
-  # Duck-types as a Date-like class. See Object#acts_like?.
-  def acts_like_date?
-    true
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1158262d2bfd2fdc21c2531cd901c329e494841863d95e83e35983fb78cec3b8
+size 195

@@ -1,24 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb08e48b7df3451e22fb32b808eee8b7c12d330b7f04be49353715fe612fa7d7
+size 374

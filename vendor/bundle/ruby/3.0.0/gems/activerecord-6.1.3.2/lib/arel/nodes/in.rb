@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module Nodes
-    class In < Arel::Nodes::Binary
-      include FetchAttribute
-
-      def equality?; true; end
-
-      def invert
-        Arel::Nodes::NotIn.new(left, right)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5bbc946fc7bd17e6ccdfab5e570c69c43309988c8c27bc92c530fd387f37b293
+size 258

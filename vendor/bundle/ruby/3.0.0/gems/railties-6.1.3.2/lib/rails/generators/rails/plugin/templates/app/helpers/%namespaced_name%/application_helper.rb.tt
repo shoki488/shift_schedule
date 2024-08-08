@@ -1,5 +1,3 @@
-<%= wrap_in_modules <<~rb
-  module ApplicationHelper
-  end
-rb
-%>
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e4442c3c4a375aca21bed1c9a3fa7b3bfec7d08509975e7f223e72a1e8c821d
+size 65

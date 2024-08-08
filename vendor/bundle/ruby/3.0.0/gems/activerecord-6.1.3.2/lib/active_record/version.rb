@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "gem_version"
-
-module ActiveRecord
-  # Returns the version of the currently loaded ActiveRecord as a <tt>Gem::Version</tt>
-  def self.version
-    gem_version
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:683c5a9c6279161b58cda1c7979f19b305bb179b8cabfcaa6e94df60d8e62f63
+size 216

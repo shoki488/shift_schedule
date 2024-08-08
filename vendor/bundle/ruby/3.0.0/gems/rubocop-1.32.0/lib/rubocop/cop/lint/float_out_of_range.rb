@@ -1,34 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Lint
-      # Identifies Float literals which are, like, really really really
-      # really really really really really big. Too big. No-one needs Floats
-      # that big. If you need a float that big, something is wrong with you.
-      #
-      # @example
-      #
-      #   # bad
-      #
-      #   float = 3.0e400
-      #
-      # @example
-      #
-      #   # good
-      #
-      #   float = 42.9
-      class FloatOutOfRange < Base
-        MSG = 'Float out of range.'
-
-        def on_float(node)
-          value, = *node
-
-          return unless value.infinite? || (value.zero? && /[1-9]/.match?(node.source))
-
-          add_offense(node)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:45222f4398b63e65077686911b06478cde2fba51a312c3ce67ea3e58aa9b7ce0
+size 747

@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-# Released under the MIT License.
-# Copyright, 2008, by McClain Looney.
-# Copyright, 2008-2013, by Nick Sieger.
-# Copyright, 2011, by Gerrit Riessen.
-# Copyright, 2013, by Vincent Pellé.
-# Copyright, 2013, by Gustav Ernberg.
-# Copyright, 2013, by Socrates Vicente.
-# Copyright, 2013, by Steffen Grunwald.
-# Copyright, 2019, by Olle Jonsson.
-# Copyright, 2019-2024, by Samuel Williams.
-# Copyright, 2019, by Patrick Davey.
-
-warn "Top level ::Multipartable is deprecated, require 'multipart/post' and use `Multipart::Post::Multipartable` instead!"
-require_relative 'multipart/post'
-
-Multipartable = Multipart::Post::Multipartable
-Object.deprecate_constant :Multipartable
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ef8e4f5ec64ce7f2cba43c11bc9a43a89839dcfb7ff64ac36c799c219f921c8
+size 701

@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module RSpec
-    # RuboCop RSpec specific extensions of RuboCop::AST::Node
-    module Node
-      # In various cops we want to regard const as literal althought it's not
-      # strictly literal.
-      def recursive_literal_or_const?
-        case type
-        when :begin, :pair, *AST::Node::COMPOSITE_LITERALS
-          children.all?(&:recursive_literal_or_const?)
-        else
-          literal? || const_type?
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0a9d0b71dfa647d6f6a5f3894e20c43acca23aaf04508538b1eaae2e5b28b6c6
+size 500

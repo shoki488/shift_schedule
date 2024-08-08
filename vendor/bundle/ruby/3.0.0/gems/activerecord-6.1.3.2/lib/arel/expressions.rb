@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module Expressions
-    def count(distinct = false)
-      Nodes::Count.new [self], distinct
-    end
-
-    def sum
-      Nodes::Sum.new [self]
-    end
-
-    def maximum
-      Nodes::Max.new [self]
-    end
-
-    def minimum
-      Nodes::Min.new [self]
-    end
-
-    def average
-      Nodes::Avg.new [self]
-    end
-
-    def extract(field)
-      Nodes::Extract.new [self], field
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e1ab7711b527d96c29a491dd9861747d58865791b2a3211a39b8f145b579a98b
+size 447

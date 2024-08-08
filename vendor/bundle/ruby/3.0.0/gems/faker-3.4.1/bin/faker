@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-lib_path = File.expand_path('../lib', __dir__)
-$LOAD_PATH.unshift(lib_path) unless $LOAD_PATH.include?(lib_path)
+version https://git-lfs.github.com/spec/v1
+oid sha256:b71dab248e448f76235e71f0b4380b4e43d9641b9823950b05a21e0a8eae378f
+size 164

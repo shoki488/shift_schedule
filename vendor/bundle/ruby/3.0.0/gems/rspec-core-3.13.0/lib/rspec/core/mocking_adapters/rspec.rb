@@ -1,32 +1,3 @@
-require 'rspec/mocks'
-
-module RSpec
-  module Core
-    module MockingAdapters
-      # @private
-      module RSpec
-        include ::RSpec::Mocks::ExampleMethods
-
-        def self.framework_name
-          :rspec
-        end
-
-        def self.configuration
-          ::RSpec::Mocks.configuration
-        end
-
-        def setup_mocks_for_rspec
-          ::RSpec::Mocks.setup
-        end
-
-        def verify_mocks_for_rspec
-          ::RSpec::Mocks.verify
-        end
-
-        def teardown_mocks_for_rspec
-          ::RSpec::Mocks.teardown
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:78ff4f41b8b87a5655d2d14414e24645ac240bc44e3c6c59bc55d0f860f309f9
+size 575

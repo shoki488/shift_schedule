@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-module ActionMailbox
-  # You can configure when this +IncinerationJob+ will be run as a time-after-processing using the
-  # +config.action_mailbox.incinerate_after+ or +ActionMailbox.incinerate_after+ setting.
-  #
-  # Since this incineration is set for the future, it'll automatically ignore any <tt>InboundEmail</tt>s
-  # that have already been deleted and discard itself if so.
-  #
-  # You can disable incinerating processed emails by setting +config.action_mailbox.incinerate+ or
-  # +ActionMailbox.incinerate+ to +false+.
-  class IncinerationJob < ActiveJob::Base
-    queue_as { ActionMailbox.queues[:incineration] }
-
-    discard_on ActiveRecord::RecordNotFound
-
-    def self.schedule(inbound_email)
-      set(wait: ActionMailbox.incinerate_after).perform_later(inbound_email)
-    end
-
-    def perform(inbound_email)
-      inbound_email.incinerate
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2dc477f05c02950a9c97b2672c6847bf16d4facbdc1c669ff83eb66f7e6c3b0
+size 901

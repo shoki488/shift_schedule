@@ -1,34 +1,3 @@
-# frozen_string_literal: true
-
-class Users::PasswordsController < Devise::PasswordsController
-  # GET /resource/password/new
-  # def new
-  #   super
-  # end
-
-  # POST /resource/password
-  # def create
-  #   super
-  # end
-
-  # GET /resource/password/edit?reset_password_token=abcdef
-  # def edit
-  #   super
-  # end
-
-  # PUT /resource/password
-  # def update
-  #   super
-  # end
-
-  # protected
-
-  # def after_resetting_password_path_for(resource)
-  #   super(resource)
-  # end
-
-  # The path used after sending reset password instructions
-  # def after_sending_reset_password_instructions_path_for(resource_name)
-  #   super(resource_name)
-  # end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9b6197a2cd5bf89be5b9c312bd1b156ad770ea36f6b2e49c00f49ec8c7157da3
+size 650

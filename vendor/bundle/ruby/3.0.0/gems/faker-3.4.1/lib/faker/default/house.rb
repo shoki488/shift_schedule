@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class House < Base
-    class << self
-      ##
-      # Produces the name of a piece of furniture.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::House.furniture #=> "chair"
-      #
-      # @faker.version 1.9.2
-      def furniture
-        fetch('house.furniture')
-      end
-
-      ##
-      # Produces the name of a room in a house.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::House.room #=> "kitchen"
-      #
-      # @faker.version 1.9.2
-      def room
-        fetch('house.rooms')
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d500861b45d991c08cdf5406f2f4f1d2ee2ef899d20857151c818ec52adb6826
+size 613

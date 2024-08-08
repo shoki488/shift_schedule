@@ -1,21 +1,3 @@
-module RailsI18n
-  module Pluralization
-    module Latvian
-      def self.rule
-        lambda do |n|
-          if n.is_a?(Numeric) && n % 10 == 1 && n % 100 != 11
-            :one
-          else
-            :other
-          end
-        end
-      end
-    end
-  end
-end
-
-{ :lv => {
-    :'i18n' => {
-      :plural => {
-        :keys => [:one, :other],
-        :rule => RailsI18n::Pluralization::Latvian.rule }}}}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c4f98a246a3b4283dcc4a627cd1127b02756a74f41696a8ae016bf8a449223c
+size 410

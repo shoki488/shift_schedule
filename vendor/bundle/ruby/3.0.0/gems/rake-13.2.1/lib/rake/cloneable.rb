@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-module Rake
-  ##
-  # Mixin for creating easily cloned objects.
-
-  module Cloneable # :nodoc:
-    # The hook that is invoked by 'clone' and 'dup' methods.
-    def initialize_copy(source)
-      super
-      source.instance_variables.each do |var|
-        src_value  = source.instance_variable_get(var)
-        value = src_value.clone rescue src_value
-        instance_variable_set(var, value)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:73508beda7e6a306be64ab502e992f546bcb069c2994beb7d68917d2c5348a73
+size 448

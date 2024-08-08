@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/core_ext/object/to_param"
-require "active_support/core_ext/object/to_query"
-require "active_support/core_ext/array/conversions"
-require "active_support/core_ext/hash/conversions"
+version https://git-lfs.github.com/spec/v1
+oid sha256:954da33b6eb14fe92fef56686f48586a250794f525ebea0b83c1e4419cc23a72
+size 234

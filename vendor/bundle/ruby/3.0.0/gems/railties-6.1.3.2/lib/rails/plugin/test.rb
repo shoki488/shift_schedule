@@ -1,9 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/test_unit/runner"
-require "rails/test_unit/reporter"
-
-Rails::TestUnitReporter.executable = "bin/test"
-
-Rails::TestUnit::Runner.parse_options(ARGV)
-Rails::TestUnit::Runner.run(ARGV)
+version https://git-lfs.github.com/spec/v1
+oid sha256:b95aa46a6a66d9c5f82f5b45c59177ec0a9644e8b3dfd7891690c09cde348237
+size 227

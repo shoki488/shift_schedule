@@ -1,28 +1,3 @@
-#!/usr/bin/env rake
-begin
-  require 'bundler/setup'
-rescue LoadError
-  puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
-end
-
-require 'rake'
-require 'rspec/core/rake_task'
-$:.push File.expand_path("../lib", __FILE__)
-require "orm_adapter/version"
-
-task :default => :spec
-
-RSpec::Core::RakeTask.new(:spec)
-
-begin
-  require 'yard'
-  YARD::Rake::YardocTask.new(:doc) do |t|
-    t.files   = ['lib/**/*.rb', 'README.rdoc']
-  end
-rescue LoadError
-  task :doc do
-    puts "install yard to generate the docs"
-  end
-end
-
-Bundler::GemHelper.install_tasks
+version https://git-lfs.github.com/spec/v1
+oid sha256:6541117b15e07a1b02b0185d25e6a1e7f22ede755853aa9883cb41ab30891020
+size 572

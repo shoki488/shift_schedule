@@ -1,23 +1,3 @@
-# frozen_string_literal: false
-# = uri/wss.rb
-#
-# Author:: Matt Muller <mamuller@amazon.com>
-# License:: You can redistribute it and/or modify it under the same term as Ruby.
-#
-# See URI for general documentation
-#
-
-require_relative 'ws'
-
-module URI
-
-  # The default port for WSS URIs is 443, and the scheme is 'wss:' rather
-  # than 'ws:'. Other than that, WSS URIs are identical to WS URIs;
-  # see URI::WS.
-  class WSS < WS
-    # A Default port of 443 for URI::WSS
-    DEFAULT_PORT = 443
-  end
-
-  register_scheme 'WSS', WSS
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:faf0a834191115e659726a0681f81555e3ffef13d025dd63434f81a764eee386
+size 531

@@ -1,27 +1,3 @@
-module OpenAI
-  class Images
-    def initialize(client: nil)
-      @client = client
-    end
-
-    def generate(parameters: {})
-      @client.json_post(path: "/images/generations", parameters: parameters)
-    end
-
-    def edit(parameters: {})
-      @client.multipart_post(path: "/images/edits", parameters: open_files(parameters))
-    end
-
-    def variations(parameters: {})
-      @client.multipart_post(path: "/images/variations", parameters: open_files(parameters))
-    end
-
-    private
-
-    def open_files(parameters)
-      parameters = parameters.merge(image: File.open(parameters[:image]))
-      parameters = parameters.merge(mask: File.open(parameters[:mask])) if parameters[:mask]
-      parameters
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:dfb48f806c8c665edabe6d77302e55dae9fd6fadbc48c49dc4ee78093a3cf6c0
+size 721

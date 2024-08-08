@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module ConnectionAdapters # :nodoc:
-    module Deduplicable
-      extend ActiveSupport::Concern
-
-      module ClassMethods
-        def registry
-          @registry ||= {}
-        end
-
-        def new(*, **)
-          super.deduplicate
-        end
-      end
-
-      def deduplicate
-        self.class.registry[self] ||= deduplicated
-      end
-      alias :-@ :deduplicate
-
-      private
-        def deduplicated
-          freeze
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:7cdc6d5dc5298ebf0bdc678b2409353738bd77558294d2ce75351180a4608d9f
+size 510

@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/core_ext/module/delegation"
-
-module Devise
-  class TimeInflector
-    include ActionView::Helpers::DateHelper
-
-    class << self
-      attr_reader :instance
-      delegate :time_ago_in_words, to: :instance
-    end
-
-    @instance = new
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:abcc6358799b7170a899f4d0ab87275d98ce3766314b454762e269582b14f174
+size 299

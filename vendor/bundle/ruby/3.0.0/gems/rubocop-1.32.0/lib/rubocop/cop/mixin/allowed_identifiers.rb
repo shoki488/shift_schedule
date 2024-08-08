@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # This module encapsulates the ability to allow certain identifiers in a cop.
-    module AllowedIdentifiers
-      SIGILS = '@$' # if a variable starts with a sigil it will be removed
-
-      def allowed_identifier?(name)
-        allowed_identifiers.include?(name.to_s.delete(SIGILS))
-      end
-
-      def allowed_identifiers
-        cop_config.fetch('AllowedIdentifiers', [])
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c1547d03d208234ad2b0f80b08d9d5bd9a60c2a5844371d0375d64d3d67d7841
+size 466

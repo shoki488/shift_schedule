@@ -1,20 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-require 'mail/parsers/content_disposition_parser'
-
-module Mail
-  class ContentDispositionElement #:nodoc:
-    attr_reader :disposition_type, :parameters
-
-    def initialize(string)
-      content_disposition = Mail::Parsers::ContentDispositionParser.parse(cleaned(string))
-      @disposition_type = content_disposition.disposition_type
-      @parameters = content_disposition.parameters
-    end
-
-    private
-    def cleaned(string)
-      string =~ /(.+);\s*$/ ? $1 : string
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2835d414dcb8e28d72774ba64679f5a164e29260e4353d80a0b77d567abaabe5
+size 539

@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-require 'simplecov'
-SimpleCov.start
-
-require 'rspec'
-require 'webdrivers'
-
-RSpec.configure do |config|
-  config.filter_run_including focus: true unless ENV['CI']
-  config.run_all_when_everything_filtered = true
-  config.expect_with :rspec do |expectations|
-    expectations.syntax = :expect
-  end
-  config.mock_with :rspec do |mocks|
-    mocks.verify_partial_doubles = true
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6586cdaf9983c8fd24b66369f5a830e27d77d7abca7d8c769891fff49b31f391
+size 415

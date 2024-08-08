@@ -1,8 +1,3 @@
-# A sample Guardfile
-# More info at http://github.com/guard/guard#readme
-
-guard :rspec do
-  watch(%r(^spec/(.*)_spec.rb))
-  watch(%r(^lib/(.*)\.rb))        { |m| "spec/#{m[1]}_spec.rb" }
-  watch('spec/spec_helper.rb')    { 'spec' }
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:523e07d53d5a2fac33c83198a12878eb17406604cbbcd82d8aa455e3120388f3
+size 236

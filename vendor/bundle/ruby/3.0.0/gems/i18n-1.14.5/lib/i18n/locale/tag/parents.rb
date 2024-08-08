@@ -1,24 +1,3 @@
-module I18n
-  module Locale
-    module Tag
-      module Parents
-        def parent
-          @parent ||=
-            begin
-              segs = to_a
-              segs.compact!
-              segs.length > 1 ? self.class.tag(*segs[0..(segs.length - 2)].join('-')) : nil
-            end
-        end
-
-        def self_and_parents
-          @self_and_parents ||= [self].concat parents
-        end
-
-        def parents
-          @parents ||= parent ? [parent].concat(parent.parents) : []
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9b8dfc427d74051e4626d8bd2dceb203ac4f243b40b8918091d6af518d532b10
+size 523

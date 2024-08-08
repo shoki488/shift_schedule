@@ -1,19 +1,3 @@
-module Regexp::Expression
-  class CharacterSet < Regexp::Expression::Subexpression
-    class Range < Regexp::Expression::Subexpression
-      def ts
-        (head = expressions.first) ? head.ts : @ts
-      end
-
-      def <<(exp)
-        complete? and raise Regexp::Parser::Error,
-          "Can't add more than 2 expressions to a Range"
-        super
-      end
-
-      def complete?
-        count == 2
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e75d5efd393b779c9d05d7fa67c2e852f7f1e0ff08a0dd13ddb710d2edb535f
+size 428

@@ -1,18 +1,3 @@
-// Visit The Stimulus Handbook for more details 
-// https://stimulusjs.org/handbook/introduction
-// 
-// This example controller works with specially annotated HTML like:
-//
-// <div data-controller="hello">
-//   <h1 data-target="hello.output"></h1>
-// </div>
-
-import { Controller } from "stimulus"
-
-export default class extends Controller {
-  static targets = [ "output" ]
-
-  connect() {
-    this.outputTarget.textContent = 'Hello, Stimulus!'
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d1a83a2030a1d9b5a2006f8d91c6dcce6d38dec1ec32c20abdef412ab4f56c2
+size 448

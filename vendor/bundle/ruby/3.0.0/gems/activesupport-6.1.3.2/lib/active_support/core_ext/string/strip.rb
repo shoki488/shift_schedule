@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-class String
-  # Strips indentation in heredocs.
-  #
-  # For example in
-  #
-  #   if options[:usage]
-  #     puts <<-USAGE.strip_heredoc
-  #       This command does such and such.
-  #
-  #       Supported options are:
-  #         -h         This message
-  #         ...
-  #     USAGE
-  #   end
-  #
-  # the user would see the usage message aligned against the left margin.
-  #
-  # Technically, it looks for the least indented non-empty line
-  # in the whole string, and removes that amount of leading whitespace.
-  def strip_heredoc
-    gsub(/^#{scan(/^[ \t]*(?=\S)/).min}/, "").tap do |stripped|
-      stripped.freeze if frozen?
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9824e697bb90f1f572a653cd5e7454f98b5f815798c0998d4b06a294b2fa21df
+size 677

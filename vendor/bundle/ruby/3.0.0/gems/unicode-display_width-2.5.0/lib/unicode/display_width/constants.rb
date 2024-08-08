@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-
-module Unicode
-  class DisplayWidth
-    VERSION = "2.5.0"
-    UNICODE_VERSION = "15.1.0"
-    DATA_DIRECTORY = File.expand_path(File.dirname(__FILE__) + "/../../../data/")
-    INDEX_FILENAME = DATA_DIRECTORY + "/display_width.marshal.gz"
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:df668b091cff93e4be0ddebd1a8b3d9f31358b90a2ee76369e7691831591c8b3
+size 278

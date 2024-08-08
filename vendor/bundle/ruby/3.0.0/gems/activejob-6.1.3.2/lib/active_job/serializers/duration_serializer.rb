@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveJob
-  module Serializers
-    class DurationSerializer < ObjectSerializer # :nodoc:
-      def serialize(duration)
-        super("value" => duration.value, "parts" => Arguments.serialize(duration.parts))
-      end
-
-      def deserialize(hash)
-        value = hash["value"]
-        parts = Arguments.deserialize(hash["parts"])
-
-        klass.new(value, parts)
-      end
-
-      private
-        def klass
-          ActiveSupport::Duration
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:75eec430eafdc3710230f186d75873cbfc04f278cbaf07ff7848b323283584e0
+size 508

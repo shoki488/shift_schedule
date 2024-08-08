@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-Capybara.add_selector(:datalist_option, locator_type: [String, Symbol]) do
-  label 'datalist option'
-  visible(:all)
-
-  xpath do |locator|
-    xpath = XPath.descendant(:option)
-    xpath = xpath[XPath.string.n.is(locator.to_s) | (XPath.attr(:value) == locator.to_s)] unless locator.nil?
-    xpath
-  end
-
-  node_filter(:disabled, :boolean) { |node, value| !(value ^ node.disabled?) }
-  expression_filter(:disabled) { |xpath, val| val ? xpath : xpath[~XPath.attr(:disabled)] }
-
-  describe_expression_filters do |disabled: nil, **options|
-    desc = +''
-    desc << ' that is not disabled' if disabled == false
-    desc << describe_all_expression_filters(**options)
-  end
-
-  describe_node_filters do |**options|
-    ' that is disabled' if options[:disabled]
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c84d987de227f0df308c20039923b1f25ec8b6d42c6f209f7252acbb6ef25204
+size 796

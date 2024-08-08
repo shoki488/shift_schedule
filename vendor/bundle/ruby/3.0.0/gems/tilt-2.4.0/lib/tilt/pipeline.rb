@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-require_relative 'template'
-
-module Tilt
-  # Superclass used for pipeline templates.  Should not be used directly.
-  class Pipeline < Template
-    def prepare
-      @pipeline = self.class::TEMPLATES.inject(proc{|*| data}) do |data, (klass, options)|
-        proc do |s,l,&sb|
-          klass.new(file, line, options, &proc{|*| data.call(s, l, &sb)}).render(s, l, &sb)
-        end
-      end
-    end
-
-    def evaluate(scope, locals, &block)
-      @pipeline.call(scope, locals, &block)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d4ece87f6388751bc3846dd8e192950c1bee2623e3f94c5f1a658a3bed3a4cb
+size 531

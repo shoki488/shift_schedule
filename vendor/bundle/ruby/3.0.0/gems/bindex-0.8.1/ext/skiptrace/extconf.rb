@@ -1,15 +1,3 @@
-case RUBY_ENGINE
-when "ruby"
-  require "mkmf"
-
-  $CFLAGS << " -Wall"
-  $CFLAGS << " -g3 -O0" if ENV["DEBUG"]
-
-  create_makefile("skiptrace/internal/cruby")
-else
-  IO.write(File.expand_path("../Makefile", __FILE__), <<-END)
-    all install static install-so install-rb: Makefile
-    .PHONY: all install static install-so install-rb
-    .PHONY: clean clean-so clean-static clean-rb
-  END
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2855692501bad453824c8266eb2011a60656d9219dd3d78d6d6d170fe465e5f8
+size 390

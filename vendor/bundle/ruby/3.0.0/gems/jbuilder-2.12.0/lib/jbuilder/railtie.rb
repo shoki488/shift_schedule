@@ -1,36 +1,3 @@
-require 'rails'
-require 'jbuilder/jbuilder_template'
-
-class Jbuilder
-  class Railtie < ::Rails::Railtie
-    initializer :jbuilder do
-      ActiveSupport.on_load :action_view do
-        ActionView::Template.register_template_handler :jbuilder, JbuilderHandler
-        require 'jbuilder/jbuilder_dependency_tracker'
-      end
-
-      if Rails::VERSION::MAJOR >= 5
-        module ::ActionController
-          module ApiRendering
-            include ActionView::Rendering
-          end
-        end
-
-        ActiveSupport.on_load :action_controller do
-          if name == 'ActionController::API'
-            include ActionController::Helpers
-            include ActionController::ImplicitRender
-          end
-        end
-      end
-    end
-
-    if Rails::VERSION::MAJOR >= 4
-      generators do |app|
-        Rails::Generators.configure! app.config.generators
-        Rails::Generators.hidden_namespaces.uniq!
-        require 'generators/rails/scaffold_controller_generator'
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e5550864877d82fe9fe498341a4a7ae9211e8775c4da38cddc23fb52a7f12980
+size 997

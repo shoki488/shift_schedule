@@ -1,26 +1,3 @@
-# frozen_string_literal: true
-
-module Capybara
-  module Queries
-    class MatchQuery < Capybara::Queries::SelectorQuery
-      def visible
-        options.key?(:visible) ? super : :all
-      end
-
-    private
-
-      def assert_valid_keys
-        invalid_options = @options.keys & COUNT_KEYS
-        unless invalid_options.empty?
-          raise ArgumentError, "Match queries don't support quantity options. Invalid keys - #{invalid_options.join(', ')}"
-        end
-
-        super
-      end
-
-      def valid_keys
-        super - COUNT_KEYS
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:53a585b120f68d6b42305e092124c294b1959899fa4e9350c741e9fdbc804e8a
+size 565

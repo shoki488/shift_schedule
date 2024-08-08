@@ -1,13 +1,3 @@
-package com.gsamokovarov.skiptrace;
-
-import org.jruby.runtime.DynamicScope;
-import org.jruby.runtime.Binding;
-import org.jruby.runtime.Frame;
-import org.jruby.runtime.DynamicScope;
-import org.jruby.runtime.backtrace.BacktraceElement;
-
-class BindingBuilder {
-    public static Binding build(Frame frame, DynamicScope scope, BacktraceElement element) {
-        return new Binding(frame, scope, element.method, element.filename, element.line);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6dd62ea4076bf28c30dcbbfa74df1704eb55d558956003e6d73d1cb119353971
+size 449

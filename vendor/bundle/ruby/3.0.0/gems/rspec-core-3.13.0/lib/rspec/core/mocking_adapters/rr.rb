@@ -1,31 +1,3 @@
-require 'rr'
-
-RSpec.configuration.backtrace_exclusion_patterns.push(RR::Errors::BACKTRACE_IDENTIFIER)
-
-module RSpec
-  module Core
-    # @private
-    module MockingAdapters
-      # @private
-      module RR
-        def self.framework_name
-          :rr
-        end
-
-        include ::RR::Extensions::InstanceMethods
-
-        def setup_mocks_for_rspec
-          ::RR::Space.instance.reset
-        end
-
-        def verify_mocks_for_rspec
-          ::RR::Space.instance.verify_doubles
-        end
-
-        def teardown_mocks_for_rspec
-          ::RR::Space.instance.reset
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:963e315e605bb61d26c9e4483e2e8361cc95c9dd42801ae30a43f7c9ca582e76
+size 607

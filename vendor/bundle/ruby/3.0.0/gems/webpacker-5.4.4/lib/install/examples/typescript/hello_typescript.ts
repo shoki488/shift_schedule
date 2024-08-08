@@ -1,4 +1,3 @@
-// Run this example by adding <%= javascript_pack_tag 'hello_typescript' %> to the head of your layout file,
-// like app/views/layouts/application.html.erb.
-
-console.log('Hello world from typescript');
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d4f0f2bd4f428561d87b0e518253b37c90124a12d7bb54af2b2892b885f2efb
+size 202

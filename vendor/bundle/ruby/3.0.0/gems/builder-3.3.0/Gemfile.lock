@@ -1,22 +1,3 @@
-PATH
-  remote: .
-  specs:
-    builder (3.3.0)
-
-GEM
-  remote: https://rubygems.org/
-  specs:
-    minitest (5.23.1)
-    rake (13.2.1)
-
-PLATFORMS
-  arm64-darwin-23
-  ruby
-
-DEPENDENCIES
-  builder!
-  minitest
-  rake
-
-BUNDLED WITH
-   2.5.9
+version https://git-lfs.github.com/spec/v1
+oid sha256:55e5b61059fa0fa6d19e8cda750521dc2ef5fe14748e54ddb07796e7a8586fdb
+size 234

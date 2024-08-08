@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-module ActionCable
-  module Connection
-    module Authorization
-      class UnauthorizedError < StandardError; end
-
-      # Closes the WebSocket connection if it is open and returns a 404 "File not Found" response.
-      def reject_unauthorized_connection
-        logger.error "An unauthorized connection attempt was rejected"
-        raise UnauthorizedError
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b19211f110f265d8251392c7c91218e2b42bbc03cda079b2744fcf0e48503d40
+size 418

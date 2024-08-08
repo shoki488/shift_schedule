@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class ChuckNorris < Base
-    flexible :chuck_norris
-
-    class << self
-      ##
-      # Produces a Chuck Norris Fact.
-      # Original list of facts:
-      # https://github.com/jenkinsci/chucknorris-plugin/blob/master/src/main/java/hudson/plugins/chucknorris/FactGenerator.java
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::ChuckNorris.fact
-      #     #=> "Chuck Norris can solve the Towers of Hanoi in one move."
-      #
-      # @faker.version 1.6.4
-      def fact
-        fetch('chuck_norris.fact')
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ae6fa5799b06be859f3bece229a394f96a691673d2c5d67f33194942cd93067
+size 605

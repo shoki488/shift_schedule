@@ -1,33 +1,3 @@
-module FactoryBot
-  # @api private
-  class Configuration
-    attr_reader(
-      :callback_names,
-      :factories,
-      :inline_sequences,
-      :sequences,
-      :strategies,
-      :traits
-    )
-
-    def initialize
-      @factories = Decorator::DisallowsDuplicatesRegistry.new(Registry.new("Factory"))
-      @sequences = Decorator::DisallowsDuplicatesRegistry.new(Registry.new("Sequence"))
-      @traits = Decorator::DisallowsDuplicatesRegistry.new(Registry.new("Trait"))
-      @strategies = Registry.new("Strategy")
-      @callback_names = Set.new
-      @definition = Definition.new(:configuration)
-      @inline_sequences = []
-
-      to_create(&:save!)
-      initialize_with { new }
-    end
-
-    delegate :to_create, :skip_create, :constructor, :before, :after,
-      :callback, :callbacks, to: :@definition
-
-    def initialize_with(&block)
-      @definition.define_constructor(&block)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f561e3f44fe79438d3cb9e1fa2d85f0362267642ff4fe69ce6667c4f9e1653a7
+size 908

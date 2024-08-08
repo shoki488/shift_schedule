@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module ConnectionAdapters
-    module PostgreSQL
-      module OID # :nodoc:
-        class Macaddr < Type::String # :nodoc:
-          def type
-            :macaddr
-          end
-
-          def changed?(old_value, new_value, _new_value_before_type_cast)
-            old_value.class != new_value.class ||
-              new_value && old_value.casecmp(new_value) != 0
-          end
-
-          def changed_in_place?(raw_old_value, new_value)
-            raw_old_value.class != new_value.class ||
-              new_value && raw_old_value.casecmp(new_value) != 0
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a55db2e22faf942c71e4ec2bdee2964321aee3c67e1e2df2dad6d9855228ec7f
+size 661

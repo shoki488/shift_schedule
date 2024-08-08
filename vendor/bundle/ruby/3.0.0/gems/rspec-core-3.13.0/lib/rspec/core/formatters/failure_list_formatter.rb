@@ -1,23 +1,3 @@
-RSpec::Support.require_rspec_core "formatters/base_formatter"
-
-module RSpec
-  module Core
-    module Formatters
-      # @private
-      class FailureListFormatter < BaseFormatter
-        Formatters.register self, :example_failed, :dump_profile, :message
-
-        def example_failed(failure)
-          output.puts "#{failure.example.location}:#{failure.example.description}"
-        end
-
-        # Discard profile and messages
-        #
-        # These outputs are not really relevant in the context of this failure
-        # list formatter.
-        def dump_profile(_profile); end
-        def message(_message); end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:50f1d01f6a5e73cb0a6a3077e69ac2ca8c19407bbc2baff9de79d0800e9f766d
+size 643

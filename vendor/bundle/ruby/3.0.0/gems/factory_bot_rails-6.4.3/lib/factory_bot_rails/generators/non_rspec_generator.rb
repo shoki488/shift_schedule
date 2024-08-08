@@ -1,23 +1,3 @@
-module FactoryBotRails
-  module Generators
-    class NonRSpecGenerator
-      def initialize(generators)
-        @generators = generators
-      end
-
-      def run
-        @generators.test_framework(
-          test_framework,
-          fixture: false,
-          fixture_replacement: :factory_bot
-        )
-      end
-
-      private
-
-      def test_framework
-        @generators.options[:rails][:test_framework]
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:690850894b0a4c4d957eb79cafd322674ae56dd686e8d48c3cd7b531c8d53cfa
+size 436

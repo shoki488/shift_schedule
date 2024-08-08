@@ -1,35 +1,3 @@
-# frozen_string_literal: true
-
-require 'spec_helper'
-
-RSpec.describe Capybara::Server::Middleware::Counter do
-  let(:counter) { described_class.new }
-  let(:uri) { '/example' }
-
-  describe '#increment' do
-    it 'successfully' do
-      counter.increment(uri)
-      expect(counter).to be_positive
-    end
-  end
-
-  describe '#decrement' do
-    before do
-      counter.increment(uri)
-    end
-
-    context 'successfully' do
-      it 'with same uri' do
-        expect(counter).to be_positive
-        counter.decrement(uri)
-        expect(counter).not_to be_positive
-      end
-
-      it 'with changed uri' do
-        expect(counter).to be_positive
-        counter.decrement('/')
-        expect(counter).not_to be_positive
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa0781e841e32c2109d5e291005245a7bfeed33b4757001b2b7633d5d53edb41
+size 744

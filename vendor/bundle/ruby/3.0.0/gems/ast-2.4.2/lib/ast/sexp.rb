@@ -1,30 +1,3 @@
-module AST
-  # This simple module is very useful in the cases where one needs
-  # to define deeply nested ASTs from Ruby code, for example, in
-  # tests. It should be used like this:
-  #
-  #     describe YourLanguage::AST do
-  #       include Sexp
-  #
-  #       it "should correctly parse expressions" do
-  #         YourLanguage.parse("1 + 2 * 3").should ==
-  #             s(:add,
-  #               s(:integer, 1),
-  #               s(:multiply,
-  #                 s(:integer, 2),
-  #                 s(:integer, 3)))
-  #       end
-  #     end
-  #
-  # This way the amount of boilerplate code is greatly reduced.
-  module Sexp
-    # Creates a {Node} with type `type` and children `children`.
-    # Note that the resulting node is of the type AST::Node and not a
-    # subclass.
-    # This would not pose a problem with comparisons, as {Node#==}
-    # ignores metadata.
-    def s(type, *children)
-      Node.new(type, children)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8dc78dac8f9465a5f6a62aa057ae97fbadd5b111efe8895ac824d46938dc3793
+size 947

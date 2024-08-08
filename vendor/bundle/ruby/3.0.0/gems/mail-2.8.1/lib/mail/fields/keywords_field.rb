@@ -1,31 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-require 'mail/fields/named_structured_field'
-
-module Mail
-  # keywords        =       "Keywords:" phrase *("," phrase) CRLF
-  class KeywordsField < NamedStructuredField #:nodoc:
-    NAME = 'Keywords'
-
-    def element
-      @element ||= PhraseList.new(value)
-    end
-
-    def keywords
-      element.phrases
-    end
-
-    def default
-      keywords
-    end
-
-    private
-      def do_decode
-        keywords.join(', ')
-      end
-
-      def do_encode
-        "#{name}: #{keywords.join(",\r\n ")}\r\n"
-      end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b86eb084d602c506549e49b0f5c5940ec16f04aaa24559afe60ab7a3bf9a72de
+size 564

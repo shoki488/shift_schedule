@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Rails
-    # Because RuboCop doesn't yet support plugins, we have to monkey patch in a
-    # bit of our configuration.
-    module Inject
-      def self.defaults!
-        path = CONFIG_DEFAULT.to_s
-        hash = ConfigLoader.send(:load_yaml_configuration, path)
-        config = Config.new(hash, path).tap(&:make_excludes_absolute)
-        puts "configuration from #{path}" if ConfigLoader.debug?
-        config = ConfigLoader.merge_with_default(config, path, unset_nil: false)
-        ConfigLoader.instance_variable_set(:@default_configuration, config)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec12ded5572f736c72c824e88e21b74c23cf1311cc5a0e7232e50ff967c1eeb9
+size 636

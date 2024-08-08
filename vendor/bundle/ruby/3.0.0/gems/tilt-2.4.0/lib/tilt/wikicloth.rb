@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-require_relative 'template'
-require 'wikicloth'
-
-warn 'tilt/wikicloth is deprecated, as wikicloth requires modifying string literals', uplevel: 1
-
-# WikiCloth implementation. See: https://github.com/nricciar/wikicloth
-Tilt::WikiClothTemplate = Tilt::StaticTemplate.subclass do
-  parser = @options.delete(:parser) || WikiCloth::Parser
-  @options[:data] = @data
-  parser.new(@options).to_html
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cccab2136394708ccee6f70e0b8c3388acb740fc1f454c346b13f0d1ddfad0aa
+size 425

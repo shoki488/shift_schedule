@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-require "action_cable/subscription_adapter/inline"
-
-module ActionCable
-  module SubscriptionAdapter
-    class Async < Inline # :nodoc:
-      private
-        def new_subscriber_map
-          AsyncSubscriberMap.new(server.event_loop)
-        end
-
-        class AsyncSubscriberMap < SubscriberMap
-          def initialize(event_loop)
-            @event_loop = event_loop
-            super()
-          end
-
-          def add_subscriber(*)
-            @event_loop.post { super }
-          end
-
-          def invoke_callback(*)
-            @event_loop.post { super }
-          end
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:34807d1baab989255d7f83581387a195fe819ed08922ba85ac9e245a007bfcb9
+size 636

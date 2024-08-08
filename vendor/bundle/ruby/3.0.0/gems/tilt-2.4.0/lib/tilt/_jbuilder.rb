@@ -1,2 +1,3 @@
-warn "Lazy loading of jbuilder templates is deprecated and will be removed in Tilt 3.  Require tilt/jbuilder manually.", uplevel: 1
-require "tilt/jbuilder"
+version https://git-lfs.github.com/spec/v1
+oid sha256:61875e0ce828fa714abefe3279cd114ab4cf078651fc99d1db99912c8fd92527
+size 156

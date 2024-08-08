@@ -1,35 +1,3 @@
-module Regexp::Syntax
-  module Token
-    module Quantifier
-      Greedy = %i[
-        zero_or_one
-        zero_or_more
-        one_or_more
-      ]
-
-      Reluctant = %i[
-        zero_or_one_reluctant
-        zero_or_more_reluctant
-        one_or_more_reluctant
-      ]
-
-      Possessive = %i[
-        zero_or_one_possessive
-        zero_or_more_possessive
-        one_or_more_possessive
-      ]
-
-      Interval             = %i[interval]
-      IntervalReluctant    = %i[interval_reluctant]
-      IntervalPossessive   = %i[interval_possessive]
-
-      IntervalAll = Interval + IntervalReluctant + IntervalPossessive
-
-      V1_8_6 = Greedy + Reluctant + Interval + IntervalReluctant
-      All = Greedy + Reluctant + Possessive + IntervalAll
-      Type = :quantifier
-    end
-
-    Map[Quantifier::Type] = Quantifier::All
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c6e397b2f0c511c640cc1df09e4e5acb9d42f895922e5c6ac587c1f7da775933
+size 826

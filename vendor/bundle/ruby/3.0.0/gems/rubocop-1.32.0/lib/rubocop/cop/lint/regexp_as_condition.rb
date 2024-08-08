@@ -1,31 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Lint
-      # Checks for regexp literals used as `match-current-line`.
-      # If a regexp literal is in condition, the regexp matches `$_` implicitly.
-      #
-      # @example
-      #   # bad
-      #   if /foo/
-      #     do_something
-      #   end
-      #
-      #   # good
-      #   if /foo/ =~ $_
-      #     do_something
-      #   end
-      class RegexpAsCondition < Base
-        extend AutoCorrector
-
-        MSG = 'Do not use regexp literal as a condition. ' \
-              'The regexp literal matches `$_` implicitly.'
-
-        def on_match_current_line(node)
-          add_offense(node) { |corrector| corrector.replace(node, "#{node.source} =~ $_") }
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:263e4bbe04b9bed695a7859a6590d8bcaf057c3c6b27102cc854e236bef07055
+size 770

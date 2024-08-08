@@ -1,14 +1,3 @@
-module RSpec
-  module Core
-    module MockingAdapters
-      # @private
-      module Null
-        def setup_mocks_for_rspec; end
-
-        def verify_mocks_for_rspec; end
-
-        def teardown_mocks_for_rspec; end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:81c1f280df905147851ded77a13c4b714413ddf128820d9351dd3da1887cdcfa
+size 240

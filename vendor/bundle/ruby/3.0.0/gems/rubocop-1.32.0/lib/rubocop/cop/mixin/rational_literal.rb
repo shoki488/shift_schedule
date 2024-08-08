@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # Common functionality for handling Rational literals.
-    module RationalLiteral
-      extend NodePattern::Macros
-
-      private
-
-      # @!method rational_literal?(node)
-      def_node_matcher :rational_literal?, <<~PATTERN
-        (send
-          (int _) :/
-          (rational _))
-      PATTERN
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:54b0510a50707b0207a58b1b3ff016398dfdbf614f31892ce7f480d721f6cf8f
+size 380

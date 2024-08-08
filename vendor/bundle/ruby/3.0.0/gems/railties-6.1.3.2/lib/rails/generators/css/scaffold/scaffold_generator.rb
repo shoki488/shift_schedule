@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators/named_base"
-
-module Css # :nodoc:
-  module Generators # :nodoc:
-    class ScaffoldGenerator < Rails::Generators::NamedBase # :nodoc:
-      source_root Rails::Generators::ScaffoldGenerator.source_root
-
-      # In order to allow the Sass generators to pick up the default Rails CSS and
-      # transform it, we leave it in a standard location for the CSS stylesheet
-      # generators to handle. For the simple, default case, just copy it over.
-      def copy_stylesheet
-        copy_file "scaffold.css", "app/assets/stylesheets/scaffold.css"
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:3f43259218a03edb649a3d785513ec5259cf23ef83e0db41c9cbf89fe1d70802
+size 626

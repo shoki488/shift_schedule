@@ -1,7 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/core_ext/date/acts_like"
-require "active_support/core_ext/date/blank"
-require "active_support/core_ext/date/calculations"
-require "active_support/core_ext/date/conversions"
-require "active_support/core_ext/date/zones"
+version https://git-lfs.github.com/spec/v1
+oid sha256:be00bdefab9fde30798c66b00cfa4a7f3fc95d7e368354f1f34a8dc12a13cadc
+size 273

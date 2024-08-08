@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module Nodes
-    class True < Arel::Nodes::NodeExpression
-      def hash
-        self.class.hash
-      end
-
-      def eql?(other)
-        self.class == other.class
-      end
-      alias :== :eql?
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a243793b03eb22ca7e488286f2bd7ec32b1459c540b25607987776b1ef8462c8
+size 273

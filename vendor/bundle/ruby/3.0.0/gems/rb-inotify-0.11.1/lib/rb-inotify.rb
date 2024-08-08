@@ -1,15 +1,3 @@
-require 'rb-inotify/version'
-require 'rb-inotify/native'
-require 'rb-inotify/native/flags'
-require 'rb-inotify/notifier'
-require 'rb-inotify/watcher'
-require 'rb-inotify/event'
-require 'rb-inotify/errors'
-
-# The root module of the library, which is laid out as so:
-#
-# * {Notifier} -- The main class, where the notifications are set up
-# * {Watcher} -- A watcher for a single file or directory
-# * {Event} -- An filesystem event notification
-module INotify
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5fca7ac6bfbbd7b49c2fc3768011d5ce9e7c1511433fa39cce5500d914a79c9
+size 461

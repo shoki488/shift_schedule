@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # A node extension for `yield` nodes. This will be used in place of a plain
-    # node when the builder constructs the AST, making its methods available
-    # to all `yield` nodes within RuboCop.
-    class YieldNode < Node
-      include ParameterizedNode
-      include MethodDispatchNode
-
-      # Custom destructuring method. This can be used to normalize
-      # destructuring for different variations of the node.
-      #
-      # @return [Array] the different parts of the `send` node
-      def node_parts
-        [nil, :yield, *to_a]
-      end
-
-      alias arguments children
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed7d877f20ef193e625e058dec5038b33b65de368d38e9e333f7f68fa9220f0c
+size 660

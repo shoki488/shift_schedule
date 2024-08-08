@@ -1,31 +1,3 @@
-module RSpec
-  module Mocks
-    module AnyInstance
-      # @private
-      class ExpectChainChain < StubChain
-        def initialize(*args)
-          super
-          @expectation_fulfilled = false
-        end
-
-        def expectation_fulfilled?
-          @expectation_fulfilled
-        end
-
-        def playback!(instance)
-          super.tap { @expectation_fulfilled = true }
-        end
-
-      private
-
-        def create_message_expectation_on(instance)
-          ::RSpec::Mocks::ExpectChain.expect_chain_on(instance, *@expectation_args, &@expectation_block)
-        end
-
-        def invocation_order
-          EmptyInvocationOrder
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc5be549a3ba727f35d4e3708ab921ff98c79a91162fa480492eb2c8ea1cceee
+size 674

@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-# These classes are used to strip out the ERB configuration
-# values so we can evaluate the database.yml without evaluating
-# the ERB values.
-class DummyERB < ERB # :nodoc:
-  def make_compiler(trim_mode)
-    DummyCompiler.new trim_mode
-  end
-end
-
-class DummyCompiler < ERB::Compiler # :nodoc:
-  def compile_content(stag, out)
-    if stag == "<%="
-      out.push "_erbout << ''"
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:805d12b2d2ae7e4211bb568eba9f9827947b25644eef8fbfbe545f83797e53c9
+size 427

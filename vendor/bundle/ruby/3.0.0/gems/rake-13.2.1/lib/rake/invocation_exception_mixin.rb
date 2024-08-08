@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-module Rake
-  module InvocationExceptionMixin
-    # Return the invocation chain (list of Rake tasks) that were in
-    # effect when this exception was detected by rake.  May be null if
-    # no tasks were active.
-    def chain
-      @rake_invocation_chain ||= nil
-    end
-
-    # Set the invocation chain in effect when this exception was
-    # detected.
-    def chain=(value)
-      @rake_invocation_chain = value
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:26422c2b5c66bdb705342b0366af569ebe6a72c24607ad2e332119b8eb402f43
+size 461

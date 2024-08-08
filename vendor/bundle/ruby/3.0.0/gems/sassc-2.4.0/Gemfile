@@ -1,2 +1,3 @@
-source "https://rubygems.org"
-gemspec
+version https://git-lfs.github.com/spec/v1
+oid sha256:438000041f52b3e8a73bd3b032688c4cdedb566293e7128495e872cda9ba085c
+size 38

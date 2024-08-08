@@ -1,14 +1,3 @@
-# frozen_string_literal: true
-module Rake
-
-  # Same as a regular task, but the immediate prerequisites are done in
-  # parallel using Ruby threads.
-  #
-  class MultiTask < Task
-    private
-
-    def invoke_prerequisites(task_args, invocation_chain) # :nodoc:
-      invoke_prerequisites_concurrently(task_args, invocation_chain)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e6ccf2292ff72503325a9561c4e9f9bdf5e7fa54f307c0e514a7ec1f5cd7b0b
+size 345

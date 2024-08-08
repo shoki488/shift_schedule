@@ -1,35 +1,3 @@
-#--
-#
-#
-#
-# Copyright (c) 1999-2006 Minero Aoki
-#
-# This program is free software.
-# You can distribute/modify this program under the same terms of ruby.
-# see the file "COPYING".
-#
-#++
-
-module Racc
-
-  class SourceText
-    def initialize(text, filename, lineno)
-      @text = text
-      @filename = filename
-      @lineno = lineno
-    end
-
-    attr_reader :text
-    attr_reader :filename
-    attr_reader :lineno
-
-    def to_s
-      "#<SourceText #{location()}>"
-    end
-
-    def location
-      "#{@filename}:#{@lineno}"
-    end
-  end
-
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:43fd163c4bd56a541fa3c7cefd3798f02c1d2608e6a20a680f29ef522d21236b
+size 539

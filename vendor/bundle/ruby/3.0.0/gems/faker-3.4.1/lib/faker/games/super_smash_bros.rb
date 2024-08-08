@@ -1,35 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class Games
-    class SuperSmashBros < Base
-      class << self
-        ##
-        # Produces the name of a fighter from the Smash Bros games.
-        #
-        # @return [String]
-        #
-        # @example
-        #   Faker::Games::SuperSmashBros.fighter #=> "Mario"
-        #
-        # @faker.version 1.9.2
-        def fighter
-          fetch('games.super_smash_bros.fighter')
-        end
-
-        ##
-        # Produces the name of a stage from the Smash Bros games.
-        #
-        # @return [String]
-        #
-        # @example
-        #   Faker::Games::SuperSmashBros.stage #=> "Final Destination"
-        #
-        # @faker.version 1.9.2
-        def stage
-          fetch('games.super_smash_bros.stage')
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5376812678a949b4687b2c38a84f850dbea8ca535efd7ab7102e6c85eac7efc8
+size 801

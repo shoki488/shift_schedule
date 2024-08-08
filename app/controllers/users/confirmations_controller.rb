@@ -1,30 +1,3 @@
-# frozen_string_literal: true
-
-class Users::ConfirmationsController < Devise::ConfirmationsController
-  # GET /resource/confirmation/new
-  # def new
-  #   super
-  # end
-
-  # POST /resource/confirmation
-  # def create
-  #   super
-  # end
-
-  # GET /resource/confirmation?confirmation_token=abcdef
-  # def show
-  #   super
-  # end
-
-  # protected
-
-  # The path used after resending confirmation instructions.
-  # def after_resending_confirmation_instructions_path_for(resource_name)
-  #   super(resource_name)
-  # end
-
-  # The path used after confirmation.
-  # def after_confirmation_path_for(resource_name, resource)
-  #   super(resource_name, resource)
-  # end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:65293312f21000b79868fffb438a8de6215fe2ead325ca2fd26a9d088c2edc2e
+size 663

@@ -1,9 +1,3 @@
-module Regexp::Expression
-  class Root < Regexp::Expression::Subexpression
-    def self.build(options = {})
-      warn "`#{self.class}.build(options)` is deprecated and will raise in "\
-           "regexp_parser v3.0.0. Please use `.construct(options: options)`."
-      construct(options: options)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a165d2c3d64685e07bcdb3b79a2eacebb8e319ec05d170ba96da2cf1b2b32524
+size 316

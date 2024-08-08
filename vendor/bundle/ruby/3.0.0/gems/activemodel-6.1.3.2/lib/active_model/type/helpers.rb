@@ -1,7 +1,3 @@
-# frozen_string_literal: true
-
-require "active_model/type/helpers/accepts_multiparameter_time"
-require "active_model/type/helpers/numeric"
-require "active_model/type/helpers/mutable"
-require "active_model/type/helpers/time_value"
-require "active_model/type/helpers/timezone"
+version https://git-lfs.github.com/spec/v1
+oid sha256:4213c30631f44c36b4736715ac5f46875da4301fb6228578519798e64975c1d2
+size 275

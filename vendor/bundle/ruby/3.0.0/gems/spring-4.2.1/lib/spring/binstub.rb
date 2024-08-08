@@ -1,13 +1,3 @@
-command  = File.basename($0)
-bin_path = File.expand_path("../../../bin/spring", __FILE__)
-
-if command == "spring"
-  load bin_path
-else
-  disable = ENV["DISABLE_SPRING"]
-
-  if Process.respond_to?(:fork) && (disable.nil? || disable.empty? || disable == "0")
-    ARGV.unshift(command)
-    load bin_path
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:22af78601d0ca523bee4ec2e1abba2e511f284cba89583c7d7f0f4bf959508b7
+size 310

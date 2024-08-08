@@ -1,19 +1,3 @@
-module Concurrent
-
-  # @!macro monotonic_get_time
-  #
-  #   Returns the current time as tracked by the application monotonic clock.
-  #
-  #   @param [Symbol] unit the time unit to be returned, can be either
-  #     :float_second, :float_millisecond, :float_microsecond, :second,
-  #     :millisecond, :microsecond, or :nanosecond default to :float_second.
-  #
-  #   @return [Float] The current monotonic time since some unspecified
-  #     starting point
-  #
-  #   @!macro monotonic_clock_warning
-  def monotonic_time(unit = :float_second)
-    Process.clock_gettime(Process::CLOCK_MONOTONIC, unit)
-  end
-  module_function :monotonic_time
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:329b1e2f226f4871088c9ff9f1ed532d3803c068311de37fa58f7f78859c844c
+size 642

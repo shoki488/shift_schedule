@@ -1,25 +1,3 @@
-# frozen_string_literal: true
-
-require_relative 'wrapper'
-
-module Rainbow
-  def self.global
-    @global ||= Wrapper.new
-  end
-
-  def self.enabled
-    global.enabled
-  end
-
-  def self.enabled=(value)
-    global.enabled = value
-  end
-
-  def self.uncolor(string)
-    StringUtils.uncolor(string)
-  end
-end
-
-def Rainbow(string)
-  Rainbow.global.wrap(string.to_s)
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:27bfa9e0ea220f70bfe3b5b13eb52ebd3531f6cb26b27f7e88652933a05b3350
+size 362

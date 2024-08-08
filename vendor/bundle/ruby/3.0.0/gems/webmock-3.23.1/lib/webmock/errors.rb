@@ -1,19 +1,3 @@
-# frozen_string_literal: true
-
-module WebMock
-
-  class NetConnectNotAllowedError < Exception
-    def initialize(request_signature)
-      request_signature_snippet = RequestSignatureSnippet.new(request_signature)
-      text = [
-        "Real HTTP connections are disabled. Unregistered request: #{request_signature}",
-        request_signature_snippet.stubbing_instructions,
-        request_signature_snippet.request_stubs,
-        "="*60
-      ].compact.join("\n\n")
-      super(text)
-    end
-
-  end
-
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:631b8462be5ae45da0405f97fef681e1c5ff0e62556cbab9b52755613cddfae3
+size 505

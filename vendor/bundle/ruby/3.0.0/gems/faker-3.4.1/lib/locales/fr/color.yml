@@ -1,4 +1,3 @@
-fr:
-  faker:
-    color:
-      name: ["rouge", "vert", "bleu", "jaune", "violet", "vert menthe", "bleu sarcelle", "blanc", "noir", "orange", "rose", "gris", "marron", "turquoise", "brun", "bleu ciel", "saumon", "prune", "orchidée", "olive", "magenta", "vert citron", "ivoire", "indigo", "or", "fuchsia", "cyan", "azur", "lavande", "argent"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff434c8baa1914a1a733cd20f8608cb9920c06f18f8b997bbf35e9676d84bfbb
+size 341

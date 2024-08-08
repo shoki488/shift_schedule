@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module Layout
-      # Checks for semicolon (;) preceded by space.
-      #
-      # @example
-      #   # bad
-      #   x = 1 ; y = 2
-      #
-      #   # good
-      #   x = 1; y = 2
-      class SpaceBeforeSemicolon < Base
-        include SpaceBeforePunctuation
-        extend AutoCorrector
-
-        def kind(token)
-          'semicolon' if token.semicolon?
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:562a0ded0b2c0c2bd20527a897d4ea7636d18e0a6a71a8f3d2a0544dd4aa6a56
+size 457

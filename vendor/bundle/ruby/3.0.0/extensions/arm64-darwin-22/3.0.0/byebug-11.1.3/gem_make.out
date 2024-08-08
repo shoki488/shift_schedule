@@ -1,22 +1,3 @@
-current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
-/Users/mashimakatsunori/.rbenv/versions/3.0.4/bin/ruby extconf.rb
-creating Makefile
-
-current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
-make DESTDIR\= sitearchdir\=./.gem.20240708-46689-1f2wkb sitelibdir\=./.gem.20240708-46689-1f2wkb clean
-
-current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
-make DESTDIR\= sitearchdir\=./.gem.20240708-46689-1f2wkb sitelibdir\=./.gem.20240708-46689-1f2wkb
-compiling breakpoint.c
-compiling byebug.c
-compiling context.c
-compiling locker.c
-compiling threads.c
-linking shared-object byebug/byebug.bundle
-
-current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
-make DESTDIR\= sitearchdir\=./.gem.20240708-46689-1f2wkb sitelibdir\=./.gem.20240708-46689-1f2wkb install
-/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20240708-46689-1f2wkb/byebug
-
-current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
-make DESTDIR\= sitearchdir\=./.gem.20240708-46689-1f2wkb sitelibdir\=./.gem.20240708-46689-1f2wkb clean
+version https://git-lfs.github.com/spec/v1
+oid sha256:05344518b58509119c2182a387449f4e5e52a049e29f8578eb7128534e924f7d
+size 1287

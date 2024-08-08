@@ -1,12 +1,3 @@
-Description:
-============
-    Generates a new mailbox class in app/mailboxes and invokes your template
-    engine and test framework generators.
-
-Example:
-========
-    bin/rails generate mailbox inbox
-
-    creates an InboxMailbox class and test:
-        Mailbox:  app/mailboxes/inbox_mailbox.rb
-        Test:     test/mailboxes/inbox_mailbox_test.rb
+version https://git-lfs.github.com/spec/v1
+oid sha256:0cff87f35b81d16f910328b36b07ffd5eda0195c75f32c1772dc2070ddc9ca78
+size 350

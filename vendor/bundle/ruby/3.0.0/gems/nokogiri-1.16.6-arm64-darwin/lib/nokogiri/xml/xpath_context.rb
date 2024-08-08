@@ -1,16 +1,3 @@
-# frozen_string_literal: true
-
-module Nokogiri
-  module XML
-    class XPathContext
-      ###
-      # Register namespaces in +namespaces+
-      def register_namespaces(namespaces)
-        namespaces.each do |k, v|
-          k = k.to_s.gsub(/.*:/, "") # strip off 'xmlns:' or 'xml:'
-          register_ns(k, v)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:84da363df85ba4858e9b5fbd4db552aaa80d8fc38b8a8d18662acdc30fde34d8
+size 349

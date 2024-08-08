@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class ProgrammingLanguage < Base
-    class << self
-      ##
-      # Produces the name of a programming language.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::ProgrammingLanguage.name #=> "Ruby"
-      #
-      # @faker.version 1.8.5
-      def name
-        fetch('programming_language.name')
-      end
-
-      ##
-      # Produces the name of a programming language's creator.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::ProgrammingLanguage.creator #=> "Yukihiro Matsumoto"
-      #
-      # @faker.version 1.8.5
-      def creator
-        fetch('programming_language.creator')
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e6c179d3de32f4d2560ce36b9e2f85f988899c84b6c9579c46e9ff22cbe72c7
+size 705

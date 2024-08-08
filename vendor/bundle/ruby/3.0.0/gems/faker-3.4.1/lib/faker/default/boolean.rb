@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class Boolean < Base
-    class << self
-      ##
-      # Produces a boolean
-      #
-      # @param true_ratio [Float] The likelihood (as a float, out of 1.0) for the method to return `true`.
-      # @return [Boolean]
-      #
-      # @example
-      #   Faker::Boolean.boolean #=> true
-      # @example
-      #   Faker::Boolean.boolean(true_ratio: 0.2) #=> false
-      #
-      # @faker.version 1.6.2
-      def boolean(true_ratio: 0.5)
-        (rand < true_ratio)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:12c368db7a571607854a4db185d5f676b0c0b7a3bc7380a781ebc5a886682c87
+size 534

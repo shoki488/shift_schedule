@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module AST
-    # Common functionality for nodes that can be used as modifiers:
-    # `if`, `while`, `until`
-    module ModifierNode
-      # Checks whether the node is in a modifier form, i.e. a condition
-      # trailing behind an expression.
-      #
-      # @return [Boolean] whether the node is a modifier
-      def modifier_form?
-        loc.end.nil?
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:eeaa25284aaf5111335014dd8fe99e97e6989bf1060e25326424d4af08298ac2
+size 430

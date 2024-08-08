@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class Coin < Base
-    class << self
-      ##
-      # Retrieves a random coin from any country.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::Coin.name #=> "Brazilian Real"
-      #
-      # @faker.version 1.9.2
-      def name
-        fetch('currency.name')
-      end
-
-      ##
-      # Retrieves a face to a flipped coin
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::Coin.flip #=> "Heads"
-      #
-      # @faker.version 1.9.2
-      def flip
-        fetch('coin.flip')
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:12320610f1e994660b32679c80fe925ff06a89ac8e84d8076037db3c39b95bc3
+size 597

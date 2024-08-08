@@ -1,15 +1,3 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-require "bundler/setup"
-require "mini_mime"
-
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
-
-# (If you use this, don't forget to add pry to your Gemfile!)
-# require "pry"
-# Pry.start
-
-require "irb"
-IRB.start
+version https://git-lfs.github.com/spec/v1
+oid sha256:b9a915d019326ab6f6b1e9214e6c432ca22f982215dcaef1867935d99aef99f7
+size 364

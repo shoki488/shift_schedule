@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "gem_version"
-
-module ActionMailbox
-  # Returns the currently-loaded version of Action Mailbox as a <tt>Gem::Version</tt>.
-  def self.version
-    gem_version
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4776ea53735af6ed75d36ad7d0f42c3356709956e1e635e60cccc74003cc7bd2
+size 216

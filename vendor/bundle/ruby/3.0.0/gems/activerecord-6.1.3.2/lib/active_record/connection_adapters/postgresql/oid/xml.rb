@@ -1,30 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module ConnectionAdapters
-    module PostgreSQL
-      module OID # :nodoc:
-        class Xml < Type::String # :nodoc:
-          def type
-            :xml
-          end
-
-          def serialize(value)
-            return unless value
-            Data.new(super)
-          end
-
-          class Data # :nodoc:
-            def initialize(value)
-              @value = value
-            end
-
-            def to_s
-              @value
-            end
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c9dd01edea4efe49afb34170072c8a3870579ccdcf1b164a81f5f340e46b0246
+size 551

@@ -1,3 +1,3 @@
-require 'rails_i18n/common_pluralizations/one_other'
-
-::RailsI18n::Pluralization::OneOther.with_locale(:'es-NI')
+version https://git-lfs.github.com/spec/v1
+oid sha256:07e51451bc19c726c2df43eb3ec99def3d40baa0e004df5db4215839e6a13b7a
+size 113

@@ -1,11 +1,3 @@
-require 'ffi'
-
-module Foo
-  extend FFI::Library
-  ffi_lib FFI::Library::LIBC
-  attach_function("cputs", "puts", [ :string ], :int)
-  freeze
-end
-Ractor.new do
-  Foo.cputs("Hello, World via libc puts using FFI in a Ractor")
-end.take
+version https://git-lfs.github.com/spec/v1
+oid sha256:09dfa5741a8adc224632bcc2ce50d0f4160ebaaa586dff1cc51ec245041d09ea
+size 231

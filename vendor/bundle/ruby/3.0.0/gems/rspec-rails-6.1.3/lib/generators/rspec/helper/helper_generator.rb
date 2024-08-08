@@ -1,16 +1,3 @@
-require 'generators/rspec'
-
-module Rspec
-  module Generators
-    # @private
-    class HelperGenerator < Base
-      class_option :helper_specs, type: :boolean, default: true
-
-      def generate_helper_spec
-        return unless options[:helper_specs]
-
-        template 'helper_spec.rb', target_path('helpers', class_path, "#{file_name}_helper_spec.rb")
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6abddc798ddc674c95c59f8a885f1bb6b7ddd63e5ca76e10d2da485c12fa0338
+size 380

@@ -1,12 +1,3 @@
-Gemspec/OrderedDependencies:
-  Enabled: false
-
-Gemspec/RequiredRubyVersion:
-  Description: Checks that `required_ruby_version` of gemspec and `TargetRubyVersion` of
-    .rubocop.yml are equal.
-  Enabled: false
-  Include:
-    - '**/*.gemspec'
-
-Gemspec/RubyVersionGlobalsUsage:
-  Enabled: true
+version https://git-lfs.github.com/spec/v1
+oid sha256:d01abaa0a93c27f5e2fbddd3fe3e9c6d85598c3cebfdf071563b201ace66795a
+size 292

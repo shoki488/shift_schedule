@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-module Parser
-  ##
-  # {Parser::SyntaxError} is raised whenever parser detects a syntax error,
-  # similar to the standard SyntaxError class.
-  #
-  # @api public
-  #
-  # @!attribute [r] diagnostic
-  #  @return [Parser::Diagnostic]
-  #
-  class SyntaxError < StandardError
-    attr_reader :diagnostic
-
-    def initialize(diagnostic)
-      @diagnostic = diagnostic
-      super(diagnostic.message)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b35a7eb23f86478e8d1480728eb38b7138a00331e9741bc7f4fb37ea1a1f3d05
+size 443

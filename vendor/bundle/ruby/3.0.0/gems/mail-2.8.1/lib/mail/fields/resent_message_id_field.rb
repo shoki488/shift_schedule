@@ -1,11 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
-require 'mail/fields/common_message_id_field'
-
-module Mail
-  #
-  # resent-msg-id   =       "Resent-Message-ID:" msg-id CRLF
-  class ResentMessageIdField < CommonMessageIdField #:nodoc:
-    NAME = 'Resent-Message-ID'
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:af2a11cd4aaf8924eb4285be0e97cf9c1788900858a769940e1b5cf358cddc40
+size 274

@@ -1,32 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveStorage::Blob::Identifiable
-  def identify
-    identify_without_saving
-    save!
-  end
-
-  def identify_without_saving
-    unless identified?
-      self.content_type = identify_content_type
-      self.identified = true
-    end
-  end
-
-  def identified?
-    identified
-  end
-
-  private
-    def identify_content_type
-      Marcel::MimeType.for download_identifiable_chunk, name: filename.to_s, declared_type: content_type
-    end
-
-    def download_identifiable_chunk
-      if byte_size.positive?
-        service.download_chunk key, 0...4.kilobytes
-      else
-        ""
-      end
-    end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:29b06ebf4e34536ef543f1def8e5a0ee403d9f416631f6ea962ee501e3224189
+size 632

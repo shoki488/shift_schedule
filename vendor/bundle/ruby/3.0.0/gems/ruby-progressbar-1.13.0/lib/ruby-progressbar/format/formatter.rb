@@ -1,27 +1,3 @@
-class   ProgressBar
-module  Format
-class   Formatter
-  def self.process(format_string, max_length, bar)
-    processed_string = format_string.dup
-
-    format_string.non_bar_molecules.each do |molecule|
-      processed_string.gsub!(molecule.full_key, molecule.lookup_value(bar, nil))
-    end
-
-    processed_string.gsub!(/%%/, '%')
-
-    bar_length         = max_length -
-                         processed_string.displayable_length +
-                         format_string.bar_molecule_placeholder_length
-    bar_length         = 0 if bar_length < 0
-
-    format_string.bar_molecules.each do |molecule|
-      processed_string.gsub!(molecule.full_key,
-                             molecule.lookup_value(bar, bar_length))
-    end
-
-    processed_string
-  end
-end
-end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:953723af9e82557e53f7e0e07193e32e1ec8e50f93aefaa2c30313529adad460
+size 764

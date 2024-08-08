@@ -1,7 +1,3 @@
-module FFI
-  class StructByValue[C < singleton(Struct)] < Type
-    def initialize: (C) -> self
-    def layout: () -> StructLayout
-    def struct_class: () -> C
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:12c6e89cd2794fc3bcb1acc7c57665aa5c27a80190c5f1d308f17db8dca0ff8f
+size 170

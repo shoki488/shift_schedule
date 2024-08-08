@@ -1,28 +1,3 @@
-# coding: utf-8
-# frozen_string_literal: true
-
-require "set"
-
-module Loofah
-  #
-  #  constants related to working around unhelpful libxml2 behavior
-  #
-  #  ಠ_ಠ
-  #
-  module LibxmlWorkarounds
-    #
-    #  these attributes and qualifying parent tags are determined by the code at:
-    #
-    #    https://git.gnome.org/browse/libxml2/tree/HTMLtree.c?h=v2.9.2#n714
-    #
-    #  see comments about CVE-2018-8048 within the tests for more information
-    #
-    BROKEN_ESCAPING_ATTRIBUTES = Set.new([
-      "href",
-      "action",
-      "src",
-      "name",
-    ])
-    BROKEN_ESCAPING_ATTRIBUTES_QUALIFYING_TAG = { "name" => "a" }
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f80fb41555a7cc6c2087594a236cc20a1bf38aae92ac33f2c17ad4e9ff4b90a1
+size 639

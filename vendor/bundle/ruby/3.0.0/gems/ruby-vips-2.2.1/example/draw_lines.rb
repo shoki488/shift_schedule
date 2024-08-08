@@ -1,30 +1,3 @@
-#!/usr/bin/ruby
-
-require "vips"
-
-# load and stream into memory
-image = Vips::Image.new_from_file(ARGV[0], access: :sequential).copy_memory
-
-starting = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-
-lines = image
-(0..1).step 0.01 do |i|
-  lines = lines.draw_line 255, lines.width * i, 0, 0, lines.height * (1 - i)
-end
-
-ending = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-puts "non-destructive took #{ending - starting}s"
-
-starting = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-
-lines = image
-lines = lines.mutate do |x|
-  (0..1).step 0.01 do |i|
-    x.draw_line! 255, x.width * i, 0, 0, x.height * (1 - i)
-  end
-end
-
-ending = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-puts "mutate took #{ending - starting}s"
-
-lines.write_to_file ARGV[1]
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a2f11492ad88a2675f94ba3be291558b9c29d5bf34d2c4a6a203e9abe701d21
+size 754

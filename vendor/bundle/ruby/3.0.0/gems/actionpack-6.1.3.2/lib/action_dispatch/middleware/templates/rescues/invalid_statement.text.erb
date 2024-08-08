@@ -1,15 +1,3 @@
-<%= @exception.class.to_s %><%
-  if @request.parameters['controller']
-%> in <%= @request.parameters['controller'].camelize %>Controller<% if @request.parameters['action'] %>#<%= @request.parameters['action'] %><% end %>
-<% end %>
-
-<%= @exception.message %>
-<% if defined?(ActiveStorage) && @exception.message.match?(%r{#{ActiveStorage::Blob.table_name}|#{ActiveStorage::Attachment.table_name}}) %>
-To resolve this issue run: bin/rails active_storage:install
-<% if defined?(ActionMailbox) && @exception.message.match?(%r{#{ActionMailbox::InboundEmail.table_name}}) %>
-To resolve this issue run: bin/rails action_mailbox:install
-<% end %>
-
-<%= render template: "rescues/_source" %>
-<%= render template: "rescues/_trace" %>
-<%= render template: "rescues/_request_and_response" %>
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0a0d878d291ca99ad38b167af13ada9bae6c9e20b3817af3b7b04f696f12d72
+size 777

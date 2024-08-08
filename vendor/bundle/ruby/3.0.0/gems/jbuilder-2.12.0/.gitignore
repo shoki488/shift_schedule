@@ -1,8 +1,3 @@
-tmp
-/log
-gemfiles/.bundle
-gemfiles/*.lock
-Gemfile.lock
-.ruby-version
-pkg
-*.gem
+version https://git-lfs.github.com/spec/v1
+oid sha256:baf97d82becf861999129978b8d86b7f2f417eeca917b3616634f7d9f64ab468
+size 79

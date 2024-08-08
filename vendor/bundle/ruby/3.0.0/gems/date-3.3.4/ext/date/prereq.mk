@@ -1,19 +1,3 @@
-.SUFFIXES: .list
-
-.list.h:
-	gperf --ignore-case -C -c -P -p -j1 -i 1 -g -o -t -N $(*F) $< \
-	| sed -f $(top_srcdir)/tool/gperf.sed \
-	> $(@F)
-
-zonetab.h: zonetab.list
-
-.PHONY: update-zonetab
-update-zonetab:
-	$(RUBY) -C $(srcdir) update-abbr
-
-.PHONY: update-nothing
-update-nothing:
-
-update = nothing
-
-zonetab.list: update-$(update)
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb5760d995a2a27ce7e9f815a0b16db7296c7954376719bded3238c407e197b9
+size 331

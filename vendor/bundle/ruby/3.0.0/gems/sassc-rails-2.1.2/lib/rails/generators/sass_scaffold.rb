@@ -1,15 +1,3 @@
-require "sassc/engine"
-require "rails/generators/named_base"
-
-module Sass
-  module Generators
-    class ScaffoldBase < ::Rails::Generators::NamedBase
-      def copy_stylesheet
-        dir = ::Rails::Generators::ScaffoldGenerator.source_root
-        file = File.join(dir, "scaffold.css")
-        converted_contents = ::SassC::Engine.new(File.read(file)).render
-        create_file "app/assets/stylesheets/scaffolds.#{syntax}", converted_contents
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:9b6cde3d97d02d14636d7b4f177039aebfefb25b11b59c016dcf71614816b715
+size 473

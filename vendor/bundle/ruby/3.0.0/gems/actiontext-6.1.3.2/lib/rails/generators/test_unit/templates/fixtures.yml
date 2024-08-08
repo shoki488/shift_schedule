@@ -1,4 +1,3 @@
-# one:
-#   record: name_of_fixture (ClassOfFixture)
-#   name: content
-#   body: <p>In a <i>million</i> stars!</p>
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc51e93315984ef053133e9d005672e481bd6bdc10ff1e904384887876f76ef1
+size 114

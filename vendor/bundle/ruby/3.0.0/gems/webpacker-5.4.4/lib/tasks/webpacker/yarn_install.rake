@@ -1,16 +1,3 @@
-namespace :webpacker do
-  desc "Support for older Rails versions. Install all JavaScript dependencies as specified via Yarn"
-  task :yarn_install do
-    valid_node_envs = %w[test development production]
-    node_env = ENV.fetch("NODE_ENV") do
-      valid_node_envs.include?(Rails.env) ? Rails.env : "production"
-    end
-    yarn_flags =
-      if `yarn --version`.start_with?("1")
-        "--no-progress --frozen-lockfile"
-      else
-        "--immutable"
-      end
-    system({ "NODE_ENV" => node_env }, "yarn install #{yarn_flags}")
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e6cc6fd5796e53c4f09fe3cfe547b186201afea5ea492620e94f531a6bd9a973
+size 544

@@ -1,8 +1,3 @@
-# frozen_string_literal: true
-
-warn "You are loading 'unicode-display_width/no_string_ext'\n" \
-     "Beginning with version 2.0, this is not necessary anymore\n"\
-     "You can just require 'unicode-display_width' now and no\n"\
-     "string extension will be loaded"
-
-require_relative "../display_width"
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb5b7cb5329b84d283379b6529d42fb1d36d31b32a9b2d147cf0470b28e1b3c4
+size 306

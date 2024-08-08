@@ -1,36 +1,3 @@
-# frozen_string_literal: true
-
-class Logger
-  # Default formatter for log messages.
-  class Formatter
-    Format = "%.1s, [%s #%d] %5s -- %s: %s\n"
-    DatetimeFormat = "%Y-%m-%dT%H:%M:%S.%6N"
-
-    attr_accessor :datetime_format
-
-    def initialize
-      @datetime_format = nil
-    end
-
-    def call(severity, time, progname, msg)
-      sprintf(Format, severity, format_datetime(time), Process.pid, severity, progname, msg2str(msg))
-    end
-
-  private
-
-    def format_datetime(time)
-      time.strftime(@datetime_format || DatetimeFormat)
-    end
-
-    def msg2str(msg)
-      case msg
-      when ::String
-        msg
-      when ::Exception
-        "#{ msg.message } (#{ msg.class })\n#{ msg.backtrace.join("\n") if msg.backtrace }"
-      else
-        msg.inspect
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:798580dfe3c6d9e0187aca09e001a0f4239b9987b9fd20b730a0fe88d7f5c800
+size 790

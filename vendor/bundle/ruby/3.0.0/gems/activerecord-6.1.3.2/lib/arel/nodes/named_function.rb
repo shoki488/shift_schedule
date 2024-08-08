@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module Nodes
-    class NamedFunction < Arel::Nodes::Function
-      attr_accessor :name
-
-      def initialize(name, expr, aliaz = nil)
-        super(expr, aliaz)
-        @name = name
-      end
-
-      def hash
-        super ^ @name.hash
-      end
-
-      def eql?(other)
-        super && self.name == other.name
-      end
-      alias :== :eql?
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0542e83ecd021ea562f186f9dd266bc615ab1a3ace2e2c19d25028f7454016ce
+size 418

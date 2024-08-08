@@ -1,23 +1,3 @@
-require 'active_support'
-require 'global_id/global_id'
-
-autoload :SignedGlobalID, 'global_id/signed_global_id'
-
-class GlobalID
-  extend ActiveSupport::Autoload
-
-  eager_autoload do
-    autoload :Locator
-    autoload :Identification
-    autoload :Verifier
-  end
-
-  def self.eager_load!
-    super
-    require 'global_id/signed_global_id'
-  end
-
-  def self.deprecator # :nodoc:
-    @deprecator ||= ActiveSupport::Deprecation.new("2.1", "GlobalID")
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1933e1806fd0791ddd2a0db5a01776aa711952988b7d68aa474a5b9657ddbfc1
+size 455

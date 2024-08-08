@@ -1,31 +1,3 @@
-# frozen_string_literal: true
-
-require "rails/generators/base"
-require "active_support/encrypted_file"
-
-module Rails
-  module Generators
-    class EncryptedFileGenerator < Base # :nodoc:
-      def add_encrypted_file_silently(file_path, key_path, template = encrypted_file_template)
-        unless File.exist?(file_path)
-          ActiveSupport::EncryptedFile.new(
-            content_path: file_path,
-            key_path: key_path,
-            env_key: "RAILS_MASTER_KEY",
-            raise_if_missing_key: true
-          ).write(template)
-        end
-      end
-
-      private
-        def encrypted_file_template
-          <<~YAML
-            # aws:
-            #   access_key_id: 123
-            #   secret_access_key: 345
-
-          YAML
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:67f00e24b9c3167996b753c73a660370a2abc424906fb6df258e5f22c4d10e23
+size 771

@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-require "web_console/testing/helper"
-require "web_console/testing/fake_middleware"
-
-module WebConsole
-  module Testing
-    # This class is to pre-compile 'templates/*.erb'.
-    class ERBPrecompiler
-      def initialize(path)
-        @erb  = ERB.new(File.read(path))
-        @view = FakeMiddleware.new(
-          view_path: Helper.gem_root.join("lib/web_console/templates"),
-        ).view
-      end
-
-      def build
-        @erb.result(binding)
-      end
-
-      def method_missing(name, *args, &block)
-        return super unless @view.respond_to?(name)
-        @view.send(name, *args, &block)
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1acbd42e7c414d4ca6db51591b1ce9aed26fe230d76c97d3be7b095085d43f9
+size 653

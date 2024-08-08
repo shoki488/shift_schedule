@@ -1,7 +1,3 @@
-require "test_helper"
-
-class NavigationTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:12c5fba23fd505385b56c4d57a27dd6471f879e039330f8355fbdd26322fe3fc
+size 132

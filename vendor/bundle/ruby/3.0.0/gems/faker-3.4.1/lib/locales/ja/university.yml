@@ -1,9 +1,3 @@
-ja:
-  faker:
-    university:
-      prefix: ["北海道", "東北", "関東", "中部", "近畿", "中国", "四国", "九州"]
-      suffix: ["大学", "医科大学", "芸術大学", "音楽大学", "工業大学"]
-      name:
-        - "#{Name.last_name}#{University.suffix}"
-        - "#{University.prefix}#{Name.last_name}#{University.suffix}"
-        - "#{University.prefix}#{Address.city_prefix}#{University.suffix}"
+version https://git-lfs.github.com/spec/v1
+oid sha256:003382ae39c5880b7f6e8e0d89182594d814f0ca9951826b3bd2b25f20e4ab19
+size 423

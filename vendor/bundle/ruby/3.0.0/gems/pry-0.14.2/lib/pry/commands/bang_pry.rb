@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class BangPry < Pry::ClassCommand
-      match '!pry'
-      group 'Navigating Pry'
-      description 'Start a Pry session on current self.'
-
-      banner <<-'BANNER'
-        Start a Pry session on current self. Also works mid multi-line expression.
-      BANNER
-
-      def process
-        target.pry
-      end
-    end
-
-    Pry::Commands.add_command(Pry::Command::BangPry)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:24f06d9b7addab5874ee900c1f9c22ad502bd597083b0535550be432e0d16ca2
+size 442

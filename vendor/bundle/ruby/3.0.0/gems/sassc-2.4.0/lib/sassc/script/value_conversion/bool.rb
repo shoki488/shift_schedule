@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-module SassC
-  module Script
-    module ValueConversion
-      class Bool < Base
-        def to_native
-          Native::make_boolean(@value.value)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:43fac9bbef65aec247d1ce18b146bba7de02896f33b2b49cdae4c35e1ab0fa26
+size 218

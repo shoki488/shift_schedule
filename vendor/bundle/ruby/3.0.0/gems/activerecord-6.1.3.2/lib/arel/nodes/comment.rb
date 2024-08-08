@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-module Arel # :nodoc: all
-  module Nodes
-    class Comment < Arel::Nodes::Node
-      attr_reader :values
-
-      def initialize(values)
-        super()
-        @values = values
-      end
-
-      def initialize_copy(other)
-        super
-        @values = @values.clone
-      end
-
-      def hash
-        [@values].hash
-      end
-
-      def eql?(other)
-        self.class == other.class &&
-          self.values == other.values
-      end
-      alias :== :eql?
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:34a1eadef6973a3ecf571512ffa20ca37c1a38dba91dda26b6f51c21dff24e05
+size 504

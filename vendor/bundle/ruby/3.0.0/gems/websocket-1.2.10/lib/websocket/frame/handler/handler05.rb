@@ -1,15 +1,3 @@
-# encoding: binary
-# frozen_string_literal: true
-
-module WebSocket
-  module Frame
-    module Handler
-      class Handler05 < Handler04
-        # Since handler 5 masking should be enabled by default
-        def masking?
-          true
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6645378e4a4fdab6f9ca1295da9222e14bd0551b346fa31356794074ef757658
+size 274

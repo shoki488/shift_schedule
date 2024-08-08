@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "gem_version"
-
-module ActionPack
-  # Returns the version of the currently loaded ActionPack as a <tt>Gem::Version</tt>
-  def self.version
-    gem_version
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:365f83a87d0772d12ff9ab009a4eecf8bbb4a49f5e898d89f9123ee14a948c90
+size 212

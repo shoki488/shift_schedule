@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  class ConfigObsoletion
-    # Encapsulation of a ConfigObsoletion rule for splitting a cop's
-    # functionality into multiple new cops.
-    # @api private
-    class SplitCop < CopRule
-      attr_reader :metadata
-
-      def initialize(config, old_name, metadata)
-        super(config, old_name)
-        @metadata = metadata
-      end
-
-      def rule_message
-        "The `#{old_name}` cop has been split into #{to_sentence(alternatives)}."
-      end
-
-      private
-
-      def alternatives
-        Array(metadata['alternatives']).map { |name| "`#{name}`" }
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:1dbb19c5c41ad46e20e8adc132364ac5d126583650b051969e72abda1773b0d2
+size 631

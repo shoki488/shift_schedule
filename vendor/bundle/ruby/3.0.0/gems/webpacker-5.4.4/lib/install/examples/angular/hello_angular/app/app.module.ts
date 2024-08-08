@@ -1,16 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c30accbc5dcebebb3da38c2dd4b5c580e816f667087ff60327b193e49e17906
+size 314

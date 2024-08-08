@@ -1,31 +1,3 @@
-<p id="notice"><%%= notice %></p>
-
-<h1><%= plural_table_name.titleize %></h1>
-
-<table>
-  <thead>
-    <tr>
-<% attributes.reject(&:password_digest?).each do |attribute| -%>
-      <th><%= attribute.human_name %></th>
-<% end -%>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
-      <tr>
-<% attributes.reject(&:password_digest?).each do |attribute| -%>
-        <td><%%= <%= singular_table_name %>.<%= attribute.column_name %> %></td>
-<% end -%>
-        <td><%%= link_to 'Show', <%= model_resource_name %> %></td>
-        <td><%%= link_to 'Edit', edit_<%= singular_route_name %>_path(<%= singular_table_name %>) %></td>
-        <td><%%= link_to 'Destroy', <%= model_resource_name %>, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <%% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%%= link_to 'New <%= singular_table_name.titleize %>', new_<%= singular_route_name %>_path %>
+version https://git-lfs.github.com/spec/v1
+oid sha256:104e269ea492a1f2a751f392a214949d7c676a7a99d3d931be6f41be0aeb978a
+size 974

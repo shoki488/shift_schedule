@@ -1,36 +1,3 @@
-# frozen_string_literal: true
-
-require "backburner"
-
-module ActiveJob
-  module QueueAdapters
-    # == Backburner adapter for Active Job
-    #
-    # Backburner is a beanstalkd-powered job queue that can handle a very
-    # high volume of jobs. You create background jobs and place them on
-    # multiple work queues to be processed later. Read more about
-    # Backburner {here}[https://github.com/nesquena/backburner].
-    #
-    # To use Backburner set the queue_adapter config to +:backburner+.
-    #
-    #   Rails.application.config.active_job.queue_adapter = :backburner
-    class BackburnerAdapter
-      def enqueue(job) #:nodoc:
-        Backburner::Worker.enqueue(JobWrapper, [job.serialize], queue: job.queue_name, pri: job.priority)
-      end
-
-      def enqueue_at(job, timestamp) #:nodoc:
-        delay = timestamp - Time.current.to_f
-        Backburner::Worker.enqueue(JobWrapper, [job.serialize], queue: job.queue_name, pri: job.priority, delay: delay)
-      end
-
-      class JobWrapper #:nodoc:
-        class << self
-          def perform(job_data)
-            Base.execute job_data
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:138f0092f554c0835eb975d60cec279b2299228805f9e9a065b403c0d967dd55
+size 1148

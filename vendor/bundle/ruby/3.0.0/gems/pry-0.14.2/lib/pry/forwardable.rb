@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  module Forwardable
-    require 'forwardable'
-    include ::Forwardable
-
-    #
-    # Since Ruby 2.4, Forwardable will print a warning when
-    # calling a method that is private on a delegate, and
-    # in the future it could be an error: https://bugs.ruby-lang.org/issues/12782#note-3
-    #
-    # That's why we revert to a custom implementation for delegating one
-    # private method to another.
-    #
-    def def_private_delegators(target, *private_delegates)
-      private_delegates.each do |private_delegate|
-        define_method(private_delegate) do |*a, &b|
-          instance_variable_get(target).__send__(private_delegate, *a, &b)
-        end
-      end
-      class_eval do
-        private(*private_delegates) # rubocop:disable Style/AccessModifierDeclarations
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f5e9a6ac39abe5a7d91f2f6e459b0de5b386962d33d8ff65d948377e739799a
+size 840

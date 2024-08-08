@@ -1,6 +1,3 @@
-development:
-  adapter: sqlite3
-  database: ":memory:"
-test:
-  adapter: sqlite3
-  database: ":memory:"
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec251b96edfd5e6fdc3cb109ee2d452b76876441376b9f0fa827b5a89cd04607
+size 103

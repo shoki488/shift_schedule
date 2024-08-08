@@ -1,21 +1,3 @@
-source 'https://rubygems.org'
-
-group :development do
-  gem 'bigdecimal' # necessary on ruby-3.3+
-  gem 'bundler', '>= 1.16', '< 3'
-  gem 'rake', '~> 13.0'
-  gem 'rake-compiler', '~> 1.1'
-  gem 'rake-compiler-dock', '~> 1.0.pre'
-  gem 'rspec', '~> 3.0'
-end
-
-group :doc do
-  gem 'kramdown'
-  gem 'yard', '~> 0.9'
-end
-
-group :type_check do
-  if RUBY_VERSION >= "2.6" && %w[ ruby truffleruby ].include?(RUBY_ENGINE)
-    gem 'rbs', '~> 3.0'
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:e2513239194c1dd0e606308d3370e1ff958d4fba1059a0606e6e70d02bd7e725
+size 446

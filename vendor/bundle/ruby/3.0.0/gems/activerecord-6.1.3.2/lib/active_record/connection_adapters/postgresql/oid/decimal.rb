@@ -1,15 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module ConnectionAdapters
-    module PostgreSQL
-      module OID # :nodoc:
-        class Decimal < Type::Decimal # :nodoc:
-          def infinity(options = {})
-            BigDecimal("Infinity") * (options[:negative] ? -1 : 1)
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b3d4b3d5a326e5da7694f0943bb71480a94010a8ef05769ca63f2e5ded12d72
+size 334

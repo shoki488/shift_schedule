@@ -1,27 +1,3 @@
-$LOAD_PATH << File.expand_path('../lib', __FILE__)
-
-require 'skiptrace/version'
-
-Gem::Specification.new do |spec|
-  spec.name          = "skiptrace"
-  spec.version       = Skiptrace::VERSION
-  spec.authors       = ["Genadi Samokovarov"]
-  spec.email         = ["gsamokovarov@gmail.com"]
-  spec.extensions    = ["ext/skiptrace/extconf.rb"]
-  spec.summary       = "Bindings for your Ruby exceptions"
-  spec.homepage      = "https://github.com/gsamokovarov/skiptrace"
-  spec.license       = "MIT"
-
-  spec.required_ruby_version = ">= 2.5.0"
-
-  spec.files         = `git ls-files -z`.split("\x0")
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
-  spec.extensions    = ["ext/skiptrace/extconf.rb"]
-
-  spec.add_development_dependency "minitest", "~> 5.4"
-  spec.add_development_dependency "bundler"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "rake-compiler"
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1a772510016b870ddf385a63df2dcd6ce658ef95e34628d0c8371b22c422c0d
+size 1012

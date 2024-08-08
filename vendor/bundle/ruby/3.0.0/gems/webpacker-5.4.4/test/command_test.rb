@@ -1,33 +1,3 @@
-require "test_helper"
-
-class CommandTest < Minitest::Test
-  def test_compile_command_returns_success_status_when_stale
-    Webpacker.compiler.stub :stale?, true do
-      Webpacker.compiler.stub :run_webpack, true do
-        assert_equal true, Webpacker.commands.compile
-      end
-    end
-  end
-
-  def test_compile_command_returns_success_status_when_fresh
-    Webpacker.compiler.stub :stale?, false do
-      Webpacker.compiler.stub :run_webpack, true do
-        assert_equal true, Webpacker.commands.compile
-      end
-    end
-  end
-
-  def test_compile_command_returns_failure_status_when_stale
-    Webpacker.compiler.stub :stale?, true do
-      Webpacker.compiler.stub :run_webpack, false do
-        assert_equal false, Webpacker.commands.compile
-      end
-    end
-  end
-
-  def test_clean_command_works_with_nested_hashes_and_without_any_compiled_files
-    File.stub :delete, true do
-      assert Webpacker.commands.clean
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:599146da2707d834bf262a7625d516b9077b5f3041ba7caf8c663f1bc35c3a30
+size 940

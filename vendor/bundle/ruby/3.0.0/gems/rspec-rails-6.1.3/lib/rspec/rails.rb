@@ -1,18 +1,3 @@
-require 'rspec/core'
-require 'rails/version'
-
-# Load any of our adapters and extensions early in the process
-require 'rspec/rails/adapters'
-require 'rspec/rails/extensions'
-
-# Load the rspec-rails parts
-require 'rspec/rails/view_rendering'
-require 'rspec/rails/matchers'
-require 'rspec/rails/fixture_support'
-require 'rspec/rails/file_fixture_support'
-require 'rspec/rails/fixture_file_upload_support'
-require 'rspec/rails/example'
-require 'rspec/rails/vendor/capybara'
-require 'rspec/rails/configuration'
-require 'rspec/rails/active_record'
-require 'rspec/rails/feature_check'
+version https://git-lfs.github.com/spec/v1
+oid sha256:e118f59116c299c722f451121dca42798fb4c764326872dbf8be7a2d4921a9ae
+size 578

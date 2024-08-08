@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-module Rake
-
-  # EarlyTime is a fake timestamp that occurs _before_ any other time value.
-  class EarlyTime
-    include Comparable
-    include Singleton
-
-    ##
-    # The EarlyTime always comes before +other+!
-
-    def <=>(other)
-      -1
-    end
-
-    def to_s # :nodoc:
-      "<EARLY TIME>"
-    end
-  end
-
-  EARLY = EarlyTime.instance
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d3c8edf3a5fedc4e6dd29c68b5b746d9c4be8adb135b6c007afb7608cce8733
+size 370

@@ -1,20 +1,3 @@
-require "webpacker/configuration"
-
-namespace :webpacker do
-  desc "Remove the webpack compiled output directory"
-  task clobber: ["webpacker:verify_install", :environment] do
-    Webpacker.clobber
-    $stdout.puts "Removed webpack output path directory #{Webpacker.config.public_output_path}"
-  end
-end
-
-skip_webpacker_clobber = %w(no false n f).include?(ENV["WEBPACKER_PRECOMPILE"])
-
-unless skip_webpacker_clobber
-  # Run clobber if the assets:clobber is run
-  if Rake::Task.task_defined?("assets:clobber")
-    Rake::Task["assets:clobber"].enhance do
-      Rake::Task["webpacker:clobber"].invoke
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:476605f3d6aff00d6656357f30de97149aef6da1ca8bbe86481e9716b91b6232
+size 615

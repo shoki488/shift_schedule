@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-Capybara::SpecHelper.spec '#dismiss_prompt', requires: [:modals] do
-  before do
-    @session.visit('/with_js')
-  end
-
-  it 'should dismiss the prompt' do
-    @session.dismiss_prompt do
-      @session.click_link('Open prompt')
-    end
-    expect(@session).to have_xpath("//a[@id='open-prompt' and @response='dismissed']")
-  end
-
-  it 'should return the message presented' do
-    message = @session.dismiss_prompt do
-      @session.click_link('Open prompt')
-    end
-    expect(message).to eq('Prompt opened')
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c926df7afedde0786fc7580c7f0397b45ace447dbe022c0388ea9085c8f55b1
+size 548

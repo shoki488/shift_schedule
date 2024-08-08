@@ -1,36 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/concern"
-
-module Rails
-  class Railtie
-    module Configurable
-      extend ActiveSupport::Concern
-
-      module ClassMethods
-        delegate :config, to: :instance
-
-        def inherited(base)
-          raise "You cannot inherit from a #{superclass.name} child"
-        end
-
-        def instance
-          @instance ||= new
-        end
-
-        def respond_to?(*args)
-          super || instance.respond_to?(*args)
-        end
-
-        def configure(&block)
-          class_eval(&block)
-        end
-
-        private
-          def method_missing(*args, &block)
-            instance.send(*args, &block)
-          end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:42edeb89018aee5682c80a3d643f97a9df0c763974079c4ea5c69fa48cc7ead0
+size 700

@@ -1,27 +1,3 @@
-# frozen_string_literal: true
-
-module FactoryBotRails
-  class DefinitionFilePaths
-    def initialize(definition_file_paths)
-      @files = []
-      @directories = {}
-
-      definition_file_paths.each do |path|
-        @files << "#{path}.rb"
-        @directories[path.to_s] = [:rb]
-      end
-    end
-
-    def directories
-      @directories.select { |path| Dir.exist?(path) }
-    end
-
-    def files
-      @files.select { |file| File.exist?(file) }
-    end
-
-    def any?
-      directories.any? || files.any?
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:c5871de22a8b4f99e08eb47afecd22f310ee46fa1d7bf7ec7cb16da93e0e5352
+size 523

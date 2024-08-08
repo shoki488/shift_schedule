@@ -1,33 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class Emotion < Base
-    class << self
-      ##
-      # Produces an emotion noun.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::Emotion.noun #=> "amazement"
-      #
-      # @faker.version next
-      def noun
-        fetch('emotion.noun')
-      end
-
-      ##
-      # Produces an emotion adjective.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::Emotion.adjective # => "nonplussed"
-      #
-      # @faker.version next
-      def adjective
-        fetch('emotion.adjective')
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:f3f70875a4172bb3536cc04e6dc8b9b95f664bf20e0f7f38e4f3e07c144e8b84
+size 602

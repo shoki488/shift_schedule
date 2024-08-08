@@ -1,6 +1,3 @@
-require_relative 'regexp_parser/version'
-require_relative 'regexp_parser/token'
-require_relative 'regexp_parser/scanner'
-require_relative 'regexp_parser/syntax'
-require_relative 'regexp_parser/lexer'
-require_relative 'regexp_parser/parser'
+version https://git-lfs.github.com/spec/v1
+oid sha256:e426ba2749615b06918028e48b4974c683cb63c847a61955f9a7fe9dcbdecda2
+size 240

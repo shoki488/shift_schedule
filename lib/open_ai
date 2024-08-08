@@ -1,16 +1,3 @@
-class ChatApi
-  require 'ruby/openai'
-
-  def initialize
-    @openai = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_ACCESS_TOKEN"))
-  end
-
-  def create_shift
-    response = @openai.chat(
-      parameters: {
-        model: 'gpt-3.5-turbo',
-        messages: [{ role: 'system', content: "あなたはシフト作成者です。従業員の条件や業務ニーズに基づいて、シフトを作成してください。" }],
-      })
-    response.dig('choices', 0, 'message', 'content')
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a47789fd314df659667143b00e7c1d003036725565cb826ab94ac1f5fd661189
+size 501

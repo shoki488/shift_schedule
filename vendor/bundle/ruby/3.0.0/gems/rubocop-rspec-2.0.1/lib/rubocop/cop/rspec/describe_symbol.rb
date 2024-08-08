@@ -1,35 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module RSpec
-      # Avoid describing symbols.
-      #
-      # @example
-      #   # bad
-      #   describe :my_method do
-      #     # ...
-      #   end
-      #
-      #   # good
-      #   describe '#my_method' do
-      #     # ...
-      #   end
-      #
-      # @see https://github.com/rspec/rspec-core/issues/1610
-      class DescribeSymbol < Base
-        MSG = 'Avoid describing symbols.'
-
-        def_node_matcher :describe_symbol?, <<-PATTERN
-          (send #rspec? :describe $sym ...)
-        PATTERN
-
-        def on_send(node)
-          describe_symbol?(node) do |match|
-            add_offense(match)
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:675cc71e68147a14246e784a4afbc0c7007d9c5ad6dfa98de39e696f46e33cf3
+size 725

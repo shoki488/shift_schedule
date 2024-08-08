@@ -1,20 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/string_inquirer"
-
-module ActiveSupport
-  class EnvironmentInquirer < StringInquirer #:nodoc:
-    DEFAULT_ENVIRONMENTS = ["development", "test", "production"]
-    def initialize(env)
-      super(env)
-
-      DEFAULT_ENVIRONMENTS.each do |default|
-        instance_variable_set :"@#{default}", env == default
-      end
-    end
-
-    DEFAULT_ENVIRONMENTS.each do |env|
-      class_eval "def #{env}?; @#{env}; end"
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:01b8c4ed071d83392032afdbcf6944658e0d3ff3b1bf4fd17d157e9b4f6d74ae
+size 482

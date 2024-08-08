@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveSupport
-  module Messages
-    class RotationConfiguration # :nodoc:
-      attr_reader :signed, :encrypted
-
-      def initialize
-        @signed, @encrypted = [], []
-      end
-
-      def rotate(kind, *args, **options)
-        args << options unless options.empty?
-        case kind
-        when :signed
-          @signed << args
-        when :encrypted
-          @encrypted << args
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1b09ad762af3311bdb6b99a31d46460690b4eef66911f7599852b5b4d1e8108
+size 465

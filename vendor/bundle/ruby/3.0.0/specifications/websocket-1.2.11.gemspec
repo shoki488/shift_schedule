@@ -1,21 +1,3 @@
-# -*- encoding: utf-8 -*-
-# stub: websocket 1.2.11 ruby lib
-
-Gem::Specification.new do |s|
-  s.name = "websocket".freeze
-  s.version = "1.2.11".freeze
-
-  s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
-  s.require_paths = ["lib".freeze]
-  s.authors = ["Bernard Potocki".freeze]
-  s.date = "2024-07-08"
-  s.description = "Universal Ruby library to handle WebSocket protocol".freeze
-  s.email = ["bernard.potocki@imanel.org".freeze]
-  s.homepage = "http://github.com/imanel/websocket-ruby".freeze
-  s.licenses = ["MIT".freeze]
-  s.required_ruby_version = Gem::Requirement.new(">= 2.0".freeze)
-  s.rubygems_version = "3.5.11".freeze
-  s.summary = "Universal Ruby library to handle WebSocket protocol".freeze
-
-  s.installed_by_version = "3.5.14".freeze if s.respond_to? :installed_by_version
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:999a97d1e3e574a6d6c57504a631390dd19835dc4030906d764a917ff6407509
+size 855

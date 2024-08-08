@@ -1,21 +1,3 @@
-module Vips
-  # A resizing kernel. One of these can be given to operations like
-  # {Image#reduceh} or {Image#resize} to select the resizing kernel to use.
-  #
-  # At least these should be available:
-  #
-  # *   `:nearest` Nearest-neighbour interpolation.
-  # *   `:linear` Linear interpolation.
-  # *   `:cubic` Cubic interpolation.
-  # *   `:lanczos2` Two-lobe Lanczos
-  # *   `:lanczos3` Three-lobe Lanczos
-  #
-  #  For example:
-  #
-  #  ```ruby
-  #  im = im.resize 3, :kernel => :lanczos2
-  #  ```
-
-  class Kernel < Symbol
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:83d15f1b5cc1ddc613964e569008557890b20d11e4461363ec8c0bb1a554bd8e
+size 537

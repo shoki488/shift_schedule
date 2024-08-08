@@ -1,17 +1,3 @@
-import org.jruby.Ruby;
-import org.jruby.runtime.load.BasicLibraryService;
-
-import java.io.IOException;
-
-public class ConcurrentRubyService implements BasicLibraryService {
-
-    public boolean basicLoad(final Ruby runtime) throws IOException {
-        new com.concurrent_ruby.ext.AtomicReferenceLibrary().load(runtime, false);
-        new com.concurrent_ruby.ext.JavaAtomicBooleanLibrary().load(runtime, false);
-        new com.concurrent_ruby.ext.JavaAtomicFixnumLibrary().load(runtime, false);
-        new com.concurrent_ruby.ext.JavaSemaphoreLibrary().load(runtime, false);
-        new com.concurrent_ruby.ext.SynchronizationLibrary().load(runtime, false);
-        new com.concurrent_ruby.ext.JRubyMapBackendLibrary().load(runtime, false);
-        return true;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8aebc57397f0e52a6636e5977ea462a466905aa0d615e4224d2baf483cac57a1
+size 771

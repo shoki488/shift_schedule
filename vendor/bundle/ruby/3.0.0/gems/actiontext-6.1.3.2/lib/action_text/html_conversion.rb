@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-module ActionText
-  module HtmlConversion
-    extend self
-
-    def node_to_html(node)
-      node.to_html(save_with: Nokogiri::XML::Node::SaveOptions::AS_HTML)
-    end
-
-    def fragment_for_html(html)
-      document.fragment(html)
-    end
-
-    def create_element(tag_name, attributes = {})
-      document.create_element(tag_name, attributes)
-    end
-
-    private
-      def document
-        Nokogiri::HTML::Document.new.tap { |doc| doc.encoding = "UTF-8" }
-      end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac162256bb6845663be6edbeb5482081cbb32e0244e9597d1e4ff85d84e22f80
+size 506

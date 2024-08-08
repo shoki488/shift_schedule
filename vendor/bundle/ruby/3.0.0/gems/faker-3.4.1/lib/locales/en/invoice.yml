@@ -1,6 +1,3 @@
-en:
-  faker:
-    invoice:
-      reference:
-        check_digit_method: method_731
-        pattern: '\d{3,19}#'
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f2250ede5de20b90f11b52ec1d383f406d89e20609120d8b979d00793566a78
+size 110

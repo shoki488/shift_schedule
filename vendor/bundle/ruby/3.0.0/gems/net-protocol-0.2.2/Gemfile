@@ -1,7 +1,3 @@
-source "https://rubygems.org"
-
-gemspec
-
-gem "rake"
-gem "test-unit"
-gem "test-unit-ruby-core"
+version https://git-lfs.github.com/spec/v1
+oid sha256:56c91bb99137a59000b65a176a457f3b701693c5d6e1257e14ca76ef676cf5c3
+size 93

@@ -1,29 +1,3 @@
-# frozen_string_literal: true
-
-begin
-  require "bundler/setup"
-rescue LoadError
-  puts "You must `gem install bundler` and `bundle install` to run rake tasks"
-end
-
-require "socket"
-require "rake/testtask"
-require "tmpdir"
-require "securerandom"
-require "json"
-require "web_console/testing/erb_precompiler"
-
-EXPANDED_CWD = File.expand_path(File.dirname(__FILE__))
-
-Rake::TestTask.new(:test) do |t|
-  t.libs << "lib"
-  t.libs << "test"
-  t.pattern = "test/**/*_test.rb"
-  t.verbose = false
-end
-
-Dir["lib/web_console/tasks/**/*.rake"].each { |task| load task  }
-
-Bundler::GemHelper.install_tasks
-
-task default: :test
+version https://git-lfs.github.com/spec/v1
+oid sha256:33fc9e78055b968ebc39db016567d513cd08e27910b63962213affc7ad177a2b
+size 614

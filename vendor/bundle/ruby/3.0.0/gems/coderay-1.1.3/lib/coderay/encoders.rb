@@ -1,18 +1,3 @@
-module CodeRay
-  
-  # This module holds the Encoder class and its subclasses.
-  # For example, the HTML encoder is named CodeRay::Encoders::HTML
-  # can be found in coderay/encoders/html.
-  #
-  # Encoders also provides methods and constants for the register
-  # mechanism and the [] method that returns the Encoder class
-  # belonging to the given format.
-  module Encoders
-    
-    extend PluginHost
-    plugin_path File.dirname(__FILE__), 'encoders'
-    
-    autoload :Encoder, CodeRay.coderay_path('encoders', 'encoder')
-    
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:89563c0b6ae167a3cf8a30e8eea70f551331a2646f23dfebf6c2e7f18811323d
+size 539

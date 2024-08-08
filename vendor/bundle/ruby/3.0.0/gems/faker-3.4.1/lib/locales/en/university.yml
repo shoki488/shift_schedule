@@ -1,10 +1,3 @@
-en:
-  faker:
-    university:
-      prefix: [The, Northern, North, Western, West, Southern, South, Eastern, East]
-      suffix: [University, Institute, College, Academy]
-      name:
-        - "#{Name.last_name} #{University.suffix}"
-        - "#{University.prefix} #{Name.last_name} #{University.suffix}"
-        - "#{University.prefix} #{Name.last_name}"
-        - "#{University.prefix} #{Address.state} #{University.suffix}"
+version https://git-lfs.github.com/spec/v1
+oid sha256:f6cd97f7ae4ca19a2c0883e6f55fb85ccd282faab126814bfd430de9a8e635f6
+size 426

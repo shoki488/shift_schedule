@@ -1,8 +1,3 @@
---exclude features
---no-private
---markup markdown
---default-return void
--
-Filtering.md
-Changelog.md
-LICENSE.md
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc39e49c6c03073a5c0ee46ef19190a63e126c27bb08516cf9424f9ee5f25bf0
+size 111

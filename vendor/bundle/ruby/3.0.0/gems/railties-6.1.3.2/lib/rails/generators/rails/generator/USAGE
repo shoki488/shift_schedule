@@ -1,13 +1,3 @@
-Description:
-    Generates a new generator at lib/generators. Pass the generator name as an argument,
-    either CamelCased or snake_cased.
-
-Example:
-    `bin/rails generate generator Awesome`
-
-    creates a standard awesome generator:
-        lib/generators/awesome/
-        lib/generators/awesome/awesome_generator.rb
-        lib/generators/awesome/USAGE
-        lib/generators/awesome/templates/
-        test/lib/generators/awesome_generator_test.rb
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5c001490b7727d600d5aaa6993bc65c5697c1b19ee8fa43a22a424869aa6be1
+size 453

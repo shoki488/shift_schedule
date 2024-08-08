@@ -1,8 +1,3 @@
-en:
-  faker:
-    esport:
-      players: ["Froggen", "Dendi", "Surefour", "Seagull", "xPeke", "shroud", "KennyS", "pasha", "RamboRay", "Crimsix", "ACE", "Grubby", "f0rest", "cArn", "Flash", "Faker", "Boxer", "Miracle", "Silvername"]
-      teams: ["Dignitas", "OpTic Gaming", "FaZe", "iBUYPOWER", "Evil Geniuses", "Ninjas in Pijamas", "Natus Vincere", "Team SoloMid", "Cloud9", "Fnatic", "CLG", "EnVyUs", "Virtus.Pro", "Team Secret"]
-      events: ["ESL Cologne", "MLG Meadowlands", "GFinity London", "Worlds", "IEM Championship", "League All Stars", "International"]
-      leagues: ["ESL", "IEM", "MLG", "GFinity", "Starladder"]
-      games: ["CS:GO", "League of Legends", "Overwatch", "StarCraft II", "Dota 2", "Super Smash Bros. Melee", "Hearthstone", "PUBG"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:6365d4522ff9ec10efc9efebdc9f65ae8d54ae95bf89caf2ae12163a03d620ef
+size 761

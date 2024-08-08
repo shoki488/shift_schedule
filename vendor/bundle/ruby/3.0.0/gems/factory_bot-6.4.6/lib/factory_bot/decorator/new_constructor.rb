@@ -1,12 +1,3 @@
-module FactoryBot
-  class Decorator
-    class NewConstructor < Decorator
-      def initialize(component, build_class)
-        super(component)
-        @build_class = build_class
-      end
-
-      delegate :new, to: :@build_class
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4628ea881d05d95ca9e85d4cacf750ba0d0df34de283170d322e09378960c95b
+size 246

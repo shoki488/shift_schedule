@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module Devise
-  module Strategies
-    # Base strategy for Devise. Responsible for verifying correct scope and mapping.
-    class Base < ::Warden::Strategies::Base
-      # Whenever CSRF cannot be verified, we turn off any kind of storage
-      def store?
-        !env["devise.skip_storage"]
-      end
-
-      # Checks if a valid scope was given for devise and find mapping based on this scope.
-      def mapping
-        @mapping ||= begin
-          mapping = Devise.mappings[scope]
-          raise "Could not find mapping for #{scope}" unless mapping
-          mapping
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:37bea9a694acf13b82f73c79ab0b1193eccbb9b16569813d6d812f02d18c452f
+size 638

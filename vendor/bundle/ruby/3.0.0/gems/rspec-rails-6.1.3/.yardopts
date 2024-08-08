@@ -1,11 +1,3 @@
---no-private
---exclude features
---exclude lib/generators/([^/]+/)*.*_spec.rb
---exclude lib/generators/([^/]+/)*templates/([^/]+/)*.rb
---exclude lib/generators/([^/]+/)*templates/.+\.rb
---markup markdown
---template-path yard/template/
--
-Changelog.md
-LICENSE.md
-Capybara.md
+version https://git-lfs.github.com/spec/v1
+oid sha256:32a55e61f65b55135887f10df7ed1e3cbe88e61c2cdc285c868dd30a5c2283a5
+size 272

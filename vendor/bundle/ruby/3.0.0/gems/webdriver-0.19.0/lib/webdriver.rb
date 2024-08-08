@@ -1,23 +1,3 @@
-$stdout.sync = true
-
-require "net/http"
-require "json"
-
-module Webdriver
-  def self.debug(args)
-    return unless ENV["WEBDRIVER_DEBUG"]
-    p args
-  end
-end
-
-require_relative "webdriver/version"
-require_relative "webdriver/errors"
-
-require_relative "webdriver/connection"
-require_relative "webdriver/prefix_connection"
-
-require_relative "webdriver/window"
-require_relative "webdriver/session"
-require_relative "webdriver/element"
-require_relative "webdriver/client"
-require_relative "webdriver/cookie"
+version https://git-lfs.github.com/spec/v1
+oid sha256:9706367eec6831fb6681d25ec0961114d26fdf2684ceddb06847d8d4f64cfa8d
+size 503

@@ -1,23 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module ConnectionAdapters
-    module PostgreSQL
-      module OID # :nodoc:
-        class Date < Type::Date # :nodoc:
-          def cast_value(value)
-            case value
-            when "infinity" then ::Float::INFINITY
-            when "-infinity" then -::Float::INFINITY
-            when / BC$/
-              value = value.sub(/^\d+/) { |year| format("%04d", -year.to_i + 1) }
-              super(value.delete_suffix!(" BC"))
-            else
-              super
-            end
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:48d1badd2593a4df30cb6f4fe063cc33c9ad12cf0f46bb6e4e145575787567da
+size 591

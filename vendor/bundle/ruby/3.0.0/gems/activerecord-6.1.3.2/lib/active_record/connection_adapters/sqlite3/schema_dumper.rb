@@ -1,18 +1,3 @@
-# frozen_string_literal: true
-
-module ActiveRecord
-  module ConnectionAdapters
-    module SQLite3
-      class SchemaDumper < ConnectionAdapters::SchemaDumper # :nodoc:
-        private
-          def default_primary_key?(column)
-            schema_type(column) == :integer
-          end
-
-          def explicit_primary_key_default?(column)
-            column.bigint?
-          end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f2aa7011ceca5d1c8d4516907bc50605d6b7ff23f6dd1b9d337a2559d8f2500
+size 407

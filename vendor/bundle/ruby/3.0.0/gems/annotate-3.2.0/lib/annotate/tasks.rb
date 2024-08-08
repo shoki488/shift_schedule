@@ -1,6 +1,3 @@
-require 'rubygems'
-require 'rake'
-
-# Make tasks visible for Rails also when used as gem.
-Dir[File.join(File.dirname(__FILE__), '..', 'tasks', '**/*.rake')].each { |rake| load rake }
-Dir[File.join(File.dirname(__FILE__), '..', '..', 'tasks', '**/*.rake')].each { |rake| load rake }
+version https://git-lfs.github.com/spec/v1
+oid sha256:36db4ab23a713d1a79cb7e1bb8af94ee21f785b16b3593ff7af1502648de9388
+size 281

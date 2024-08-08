@@ -1,14 +1,3 @@
-module.exports = {
-  extends: 'airbnb',
-  rules: {
-    'comma-dangle': ['error', 'never'],
-    'import/no-unresolved': 'off',
-    'import/no-extraneous-dependencies': 'off',
-    'import/extensions': 'off',
-    semi: ['error', 'never']
-  },
-  env: {
-    browser: true,
-    node: true
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e5d6a05726b5ae8aae13790f06f1ed8012eaf8f0908eed74e048c02348068d3
+size 289

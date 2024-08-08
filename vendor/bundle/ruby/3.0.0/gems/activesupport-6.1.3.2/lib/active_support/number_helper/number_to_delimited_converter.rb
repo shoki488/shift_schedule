@@ -1,30 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/number_helper/number_converter"
-
-module ActiveSupport
-  module NumberHelper
-    class NumberToDelimitedConverter < NumberConverter #:nodoc:
-      self.validate_float = true
-
-      DEFAULT_DELIMITER_REGEX = /(\d)(?=(\d\d\d)+(?!\d))/
-
-      def convert
-        parts.join(options[:separator])
-      end
-
-      private
-        def parts
-          left, right = number.to_s.split(".")
-          left.gsub!(delimiter_pattern) do |digit_to_delimit|
-            "#{digit_to_delimit}#{options[:delimiter]}"
-          end
-          [left, right].compact
-        end
-
-        def delimiter_pattern
-          options.fetch(:delimiter_pattern, DEFAULT_DELIMITER_REGEX)
-        end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c8b402b809b88752554fc2efd4f0fb4108e3593d619cf602c7ef3d9bf68a678
+size 742

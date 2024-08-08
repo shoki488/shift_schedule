@@ -1,17 +1,3 @@
-# frozen_string_literal: true
-
-require "active_support/core_ext/module/redefine_method"
-
-class Module
-  # Removes the named method, if it exists.
-  def remove_possible_method(method)
-    if method_defined?(method) || private_method_defined?(method)
-      undef_method(method)
-    end
-  end
-
-  # Removes the named singleton method, if it exists.
-  def remove_possible_singleton_method(method)
-    singleton_class.remove_possible_method(method)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a9c9fbb28225e49abc176e8ee47321da2fcb47e61e3b145d68b130488a218bb
+size 453

@@ -1,11 +1,3 @@
-# frozen_string_literal: true
-
-# Besides programming error exceptions like ArgumentError,
-# all public interface exceptions should be declared here and inherit from Listen::Error.
-module Listen
-  class Error < RuntimeError
-    class NotStarted < Error; end
-    class SymlinkLoop < Error; end
-    class INotifyMaxWatchesExceeded < Error; end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d1ad8540905a74db7d9edeeb346e9c82e6d0fe9ad303d0333dc9528bb045fd4
+size 351

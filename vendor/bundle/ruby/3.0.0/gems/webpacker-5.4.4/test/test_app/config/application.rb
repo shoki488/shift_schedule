@@ -1,11 +1,3 @@
-require "action_controller/railtie"
-require "action_view/railtie"
-require "webpacker"
-
-module TestApp
-  class Application < ::Rails::Application
-    config.secret_key_base = "abcdef"
-    config.eager_load = true
-    config.active_support.test_order = :sorted
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:a9542c5f63fd271dbf6ecc49ae4cf8dd95e215d25d9769e9a859c197a2c79258
+size 269

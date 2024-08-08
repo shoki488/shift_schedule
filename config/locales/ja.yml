@@ -1,18 +1,3 @@
-ja:
-  devise:
-    sessions:
-      signed_in: "ログインしました。"
-      signed_out: "ログアウトしました。"
-      invaid: ""
-  user: 
-    name: 名前
-    classification: 役職
-    workin_time: 勤務時間
-    Email: メールアドレス
-    start_time: 勤務開始時間
-    end_time: 勤務終了時間
-  shift: 
-    Calendar: シフト作成日
-    content: AIの反応
-    creator: シフト作成者
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:725126ab41a37d634cf798031a43ad7937679f444d3af1c265c26c1d592878a5
+size 428

@@ -1,8 +1,3 @@
-Bundler/DuplicatedGem:
-  Enabled: true
-
-Bundler/InsecureProtocolSource:
-  Enabled: false
-
-Bundler/OrderedGems:
-  Enabled: false
+version https://git-lfs.github.com/spec/v1
+oid sha256:4685edfcd5ca169b9affacf0abf6e53fb70c3e97aa3d6e0d805a792e1023b9eb
+size 128

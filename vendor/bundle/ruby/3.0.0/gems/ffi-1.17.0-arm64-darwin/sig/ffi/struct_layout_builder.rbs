@@ -1,5 +1,3 @@
-module FFI
-  class StructLayoutBuilder
-    #TODO
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0eb09dca96fe867b830019c187822945b38831fc78ec5c76ce9d44560c658a7
+size 59

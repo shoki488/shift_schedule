@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
-
-require "dotenv/cli"
-Dotenv::CLI.new(ARGV).run
+version https://git-lfs.github.com/spec/v1
+oid sha256:ab6a45be9ce4d008a74d31bb91361225d83aa8dbcb2be1798b78ffa52b0e982a
+size 68

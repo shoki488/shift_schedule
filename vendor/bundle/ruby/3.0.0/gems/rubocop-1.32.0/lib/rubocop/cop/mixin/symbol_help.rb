@@ -1,13 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # Classes that include this module just implement functions for working
-    # with symbol nodes.
-    module SymbolHelp
-      def hash_key?(node)
-        node.parent&.pair_type? && node == node.parent.child_nodes.first
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:585801993819ff53ade687f36f064ccad2d6a455825d5eec58eede0de2e286e4
+size 309

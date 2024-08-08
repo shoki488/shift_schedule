@@ -1,28 +1,3 @@
-# frozen_string_literal: true
-require_relative 'template'
-
-module Tilt
-  class EtanniTemplate < Template
-    def prepare
-      separator = data.hash.abs
-      chomp = "<<#{separator}.chomp"
-      start = "\n_out_ << #{chomp}\n"
-      stop = "\n#{separator}\n"
-      replacement = "#{stop}\\1#{start}"
-
-      temp = @data.strip
-      temp.gsub!(/<\?r\s+(.*?)\s+\?>/m, replacement)
-
-      @code = "_out_ = [<<#{separator}.chomp]\n#{temp}#{stop}_out_.join"
-    end
-
-    def precompiled_template(locals)
-      @code
-    end
-
-    def precompiled(locals)
-      source, offset = super
-      [source, offset + 1]
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:67f3dc55b98a4f6d793d06f9d3f2f0e934488aaeff3ac96451143f55dd0413fe
+size 623

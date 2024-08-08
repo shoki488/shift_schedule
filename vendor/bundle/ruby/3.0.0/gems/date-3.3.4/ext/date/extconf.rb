@@ -1,12 +1,3 @@
-# frozen_string_literal: true
-require 'mkmf'
-
-config_string("strict_warnflags") {|w| $warnflags += " #{w}"}
-
-have_func("rb_category_warn")
-with_werror("", {:werror => true}) do |opt, |
-  have_var("timezone", "time.h", opt)
-  have_var("altzone", "time.h", opt)
-end
-
-create_makefile('date_core')
+version https://git-lfs.github.com/spec/v1
+oid sha256:b33c1365aa0efc58b09f5abfd10cfc1c697f628b962882d1eca7ae06dc30ba19
+size 294

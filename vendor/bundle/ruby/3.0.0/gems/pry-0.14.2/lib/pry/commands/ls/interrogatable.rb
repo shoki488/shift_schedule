@@ -1,24 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class Ls < Pry::ClassCommand
-      module Interrogatable
-        private
-
-        def interrogating_a_module?
-          Module === @interrogatee # rubocop:disable Style/CaseEquality
-        end
-
-        def interrogatee_mod
-          if interrogating_a_module?
-            @interrogatee
-          else
-            singleton = Pry::Method.singleton_class_of(@interrogatee)
-            singleton.ancestors.grep(::Class).reject { |c| c == singleton }.first
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:13ffcec083c7e73befe5f331c1c23a8c5bcdd625ba8ff16569cfeb7c45df1822
+size 569

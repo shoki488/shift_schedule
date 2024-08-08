@@ -1,14 +1,3 @@
-require 'active_support/message_verifier'
-
-class GlobalID
-  class Verifier < ActiveSupport::MessageVerifier
-    private
-      def encode(data, **)
-        ::Base64.urlsafe_encode64(data)
-      end
-
-      def decode(data, **)
-        ::Base64.urlsafe_decode64(data)
-      end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:4cebc78fa6529ca2638c7dcf9056b4eea58abdca86818f62808e50e6733e3062
+size 285

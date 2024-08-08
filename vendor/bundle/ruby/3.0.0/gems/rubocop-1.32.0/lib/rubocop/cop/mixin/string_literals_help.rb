@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    # Common functionality for cops checking single/double quotes.
-    module StringLiteralsHelp
-      private
-
-      def wrong_quotes?(src_or_node)
-        src = src_or_node.is_a?(RuboCop::AST::Node) ? src_or_node.source : src_or_node
-        return false if src.start_with?('%', '?')
-
-        if style == :single_quotes
-          !double_quotes_required?(src)
-        else
-          !/" | \\[^'\\] | \#[@{$]/x.match?(src)
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:085bacce0b8715d2578c29dd84f73e9dda38715171eb310207a6ca5a68a59abd
+size 523

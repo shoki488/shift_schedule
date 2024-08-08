@@ -1,15 +1,3 @@
----
-version: "2"
-services:
-  scenario:
-    build:
-      context: ..
-      dockerfile: scenarios/rails40.dockerfile
-    image: pryrails_scenario_rails40
-    volumes:
-    - "..:/scenario"
-    - "bundle_rails40:/usr/local/bundle"
-    environment:
-      BUNDLE_GEMFILE: scenarios/rails40.gemfile
-volumes:
-  bundle_rails40: {}
+version https://git-lfs.github.com/spec/v1
+oid sha256:55f8ed440a96bd6962a4e634aee456a994645e9dba3b8e8b924c55d0e988de0e
+size 322

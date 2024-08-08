@@ -1,2 +1,3 @@
-#!/usr/bin/env rake
-require 'bundler/gem_tasks'
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf98ed06ae7cc0852d04e6e3cfa5aed4ffab5e83f1b08cb12153cc0d74fd185e
+size 48

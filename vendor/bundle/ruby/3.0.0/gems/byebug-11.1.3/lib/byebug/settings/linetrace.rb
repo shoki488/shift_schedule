@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-require_relative "../setting"
-
-module Byebug
-  #
-  # Setting to enable/disable linetracing.
-  #
-  class LinetraceSetting < Setting
-    def banner
-      "Enable line execution tracing"
-    end
-
-    def value=(val)
-      Byebug.tracing = val
-    end
-
-    def value
-      Byebug.tracing?
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf127d758ecf82472bf95c8fda1642fe14c84315dfee3a70b83aa15c1f7f7078
+size 334

@@ -1,9 +1,3 @@
-module RSpec
-  module Core
-    # Version information for RSpec Core.
-    module Version
-      # Current version of RSpec Core, in semantic versioning format.
-      STRING = '3.13.0'
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5721ec9a3f79b620353fbb0041602243b4e3eda110554f5d99a1674b4cbf27b3
+size 200

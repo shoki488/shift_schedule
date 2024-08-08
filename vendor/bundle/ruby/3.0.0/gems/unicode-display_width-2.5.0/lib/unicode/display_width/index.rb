@@ -1,34 +1,3 @@
-# frozen_string_literal: true
-
-require "zlib"
-require_relative "constants"
-
-module Unicode
-  class DisplayWidth
-    File.open(INDEX_FILENAME, "rb") do |file|
-      serialized_data = Zlib::GzipReader.new(file).read
-      serialized_data.force_encoding Encoding::BINARY
-      INDEX = Marshal.load(serialized_data)
-    end
-
-    def self.decompress_index(index, level)
-      index.flat_map{ |value|
-        if level > 0
-          if value.instance_of?(Array)
-            value[15] ||= nil
-            decompress_index(value, level - 1)
-          else
-            decompress_index([value] * 16, level - 1)
-          end
-        else
-          if value.instance_of?(Array)
-            value[15] ||= nil
-            value
-          else
-            [value] * 16
-          end
-        end
-      }
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5cadf0b2d1bab425b504ef8556385d06e0084f29e22caa18b2a928806b1ed437
+size 807

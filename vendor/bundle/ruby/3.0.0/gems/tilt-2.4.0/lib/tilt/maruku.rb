@@ -1,10 +1,3 @@
-# frozen_string_literal: true
-require_relative 'template'
-require 'maruku'
-
-warn 'tilt/maruku is deprecated, as maruku requires modifying string literals', uplevel: 1
-
-# Maruku markdown implementation. See: https://github.com/bhollis/maruku
-Tilt::MarukuTemplate = Tilt::StaticTemplate.subclass do
-  Maruku.new(@data, @options).to_html
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ebba9f99de044e3553ffb830eeb8947d38f8340a9f5a470692c8d41c3ec407de
+size 339

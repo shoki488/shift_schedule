@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command
-    class Reset < Pry::ClassCommand
-      match 'reset'
-      group 'Context'
-      description 'Reset the REPL to a clean state.'
-
-      banner <<-'BANNER'
-        Reset the REPL to a clean state.
-      BANNER
-
-      def process
-        output.puts 'Pry reset.'
-        exec 'pry'
-      end
-    end
-
-    Pry::Commands.add_command(Pry::Command::Reset)
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:ae7de2c060810e216fd4ab8ef9056516daeb3a771e10d1d913a25f7f0b56d81a
+size 419

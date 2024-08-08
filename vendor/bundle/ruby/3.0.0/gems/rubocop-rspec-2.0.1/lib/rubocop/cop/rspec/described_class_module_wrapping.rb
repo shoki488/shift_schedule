@@ -1,35 +1,3 @@
-# frozen_string_literal: true
-
-module RuboCop
-  module Cop
-    module RSpec
-      # Avoid opening modules and defining specs within them.
-      #
-      # @example
-      #   # bad
-      #   module MyModule
-      #     RSpec.describe MyClass do
-      #       # ...
-      #     end
-      #   end
-      #
-      #   # good
-      #   RSpec.describe MyModule::MyClass do
-      #     # ...
-      #   end
-      #
-      # @see https://github.com/rubocop-hq/rubocop-rspec/issues/735
-      class DescribedClassModuleWrapping < Base
-        MSG = 'Avoid opening modules and defining specs within them.'
-
-        def_node_search :find_rspec_blocks, block_pattern('#ExampleGroups.all')
-
-        def on_module(node)
-          find_rspec_blocks(node) do
-            add_offense(node)
-          end
-        end
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:faaaa60da54d8fb283a0d2b6b083c2717a7f426f786cab2c9a04aa4b32f6c246
+size 821

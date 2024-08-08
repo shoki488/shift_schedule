@@ -1,22 +1,3 @@
-# frozen_string_literal: true
-
-module Faker
-  class Marketing < Base
-    flexible :marketing
-
-    class << self
-      ##
-      # Produces a few marketing buzzwords.
-      #
-      # @return [String]
-      #
-      # @example
-      #   Faker::Marketing.buzzwords #=> "rubber meets the road"
-      #
-      # @faker.version 1.9.4
-      def buzzwords
-        fetch('marketing.buzzwords')
-      end
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:5aa00574fc0be6ef9e2930131e3322ab50de1efb6d651e2d8d3ff6fbce54c544
+size 410

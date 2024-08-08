@@ -1,21 +1,3 @@
-# frozen_string_literal: true
-
-module Parser
-  module Source
-
-    class Map::RescueBody < Map
-      attr_reader :keyword
-      attr_reader :assoc
-      attr_reader :begin
-
-      def initialize(keyword_l, assoc_l, begin_l, expression_l)
-        @keyword = keyword_l
-        @assoc   = assoc_l
-        @begin   = begin_l
-
-        super(expression_l)
-      end
-    end
-
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:2135ac0caf455b360effe438be50ff12290ca172b6775396215d8bd4b6fdec38
+size 377

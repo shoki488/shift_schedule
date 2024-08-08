@@ -1,17 +1,3 @@
-require_relative "line_editor/basic"
-require_relative "line_editor/readline"
-
-class Thor
-  module LineEditor
-    def self.readline(prompt, options = {})
-      best_available.new(prompt, options).readline
-    end
-
-    def self.best_available
-      [
-        Thor::LineEditor::Readline,
-        Thor::LineEditor::Basic
-      ].detect(&:available?)
-    end
-  end
-end
+version https://git-lfs.github.com/spec/v1
+oid sha256:b909dd8639abb08c98202574bb3f89da78f3f54e45c35f6ce4d4fc0a6816d2f3
+size 364

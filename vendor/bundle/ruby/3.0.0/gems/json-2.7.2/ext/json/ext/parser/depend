@@ -1,1 +1,3 @@
-parser.o: parser.c parser.h $(srcdir)/../fbuffer/fbuffer.h
+version https://git-lfs.github.com/spec/v1
+oid sha256:38357750f8300e60a138e8bb34657f21002a75ebce1a2006188de9a62a1d08c1
+size 59
