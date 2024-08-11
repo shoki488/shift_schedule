@@ -8,8 +8,7 @@ jobs:
   rspec:
     working_directory: ~/potepanec
     docker:
-      - image: cimg/ruby:3.0.4
-      - image: cimg/node:20.10
+      - image: cimg/ruby:3.0.4-node
     environment:
       RAILS_ENV: test
     resource_class: small
@@ -46,9 +45,6 @@ jobs:
             sudo apt-get install -f
       - setup_remote_docker:
           version: 20.10.14
-      - run:
-          name: Install Yarn
-          command: yarn install
       - run:
          name: Bundle Install
          command: bundle install
