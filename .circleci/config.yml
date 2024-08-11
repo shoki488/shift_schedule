@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   heroku: circleci/heroku@2.0
+  browser-tools: circleci/browser-tools@1.4.0
 
 jobs:
   rspec:
@@ -46,6 +47,12 @@ jobs:
             sudo apt-get install -f
       - setup_remote_docker:
           version: 20.10.14
+      - run:
+          name: Yarn Install
+          command: yarn install
+      - run:
+          name: Webpack Compile
+          command: bundle exec bin/webpack
       - run:
           name: Setup environment variable
           command: |
