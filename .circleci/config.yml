@@ -47,6 +47,9 @@ jobs:
       - setup_remote_docker:
           version: 20.10.14
       - run:
+          name: Install Yarn
+          command: npm install -g yarn
+      - run:
          name: Bundle Install
          command: bundle install
       - run:
