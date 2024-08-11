@@ -41,7 +41,9 @@ jobs:
             libu2f-udev \
             libxcomposite1 \
             libxdamage1 \
-            xdg-utils
+            xdg-utils \
+            libasound2 \
+            libvulkan1
             sudo dpkg -i google-chrome-stable_current_amd64.deb
             sudo apt-get install -f
       - setup_remote_docker:
