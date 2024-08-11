@@ -50,7 +50,8 @@ jobs:
           version: 20.10.14
       - run:
           name: Install Bundler
-          command: gem install bundler
+          command: |
+            echo "export rvm_ignore_gemsets_flag=1" >> ~/.rvmrc - gem install bundler
       - run:
          name: Bundle Install
          command: bundle install
