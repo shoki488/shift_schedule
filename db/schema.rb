@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2024_05_31_193152) do
   create_table "shifts", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "overtime_eligible", default: false, null: false
     t.integer "user_id"
     t.text "content"
     t.date "calendar"
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 2024_05_31_193152) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
+    t.integer "overtime"
     t.string "classification"
     t.time "start_time"
     t.time "end_time"
