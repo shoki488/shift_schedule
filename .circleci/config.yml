@@ -8,8 +8,8 @@ jobs:
   rspec:
     working_directory: ~/potepanec
     docker:
-      - image: cimg/ruby:3.0.4
       - image: cimg/node:20.10
+      - image: cimg/ruby:3.0.4
     environment:
       RAILS_ENV: test
     resource_class: small
@@ -48,7 +48,7 @@ jobs:
           version: 20.10.14
       - run:
           name: Install Yarn
-          command: npm install -g yarn
+          command: yarn install
       - run:
          name: Bundle Install
          command: bundle install
