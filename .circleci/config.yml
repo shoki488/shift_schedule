@@ -47,6 +47,9 @@ jobs:
       - setup_remote_docker:
           version: 20.10.14
       - run:
+         name: Bundle Install
+         command: bundle install
+      - run:
           name: Webpack Compile
           command: bundle exec bin/webpack
       - run:
