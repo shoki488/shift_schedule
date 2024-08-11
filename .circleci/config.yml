@@ -50,7 +50,7 @@ jobs:
          command: bundle install
       - run:
           name: Webpack Compile
-          command: bundle exec bin/webpack
+          command: ./bin/webpack
       - run:
           name: Setup environment variable
           command: |
