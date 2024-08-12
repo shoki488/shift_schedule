@@ -52,7 +52,7 @@ jobs:
           name: Webpack Compile
 
           command: |
-            yes | rails webpacker:install
+            yarn add webpack webpack-cli
             ./bin/webpack
       - run:
           name: Setup environment variable
