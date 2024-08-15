@@ -16,19 +16,6 @@ jobs:
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
       - checkout
-      - run:
-          name: Install Dependencies
-          command: |
-            sudo apt-get update
-            sudo apt-get install -y wget unzip
-            wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_linux64.zip
-            sudo unzip chromedriver_linux64.zip -d /usr/local/bin/
-            sudo chmod +x /usr/local/bin/chromedriver
-      - run:
-          name: Set Chrome path environment variable
-          command: |
-            export CHROME_BIN=$(which google-chrome)
-            echo 'export CHROME_BIN=$(which google-chrome)' >> $BASH_ENV
       - setup_remote_docker:
           version: 20.10.14
       - run:
@@ -36,7 +23,6 @@ jobs:
          command: bundle install
       - run:
           name: Webpack Compile
-
           command: |
             yarn add webpack webpack-cli
             ./bin/webpack
