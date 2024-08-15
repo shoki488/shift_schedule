@@ -40,6 +40,7 @@ RSpec.configure do |config|
       options.add_argument('--disable-software-rasterizer')
       options.add_argument('--disable-features=VizDisplayCompositor')
       options.binary = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+      Selenium::WebDriver::Chrome.driver_path = "/path/to/your/chromedriver"
     end
   end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
