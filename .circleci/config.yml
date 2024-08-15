@@ -24,7 +24,7 @@ jobs:
             sudo chmod +x /usr/local/bin/chromedriver
       - run:
           name: Set Chrome path environment variable
-          command: echo 'export SELENIUM_REMOTE_URL="/usr/bin/google-chrome"' >> $BASH_ENV
+          command:  export CHROME_BIN=$(which google-chrome)
       - run:
           name: Install Chrome
           command: |
