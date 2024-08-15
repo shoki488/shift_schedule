@@ -22,12 +22,14 @@ RSpec.configure do |config|
   end
 end
 
-Capybara.register_driver :remote_chrome do |app|
-  url = ENV['SELENIUM_REMOTE_URL']
+Capybara.register_driver :headless_chrome do |app|
   options = ::Selenium::WebDriver::Chrome::Options.new
-  options.add_argument('no-sandbox')
-  options.add_argument('headless')
-  options.add_argument('disable-gpu')
-  options.add_argument('window-size=1680,1050')
-  Capybara::Selenium::Driver.new(app, browser: :remote, url: url, options: options)
+  options.binary = '/usr/bin/google-chrome-stable'
+  options.add_argument('--headless')
+  options.add_argument('--disable-gpu')
+  options.add_argument('--window-size=1920,1080')
+
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
+
+Capybara.javascript_driver = :headless_chrome
