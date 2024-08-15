@@ -43,7 +43,6 @@ RSpec.configure do |config|
       Selenium::WebDriver::Chrome.path = ENV['CHROME_BIN']
     end
   end
-  
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = Rails.root.join('spec/fixtures')
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
