@@ -13,11 +13,10 @@ jobs:
       RAILS_ENV: test
     resource_class: small
     steps:
-      - browser-tools/install-chrome
-      - browser-tools/install-chrome:
-          chrome-version: 116.0.5845.96
-          replace-existing: true
       - checkout
+      - run: sudo apt-get update
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
       - setup_remote_docker:
           version: 20.10.14
       - run:
