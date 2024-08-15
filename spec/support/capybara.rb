@@ -1,3 +1,6 @@
+if ENV['SELENIUM_REMOTE_URL']
+  Selenium::WebDriver::Chrome.path = ENV['SELENIUM_REMOTE_URL']
+end
 RSpec.configure do |config|
   config.before(:each, type: :system) do
     driven_by :selenium, using: :headless_chrome
@@ -20,7 +23,7 @@ RSpec.configure do |config|
 end
 
 Capybara.register_driver :remote_chrome do |app|
-  url = ENV['SELENIUM_DRIVER_URL']
+  url = ENV['SELENIUM_REMOTE_URL']
   options = ::Selenium::WebDriver::Chrome::Options.new
   options.add_argument('no-sandbox')
   options.add_argument('headless')
