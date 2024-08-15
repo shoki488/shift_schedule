@@ -13,6 +13,8 @@ jobs:
       RAILS_ENV: test
     resource_class: small
     steps:
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver   
       - checkout
       - run:
           name: Install Dependencies
@@ -49,14 +51,6 @@ jobs:
             sudo dpkg -i google-chrome-stable_current_amd64.deb
             sudo apt-get install -f
             google-chrome --version
-      - run:
-          name: Install ChromeDriver
-          command: |
-            CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
-            CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
-            wget https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
-            sudo unzip chromedriver_linux64.zip -d /usr/local/bin/
-            sudo chmod +x /usr/local/bin/chromedriver
       - setup_remote_docker:
           version: 20.10.14
       - run:
