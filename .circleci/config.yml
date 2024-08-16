@@ -16,6 +16,12 @@ jobs:
       - checkout
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
+      - run:
+          name: Set Chrome binary path
+          command: echo "export GOOGLE_CHROME_BIN=/usr/bin/google-chrome-stable" >> $BASH_ENV
+      - run:
+          name: Set ChromeDriver path
+          command: echo "export CHROMEDRIVER_PATH=/usr/local/bin/chromedriver" >> $BASH_ENV
       - setup_remote_docker:
           version: 20.10.18
       - run:
