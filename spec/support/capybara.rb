@@ -16,7 +16,6 @@ RSpec.configure do |config|
       }
     )
     Capybara::Selenium::Driver.new(app, browser: :remote, url: url, desired_capabilities: caps)
-    Selenium::WebDriver::Chrome.path = '/usr/bin/google-chrome-stable'
   end
 end
 
@@ -25,8 +24,10 @@ Capybara.register_driver :headless_chrome do |app|
   options.binary = '/usr/bin/google-chrome-stable'
   options.add_argument('--headless')
   options.add_argument('--disable-gpu')
+  options.add_argument('--no-sandbox')
+  options.add_argument('--disable-dev-shm-usage')
   options.add_argument('--window-size=1920,1080')
-
+  
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
 
