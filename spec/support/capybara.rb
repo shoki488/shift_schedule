@@ -1,6 +1,3 @@
-if ENV['SELENIUM_REMOTE_URL']
-  Selenium::WebDriver::Chrome.path = ENV['SELENIUM_REMOTE_URL']
-end
 RSpec.configure do |config|
   config.before(:each, type: :system) do
     driven_by :selenium, using: :headless_chrome
@@ -19,6 +16,7 @@ RSpec.configure do |config|
       }
     )
     Capybara::Selenium::Driver.new(app, browser: :remote, url: url, desired_capabilities: caps)
+    Selenium::WebDriver::Chrome.path = '/usr/bin/google-chrome-stable'
   end
 end
 

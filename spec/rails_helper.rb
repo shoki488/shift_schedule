@@ -1,6 +1,6 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
-require 'capybara/rspec'
+require 'webdrivers'
 
 ENV['RAILS_ENV'] = 'test'
 require_relative '../config/environment'
@@ -33,25 +33,20 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   config.before(:each, type: :system, js: true) do
-    driven_by :selenium_chrome_headless do |options|
-      options.add_argument('--no-sandbox')
-      options.add_argument('--disable-dev-shm-usage')
-      options.add_argument('--disable-gpu')
-      options.add_argument('--disable-software-rasterizer')
-      options.add_argument('--disable-features=VizDisplayCompositor')
-      options.binary = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
-    end
     Capybara.register_driver :headless_chrome do |app|
       options = Selenium::WebDriver::Chrome::Options.new
       options.add_argument('--headless')
       options.add_argument('--disable-gpu')
       options.add_argument('--no-sandbox')
       options.add_argument('--disable-dev-shm-usage')
+      options.add_argument('--disable-software-rasterizer')
+      options.add_argument('--disable-features=VizDisplayCompositor')
       Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
     end
 
     Capybara.javascript_driver = :headless_chrome
   end
+  Webdrivers::Chromedriver.update
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = Rails.root.join('spec/fixtures')
   # If you're not using ActiveRecord, or you'd prefer not to run each of your

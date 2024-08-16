@@ -57,7 +57,7 @@ end
 group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'webdrivers', require: !ENV['SELENIUM_REMOTE_URL']
+  gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
