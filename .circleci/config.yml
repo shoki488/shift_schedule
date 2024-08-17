@@ -10,6 +10,8 @@ jobs:
       - image: cimg/ruby:3.0.4-node
     environment:
       RAILS_ENV: test
+      GOOGLE_CHROME_BIN: /usr/bin/google-chrome-stable
+      CHROMEDRIVER_PATH: /usr/local/bin/chromedriver
     resource_class: small
     steps:
       - checkout
@@ -43,10 +45,9 @@ jobs:
             docker exec potepanec_app curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
       - run:
           name: Run rspec
-          command: docker-compose exec  rspec
+          command: docker-compose exec potepanec rspec
 
   rubocop:
-    working_directory: ~/potepanec
     docker:
       - image: cimg/ruby:3.0.4
     resource_class: small
