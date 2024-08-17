@@ -6,7 +6,6 @@ orbs:
 
 jobs:
   rspec:
-    working_directory: ~/potepanec
     docker:
       - image: cimg/ruby:3.0.4-node
     environment:
@@ -44,7 +43,7 @@ jobs:
             docker exec potepanec_app curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
       - run:
           name: Run rspec
-          command: docker-compose exec potepanec rspec
+          command: docker-compose exec  rspec
 
   rubocop:
     working_directory: ~/potepanec

@@ -8,7 +8,7 @@ RSpec.configure do |config|
       driven_by :selenium, using: :remote_chrome, options: {
         browser: :remote,
         url: ENV.fetch("SELENIUM_DRIVER_URL"),
-        desired_capabilities: :chrome
+        desired_capabilities: :chrome,
       }
     else
       driven_by :headless_chrome
@@ -33,7 +33,7 @@ end
 
 Capybara.register_driver :headless_chrome do |app|
   options = ::Selenium::WebDriver::Chrome::Options.new
-  options.binary = '/usr/bin/google-chrome-stable'
+  options.binary = ENV.fetch('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome-stable')
   options.add_argument('--headless')
   options.add_argument('--disable-gpu')
   options.add_argument('--no-sandbox')
