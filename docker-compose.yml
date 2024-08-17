@@ -5,13 +5,12 @@ volumes:
   node_modules:
   public_spree:
   storage:
+
 services:
   mysql:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: password
-    networks:
-      - default
     ports:
       - '33306:3306'
     volumes:
@@ -22,35 +21,30 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
+    env_file:
+      - .env  
     ports:
       - '3000:3000'
     environment:
       MYSQL_USERNAME: root
       MYSQL_PASSWORD: password
       MYSQL_HOST: mysql
-      SELENIUM_REMOTE_URL: http://webdriver_chrome:4444/wd/hub
-    depends_on:
-      - mysql
-      - webdriver_chrome
-    networks:
-      - default
-    command: bin/rails s -b 0.0.0.0 -p 3000
-
-  chrome:
-    image: selenium/standalone-chrome
-    ports:
-     - 4444:4444
-    networks:
-      - default
+      SELENIUM_DRIVER_URL: http://selenium_chrome:4444/wd/hub
     volumes:
       - .:/potepanec
-      # https://qiita.com/shotat/items/57d049793605ffc20135
-      - /potepanec/log
-      - /potepanec/tmp
       - vendor_bundle:/potepanec/vendor/bundle
       - node_modules:/potepanec/node_modules
       - public_spree:/potepanec/public/spree
       - storage:/potepanec/storage
+    command: bundle exec rails server -b 0.0.0.0
+    depends_on:
+      - mysql
     tty: true
     stdin_open: true
-    command: bundle exec rails server -b 0.0.0.0
+
+  selenium_chrome:
+    image: selenium/standalone-chrome-debug
+    logging:
+      driver: none
+    depends_on:
+      - mysql
