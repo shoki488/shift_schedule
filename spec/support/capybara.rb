@@ -16,21 +16,6 @@ RSpec.configure do |config|
   end
 end
 
-Capybara.register_driver :remote_chrome do |app|
-  url = ENV.fetch("SELENIUM_DRIVER_URL", 'http://chrome:4444/wd/hub')
-  caps = ::Selenium::WebDriver::Remote::Capabilities.chrome(
-    'goog:chromeOptions' => {
-      'args' => [
-        'no-sandbox',
-        'headless',
-        'disable-gpu',
-        'window-size=1680,1050',
-      ],
-    }
-  )
-  Capybara::Selenium::Driver.new(app, browser: :remote, url: url, desired_capabilities: caps)
-end
-
 Capybara.register_driver :headless_chrome do |app|
   options = ::Selenium::WebDriver::Chrome::Options.new
   options.binary = ENV.fetch('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome-stable')
