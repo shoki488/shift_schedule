@@ -31,6 +31,8 @@ services:
       MYSQL_HOST: mysql
       REDIS_URL: "redis://redis:6379"
       SELENIUM_DRIVER_URL: "http://selenium_chrome:4444/wd/hub"
+      GOOGLE_CHROME_BIN: /usr/bin/google-chrome-stable
+      CHROMEDRIVER_PATH: /usr/local/bin/chromedriver
     depends_on:
       - mysql
       - redis
