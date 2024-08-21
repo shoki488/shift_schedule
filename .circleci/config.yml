@@ -39,10 +39,10 @@ jobs:
             echo "export COMPOSE_FILE=docker-compose.ci.yml" >> $BASH_ENV
       - run:
           name: Change permissions
-          command: chmod -R 777 /root/.cache/selenium/chromedriver/
+          command: sudo chmod -R 777 /root/.cache/selenium/chromedriver/
       - run:
           name: Remove ChromeDriver cache
-          command: rm -rf /root/.cache/selenium/chromedriver/
+          command: sudo rm -rf /root/.cache/selenium/chromedriver/
       - run:
           name: Start containers and verify it is working
           command: |
