@@ -45,7 +45,7 @@ jobs:
             docker exec potepanec_app curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
       - run:
           name: Run rspec
-          command: docker-compose exec potepanec bundle exec rspec
+          command: docker-compose exec web bundle exec rspec
 
   rubocop:
     docker:
