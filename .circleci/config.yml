@@ -15,8 +15,17 @@ jobs:
     resource_class: small
     steps:
       - checkout
-      - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
+      - run:
+          name: Install specific Chrome version
+          command: | 
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo dpkg -i google-chrome-stable_current_amd64.deb
+            sudo apt-get install -f
+      - run:
+          name: Install specific ChromeDriver version
+          command: |
+            wget https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+            unzip chromedriver_linux64.zip -d /usr/local/bin/
       - run:
           name: Set Chrome binary path
           command: echo "export GOOGLE_CHROME_BIN=/usr/bin/google-chrome-stable" >> $BASH_ENV
@@ -37,12 +46,6 @@ jobs:
           name: Setup environment variable
           command: |
             echo "export COMPOSE_FILE=docker-compose.ci.yml" >> $BASH_ENV
-      - run:
-          name: Change permissions
-          command: sudo chmod -R 777 /root/.cache/selenium/chromedriver/
-      - run:
-          name: Remove ChromeDriver cache
-          command: sudo rm -rf /root/.cache/selenium/chromedriver/
       - run:
           name: Start containers and verify it is working
           command: |
