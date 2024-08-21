@@ -6,13 +6,13 @@ services:
     volumes:
       - .:/app
     ports:
-      - 3000:3000
+      - "3000:3000"
     depends_on:
       - db
     tty: true
     stdin_open: true
     environment:
-      - "SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub"
+    - "SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub"
   selenium_chrome:
     image: selenium/standalone-chrome-debug
     logging:
