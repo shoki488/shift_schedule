@@ -40,8 +40,9 @@ jobs:
       - run:
           name: Remove ChromeDriver cache
           command: |
-            sudo chmod -R 777 ~/.cache/selenium/chromedriver/ || true
-            sudo rm -rf ~/.cache/selenium/chromedriver/* || true
+            if [ -d "$HOME/.cache/selenium/chromedriver/" ]; then
+            sudo rm -rf "$HOME/.cache/selenium/chromedriver/"
+            fi
       - run:
           name: Start containers and verify it is working
           command: |
@@ -51,7 +52,6 @@ jobs:
       - run:
           name: Run rspec
           command: docker-compose exec web bundle exec rspec
-
   rubocop:
     docker:
       - image: cimg/ruby:3.0.4
