@@ -15,6 +15,10 @@ jobs:
     resource_class: small
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "Gemfile.lock" }}
+            - v1-dependencies-
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
       - run:
@@ -38,12 +42,6 @@ jobs:
           command: |
             echo "export COMPOSE_FILE=docker-compose.ci.yml" >> $BASH_ENV
       - run:
-          name: Remove ChromeDriver cache
-          command: |
-            if [ -d "$HOME/.cache/selenium/chromedriver/" ]; then
-            sudo rm -rf "$HOME/.cache/selenium/chromedriver/"
-            fi
-      - run:
           name: Start containers and verify it is working
           command: |
             set -x
@@ -52,6 +50,7 @@ jobs:
       - run:
           name: Run rspec
           command: docker-compose exec web bundle exec rspec
+
   rubocop:
     docker:
       - image: cimg/ruby:3.0.4
