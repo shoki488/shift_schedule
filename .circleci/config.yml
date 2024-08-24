@@ -19,14 +19,24 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
             - v1-dependencies-
-      - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
       - run:
-          name: Set Chrome binary path
-          command: echo "export GOOGLE_CHROME_BIN=/usr/bin/google-chrome-stable" >> $BASH_ENV
+          name: Install Google Chrome
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y wget curl gnupg
+            curl -sSL https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+            echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google.list
+            sudo apt-get update
+            sudo apt-get install -y google-chrome-stable
       - run:
-          name: Set ChromeDriver path
-          command: echo "export CHROMEDRIVER_PATH=/usr/local/bin/chromedriver" >> $BASH_ENV
+          name: Install ChromeDriver
+          command: |
+            CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+\.\d+')
+            CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
+            wget -N https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip -P ~/
+            unzip ~/chromedriver_linux64.zip -d ~/
+            sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
+            sudo chmod +x /usr/local/bin/chromedriver
       - setup_remote_docker:
           version: 20.10.18
       - run:
@@ -49,7 +59,9 @@ jobs:
             docker exec potepanec_app curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
       - run:
           name: Run rspec
-          command: docker-compose exec web bundle exec rspec
+          command: |
+            docker-compose exec web rm -rf /root/.cache/selenium/chromedriver/
+            docker-compose exec web bundle exec rspec
 
   rubocop:
     docker:
