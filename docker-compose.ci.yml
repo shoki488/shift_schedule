@@ -1,55 +1,15 @@
 version: '3'
-
 services:
-  mysql:
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-    networks:
-      - default
+  selenium_chrome:
+    image: selenium/standalone-chrome:latest
     ports:
-      - '33306:3306'
-    command: --default-authentication-plugin=mysql_native_password
-  redis:
-    image: redis:alpine
-    ports:
-      - '36379:6379'
-    networks:
-      - default
-
+      - "4444:4444"
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile.ci
-    container_name: potepanec_app
-    command: bundle exec rails server -b 0.0.0.0
-    ports:
-      - '3000:3000'
+    build: .
+    command: bundle exec rails s -b '0.0.0.0'
     environment:
-      MYSQL_USERNAME: root
-      MYSQL_PASSWORD: password
-      MYSQL_HOST: mysql
-      REDIS_URL: "redis://redis:6379"
-      SELENIUM_DRIVER_URL: "http://selenium_chrome:4444/wd/hub"
-      GOOGLE_CHROME_BIN: /usr/bin/google-chrome-stable
-      CHROMEDRIVER_PATH: /usr/local/bin/chromedriver
+      - CHROMEDRIVER_URL=http://selenium_chrome:4444/wd/hub
     depends_on:
-      - mysql
-      - redis
       - selenium_chrome
-    networks:
-      - default
-
-  chrome:
-    image: seleniarm/standalone-chromium
     ports:
-      - 4444:4444
-      - 7900:7900 
-    networks:
-      - default
-    logging:
-      driver: none
-
-networks:
-  default:
-    driver: bridge
+      - "3000:3000"
