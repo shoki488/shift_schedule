@@ -1,5 +1,6 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+require 'selenium-webdriver'
 
 ENV['RAILS_ENV'] = 'test'
 require_relative '../config/environment'
@@ -40,7 +41,12 @@ RSpec.configure do |config|
       options.add_argument('--disable-dev-shm-usage')
       options.add_argument('--disable-software-rasterizer')
       options.add_argument('--disable-features=VizDisplayCompositor')
-      Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+      Capybara::Selenium::Driver.new(
+        app,
+        browser: :remote,
+        url: 'http://selenium_chrome:4444/wd/hub',
+        desired_capabilities: capabilities,
+      )
     end
 
     Capybara.javascript_driver = :headless_chrome
