@@ -1,7 +1,13 @@
 version: '3'
 services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    env_file:
+      - .env
+    image: mysql:8.0
+    platform: linux/x86_64
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - .:/app
@@ -15,10 +21,12 @@ services:
     - "SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub"
   selenium_chrome:
     image: selenium/standalone-chrome-debug
+    platform: linux/x86_64
     logging:
       driver: none
   db:
     image: mysql:5.7
+    platform: linux/x86_64
     volumes:
       - db-volume:/var/lib/mysql
     environment:

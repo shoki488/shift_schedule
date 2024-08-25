@@ -32,21 +32,19 @@ rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
 RSpec.configure do |config|
-  config.before(:each, type: :system, js: true) do
-    Capybara.register_driver :headless_chrome do |app|
-      capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-        "goog:chromeOptions" => {
-          "args" => %w(headless disable-gpu no-sandbox disable-dev-shm-usage disable-software-rasterizer disable-features=VizDisplayCompositor),
-        },
-      )
+  Capybara.register_driver :headless_chrome do |app|
+    capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+      "goog:chromeOptions" => {
+        "args" => %w(headless disable-gpu no-sandbox disable-dev-shm-usage disable-software-rasterizer disable-features=VizDisplayCompositor),
+      },
+    )
 
-      Capybara::Selenium::Driver.new(
-        app,
-        browser: :remote,
-        url: "http://selenium_chrome:4444/wd/hub",
-        desired_capabilities: capabilities
-      )
-    end
+    Capybara::Selenium::Driver.new(
+      app,
+      browser: :remote,
+      url: ENV.fetch('CHROMEDRIVER_URL', 'http://localhost:9515'),
+      capabilities: capabilities
+    )
 
     Capybara.javascript_driver = :headless_chrome
   end
