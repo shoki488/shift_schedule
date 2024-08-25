@@ -19,8 +19,6 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
             - v1-dependencies-
-      - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
       - setup_remote_docker:
           version: 20.10.18
       - run:

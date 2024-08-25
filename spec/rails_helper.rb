@@ -34,18 +34,17 @@ end
 RSpec.configure do |config|
   config.before(:each, type: :system, js: true) do
     Capybara.register_driver :headless_chrome do |app|
-      options = Selenium::WebDriver::Chrome::Options.new
-      options.add_argument('--headless')
-      options.add_argument('--disable-gpu')
-      options.add_argument('--no-sandbox')
-      options.add_argument('--disable-dev-shm-usage')
-      options.add_argument('--disable-software-rasterizer')
-      options.add_argument('--disable-features=VizDisplayCompositor')
+      capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+        "goog:chromeOptions" => {
+          "args" => %w(headless disable-gpu no-sandbox disable-dev-shm-usage disable-software-rasterizer disable-features=VizDisplayCompositor),
+        },
+      )
+
       Capybara::Selenium::Driver.new(
         app,
         browser: :remote,
-        url: 'http://selenium_chrome:4444/wd/hub',
-        desired_capabilities: capabilities,
+        url: "http://selenium_chrome:4444/wd/hub",
+        desired_capabilities: capabilities
       )
     end
 
