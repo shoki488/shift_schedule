@@ -46,7 +46,7 @@ RSpec.describe Shift, type: :model do
       shift.calendar = Date.tomorrow
       expect(shift).to be_valid
     end
-    
+
     it '本日の日付なら、有効であること' do
       shift.calendar = Date.today
       expect(shift).to be_valid

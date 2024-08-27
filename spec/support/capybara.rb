@@ -21,13 +21,13 @@ RSpec.configure do |config|
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--window-size=1920,1080')
         options.binary = ENV['CHROME_BIN']
-        
+
         Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
       end
 
       driven_by :remote_chrome, using: :remote_chrome, options: {
         browser: :remote,
-        url: ENV.fetch("SELENIUM_DRIVER_URL")
+        url: ENV.fetch("SELENIUM_DRIVER_URL"),
       }
     else
       driven_by :headless_chrome
