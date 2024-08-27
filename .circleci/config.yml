@@ -10,8 +10,9 @@ jobs:
       - image: cimg/ruby:3.0.4-node
     environment:
       RAILS_ENV: test
-      GOOGLE_CHROME_BIN: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+      CHROME_BIN: /usr/local/bin/google-chrome
       CHROMEDRIVER_PATH: /usr/local/bin/chromedriver
+
     resource_class: small
     steps:
       - checkout
@@ -68,7 +69,6 @@ jobs:
             - vendor/bundle
 
   heroku_deploy:
-    working_directory: ~/potepanec
     executor: heroku/default
     resource_class: small
     steps:
