@@ -38,11 +38,10 @@ jobs:
           command: |
             set -x
             docker compose up -d
-            docker exec web curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
+            docker compose exec web curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
       - run:
           name: Run rspec 
           command: |
-            docker compose exec web rm -rf /root/.cache/selenium/chromedriver/
             docker compose exec web bundle exec rspec
 
   rubocop:
