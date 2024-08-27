@@ -19,8 +19,6 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
             - v1-dependencies-
-      - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
       - setup_remote_docker:
           version: 20.10.18
       - run:
@@ -40,7 +38,7 @@ jobs:
           command: |
             set -x
             docker compose up -d
-            docker exec potepanec_app curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
+            docker exec web curl -4 --retry 10 --retry-delay 3 --retry-connrefused http://localhost:3000
       - run:
           name: Run rspec 
           command: |
