@@ -1,4 +1,8 @@
-version: '3'
+volumes:
+  mysql_data:
+  vendor_bundle:
+  node_modules:
+  storage:
 services:
   web:
     build:
@@ -6,7 +10,6 @@ services:
       dockerfile: Dockerfile.dev
     env_file:
       - .env
-    image: mysql:8.0
     platform: linux/x86_64
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
@@ -14,22 +17,30 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - db
+      - selenium_chrome
     tty: true
     stdin_open: true
     environment:
-    - "SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub"
+      - SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub
+      - CHROME_BIN=/usr/local/bin/google-chrome
+      - CHROMEDRIVER_PATH=/usr/local/bin/chromedriver
+
   selenium_chrome:
-    image: selenium/standalone-chrome-debug
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "4444:4444"
     platform: linux/x86_64
     logging:
       driver: none
+
   db:
-    image: mysql:5.7
-    platform: linux/x86_64
+    image: mysql:8.0
     volumes:
-      - db-volume:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
-volumes:
-  db-volume:
+    networks:
+      - default
+    ports:
+      - '33306:3306'
+    command: --default-authentication-plugin=mysql_native_password

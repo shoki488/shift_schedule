@@ -1,30 +1,33 @@
-require 'selenium/webdriver'
-
-Capybara.register_driver :headless_chrome do |app|
+Capybara.register_driver :remote_chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new
-  options.binary = ENV['GOOGLE_CHROME_BIN']
   options.add_argument('--headless')
   options.add_argument('--disable-gpu')
   options.add_argument('--no-sandbox')
   options.add_argument('--disable-dev-shm-usage')
   options.add_argument('--window-size=1920,1080')
+  options.binary = ENV['CHROME_BIN']
 
-  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options, service: Selenium::WebDriver::Service.chrome(path: ENV['CHROMEDRIVER_PATH']))
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
-
-Capybara.javascript_driver = :headless_chrome
 
 RSpec.configure do |config|
   config.before(:each, type: :system) do
-    driven_by :selenium, using: :headless_chrome
-  end
-
-  config.before(:each, type: :system, js: true) do
     if ENV["SELENIUM_DRIVER_URL"].present?
-      driven_by :selenium, using: :remote_chrome, options: {
+      Capybara.register_driver :remote_chrome do |app|
+        options = Selenium::WebDriver::Chrome::Options.new
+        options.add_argument('--headless')
+        options.add_argument('--disable-gpu')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+        options.add_argument('--window-size=1920,1080')
+        options.binary = ENV['CHROME_BIN']
+        
+        Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+      end
+
+      driven_by :remote_chrome, using: :remote_chrome, options: {
         browser: :remote,
-        url: ENV.fetch("SELENIUM_DRIVER_URL"),
-        desired_capabilities: :chrome,
+        url: ENV.fetch("SELENIUM_DRIVER_URL")
       }
     else
       driven_by :headless_chrome
