@@ -67,3 +67,4 @@ gem 'carrierwave'
 gem 'ruby-openai'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'annotate'
+gem 'ffi', '~> 1.15.5'
