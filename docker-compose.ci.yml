@@ -1,8 +1,42 @@
-version: '3'
-
+volumes:
+  mysql_data:
+  vendor_bundle:
+  node_modules:
+  storage:
 services:
-  mysql:
-    platform: linux/amd64
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    env_file:
+      - .env
+    platform: linux/x86_64
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - selenium_chrome
+    tty: true
+    stdin_open: true
+    environment:
+      - SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub
+      - CHROME_BIN=/usr/local/bin/google-chrome
+      - CHROMEDRIVER_PATH=/usr/local/bin/chromedriver
+
+  selenium_chrome:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "4444:4444"
+    platform: linux/x86_64
+    logging:
+      driver: none
+
+  db:
+    image: mysql:8.0
+    volumes:
+      - mysql_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
     networks:
@@ -10,35 +44,3 @@ services:
     ports:
       - '33306:3306'
     command: --default-authentication-plugin=mysql_native_password
-
-  web:
-    build:
-      context: .
-      dockerfile: Dockerfile.ci
-    container_name: potepanec_app
-    command: bundle exec rails server -b 0.0.0.0
-    ports:
-      - '3000:3000'
-    environment:
-      MYSQL_USERNAME: root
-      MYSQL_PASSWORD: password
-      MYSQL_HOST: mysql
-      REDIS_URL: "redis://redis:6379"
-      SELENIUM_DRIVER_URL: "http://selenium_chrome:4444/wd/hub"
-      GOOGLE_CHROME_BIN: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
-      CHROMEDRIVER_PATH: /usr/local/bin/chromedriver
-    depends_on:
-      - mysql
-      - redis
-      - selenium_chrome
-    networks:
-      - default
-
-  selenium_chrome:
-    image: seleniarm/standalone-chromium:latest
-    ports:
-      - 4444:4444
-    networks:
-      - default
-    logging:
-      driver: none
