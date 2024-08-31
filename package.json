@@ -38,6 +38,6 @@
     "heroku-postbuild": "webpack -p"
   },
   "engines": {
-    "node": "20.x"
+    "node": "16.x"
   }
 }
