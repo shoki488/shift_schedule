@@ -5,5 +5,5 @@ environment.config.node = {
   __filename: true,
   global: true
 };
-
+environment.config.resolve.alias['@hotwired'] = 'node_modules/@hotwired'
 module.exports = environment;
