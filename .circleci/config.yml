@@ -75,6 +75,18 @@ jobs:
       - checkout
       - heroku/install
       - run:
+          name: Install Node.js and Yarn
+          command: |
+            curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            sudo npm install -g yarn
+      - run:
+          name: Install dependencies
+          command: yarn install
+      - run:
+          name: Install dependencies
+          command: yarn add -D webpack-cli
+      - run:
           name: Deploy
           command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git HEAD:master
       - run:
