@@ -82,7 +82,9 @@ jobs:
             sudo npm install -g yarn
       - run:
           name: Install dependencies
-          command: yarn install
+          command: |
+            yarn install
+            yarn run build
       - run:
           name: Install dependencies
           command: yarn add -D webpack-cli
