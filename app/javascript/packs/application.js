@@ -4,6 +4,7 @@
 // that code so it'll be compiled.
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-
+import { start } from "@rails/activestorage";
+start();
 ActiveStorage.start()
 Turbo.start()

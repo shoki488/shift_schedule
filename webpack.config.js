@@ -1,11 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
+  entry: './app/javascript/packs/application.js',
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'public/assets')
   },
   module: {
     rules: [
@@ -19,9 +18,7 @@ module.exports = {
     ]
   },
   resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'app/javascript'),
-      '@hotwired': path.resolve(__dirname, 'node_modules/@hotwired')
-    }
-  }
+    extensions: ['.js', '.jsx'],
+  },
+  mode: 'development'
 };
