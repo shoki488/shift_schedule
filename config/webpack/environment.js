@@ -1,9 +1,11 @@
 const { environment } = require('@rails/webpacker');
+const webpack = require('webpack');
 
-environment.config.node = {
-  __dirname: true,
-  __filename: true,
-  global: true
-};
-
+environment.plugins.append(
+    'Provide',
+    new webpack.ProvidePlugin({
+      Rails: '@rails/ujs',
+      ActiveStorage: '@rails/activestorage'
+    })
+  );
 module.exports = environment;
