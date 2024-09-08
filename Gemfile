@@ -36,6 +36,7 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
   gem 'pry-rails'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
