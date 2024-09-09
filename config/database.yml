@@ -25,7 +25,6 @@ test:
 
 production:
   <<: *default
-  database: shift_schedule_production
-  username: shift_schedule
-  password: <%= ENV['SHIFT_SCHEDULE_DATABASE_PASSWORD'] %>
+  database: db/production.sqlite3
+  url: <%= ENV['DATABASE_URL'] %>
 
