@@ -1,6 +1,2 @@
-import "channels";
-import * as ActiveStorage from "@rails/activestorage";
-import * as Turbo from "@hotwired/turbo-rails";
+import "channels"
 
-ActiveStorage.start();
-Turbo.start();
