@@ -1,8 +1,5 @@
-import Rails from "@rails/ujs"
+import "channels";
 import * as ActiveStorage from "@rails/activestorage"
-import * as Turbo from "@hotwired/turbo-rails"
-import "channels"
-
-Rails.start()
+import { Turbo } from "@hotwired/turbo-rails";
 ActiveStorage.start()
-Turbo.start()
+Turbo.start();
