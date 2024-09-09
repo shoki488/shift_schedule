@@ -26,6 +26,11 @@ jobs:
          name: Bundle Install
          command: bundle install
       - run:
+          name: Webpack Compile
+          command: |
+            yarn add webpack webpack-cli
+            ./bin/webpack
+      - run:
           name: Setup environment variable
           command: |
             echo "export COMPOSE_FILE=docker-compose.ci.yml" >> $BASH_ENV
