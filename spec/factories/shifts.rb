@@ -2,7 +2,7 @@
 #
 # Table name: shifts
 #
-#  id                :integer          not null, primary key
+#  id                :bigint           not null, primary key
 #  calendar          :date
 #  content           :text
 #  creator           :string

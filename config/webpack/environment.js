@@ -8,7 +8,6 @@ environment.config.merge({
     },
     alias: {
       '@rails': path.resolve(__dirname, '../../node_modules/@rails'),
-      '@rails/activestorage': path.resolve(__dirname, '../../node_modules/@rails/activestorage')
     },
     modules: [
       'node_modules',

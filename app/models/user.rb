@@ -2,18 +2,18 @@
 #
 # Table name: users
 #
-#  id                     :integer          not null, primary key
+#  id                     :bigint           not null, primary key
 #  classification         :string
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
-#  end_time               :time
+#  end_time               :integer
 #  name                   :string
 #  overtime               :integer
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
 #  shift_type             :string
-#  start_time             :time
+#  start_time             :integer
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #

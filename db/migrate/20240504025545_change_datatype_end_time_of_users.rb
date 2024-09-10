@@ -1,5 +1,9 @@
 class ChangeDatatypeEndTimeOfUsers < ActiveRecord::Migration[6.1]
-  def change
-    change_column :users, :end_time, :integer
+  def up
+    change_column :users, :end_time, 'integer USING CAST(end_time AS integer)'
+  end
+
+  def down
+    change_column :users, :end_time, :string 
   end
 end
