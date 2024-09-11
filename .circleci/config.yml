@@ -26,14 +26,25 @@ jobs:
          name: Bundle Install
          command: bundle install
       - run:
-          name: Webpack Compile
+          name: Install and configure nvm
           command: |
             curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
+            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
+      - run:
+          name: Install Node.js and dependencies
+          command: |
             nvm install 20
             nvm use 20
             rm -rf node_modules yarn.lock
             yarn install
             yarn add webpack webpack-cli --dev
+      - run:
+          name: Webpack Compile
+          command: |
             RAILS_ENV=production bundle exec rails assets:precompile
       - run:
           name: Setup environment variable
