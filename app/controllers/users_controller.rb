@@ -7,11 +7,12 @@ class UsersController < ApplicationController
     
   def new
     @user = User.new
-    @user.start_time = Time.current 
-    @user.end_time = Time.current + 1.hour
+    @user.start_time = Time.current.seconds_since_midnight.to_i
+    @user.end_time = (Time.current + 1.hour).seconds_since_midnight.to_i
   end
     
   def create
+    binding.pry
     @user = User.new(user_params)
     if @user.save
       log_in @user
@@ -31,9 +32,6 @@ class UsersController < ApplicationController
   def edit
     @user = current_user
   end
-
-  def destroy
-  end
       
   def account
   end
@@ -41,13 +39,12 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :working_time, :start_time, :end_time, :shift_type)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :start_time, :end_time, :shift_type)
   end
 
   protected
   
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:classification, :shift_type, :start_time, :end_time])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:classification, :shift_type, :start_time, :end_time])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :email, :classification, :shift_type, :start_time, :end_time])
   end
 end

@@ -6,14 +6,14 @@
 #  classification         :string
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
-#  end_time               :integer
+#  end_time               :time
 #  name                   :string
 #  overtime               :integer
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
 #  shift_type             :string
-#  start_time             :integer
+#  start_time             :time
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #
@@ -111,20 +111,20 @@ RSpec.describe User, type: :model do
 
     it 'パート・アルバイトで営業時間外だった場合バリデーションが出ること' do
       user.classification = 'パート・アルバイト'
-      user.start_time = '8:00'
-      user.end_time = '15:00'
+      user.start_time = Time.zone.parse('8:00').to_i
+      user.end_time = Time.zone.parse('15:00').to_i
       user.valid?
       expect(user.errors[:start_time]).to include("は営業時間内（9:00から22:00）にしてください。")
     end
-
+    
     it 'パート・アルバイトで時間が８時間を超えた場合バリデーションが出ること' do
       user.classification = 'パート・アルバイト'
-      user.start_time = '9:00'
-      user.end_time = '20:00'
+      user.start_time = Time.zone.parse('9:00').to_i
+      user.end_time = Time.zone.parse('20:00').to_i
       user.valid?
       expect(user.errors[:base]).to include("勤務時間は8時間以内にしてください。")
     end
-
+    
     it 'パート・アルバイトで時間が同じ場合バリデーションが出ること' do
       user.classification = 'パート・アルバイト'
       user.start_time = '9:00'

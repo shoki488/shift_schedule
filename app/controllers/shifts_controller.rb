@@ -1,4 +1,5 @@
 class ShiftsController < ApplicationController
+  protect_from_forgery
   before_action :set_users, only: [:new, :create]
   def index
     @shifts = Shift.all
@@ -31,8 +32,6 @@ class ShiftsController < ApplicationController
   def show
     @shift = Shift.find(params[:id])
   end
-          
-  def edit; end
       
   def destroy
     @shift = Shift.find(params[:id])

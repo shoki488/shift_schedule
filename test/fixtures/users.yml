@@ -6,14 +6,14 @@
 #  classification         :string
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
-#  end_time               :integer
+#  end_time               :time
 #  name                   :string
 #  overtime               :integer
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
 #  shift_type             :string
-#  start_time             :integer
+#  start_time             :time
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #

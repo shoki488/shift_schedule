@@ -6,14 +6,14 @@
 #  classification         :string
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
-#  end_time               :integer
+#  end_time               :time
 #  name                   :string
 #  overtime               :integer
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
 #  shift_type             :string
-#  start_time             :integer
+#  start_time             :time
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #
@@ -58,15 +58,23 @@ class User < ApplicationRecord
 
   
   def start_time_and_end_time_within_business_hours
-    business_start = Time.zone.parse("09:00")
+    business_start = Time.zone.parse("9:00")
     business_end = Time.zone.parse("22:00")
-    
-    if start_time.present? && (start_time.seconds_since_midnight < business_start.seconds_since_midnight || start_time.seconds_since_midnight > business_end.seconds_since_midnight)
-      errors.add(:start_time, "は営業時間内（9:00から22:00）にしてください。")
+
+    if start_time.present?
+      start_time_obj = Time.zone.at(start_time)
+      if start_time_obj.strftime("%H:%M") < business_start.strftime("%H:%M") || 
+         start_time_obj.strftime("%H:%M") > business_end.strftime("%H:%M")
+        errors.add(:start_time, "は営業時間内（9:00から22:00）にしてください。")
+      end
     end
 
-    if end_time.present? && (end_time.seconds_since_midnight < business_start.seconds_since_midnight || end_time.seconds_since_midnight > business_end.seconds_since_midnight)
-      errors.add(:end_time, "は営業時間内（9:00から22:00）にしてください。")
+    if end_time.present?
+      end_time_obj = Time.zone.at(end_time)
+      if end_time_obj.strftime("%H:%M") < business_start.strftime("%H:%M") || 
+         end_time_obj.strftime("%H:%M") > business_end.strftime("%H:%M")
+        errors.add(:end_time, "は営業時間内（9:00から22:00）にしてください。")
+      end
     end
   end
 
@@ -84,13 +92,13 @@ class User < ApplicationRecord
 
   def shift_duration_within_limit
     if start_time.present? && end_time.present?
-      duration = (end_time - start_time) / 1.hour
+      duration = (end_time - start_time) / 3600.0
       if duration > 8
         errors.add(:base, "勤務時間は8時間以内にしてください。")
       end
     end
   end
-  
+
   private
 
   def password_required?
