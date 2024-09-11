@@ -3,16 +3,14 @@ const { environment } = require('@rails/webpacker')
 
 environment.config.merge({
   resolve: {
-    fallback: {
-     "domain": require.resolve("domain-browser")
-    },
     alias: {
       '@rails': path.resolve(__dirname, '../../node_modules/@rails'),
     },
     modules: [
-      'node_modules',
-      path.resolve(__dirname, '../../node_modules')
-    ]
+      path.resolve(__dirname, '../../node_modules'),
+      'node_modules'
+    ],
+    extensions: ['.js', '.sass', '.scss', '.css', '.module.sass', '.module.scss', '.module.css', '.png', '.svg', '.gif', '.jpeg', '.jpg']
   }
 });
 
@@ -21,5 +19,10 @@ environment.config.node = {
   __filename: true,
   global: true
 };
+
+environment.config.set('stats', {
+  errorDetails: true,
+  warnings: false 
+})
 
 module.exports = environment

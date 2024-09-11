@@ -116,7 +116,7 @@ RSpec.describe User, type: :model do
       user.valid?
       expect(user.errors[:start_time]).to include("は営業時間内（9:00から22:00）にしてください。")
     end
-    
+
     it 'パート・アルバイトで時間が８時間を超えた場合バリデーションが出ること' do
       user.classification = 'パート・アルバイト'
       user.start_time = Time.zone.parse('9:00').to_i
@@ -124,7 +124,7 @@ RSpec.describe User, type: :model do
       user.valid?
       expect(user.errors[:base]).to include("勤務時間は8時間以内にしてください。")
     end
-    
+
     it 'パート・アルバイトで時間が同じ場合バリデーションが出ること' do
       user.classification = 'パート・アルバイト'
       user.start_time = '9:00'
