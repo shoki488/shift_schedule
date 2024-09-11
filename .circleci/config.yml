@@ -28,7 +28,11 @@ jobs:
       - run:
           name: Webpack Compile
           command: |
-            yarn add webpack webpack-cli
+            nvm install 20
+            nvm use 20
+            rm -rf node_modules yarn.lock
+            yarn install
+            yarn add webpack webpack-cli --dev
             RAILS_ENV=production bundle exec rails assets:precompile
       - run:
           name: Setup environment variable
