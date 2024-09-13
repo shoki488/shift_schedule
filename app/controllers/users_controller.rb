@@ -5,10 +5,18 @@ class UsersController < ApplicationController
     @user = current_user if user_signed_in?
   end
     
+  def show
+    @user = User.find(params[:id])
+  end
+
   def new
     @user = User.new
-    @user.start_time = Time.current.seconds_since_midnight.to_i
-    @user.end_time = (Time.current + 1.hour).seconds_since_midnight.to_i
+    @user.start_time = Time.current 
+    @user.end_time = Time.current + 1.hour
+  end
+
+  def edit
+    @user = current_user
   end
     
   def create
@@ -21,15 +29,7 @@ class UsersController < ApplicationController
     end
   end
     
-  def show
-    @user = User.find(params[:id])
-  end
-    
   def update
-  end
-
-  def edit
-    @user = current_user
   end
       
   def account

@@ -30,4 +30,23 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  devise:
+    sessions:
+      signed_in: "You have successfully logged in."
+      signed_out: "You have successfully logged out."
+      invaid: ""
+  user:
+    name: Name
+    classification: Position
+    workin_time: Working Hours
+    Email: Email Address
+    start_time: Work Start Time
+    end_time: Work End Time
+  shift:
+    Calendar: Shift Creation Date
+    content: AI Response
+    creator: Shift Creator
+    success: "The shift has been created successfully."
+    failure: "Failed to create the shift. Please try again."
+    destroy:
+       success: "The shift has been deleted."

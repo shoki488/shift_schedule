@@ -5,12 +5,16 @@ class ShiftsController < ApplicationController
     @shifts = Shift.all
     @users = User.all
   end
+
+  def show
+    @shift = Shift.find(params[:id])
+  end
   
   def new
     @shift = Shift.new
     @users = @users.sort_by { |user| user == current_user ? 0 : 1 }
   end
-        
+
   def create
     @shift = current_user.shifts.new(shift_params)
     @shift.creator = User.find(@shift.user_id).name
@@ -27,10 +31,6 @@ class ShiftsController < ApplicationController
       flash.now[:alert] = "パスワードを入力するかもしくはパスワードが違います。"
       render :new
     end
-  end
-          
-  def show
-    @shift = Shift.find(params[:id])
   end
       
   def destroy

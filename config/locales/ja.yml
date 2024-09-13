@@ -15,4 +15,8 @@ ja:
     Calendar: シフト作成日
     content: AIの反応
     creator: シフト作成者
+    success: "シフトが作成されました。"
+    failure: "シフトの作成に失敗しました。もう一度お試しください。"
+    destroy:
+      success: "シフトを削除しました"
 
