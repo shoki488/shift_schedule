@@ -1,4 +1,4 @@
-FROM ruby:3.0.4-buster
+FROM ruby:3.2.2-buster
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
 
