@@ -24,7 +24,7 @@ jobs:
           version: 20.10.18
       - run:
          name: Bundle Install
-         command: bundle installs
+         command: bundle install
       - run:
           name: Webpack Compile
           command: |
