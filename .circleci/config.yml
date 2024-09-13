@@ -29,7 +29,7 @@ jobs:
           name: Webpack Compile
           command: |
             yarn add webpack webpack-cli --dev
-            RAILS_ENV=production bundle exec rails assets:precompile
+            bin/webpack
       - run:
           name: Setup environment variable
           command: |

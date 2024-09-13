@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @user.start_time = Time.current 
-    @user.end_time = Time.current + 1.hour
+    @user.end_time = 1.hour.from_now
   end
 
   def edit
