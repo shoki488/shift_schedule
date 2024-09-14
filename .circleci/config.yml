@@ -47,7 +47,7 @@ jobs:
 
   rubocop:
     docker:
-      - image: cimg/ruby:3.0.4
+      - image: cimg/ruby:3.2.2
     resource_class: small
     steps:
       - checkout
@@ -59,7 +59,7 @@ jobs:
       - run: bundle config --local path vendor/bundle
       - run:
           name: bundle install
-          command: bundle check || bundle install --jobs=8 --clean
+          command: bundle check || bundle install --jobs=8
       - run:
           name: Run rubocop
           command: bundle exec rubocop --parallel
