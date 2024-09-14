@@ -8,6 +8,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
+    env_file:  
+      - .env 
     platform: linux/x86_64
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
@@ -15,13 +17,17 @@ services:
     ports:
       - "3000:3000"
     depends_on:
+      - db
       - selenium_chrome
     tty: true
     stdin_open: true
+    networks:
+      - default
     environment:
       - SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub
       - CHROME_BIN=/usr/local/bin/google-chrome
       - CHROMEDRIVER_PATH=/usr/local/bin/chromedriver
+      - POSTGRES_PASSWORD=password
 
   selenium_chrome:
     image: selenium/standalone-chrome:latest
@@ -34,11 +40,10 @@ services:
   db:
     image: postgres:14
     volumes:
-       - postgres_data:/var/lib/postgresql/data/
+      - postgres_data:/var/lib/postgresql/data/
     environment:
-     POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: password
     networks:
       - default
     ports:
       - '5432:5432'
-    command: --default-authentication-plugin=mysql_native_password
