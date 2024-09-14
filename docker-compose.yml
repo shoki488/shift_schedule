@@ -1,6 +1,5 @@
 volumes:
   postgres_data:
-  mysql_data:
   vendor_bundle:
   node_modules:
   storage:
