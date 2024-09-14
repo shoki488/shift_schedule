@@ -1,4 +1,5 @@
 volumes:
+  postgres_data:
   mysql_data:
   vendor_bundle:
   node_modules:
@@ -34,13 +35,13 @@ services:
       driver: none
 
   db:
-    image: mysql:8.0
+    image: postgres:14
     platform: linux/x86_64
     volumes:
-      - mysql_data:/var/lib/mysql
+      - postgres_data:/var/lib/postgresql/data/
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      POSTGRES_PASSWORD: password
     networks:
       - default
     ports:
-      - '33306:3306'
+      - '5432:5432'

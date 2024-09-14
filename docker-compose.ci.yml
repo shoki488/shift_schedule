@@ -32,13 +32,13 @@ services:
       driver: none
 
   db:
-    image: mysql:8.0
+    image: postgres:14
     volumes:
-      - mysql_data:/var/lib/mysql
+       - postgres_data:/var/lib/postgresql/data/
     environment:
-      MYSQL_ROOT_PASSWORD: password
+     POSTGRES_PASSWORD: password
     networks:
       - default
     ports:
-      - '33306:3306'
+      - '5432:5432'
     command: --default-authentication-plugin=mysql_native_password

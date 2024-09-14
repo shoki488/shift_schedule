@@ -409,7 +409,7 @@ DEPENDENCIES
   rails-i18n
   rspec-rails
   rubocop
-  rubocop-airbnb
+  rubocop-airbnb (~> 7.0.0)
   rubocop-performance
   rubocop-rails
   rubocop-rspec
