@@ -2,7 +2,8 @@ FROM ruby:3.2.2-buster
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
 
-RUN apt-get update && apt-get install -y postgresql-client \
+RUN apt-get update \
+  && apt-get install -y wget gnupg2 \
      libnss3 \
      libatk1.0-0 \
      libatk-bridge2.0-0 \
