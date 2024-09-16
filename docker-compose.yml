@@ -39,7 +39,7 @@ services:
       - "4444:4444"
     platform: linux/x86_64
     logging:
-      driver: none
+      driver: json-file
     networks:
       - app-network
 
