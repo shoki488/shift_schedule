@@ -26,27 +26,27 @@ RSpec.describe "TopPages", type: :request do
         sign_in user
       end
 
-      it 'ヘッダーのホームが表示さえれ繋がること' do
+      it 'ヘッダーのホームが表示され繋がること' do
         get root_path
         expect(response.body).to include("ホーム")
       end
 
-      it 'ヘッダーのシフト作成が表示さえれ繋がること' do
+      it 'ヘッダーのシフト作成が表示され繋がること' do
         get new_shift_path
         expect(response.body).to include("シフト作成")
       end
 
-      it 'ヘッダーのシフト一覧が表示さえれ繋がること' do
+      it 'ヘッダーのシフト一覧が表示され繋がること' do
         get shifts_path
         expect(response.body).to include("シフト一覧")
       end
 
-      it 'ヘッダーのアカウント詳細が表示さえれ繋がること' do
+      it 'ヘッダーのアカウント詳細が表示され繋がること' do
         get users_account_path
         expect(response.body).to include("アカウント詳細")
       end
 
-      it 'ヘッダーのアカウント変更が表示さえれ繋がること' do
+      it 'ヘッダーのアカウント変更が表示され繋がること' do
         get edit_user_registration_path
         expect(response.body).to include("アカウント変更")
       end

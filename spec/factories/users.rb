@@ -45,6 +45,12 @@ FactoryBot.define do
       shift_type { '遅番' }
     end
 
+    trait :guest do
+      sequence(:email) { |n| "guest#{n}@example.com" }
+      name { 'ゲスト' }
+      classification { 'ゲスト' }
+    end
+
     factory :user_shift do
       user
       shift

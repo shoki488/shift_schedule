@@ -2,8 +2,7 @@ FROM ruby:3.2.2-buster
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
 
-RUN apt-get update \
-  && apt-get install -y wget gnupg2 \
+RUN apt-get update && apt-get install -y postgresql-client \
      libnss3 \
      libatk1.0-0 \
      libatk-bridge2.0-0 \
@@ -46,7 +45,10 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN wget https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.84/linux64/chromedriver-linux64.zip \
+RUN bundle config set force_ruby_platform true
+RUN gem install nokogiri --platform=ruby
+
+RUN wget https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/linux64/chromedriver-linux64.zip \
   && unzip chromedriver-linux64.zip \
   && mv chromedriver-linux64/chromedriver /usr/local/bin/ \
   && chmod +x /usr/local/bin/chromedriver \
@@ -54,7 +56,7 @@ RUN wget https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.84/
   && rm chromedriver-linux64.zip
 
 RUN mkdir -p /opt/google/chrome && \
-  wget https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.84/linux64/chrome-linux64.zip && \
+  wget https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/linux64/chrome-linux64.zip && \
   unzip chrome-linux64.zip -d /opt/google/chrome && \
   ln -s /opt/google/chrome/google-chrome /usr/local/bin/google-chrome && \
   rm chrome-linux64.zip
@@ -64,6 +66,6 @@ ENV CHROME_BIN=/usr/local/bin/google-chrome \
 
 WORKDIR /potepanec
 COPY . /potepanec
-COPY Gemfile /Gemfile
-COPY Gemfile.lock /Gemfile.lock
+COPY Gemfile /myapp/Gemfile
+COPY Gemfile.lock /myapp/Gemfile.lock
 RUN bundle install

@@ -40,12 +40,13 @@ RSpec.configure do |config|
     )
 
     Capybara::Selenium::Driver.new(
-      app,
-      browser: :remote,
-      url: ENV.fetch('CHROMEDRIVER_URL', 'http://localhost:9515'),
-      capabilities: capabilities
+    app,
+    browser: :chrome,
+    options: options,
+    service: Selenium::WebDriver::Service.chrome(
+      path: '/usr/local/bin/chromedriver'
     )
-
+  )
     Capybara.javascript_driver = :headless_chrome
   end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures

@@ -1,14 +1,14 @@
 volumes:
   postgres_data:
-  vendor_bundle:
-  node_modules:
-  storage:
+
 services:
   web:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    platform: linux/x86_64
+    env_file:
+      - .env 
+    platform: linux/arm64
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - .:/app
@@ -25,23 +25,26 @@ services:
       - SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub
       - CHROME_BIN=/usr/local/bin/google-chrome
       - CHROMEDRIVER_PATH=/usr/local/bin/chromedriver
-      - POSTGRES_PASSWORD=password
+      - DATABASE_HOST=db
+      - RAILS_ENV=test
 
   selenium_chrome:
-    image: selenium/standalone-chrome:latest
+    image: seleniarm/standalone-chromium:latest
+    platform: linux/arm64
     ports:
       - "4444:4444"
-    platform: linux/x86_64
     logging:
-      driver: none
+      driver: json-file
 
   db:
     image: postgres:14
+    platform: linux/arm64
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
       POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
     networks:
       - default
     ports:
-      - '5432:5432'
+       - '5432:5432'

@@ -69,3 +69,4 @@ gem 'ruby-openai'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'annotate'
 gem 'ffi'
+gem 'nokogiri', platforms: :ruby

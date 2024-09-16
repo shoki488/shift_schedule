@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :ensure_normal_user, only: [:edit, :show]
+  before_action :ensure_normal_user, only: [:edit]
   before_action :configure_account_update_params, only: [:update]
 
   def configure_account_update_params
@@ -71,9 +71,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def ensure_normal_user
-    if resource.email == 'guest@example.com'
-       resource.name == 'ゲスト'
-       redirect_to root_path, alert: I18n.t('users.registrations.guest_user_alert')
+    if resource.email == 'guest@example.com' || resource.name == 'ゲスト'
+      redirect_to root_path, alert: I18n.t('users.registrations.guest_user_alert')
     end
   end
 end
