@@ -1,6 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 require 'selenium-webdriver'
+require 'capybara/rspec'
 
 ENV['RAILS_ENV'] = 'test'
 require_relative '../config/environment'
@@ -37,20 +38,18 @@ RSpec.configure do |config|
       args: %w(headless disable-gpu no-sandbox disable-dev-shm-usage disable-software-rasterizer disable-features=VizDisplayCompositor)
     )
 
-    options = Selenium::WebDriver::Chrome::Options.new
-    options.add_argument('--headless')
-    options.add_argument('--disable-gpu')
-    options.add_argument('--no-sandbox')
-
     Capybara::Selenium::Driver.new(
       app,
       browser: :chrome,
-      options: options
+      options: options,
+      service: Selenium::WebDriver::Service.chrome(
+        path: '/usr/local/bin/chromedriver'
+      )
     )
+
+    Capybara.javascript_driver = :headless_chrome
   end
 
-  Capybara.javascript_driver = :headless_chrome
-  Capybara.default_driver = :headless_chrome
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = Rails.root.join('spec/fixtures')
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
