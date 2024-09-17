@@ -25,6 +25,11 @@ jobs:
          name: Bundle Install
          command: bundle install
       - run:
+          name: set up db
+          command: |
+            bundle exec rails db:create
+            bundle exec rails db:schema:load
+      - run:
           name: Webpack Compile
           command: |
             yarn add webpack webpack-cli --dev

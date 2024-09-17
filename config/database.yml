@@ -18,6 +18,8 @@ test:
   <<: *default
   host: <%= ENV['PGHOST'] || 'db' %>
   database: shift_schedule_test
+  username: <%= ENV['DATABASE_USERNAME'] || 'postgres' %>
+  password: <%= ENV['DATABASE_PASSWORD'] || 'password' %>
 
 production:
   <<: *default
