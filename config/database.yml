@@ -2,13 +2,13 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  host: <%= ENV.fetch("DATABASE_HOST") { "db" } %>
+  host: <%= ENV.fetch("DATABASE_HOST") { "localhost" } %>
   username: <%= ENV['DATABASE_USERNAME'] || 'postgres' %>
   password: <%= ENV['DATABASE_PASSWORD'] || 'password' %>
 
 development:
   <<: *default
-  development:
+  host: localhost
   database: shift_schedule_development
 
 # Warning: The database defined as "test" will be erased and
