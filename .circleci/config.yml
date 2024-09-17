@@ -7,8 +7,7 @@ orbs:
 jobs:
   rspec:
     docker:
-      - image: cimg/ruby:3.2.2-node
-      - image: cimg/postgres:14.1
+      - image: cimg/ruby:3.2.2-node-browsers
     environment:
       RAILS_ENV: test
       PGHOST: localhost

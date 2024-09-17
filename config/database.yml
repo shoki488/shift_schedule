@@ -16,8 +16,13 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  host: <%= ENV.fetch("PGHOST") { "localhost" } %>
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
   database: shift_schedule_test
+  username: <%= ENV['DATABASE_USERNAME'] || 'postgres' %>
+  password: <%= ENV['DATABASE_PASSWORD'] || 'password' %>
+
 
 production:
   <<: *default

@@ -36,7 +36,7 @@ RSpec.configure do |config|
     options = Selenium::WebDriver::Chrome::Options.new(
       args: %w(headless disable-gpu no-sandbox disable-dev-shm-usage disable-software-rasterizer disable-features=VizDisplayCompositor)
     )
-  
+
     options = Selenium::WebDriver::Chrome::Options.new
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')
@@ -48,7 +48,7 @@ RSpec.configure do |config|
       options: options
     )
   end
-  
+
   Capybara.javascript_driver = :headless_chrome
   Capybara.default_driver = :headless_chrome
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
