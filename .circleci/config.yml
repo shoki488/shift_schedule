@@ -8,8 +8,12 @@ jobs:
   rspec:
     docker:
       - image: cimg/ruby:3.2.2-node
+      - image: cimg/postgres:14.1
     environment:
       RAILS_ENV: test
+      PGHOST: localhost
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: password
       CHROME_BIN: /usr/local/bin/google-chrome
       CHROMEDRIVER_PATH: /usr/local/bin/chromedriver
 
@@ -24,6 +28,11 @@ jobs:
       - run:
          name: Bundle Install
          command: bundle install
+      - run:
+          name: set up db
+          command: |
+            bundle exec rails db:create
+            bundle exec rails db:schema:load
       - run:
           name: Webpack Compile
           command: |
