@@ -1,6 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 require 'selenium-webdriver'
+require 'capybara/rspec'
 
 ENV['RAILS_ENV'] = 'test'
 require_relative '../config/environment'
@@ -33,21 +34,14 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   Capybara.register_driver :headless_chrome do |app|
-    options = Selenium::WebDriver::Chrome::Options.new(
-      args: %w(headless disable-gpu no-sandbox disable-dev-shm-usage disable-software-rasterizer disable-features=VizDisplayCompositor)
-    )
-
-    Capybara::Selenium::Driver.new(
-      app,
-      browser: :chrome,
-      options: options,
-      service: Selenium::WebDriver::Service.chrome(
-        path: '/usr/local/bin/chromedriver'
-      )
-    )
-
-    Capybara.javascript_driver = :headless_chrome
+    options = Selenium::WebDriver::Chrome::Options.new
+    options.add_argument('--headless')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--no-sandbox')
+    Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
   end
+  
+  Capybara.javascript_driver = :headless_chrome
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = Rails.root.join('spec/fixtures')
