@@ -22,13 +22,13 @@ class ShiftsController < ApplicationController
       if @shift.save 
         shift_content = OpenAi.create_shift(current_user)
         @shift.update(content: shift_content)
-        redirect_to shift_path(@shift), notice: I18n.t('shifts.create.success')
+        redirect_to shift_path(@shift), notice: I18n.t('shift.success')
       else
-        flash.now[:alert] = I18n.t('shifts.create.failure')
+        flash.now[:alert] = I18n.t('shift.failure')
         render :new
       end
     else
-      flash.now[:alert] = I18n.t('shifts.create.invalid_password')
+      flash.now[:alert] = I18n.t('shift.invalid_password')
       render :new
     end
   end
