@@ -1,0 +1,20 @@
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/strscan-3.1.0/ext/strscan
+/Users/mashimakatsunori/.rbenv/versions/3.0.4/bin/ruby extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+checking for rb_reg_onig_match() in ruby.h... no
+creating Makefile
+
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-9j74pm sitelibdir\=./.gem.20240708-46689-9j74pm clean
+
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-9j74pm sitelibdir\=./.gem.20240708-46689-9j74pm
+compiling strscan.c
+linking shared-object strscan.bundle
+
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-9j74pm sitelibdir\=./.gem.20240708-46689-9j74pm install
+/usr/bin/install -c -m 0755 strscan.bundle ./.gem.20240708-46689-9j74pm
+
+current directory: /Users/mashimakatsunori/shift_schedule/vendor/bundle/ruby/3.0.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= sitearchdir\=./.gem.20240708-46689-9j74pm sitelibdir\=./.gem.20240708-46689-9j74pm clean

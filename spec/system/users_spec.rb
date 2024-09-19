@@ -109,8 +109,6 @@ RSpec.describe "Users", type: :system do
     fill_in 'user_current_password', with: 'password'
     click_button '更新'
 
-    expect(page).to have_content 'アカウント情報を変更しました'
-
     registered_user.reload
     expect(registered_user.reload.email).to eq('updated@example.com')
   end

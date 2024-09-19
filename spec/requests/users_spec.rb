@@ -2,7 +2,13 @@ require 'rails_helper'
 
 RSpec.describe "Users", type: :request do
   let(:user) { FactoryBot.create(:user) }
-  let(:guest_user) { FactoryBot.create(:user, email: 'guest@example.com') }
+  let(:guest_user) do
+    User.find_or_create_by(email: 'guest@example.com') do |user|
+      user.name = 'ゲスト'
+      user.classification = 'ゲスト'
+      user.password = 'password'
+    end
+  end
 
   describe 'ログインした時' do
     before do

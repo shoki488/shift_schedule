@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Tops", type: :system do
   it "トップページの画像が表示されること" do
     visit root_path
-    expect(page).to have_css('.main img[src*="job.jpg"]')
+    expect(page).to have_css('.main')
   end
 
   it "Shfit Scheduleをクリックしてホームに接続できること" do

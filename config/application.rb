@@ -5,12 +5,12 @@ require "rails/all"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-Dotenv::Railtie.load if defined?(Dotenv::Railtie)
+Dotenv::Rails.load if defined?(Dotenv::Rails)
 
 module ShiftScheduling
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
+    config.load_defaults 7.0
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -19,16 +19,16 @@ module ShiftScheduling
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.i18n.default_locale = :ja 
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :ja
     config.active_record.default_timezone = :local
-    config.time_zone = 'Asia/Tokyo'   
-    
+    config.time_zone = 'Tokyo'
     config.generators do |g|
-      config.generators.test_framework = :rspec
-      config.generators.system_tests   = false
-      config.generators.stylesheets    = false
-      config.generators.javascripts    = false
-      config.generators.helper         = false
+      g.test_framework :rspec
+      g.system_tests   false
+      g.stylesheets    false
+      g.javascripts    false
+      g.helper         false
     end
   end
 end

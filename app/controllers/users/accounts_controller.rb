@@ -10,7 +10,7 @@ class Users::AccountsController < ApplicationController
 
   def ensure_normal_user
     if current_user.email == 'guest@example.com'
-      redirect_to root_path, alert: 'ゲストユーザーのアカウント情報は閲覧・変更できません。'
+      redirect_to root_path, alert: I18n.t('users.registrations.guest_user_alert')
     end
   end
 end

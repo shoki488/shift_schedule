@@ -21,9 +21,13 @@ AllCops:
    - '**/Gemfile'
    - 'vendor/**/*'
    - '.git/**/*'
-   - 'spec/spec_helper.rb'
+   - 'shift_schedule/spec/spec_helper.rb'
    - 'lib/**/*'
-
+   - 'shift_schedule/lib/tasks/auto_annotate_models.rake'
+   - 'shift_schedule/bin/bundle'
+   - 'shift_schedule/config/*'
+   - 'shift_schedule/config/**/*'
+   - 'spec/spec_helper.rb'
 Layout/LineLength:
   Max: 200
 

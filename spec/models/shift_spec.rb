@@ -2,13 +2,14 @@
 #
 # Table name: shifts
 #
-#  id         :integer          not null, primary key
-#  calendar   :date
-#  content    :text
-#  creator    :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  user_id    :integer
+#  id                :bigint           not null, primary key
+#  calendar          :date
+#  content           :text
+#  creator           :string
+#  overtime_eligible :boolean          default(FALSE), not null
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#  user_id           :integer
 #
 require 'rails_helper'
 
@@ -35,17 +36,19 @@ RSpec.describe Shift, type: :model do
       expect(shift.errors[:calendar]).to include("を入力してください")
     end
 
-    it 'シフト作成日が指定が本日以前の日付なら、無効であること' do
-      shift.calendar = Date.yesterday
+    it 'シフト作成日の指定が本日より前の日付なら、無効であること' do
+      shift.calendar = Date.new(2023, 8, 8)
       expect(shift).not_to be_valid
-      shift.valid?
-      expect(shift.errors[:base]).to include("本日以降の日付を選んでください。")
+      expect(shift.errors[:calendar]).to include("本日以降の日付を選んでください。")
     end
 
-    it 'シフト作成日が本日または明日以降なら、有効であること' do
-      shift.calendar = Date.today
-      expect(shift).to be_valid
+    it '明日以降の日付なら、有効であること' do
       shift.calendar = Date.tomorrow
+      expect(shift).to be_valid
+    end
+
+    it '本日の日付なら、有効であること' do
+      shift.calendar = Date.today
       expect(shift).to be_valid
     end
 

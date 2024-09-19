@@ -4,15 +4,22 @@ ja:
       signed_in: "ログインしました。"
       signed_out: "ログアウトしました。"
       invaid: ""
-  user: 
+  users:
     name: 名前
     classification: 役職
     workin_time: 勤務時間
     Email: メールアドレス
     start_time: 勤務開始時間
     end_time: 勤務終了時間
+    registrations:
+      guest_user_alert: 'ゲストユーザーのアカウント情報は閲覧・変更できません。'
+    sessions:
+      guest_sign_in: 'ゲストユーザーとしてログインしました。'
   shift: 
     Calendar: シフト作成日
     content: AIの反応
     creator: シフト作成者
+    success: "シフトが作成されました。"
+    failure: "シフトの作成に失敗しました。もう一度お試しください。"
+    destroy: "シフトを削除しました"
 
