@@ -19,15 +19,15 @@
       <p class="sub-title">手軽にシフト作成</p>
     </div>
     <% if user_signed_in? %>
-    <div class="nave_menu">
-      <%= link_to 'シフト作成はこちら', new_shift_path, class: "btn btn-primary btn-lg", role: "button", id: "enter"%>
-      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn btn-primary btn-lg", role: "button", id: "enter", onclick: "return confirm('本当にログアウトしますか？');" %>
-    </div>
+      <div class="nave_menu-fir">
+        <%= link_to 'シフト作成はこちら', new_shift_path, class: "btn btn-primary btn-lg custom-btn", role: "button", id: "enter"%>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn btn-primary btn-lg custom-btn", role: "button", id: "enter", onclick: "return confirm('本当にログアウトしますか？');" %>
+      </div>
     <% else %>
-    <div class="nave_menu">
-      <%= link_to "ログイン", new_user_session_path, class: "btn btn-primary btn-lg", role: "button", id: "enter" %>
-      <%= link_to "新規登録", new_user_registration_path, class: "btn btn-primary btn-lg", role: "button", id: "enter" %>
-      <%= link_to 'ゲストログイン', users_guest_sign_in_path, class: "btn btn-primary btn-lg", role: "button", id: "enter" %>
+      <div class="nave_menu-sec">
+        <%= link_to "ログイン", new_user_session_path, class: "btn btn-primary btn-lg custom-btn", role: "button", id: "enter" %>
+        <%= link_to "新規登録", new_user_registration_path, class: "btn btn-primary btn-lg custom-btn", role: "button", id: "enter" %>
+        <%= link_to 'ゲストログイン', users_guest_sign_in_path, class: "btn btn-primary btn-lg custom-btn", role: "button", id: "enter" %>
     </div>
     <% end %>
   </div>

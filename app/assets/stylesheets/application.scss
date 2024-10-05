@@ -1,15 +1,16 @@
+@import "shifts";
 body {
   margin: 0%;
 }
 
 .scrollable-form {
-  max-height: 450px; /* 適切な高さを指定 */
+  max-height: 450px;
   overflow-y: auto;
 }
 
 header {
   background-color: #174a5c;
-  height: 70px;
+  height: 85px;
   text-align: center;
 }
 
@@ -64,13 +65,13 @@ hr {
 }
 
 .Shift_Schedule {
-  margin-left: 25px;
+  margin-left: 40px;
   color: white;
   padding-top: 15px;
   font-family: "Comic Sans MS";
   text-decoration: none;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .Shift_Schedule:hover {
@@ -78,7 +79,7 @@ hr {
 }
 
 .guest {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .dropdown-toggle {
@@ -99,7 +100,7 @@ hr {
 
 #question {
   font-size: 25px;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .nav-list {

@@ -78,11 +78,11 @@ RSpec.describe "Tops", type: :system do
     end
 
     it "ヘッダー欄に？が表示されていること" do
-      expect(page).to have_content("？")
+      expect(page).to have_content("お困りの方")
     end
 
     it "ヘッダー欄の？をクリックすると使い方ページに接続できること" do
-      click_link "？"
+      click_link "お困りの方"
       expect(page).to have_current_path(question_path)
     end
 

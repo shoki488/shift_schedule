@@ -1,6 +1,6 @@
 .main {
   position: relative;
-  height: 700px;
+  height: 900px;
   width: 100%;
   overflow: hidden;
   background-image: image-url('job.jpg');
@@ -27,11 +27,38 @@
   font-family: Arial unicode ms;
 }
 
-.nave_menu {
+.nave_menu-fir, .nave_menu-sec {
   padding-top: 10px;
   text-align: center;
+  margin-top: 50px;
 }
 
 #enter {
   margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 55px;
+    margin-top: 50px;
+    padding: 15px;
+  }
+
+  .sub-title {
+    font-size: 60px;
+  }
+
+  .nave_menu-fir, .nave_menu-sec {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+    width: 80%;
+    max-width: 250px;
+    margin: 20px 0;
+  }
 }

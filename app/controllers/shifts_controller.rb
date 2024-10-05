@@ -9,7 +9,7 @@ class ShiftsController < ApplicationController
   def show
     @shift = Shift.find(params[:id])
   end
-  
+
   def new
     @shift = Shift.new
     @users = @users.sort_by { |user| user == current_user ? 0 : 1 }
@@ -17,11 +17,12 @@ class ShiftsController < ApplicationController
 
   def create
     @shift = current_user.shifts.new(shift_params)
-    @shift.creator = User.find(@shift.user_id).name
+    @shift.creator = current_user.name
+  
     if params[:password] == ENV['SHIFT_CREATION_PASSWORD']
-      if @shift.save 
-        shift_content = OpenAi.create_shift(current_user)
-        @shift.update(content: shift_content)
+      @shift.content = OpenAi.create_shift(current_user, @shift.calendar)
+  
+      if @shift.save
         redirect_to shift_path(@shift), notice: I18n.t('shift.success')
       else
         flash.now[:alert] = I18n.t('shift.failure')

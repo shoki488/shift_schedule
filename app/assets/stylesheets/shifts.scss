@@ -1,3 +1,43 @@
-// Place all the styles related to the Shifts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.shift-container {
+  max-width: 100%;
+}
+
+.shift-card {
+  width: calc(34% - 10px);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-size: 9px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.shift-poster {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-size: 0.8em;
+  box-sizing: border-box;
+}
+    
+@media (max-width: 1024px) {
+  .shift-card {
+    width: calc(50% - 7.5px);
+}
+
+  .shift-card:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+  
+
+@media (max-width: 768px) {
+  .shift-card {
+    width: 100%;
+    margin-right: 0;
+  }
+}
