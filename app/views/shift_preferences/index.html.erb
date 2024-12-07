@@ -1,0 +1,32 @@
+<h1>従業員シフト希望一覧</h1>
+<div class="range">
+  <% @shift_preferences.each do |user, preferences| %>
+    <h2><%= user.name %></h2>
+    <%= month_calendar do |date| %>
+      <% preferences_for_date = preferences.select { |p| p.date == date } %>
+      <div class="calendar-day" data-date="<%= date %>">
+        <%= date.day %>
+
+        <% preferences_for_date.each do |preference| %>
+          <% if preference.preference_type == '希望休' %>
+            <div class="holiday-mark">⭕️</div>
+          <% end %>
+          <% if user.classification == 'パート・アルバイト' %>
+            <div class="time">
+              <%= preference.start_time&.strftime("%H:%M") %> - <%= preference.end_time&.strftime("%H:%M") %>
+            </div>
+          <% elsif user.classification == '社員' %>
+            <div class="shift_type">
+              <%= preference.shift_type %>
+            </div>
+          <% end %>
+          <% if preference.notes.present? %>
+            <div class="note" data-preference-id="<%= preference.id %>">
+              <%= preference.notes %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

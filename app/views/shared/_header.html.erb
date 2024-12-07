@@ -21,12 +21,18 @@
                 <p class="main-menu">シフト関連</p>
                 <li><a class="dropdown-item" href="/shifts">シフト一覧</a></li>
                 <li><a class="dropdown-item" href="/shifts/new">シフト作成</a></li>
+                <li><%= link_to "シフト希望登録", new_shift_preference_path, class: "dropdown-item" %></li>
+                <li><%= link_to "シフト希望詳細", shift_preference_path(current_user), class: "dropdown-item" %></li>
+                <% if current_user.classification == "リーダー" %>
+                  <li><%= link_to "シフト希望一覧", shift_preferences_path, class: "dropdown-item" %></li>
+                <% end %>
               </div>
               <li><hr class="dropdown-divider"></li>
               <div class="sub-menu">
                 <p class="main-menu">myページ</p>
                 <li><a class="dropdown-item" href="/users/edit">アカウント変更</a></li>
                 <li><a class="dropdown-item" href="/users/account">アカウント詳細</a></li>
+                <li><%= link_to "お気に入りシフト", favorite_user_path(current_user), class: "dropdown-item" %></li>
               </div>
             </ul>
         <% else %>

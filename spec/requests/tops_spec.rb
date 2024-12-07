@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "TopPages", type: :request do
   let(:user) { FactoryBot.create(:user) }
+  let(:leader) { FactoryBot.create(:user, :leader) }
 
   describe 'トップページ' do
     it 'ステータス200 OKであること' do
@@ -41,6 +42,16 @@ RSpec.describe "TopPages", type: :request do
         expect(response.body).to include("シフト一覧")
       end
 
+      it 'ヘッダーのシフト希望登録が表示され繋がること' do
+        get new_shift_preference_path
+        expect(response.body).to include("シフト希望登録")
+      end
+
+      it 'ヘッダーのシフト希望詳細が表示され繋がること' do
+        get shift_preference_path(user)
+        expect(response.body).to include("シフト希望詳細")
+      end
+
       it 'ヘッダーのアカウント詳細が表示され繋がること' do
         get users_account_path
         expect(response.body).to include("アカウント詳細")
@@ -51,6 +62,11 @@ RSpec.describe "TopPages", type: :request do
         expect(response.body).to include("アカウント変更")
       end
 
+      it 'ヘッダーのお気に入りシフトが表示され繋がること' do
+        get favorite_user_path(user)
+        expect(response.body).to include("お気に入りシフト")
+      end
+
       it '新規登録リンクが表示されること' do
         get root_path
         expect(response.body).to include("ログアウト")
@@ -59,6 +75,16 @@ RSpec.describe "TopPages", type: :request do
       it 'ログアウトリンクが表示されること' do
         get root_path
         expect(response.body).to include("ログアウト")
+      end
+    end
+
+    context 'ログイン、新規登録している場合' do
+      before do
+        sign_in leader
+      end
+      it 'ヘッダーのシフト希望一覧が表示され繋がること' do
+        get shift_preferences_path
+        expect(response.body).to include("シフト希望一覧")
       end
     end
   end

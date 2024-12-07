@@ -11,6 +11,7 @@ Rails:
   Enabled: true
 
 AllCops:
+  SuggestExtensions: false
   NewCops: enable
   Exclude:
    - 'db/**/*'
@@ -28,6 +29,7 @@ AllCops:
    - 'shift_schedule/config/*'
    - 'shift_schedule/config/**/*'
    - 'spec/spec_helper.rb'
+   - 'app/models/open_ai.rb'
 Layout/LineLength:
   Max: 200
 

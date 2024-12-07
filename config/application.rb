@@ -23,6 +23,9 @@ module ShiftScheduling
     config.i18n.default_locale = :ja
     config.active_record.default_timezone = :local
     config.time_zone = 'Tokyo'
+    config.to_prepare do
+      Devise::SessionsController.layout proc{ |controller| user_signed_in? ? "application" : "devise" }
+    end
     config.generators do |g|
       g.test_framework :rspec
       g.system_tests   false

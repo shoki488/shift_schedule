@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
     
   def show
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   def new
@@ -31,8 +31,10 @@ class UsersController < ApplicationController
     
   def update
   end
-      
-  def account
+
+  def favorite
+    @user = User.find(params[:id])
+    @favorite_shifts = @user.favorited_by_users
   end
 
   private

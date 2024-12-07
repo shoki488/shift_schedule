@@ -1,0 +1,31 @@
+<div class="range">
+  <h1>シフト希望情報確認</h1>
+  <p>希望がある方は毎月20日までに更新してください</p>
+  <p>希望の変更をしたい場合、このページで再登録すれば変更できます（その際、シフト希望詳細で情報が反映されているか確認すること）</p>
+  <%= month_calendar do |date| %>
+    <% preferences = @shift_preferences[date] || [] %>
+    <div class="calendar-day" data-date="<%= date %>">
+      <%= date.day %>
+
+      <% preferences.each do |preference| %>
+        <% if preference.preference_type == '希望休' %>
+          <div class="holiday-mark">⭕️</div>
+        <% end %>
+        <% if current_user.classification == 'パート・アルバイト' %>
+          <div class="time">
+           <%= preference.start_time&.strftime("%H:%M") %> - <%= preference.end_time&.strftime("%H:%M") %>
+          </div>
+        <% else current_user.classification == '社員' %>
+          <div class="shift_type">
+            <%= preference.shift_type %>
+          </div>
+        <% end %>
+        <% if preference.notes.present? %>
+          <div class="note" data-preference-id="<%= preference.id %>">
+            <%= preference.notes %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

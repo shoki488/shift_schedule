@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "Tops", type: :system do
+  let(:user) { FactoryBot.create(:user) }
+  let(:leader) { FactoryBot.create(:user, :leader) }
+
   it "トップページの画像が表示されること" do
     visit root_path
     expect(page).to have_css('.main')
@@ -13,8 +16,6 @@ RSpec.describe "Tops", type: :system do
   end
 
   context "ログイン、新規登録した時のトップページ" do
-    let(:user) { FactoryBot.create(:user) }
-
     before do
       visit root_path
       login_as(user, scope: :user)
@@ -37,6 +38,18 @@ RSpec.describe "Tops", type: :system do
       expect(page).to have_current_path(shifts_path)
     end
 
+    it "メニュー欄のシフト希望登録をクリックしてシフト希望登録ページに接続できること" do
+      find('.dropdown-toggle').click
+      click_link 'シフト希望登録'
+      expect(page).to have_current_path(new_shift_preference_path)
+    end
+
+    it "メニュー欄のシフト希望詳細をクリックしてシフト希望詳細ページに接続できること" do
+      find('.dropdown-toggle').click
+      click_link 'シフト希望詳細'
+      expect(page).to have_current_path(shift_preference_path(user))
+    end
+
     it "メニュー欄のシフト作成をクリックしてシフト作成ページに接続できること" do
       find('.dropdown-toggle').click
       click_link('シフト作成')
@@ -55,6 +68,12 @@ RSpec.describe "Tops", type: :system do
       expect(page).to have_current_path(edit_user_registration_path)
     end
 
+    it "メニュー欄のお気に入りシフトをクリックしてお気に入りシフトページに接続できること" do
+      find('.dropdown-toggle').click
+      click_link 'お気に入りシフト'
+      expect(page).to have_current_path(favorite_user_path(user))
+    end
+
     it "トップページにシフト作成ボタン、ログアウトボタンが表示されていること" do
       expect(page).to have_link('シフト作成', href: new_shift_path)
       expect(page).to have_link('ログアウト', href: destroy_user_session_path)
@@ -69,6 +88,20 @@ RSpec.describe "Tops", type: :system do
       click_link 'ログアウト'
       page.driver.browser.switch_to.alert.accept
       expect(page).to have_content 'ログアウトしました'
+    end
+  end
+
+  context "リーダーがログインした時のトップページ" do
+    before do
+      visit root_path
+      login_as(leader, scope: :user)
+      visit root_path
+    end
+
+    it "リーダーのみメニュー欄のシフト希望一覧をクリックしてシフト希望一覧ページに接続できること" do
+      find('.dropdown-toggle').click
+      click_link 'シフト希望一覧'
+      expect(page).to have_current_path(shift_preferences_path)
     end
   end
 

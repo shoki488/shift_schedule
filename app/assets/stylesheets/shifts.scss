@@ -23,6 +23,23 @@
   font-size: 0.8em;
   box-sizing: border-box;
 }
+
+.sort-options {
+  font-size: 17px;
+  margin-bottom: 15px;
+  justify-content: right;
+  display:flex
+}
+
+#shift-result {
+  margin-left: 30px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.search {
+ text-align: center;
+}
     
 @media (max-width: 1024px) {
   .shift-card {

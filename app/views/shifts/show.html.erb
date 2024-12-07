@@ -1,5 +1,6 @@
 <div class="container">
   <h1 class="title">シフト詳細ページ</h1>
+  <%= link_to "シフト一覧", shifts_path, class: "btn btn-primary" %>
   <div class="shift-poster">
     <h3><%= @shift.calendar %> 予定シフト</h3>
     <div class="shift-content">
@@ -7,5 +8,4 @@
     </div>
   </div>
   <p>シフト作成者: <%= @shift.creator %></p>
-  <%= link_to "シフト一覧に戻る", shifts_index_path, class: "btn btn-primary" %>
 </div>

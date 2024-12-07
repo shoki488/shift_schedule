@@ -63,6 +63,10 @@ document.addEventListener("DOMContentLoaded", function() {
 </head>
 <div class="scrollable-form">
   <h2 class="title">新規登録</h2>
+  <div class="carefull">
+    *苗字と名前は続けて入力してください<br>
+    *登録せずに画面更新すると役職がリセットされますのでご注意ください
+  </div>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: @user %>
 

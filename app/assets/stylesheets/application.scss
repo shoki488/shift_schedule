@@ -1,3 +1,4 @@
+@import "simple_calendar";
 @import "shifts";
 body {
   margin: 0%;
@@ -190,4 +191,20 @@ hr {
 .important {
   color: red;
   font-weight: 600;
+}
+
+.alert {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+#error_explanation li {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+  text-align: center;
+}
+
+.range {
+  margin: 50px;
 }

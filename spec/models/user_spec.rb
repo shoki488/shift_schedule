@@ -27,17 +27,32 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   let(:user) { FactoryBot.build(:user) }
 
-  describe 'アソシエーションのテスト' do
-    it 'UserはUserShiftを複数持つこと' do
-      association = described_class.reflect_on_association(:shift_users)
-      expect(association.macro).to eq :has_many
-    end
+  it 'UserShiftを複数持つこと' do
+    association = described_class.reflect_on_association(:shift_users)
+    expect(association.macro).to eq :has_many
+  end
 
-    it 'Userはshift_usersを介してShiftを複数持つこと' do
-      association = described_class.reflect_on_association(:shifts)
-      expect(association.macro).to eq :has_many
-      expect(association.options[:through]).to eq :shift_users
-    end
+  it 'Userはshift_usersを介してShiftを複数持つこと' do
+    association = described_class.reflect_on_association(:assigned_shifts)
+    expect(association.macro).to eq :has_many
+    expect(association.options[:through]).to eq :shift_users
+  end
+
+  it 'favoritesを複数持つこと' do
+    association = described_class.reflect_on_association(:favorites)
+    expect(association.macro).to eq :has_many
+  end
+
+  it 'favoritesを介してShiftを複数持つこと' do
+    association = described_class.reflect_on_association(:favorited_by_users)
+    expect(association.macro).to eq :has_many
+    expect(association.options[:through]).to eq :favorites
+    expect(association.options[:source]).to eq :shift
+  end
+
+  it 'shift_preferencesを複数関係を持つこと' do
+    association = described_class.reflect_on_association(:shift_preferences)
+    expect(association.macro).to eq :has_many
   end
 
   describe 'バリデーションテスト' do

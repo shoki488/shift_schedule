@@ -2,10 +2,10 @@ class OpenAi
   require 'openai'
 
   class << self
-    def create_shift(user, calendar)
+    def create_shift(user, calendar, shift_preferences)
       client = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_ACCESS_KEY"))
       users = User.where.not(classification: 'ゲスト')
-      shift_list = create_shift_list(users)
+      shift_list = create_shift_list(users, shift_preferences)
       shift_messages = create_shift_messages(shift_list)
 
       begin
@@ -26,58 +26,77 @@ class OpenAi
         "<div class='alert alert-danger'>シフトの生成中にエラーが発生しました。</div>"
       rescue StandardError => e
         Rails.logger.error "Unexpected error: #{e.message}"
-        "<div class='alert alert-danger'>予期せぬエラーが発生しました。</div>"
+        "<div class='alert alert-danger'>予期せぬエラーが発生しました。お手数ですがもう一度作成し直してください。</div>"
       end
     end
 
     private
 
-    def create_shift_list(users)
-      off_count = 4
+    def create_shift_list(users, shift_preferences)
       valid_users = users.pluck(:name)
-      shuffled_users = users.shuffle
-      shift_list = shuffled_users.map.with_index do |user, index|
-        if valid_users.include?(user.name)
-          {
-            name: user.name,
-            classification: user.classification,
-            shift_type: user.shift_type,
-            start_time: calculate_start_time(user),
-            end_time: calculate_end_time(user),
-            is_working: index >= off_count
-          }
-        end
-      end.compact  
-      off_users = shift_list.select { |shift| !shift[:is_working] }
-      if off_users.size != off_count
-        Rails.logger.error "休みの人数が正しく設定されていません。再生成を行います。"
-        return create_shift_list(users)
-      end
-  
-      shift_list
+      
+      users.map do |user|
+        user_preferences = shift_preferences[user] || []
+        {
+          name: user.name,
+          classification: user.classification,
+          shift_type: user.shift_type,
+          start_time: calculate_start_time(user),
+          end_time: calculate_end_time(user),
+          preferences: user_preferences.map { |pref| format_preference(pref) }
+        } if valid_users.include?(user.name)
+      end.compact
     end
 
     def validate_shift(shift_content, users)
       lines = shift_content.split("\n")
-      valid_users = users.pluck(:name)
+      working_count = 0
+      off_count = 0
+      early_shift_count = 0
+      late_shift_count = 0
+      leader_working = false
+      processed_employees = Set.new
+    
+      lines.each do |line|
+        parts = line.split(":")
+        next if parts.length < 3
+        name = parts[1].strip
+        
+        if processed_employees.include?(name)
+          return false
+        end
+        processed_employees.add(name)
+    
+        if line.include?('⚪︎')
+          working_count += 1
+          leader_working = true if line.include?('リーダー')
+          if line.include?('早番')
+            early_shift_count += 1
+          elsif line.include?('遅番')
+            late_shift_count += 1
+          end
 
-      valid_user_check = lines.all? do |line|
-        valid_users.any? { |user_name| line.include?(user_name) }
+          if line.include?('パート・アルバイト')
+            time_match = line.match(/(\d{2}:\d{2})-(\d{2}:\d{2})/)
+            if time_match
+              start_time = Time.parse(time_match[1])
+              end_time = Time.parse(time_match[2])
+              return false if (end_time - start_time) / 3600 < 5
+            else
+              return false
+            end
+          end
+        elsif line.include?('x')
+          off_count += 1
+        end
       end
-
-      working_count = lines.count { |line| line.include?('⚪') }
-      off_count = lines.count { |line| line.include?('x') } 
-      early_shift = lines.any? { |line| line.include?('早番') }
-      late_shift = lines.any? { |line| line.include?('遅番') }
-      leader_working = lines.select { |line| line.include?('リーダー') && line.include?('⚪') }.count == 1
-      all_employees_included = users.all? { |user| lines.any? { |line| line.include?(user.name) } }
-      working_count.between?(8, 9) &&
-      off_count == 4 && 
-      early_shift &&
-      late_shift &&
+    
+      working_count == 9 &&
+      off_count == 4 &&
+      early_shift_count >= 1 &&
+      late_shift_count >= 1 &&
       leader_working &&
-      all_employees_included &&
-      valid_user_check 
+      processed_employees.size == users.size
     end
 
     def calculate_start_time(user)
@@ -102,25 +121,42 @@ class OpenAi
       end
     end
 
+    def format_preference(preference)
+      {
+        date: preference.date,
+        preference_type: preference.preference_type,
+        shift_type: preference.shift_type,
+        start_time: preference.start_time&.strftime("%H:%M"),
+        end_time: preference.end_time&.strftime("%H:%M"),
+        notes: preference.notes
+      }
+    end
+
     def create_shift_messages(shift_list)
       shift_list.map do |shift|
         next if shift.nil?
-        if shift[:classification] == 'リーダー'
-          {
-            role: "system",
-            content: "名前: #{shift[:name]}\n役職: #{shift[:classification]}\nシフトタイプ: 固定シフト"
-          }
-        elsif shift[:classification] == '社員'
-          {
-            role: "system",
-            content: "名前: #{shift[:name]}\n役職: #{shift[:classification]}\nシフトタイプ: #{shift[:shift_type]}"
-          }
-        else
-          {
-            role: "system",
-            content: "名前: #{shift[:name]}\n役職: #{shift[:classification]}\nシフト: #{shift[:start_time]} ~ #{shift[:end_time]}"
-          }
+        content = "従業員情報:\n"
+        content += "名前: #{shift[:name]}\n役職: #{shift[:classification]}\n"
+        content += case shift[:classification]
+                   when 'リーダー'
+                     "シフトタイプ: 固定シフト\n"
+                   when '社員'
+                     "シフトタイプ: #{shift[:shift_type]}\n"
+                   else
+                     "通常シフト: #{shift[:start_time]} - #{shift[:end_time]}\n"
+                   end
+        content += "シフト希望（最優先で考慮すること）:\n"
+        shift[:preferences].each do |pref|
+          content += " 日付: #{pref[:date]}\n"
+          content += " 希望: #{pref[:preference_type]}\n"
+          if pref[:preference_type] == "休み"
+            content += " 休日希望\n"
+          else
+            content += "    シフトタイプ: #{pref[:shift_type]}\n" if pref[:shift_type].present?
+            content += "    時間: #{pref[:start_time]}-#{pref[:end_time]}\n" if pref[:start_time] && pref[:end_time]
+          end
         end
+        { role: "user", content: content.strip }
       end.compact
     end
 
@@ -128,27 +164,30 @@ class OpenAi
       {
         role: "system",
         content: <<~EOS
-          ###あなたはシフト作成者です。以下の条件を守ってシフトを作成してください："""
+          あなたはシフト作成者です。以下の条件を厳密に守り、従業員のシフト希望を最優先で反映してシフトを作成してください：
+    
           1. 営業時間は9:00から22:00。
-          2. 早番と遅番にそれぞれ最低1人ずつ社員がいること。
-          3. 営業時間内で必ずリーダーが1人は入ること。
-          4. 見やすく表示されるように出勤者と休みの人を区別して表示すること。
-          5. 必ず4人が休みになるシフトを作成すること。これは絶対条件です。
-          6. 必ず9人が出勤であるシフトを作成すること。これは絶対条件です
-
-          上記の条件を全て満たすまで、シフトの再生成を行ってください。
-
-          形式例：
+          2. 早番と遅番にそれぞれ最低2人ずつ社員がいること。
+          3. 営業時間内で必ずリーダーが1人は入ること。ただし、リーダーの希望シフトがある場合はそれを優先すること。
+          4. 必ず4人が休みになるシフトを作成すること。これは絶対条件です。
+          5. 必ず9人が出勤になるシフトを作成すること。これは絶対条件です。
+          6. 従業員のシフト希望（希望休、早番/遅番の希望、時間帯の希望）を最優先で反映すること。これは最も重要な条件です。
+          7. 同じ従業員が出勤と休みの両方に記載されないようにすること。
+          8. 全ての従業員が反映されていること。
+    
+          上記の条件を全て満たし、特にシフト希望を最優先で反映したシフトを作成してください。
+          条件を満たさない場合、シフトの再生成を行います。
+    
+          出力形式：
           出勤者：
-         リーダー: 山本 : ⚪︎ : （固定シフト）
-          社員: 佐藤 : ⚪︎ :（早番）
-          社員: 鈴木 : ⚪︎ :（遅番)
-          パート・アルバイト: 渡辺 : ⚪︎ : （17:00-22:00）
+          リーダー : 山田太郎 : ⚪︎ : シフトタイプ: 11:00-20:00
+          社員 : 太田慎二 : ⚪︎ : 早番 : 9:00-18:00
+          パート・アルバイト : 菊池隆 : ⚪︎ : 15:00-19:00
           休み：
-          リーダー: 山本 : x
-          社員: 田中 : x
-          パート・アルバイト: 伊藤: x
-          """
+          リーダー : 中山悟 : x
+          社員: 小池次郎 : x
+          パート・アルバイト : 山崎毅 : x
+          この形式を厳密に守ってください。
         EOS
       }
     end
@@ -162,62 +201,100 @@ class OpenAi
               <tr>
                 <th>役職</th>
                 <th>名前</th>
-                <th>出勤</th>
-                <th>休み</th>
+                <th>勤務状況</th>
                 <th>シフトタイプ</th>
+                <th>勤務時間</th>
               </tr>
             </thead>
-          <tbody>
-
+            <tbody>
       HTML
 
-      processed_employees = Set.new
-  
+      all_users = User.where.not(classification: 'ゲスト')
+      processed_names = Set.new
+
       lines.each do |line|
-        if line.strip.empty? || line.exclude?(":")
-          next
-        end
-
+        next if line.strip.empty? || !line.include?(":")
         parts = line.split(":")
-        if parts.length >= 3
-          role = parts[0].strip
-          name = parts[1].strip
-          status_and_time = parts[2..-1].join(":").strip
+        next unless parts.length >= 3
 
-          next if processed_employees.include?(name)
-          processed_employees.add(name)
+        role = parts[0].strip
+        name = parts[1].strip
+        status_and_time = parts[2].strip
 
-          is_working = status_and_time.include?("⚪︎")
-          role.downcase.include?("パート・アルバイト")
+        next if processed_names.include?(name)
+        processed_names.add(name)
 
-          time_match = status_and_time.match(/（(.+)）/)
-          time_info = time_match ? time_match[1] : ""
-          shift_type = if is_working
-                         if role == "社員"
-                           if time_info.downcase.include?("早番")
-                             "早番"
-                           elsif time_info.downcase.include?("遅番")
-                             "遅番"
-                           end
-                         elsif role == "リーダー"
-                           "固定シフト"
-                         elsif role == "パート・アルバイト"
-                           time_info
-                         end
-                       end
+        is_working = status_and_time.include?("⚪︎")
+        shift_type_match = status_and_time.match(/シフトタイプ: (.+?)$/)
+        shift_type = shift_type_match ? shift_type_match[1] : ""
 
-          html += <<-ROW
-            <tr>
-              <td>#{role}</td>
-              <td>#{name}</td>
-              <td>#{is_working ? "⚪" : ""}</td>
-              <td>#{!is_working ? "x" : ""}</td>
-              <td>#{shift_type}</td>
-            </tr>
-          ROW
-        else
-          Rails.logger.warn "Invalid line format: #{line}"
+        time_match = status_and_time.match(/(\d{2}:\d{2})-(\d{2}:\d{2})/)
+        start_time, end_time = time_match ? [time_match[1], time_match[2]] : ["", ""]
+
+        user = User.find_by(name: name)
+        preference = ShiftPreference.find_by(user: user, date: calendar)
+
+        if preference
+          if preference.preference_type == "希望休"
+            is_working = false
+          else
+            shift_type = preference.shift_type if preference.shift_type.present?
+            start_time = preference.start_time.strftime("%H:%M") if preference.start_time
+            end_time = preference.end_time.strftime("%H:%M") if preference.end_time
+          end
         end
+
+        if shift_type.empty? || start_time.empty? || end_time.empty?
+          case role
+          when "リーダー"
+            shift_type = "固定シフト" if shift_type.empty?
+            start_time = "11:00" if start_time.empty?
+            end_time = "20:00" if end_time.empty?
+          when "社員"
+            if shift_type.include?("早番")
+              shift_type = "早番"
+              start_time = "09:00" if start_time.empty?
+              end_time = "18:00" if end_time.empty?
+            elsif shift_type.include?("遅番")
+              shift_type = "遅番"
+              start_time = "13:00" if start_time.empty?
+              end_time = "22:00" if end_time.empty?
+            else
+              shift_type = user.shift_type || "通常"
+              start_time = user.start_time.strftime("%H:%M") if start_time.empty? && user.start_time
+              end_time = user.end_time.strftime("%H:%M") if end_time.empty? && user.end_time
+            end
+          when "パート・アルバイト"
+            shift_type = "パート" if shift_type.empty?
+            start_time = user.start_time.strftime("%H:%M") if start_time.empty? && user.start_time
+            end_time = user.end_time.strftime("%H:%M") if end_time.empty? && user.end_time
+          end
+        end
+
+        html += <<-ROW
+          <tr>
+            <td>#{role}</td>
+            <td>#{name}</td>
+            <td>#{is_working ? "⚪︎" : "x"}</td>
+            <td>#{is_working ? shift_type : ""}</td>
+            <td>#{is_working ? "#{start_time} - #{end_time}" : ""}</td>
+          </tr>
+        ROW
+      end
+
+      all_users.each do |user|
+        next if processed_names.include?(user.name)
+
+        role = user.classification == "リーダー" ? "リーダー" : user.classification
+        html += <<-ROW
+          <tr>
+            <td>#{role}</td>
+            <td>#{user.name}</td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+          </tr>
+        ROW
       end
 
       html += <<-HTML

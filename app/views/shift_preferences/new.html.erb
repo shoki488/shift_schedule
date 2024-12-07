@@ -1,0 +1,180 @@
+<h1>シフト希望情報</h1>
+<p>希望がある方は毎月20日までに更新してください</p>
+<p>希望の変更をしたい場合、このページで再登録すれば変更できます（変更したら必ずシフト希望詳細で確認すること）</p>
+
+<%= month_calendar(events: @shift_preferences.values) do |date, events| %>
+  <% preference = @shift_preferences[date] %>
+  <div class="calendar-day" data-date="<%= date %>">
+    <%= date.day %>
+    
+    <label>
+      <input type="checkbox" class="preferred-date-checkbox" style="display:inline-block;" <%= 'checked' if preference&.preference_type == '希望休' %> >
+      希望休
+    </label>
+    
+    <% if current_user.classification == 'パート・アルバイト' %>
+      <div>
+        <select class="start-time" <%= 'disabled' if preference&.preference_type == '希望休' %>
+          data-default="<%= preference&.start_time&.strftime('%H:%M') %>">
+          <option value="">開始時間を選択</option>
+        </select>
+        <select class="end-time" <%= 'disabled' if preference&.preference_type == '希望休' %>
+          data-default="<%= preference&.end_time&.strftime('%H:%M') %>">
+          <option value="">終了時間を選択</option>
+        </select>
+      </div>
+    <% elsif current_user.classification == '社員' %>
+      <div>
+        <select class="shift-type" <%= 'disabled' if preference&.preference_type == '希望休' %> >
+          <option value="">選択してください</option>
+          <option value="早番" <%= 'selected' if preference&.shift_type == '早番' %>>早番</option>
+          <option value="遅番" <%= 'selected' if preference&.shift_type == '遅番' %>>遅番</option>
+        </select>
+      </div>
+    <% end %>
+    
+    <input type="text" class="note-input" placeholder="メモを入力" value="<%= preference&.notes %>">
+  </div>
+<% end %>
+
+<button id="save-all" class="btn btn-primary">まとめて保存</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const createTimeOptions = (selectElement, startHour, endHour, defaultValue) => {
+    for (let hour = startHour; hour <= endHour; hour++) {
+      for (let minute of [0, 30]) {
+        const timeValue = `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
+        const option = document.createElement("option");
+        option.value = timeValue;
+        option.textContent = timeValue;
+        if (timeValue === defaultValue) {
+          option.selected = true;
+        }
+        selectElement.appendChild(option);
+      }
+    }
+  };
+
+  // パート・アルバイトの開始時間（9:00-21:00）と終了時間（10:00-22:00）を設定
+  document.querySelectorAll(".calendar-day").forEach(day => {
+    const startTimeSelect = day.querySelector(".start-time");
+    const endTimeSelect = day.querySelector(".end-time");
+
+    if (startTimeSelect) {
+      const defaultStartTime = startTimeSelect.getAttribute("data-default");
+      createTimeOptions(startTimeSelect, 9, 21, defaultStartTime);
+    }
+
+    if (endTimeSelect) {
+      const defaultEndTime = endTimeSelect.getAttribute("data-default");
+      createTimeOptions(endTimeSelect, 10, 22, defaultEndTime);
+    }
+  });
+
+  // 希望休チェックボックスでの入力フォームの無効化処理
+  document.querySelectorAll(".calendar-day").forEach(day => {
+    const checkbox = day.querySelector(".preferred-date-checkbox");
+    const startTimeSelect = day.querySelector(".start-time");
+    const endTimeSelect = day.querySelector(".end-time");
+    const shiftTypeSelect = day.querySelector(".shift-type");
+
+    function toggleInputs() {
+      if (checkbox.checked) {
+        if (startTimeSelect) startTimeSelect.disabled = true;
+        if (endTimeSelect) endTimeSelect.disabled = true;
+        if (shiftTypeSelect) shiftTypeSelect.disabled = true;
+      } else {
+        if (startTimeSelect) startTimeSelect.disabled = false;
+        if (endTimeSelect) endTimeSelect.disabled = false;
+        if (shiftTypeSelect) shiftTypeSelect.disabled = false;
+      }
+    }
+    toggleInputs();
+    checkbox.addEventListener("change", toggleInputs);
+  });
+
+  document.getElementById("save-all").addEventListener("click", function() {
+  const preferences = [];
+
+  document.querySelectorAll(".calendar-day").forEach(day => {
+    const date = day.getAttribute("data-date");
+    const noteInput = day.querySelector(".note-input").value;
+    const isPreferred = day.querySelector(".preferred-date-checkbox").checked;
+
+    let additionalData = {};
+    if ("<%= current_user.classification %>" === "パート・アルバイト" && !isPreferred) {
+      additionalData = {
+        start_time: day.querySelector(".start-time").value || null,
+        end_time: day.querySelector(".end-time").value || null
+      };
+    } else if ("<%= current_user.classification %>" === "社員" && !isPreferred) {
+      additionalData = {
+        shift_type: day.querySelector(".shift-type").value || null
+      };
+    }
+
+    preferences.push({
+      date: date,
+      notes: noteInput || null,
+      preference_type: isPreferred ? '希望休' : null,
+      ...additionalData
+    });
+  });
+
+  fetch("/shift_preferences", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRF-Token": document.querySelector("[name='csrf-token']").content
+    },
+    body: JSON.stringify({ shift_preferences: preferences })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      const flashMessage = document.createElement('div');
+      flashMessage.textContent = "シフト希望が正常に保存されました。";
+      flashMessage.style.cssText = `
+        background-color: #4CAF50;
+        color: white;
+        text-align: left;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      `;
+      document.body.insertBefore(flashMessage, document.body.firstChild);
+      setTimeout(() => {
+        window.location.href = data.redirect_url;
+      }, 3000);
+    } else {
+      // エラーメッセージを表示
+        const errorMessages = Array.isArray(data.errors) ? data.errors : ["保存に失敗しました。登録内容を確認し直してください。"];
+      const errorMessageDiv = document.createElement('div');
+      errorMessageDiv.style.cssText = `
+        background-color: #f44336;
+        color: white;
+        text-align: left;
+        padding-top: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      `;
+      errorMessages.forEach(message => {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = message;
+        errorMessageDiv.appendChild(paragraph);
+      });
+      document.body.insertBefore(errorMessageDiv, document.body.firstChild);
+      setTimeout(() => {
+        errorMessageDiv.remove();
+      }, 5000);
+    }
+  })
+  .catch(error => console.error("エラー:", error));
+});
+});
+</script>

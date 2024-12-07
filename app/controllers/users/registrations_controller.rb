@@ -72,7 +72,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def ensure_normal_user
     if resource.email == 'guest@example.com' || resource.name == 'ゲスト'
-      redirect_to root_path, alert: I18n.t('users.registrations.guest_user_alert')
+      redirect_to root_path, error: I18n.t('users.registrations.guest_user_alert')
     end
   end
 end

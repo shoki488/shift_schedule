@@ -1,0 +1,35 @@
+<h2 id="shift-result">検索結果 <span id="shift-count"><%= @shifts.count %></span> 件</h2>
+  <% if @range == "Shift" %>
+      <% if @shifts.present? %>
+      <div class="container">
+        <div class="search">
+          <%= render "shared/search" %>
+        </div>
+      <div class="shifts-grid">
+        <% @shifts.each do |shift| %>
+          <div class="shift-card">
+            <h3><%= shift.calendar %>予定シフト</h3>
+            <div class="shift-content">
+              <%= raw shift.content %>
+            </div>
+            <div class="shift-actions">
+              <%= link_to "シフト詳細", shift_path(shift), class: "btn btn-primary btn-sm" %>
+              <% if current_user.favorites.exists?(shift: shift) %>
+                <%= button_to "お気に入りから外す", shift_favorite_path(shift), method: :delete, remote: true, class: "btn btn-secondary btn-sm" %>
+              <% else %>
+                <%= button_to "お気に入り登録する", shift_favorite_path(shift), method: :post, remote: true, class: "btn btn-primary btn-sm" %>
+              <% end %>
+            </div>
+             <p>シフト作成者: <%= shift.creator %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+      <% else %>
+        <tr>
+          <td colspan="4">該当するシフトが見つかりません。</td>
+        </tr>
+      <% end %>
+     <% else %>
+    <p>検索範囲が指定されていません。</p>
+    <% end %>

@@ -1,26 +1,35 @@
 ja:
   devise:
     sessions:
-      signed_in: "ログインしました。"
-      signed_out: "ログアウトしました。"
-      invaid: ""
+      signed_in: ログインしました。
+      signed_out: ログアウトしました。
   users:
     name: 名前
     classification: 役職
-    workin_time: 勤務時間
+    working_time: 勤務時間
     Email: メールアドレス
     start_time: 勤務開始時間
     end_time: 勤務終了時間
     registrations:
-      guest_user_alert: 'ゲストユーザーのアカウント情報は閲覧・変更できません。'
+      guest_user_alert: ゲストユーザーのアカウント情報は閲覧・変更できません。
     sessions:
-      guest_sign_in: 'ゲストユーザーとしてログインしました。'
+      guest_sign_in: ゲストユーザーとしてログインしました。
   shift: 
     Calendar: シフト作成日
     content: AIの反応
     creator: シフト作成者
-    success: "シフトが作成されました。"
-    failure: "シフトの作成に失敗しました。もう一度お試しください。"
-    destroy: "シフトを削除しました"
-    invalid_password: "正しいパスワードを入力してください。"
-
+    success: シフトが作成されました。
+    failure: シフトの作成に失敗しました。もう一度お試しください。
+    destroy: シフトを削除しました。
+    invalid_password: 正しいパスワードを入力してください。
+    delete_error: シフトを正常に削除できませんでした
+  favorite: 
+    success: お気に入り登録しました
+    destroy: お気に入り登録を解除しました
+  shift_preference:
+   success: 希望の登録が完了しました
+   ban: ゲストアカウントでのシフト希望関連は受け付けていません。
+  simple_calendar:
+    previous: "前月"
+    next: "翌月"
+    today: "今月"

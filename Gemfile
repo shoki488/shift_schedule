@@ -70,3 +70,4 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'annotate'
 gem 'ffi'
 gem 'nokogiri', platforms: :ruby
+gem 'simple_calendar'

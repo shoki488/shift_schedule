@@ -24,7 +24,10 @@
 #
 class User < ApplicationRecord
   has_many :shift_users
-  has_many :shifts, through: :shift_users
+  has_many :assigned_shifts, through: :shift_users, source: :shift
+  has_many :favorites
+  has_many :favorited_by_users, through: :favorites, source: :shift
+  has_many :shift_preferences
 
   def create_shift_with_openai
     OpenAi.create_shift(self)
@@ -56,7 +59,6 @@ class User < ApplicationRecord
   validate :end_time_same_start_time, if: -> { classification == 'パート・アルバイト' }
   validate :shift_duration_within_limit, if: -> { classification == 'パート・アルバイト' }
 
-  
   def start_time_and_end_time_within_business_hours
     business_start = Time.zone.parse("9:00")
     business_end = Time.zone.parse("22:00")

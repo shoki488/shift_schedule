@@ -109,6 +109,20 @@ RSpec.describe "Users", type: :request do
         follow_redirect!
         expect(response.body).to include("ゲストユーザーのアカウント情報は閲覧・変更できません。")
       end
+
+      it 'ゲストユーザーのシフト希望登録ページにアクセスできないこと' do
+        get new_shift_preference_path
+        expect(response).to redirect_to(root_path)
+        follow_redirect!
+        expect(response.body).to include("ゲストアカウントでのシフト希望関連は受け付けていません。")
+      end
+
+      it 'ゲストユーザーのシフト希望詳細ページにアクセスできないこと' do
+        get shift_preference_path(id: 1)
+        expect(response).to redirect_to(root_path)
+        follow_redirect!
+        expect(response.body).to include("ゲストアカウントでのシフト希望関連は受け付けていません。")
+      end
     end
   end
 end
