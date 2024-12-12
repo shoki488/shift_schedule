@@ -24,9 +24,6 @@ class OpenAi
       rescue OpenAI::Error => e
         Rails.logger.error "OpenAI API error: #{e.message}"
         "<div class='alert alert-danger'>シフトの生成中にエラーが発生しました。</div>"
-      rescue StandardError => e
-        Rails.logger.error "Unexpected error: #{e.message}"
-        "<div class='alert alert-danger'>予期せぬエラーが発生しました。お手数ですがもう一度作成し直してください。</div>"
       end
     end
 
