@@ -24,6 +24,9 @@ class OpenAi
       rescue OpenAI::Error => e
         Rails.logger.error "OpenAI API error: #{e.message}"
         "<div class='alert alert-danger'>シフトの生成中にエラーが発生しました。</div>"
+      rescue StandardError => e
+        Rails.logger.error "Unexpected error: #{e.message}"
+        "<div class='alert alert-danger'>予期せぬエラーが発生しました。お手数ですがもう一度作成し直してください。</div>"
       end
     end
 
@@ -46,53 +49,20 @@ class OpenAi
     end
 
     def validate_shift(shift_content, users)
-      lines = shift_content.split("\n")
-      working_count = 0
-      off_count = 0
-      early_shift_count = 0
-      late_shift_count = 0
-      leader_working = false
       processed_employees = Set.new
     
-      lines.each do |line|
+      shift_content.split("\n").each do |line|
         parts = line.split(":")
-        next if parts.length < 3
-        name = parts[1].strip
-        
+        name = parts[1]&.strip
+    
+        next if name.nil?
         if processed_employees.include?(name)
+          Rails.logger.error "Duplicate entry found for #{name}"
           return false
         end
         processed_employees.add(name)
-    
-        if line.include?('⚪︎')
-          working_count += 1
-          leader_working = true if line.include?('リーダー')
-          if line.include?('早番')
-            early_shift_count += 1
-          elsif line.include?('遅番')
-            late_shift_count += 1
-          end
-
-          if line.include?('パート・アルバイト')
-            time_match = line.match(/(\d{2}:\d{2})-(\d{2}:\d{2})/)
-            if time_match
-              start_time = Time.parse(time_match[1])
-              end_time = Time.parse(time_match[2])
-              return false if (end_time - start_time) / 3600 < 5
-            else
-              return false
-            end
-          end
-        elsif line.include?('x')
-          off_count += 1
-        end
       end
     
-      working_count == 9 &&
-      off_count == 4 &&
-      early_shift_count >= 1 &&
-      late_shift_count >= 1 &&
-      leader_working &&
       processed_employees.size == users.size
     end
 
